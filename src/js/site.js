@@ -252,10 +252,47 @@
       return true;
     }
 
+    function recordInquiryToCloud(data, channel) {
+      var newInq = {
+        id: "inq_" + Date.now() + "_" + Math.random().toString(36).substring(2, 6),
+        name: data.name,
+        phone: data.phone,
+        email: data.email || "",
+        location: data.location || "",
+        service: data.service || "Su Sondajı",
+        depth: data.depth || "",
+        notes: data.notes || "",
+        channel: channel || "Web Form",
+        date: new Date().toISOString(),
+        status: "new"
+      };
+
+      fetch("https://api.restful-api.dev/objects/ff808181a09d98f701a12aecdae83c87")
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          var inquiries = (res && res.data && Array.isArray(res.data.inquiries)) ? res.data.inquiries : [];
+          inquiries.unshift(newInq);
+          if (inquiries.length > 200) inquiries = inquiries.slice(0, 200);
+          return fetch("https://api.restful-api.dev/objects/ff808181a09d98f701a12aecdae83c87", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: "KD Sondaj Inbox",
+              data: { inquiries: inquiries }
+            })
+          });
+        })
+        .catch(function (err) {
+          console.warn("Inquiry cloud dispatch:", err);
+        });
+    }
+
     if (waSubmitBtn) {
       waSubmitBtn.addEventListener("click", function () {
         var data = getFormData();
         if (!validateRequired(data)) return;
+
+        recordInquiryToCloud(data, "WhatsApp Form");
 
         var message = 
           "*KD SONDAJ — Proje Teklif Talebi*\n" +
@@ -284,6 +321,8 @@
       mailSubmitBtn.addEventListener("click", function () {
         var data = getFormData();
         if (!validateRequired(data)) return;
+
+        recordInquiryToCloud(data, "E-Posta Form");
 
         var subject = "Teklif Talebi: " + data.service + " (" + data.depth + ") — " + data.name;
         var body = 
@@ -318,7 +357,6 @@
       if (!startTime) startTime = now;
       var elapsed = now - startTime;
       var progress = Math.min(elapsed / dur, 1);
-      // Sleek easeOutQuart curve
       var ease = 1 - Math.pow(1 - progress, 4);
       var current = Math.floor(ease * target);
       el.textContent = (prefix || "") + current + (suffix || "");
@@ -337,7 +375,6 @@
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
 
-          // Check for nested or direct data-counter elements
           var counters = entry.target.querySelectorAll ? entry.target.querySelectorAll("[data-counter]") : [];
           if (entry.target.hasAttribute && entry.target.hasAttribute("data-counter")) {
             counters = [entry.target];
@@ -365,4 +402,16 @@
       el.classList.add("is-visible");
     });
   }
+
+  // 8. Progressive Web App (PWA) ServiceWorker Registration
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").then(function (reg) {
+        console.log("KD SONDAJ PWA ServiceWorker Active:", reg.scope);
+      }).catch(function (err) {
+        console.warn("PWA ServiceWorker registration error:", err);
+      });
+    });
+  }
 })();
+

@@ -2187,3 +2187,242 @@ td:first-child {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   Product Deep Pages & Technical Engineering Guides System
+   ========================================================================== */
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1.7fr 1.15fr;
+  gap: 2.75rem;
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .product-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.product-gallery-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.product-gallery-card img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-specs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: 1.5rem 0 2rem;
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.product-specs-table th, .product-specs-table td {
+  padding: 0.85rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+[dir="rtl"] .product-specs-table th, [dir="rtl"] .product-specs-table td {
+  text-align: right;
+}
+
+.product-specs-table th {
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-specs-table tr:last-child td {
+  border-bottom: none;
+}
+
+.product-specs-table tr:nth-child(even) td {
+  background: rgba(248, 250, 252, 0.7);
+}
+
+.product-specs-table td:first-child {
+  font-weight: 600;
+  color: var(--text-main);
+  width: 44%;
+}
+
+.product-specs-table td:last-child {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--signal-dark);
+  font-weight: 600;
+}
+
+.rfq-sticky-card {
+  position: sticky;
+  top: calc(var(--header-h) + 1.5rem);
+  background: var(--bg-surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--transition-normal);
+}
+
+.rfq-sticky-card:hover {
+  border-color: var(--signal);
+}
+
+.rfq-price-tag {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--signal);
+  margin-bottom: 0.5rem;
+}
+
+.rfq-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.rfq-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  margin-bottom: 0.6rem;
+}
+
+.rfq-feature-list li svg {
+  color: var(--emerald);
+  flex-shrink: 0;
+}
+
+.geo-qa-box {
+  background: var(--cyan-subtle);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  margin: 2.25rem 0;
+}
+
+.geo-qa-box h3 {
+  color: var(--cyan-hover);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.15rem;
+  margin-top: 0;
+}
+
+.geo-qa-item {
+  background: var(--bg-surface);
+  border: 1px solid rgba(2, 132, 199, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.geo-qa-item strong {
+  display: block;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+  font-size: 0.98rem;
+}
+
+.geo-qa-item p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Guide Styles */
+.guide-article-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.guide-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.guide-prose h2 {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+  position: relative;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.guide-prose p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-soft);
+  margin-bottom: 1.25rem;
+}
+
+.guide-prose blockquote {
+  border-left: 4px solid var(--signal);
+  background: var(--signal-subtle);
+  padding: 1.1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  color: var(--text-main);
+}
+
+[dir="rtl"] .guide-prose blockquote {
+  border-left: none;
+  border-right: 4px solid var(--signal);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.guide-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+}
+
+.guide-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--signal);
+  box-shadow: var(--shadow-md);
+}
+

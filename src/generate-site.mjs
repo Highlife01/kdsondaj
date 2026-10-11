@@ -3,6 +3,11 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { site, routes } from "./config.mjs";
 import { machines, pipes, bitGroups, pumpRows, pumpCommon } from "./data/catalog.mjs";
+import { productList } from "./data/products.mjs";
+import { guideList } from "./data/guides.mjs";
+import { generateLlmsTxt, generateLlmsFullTxt } from "./generate-llms.mjs";
+import { generateAdminDashboardHtml } from "./admin-dashboard.mjs";
+import { INDEXNOW_KEY } from "./indexnow.mjs";
 import { tr } from "./content/tr.mjs";
 import { en } from "./content/en.mjs";
 import { ar } from "./content/ar.mjs";
@@ -10,7 +15,28 @@ import { ar } from "./content/ar.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
 const locales = { tr, en, ar };
-const pageKeys = [
+
+export const productRouteMap = {
+  "trailer-1500-3000": "productTrailer3000",
+  "special-2500": "productSpecial2500",
+  "truck-1000-1200": "productTruck1200",
+  "trailer-1000-1200": "productTrailer1200",
+  "truck-800": "productTruck800",
+  "trailer-800": "productTrailer800",
+  "truck-300-500": "productTruck500",
+  "trailer-400-600": "productTrailer600",
+  "drill-pipes": "productPipes",
+  "drill-bits": "productBits",
+  "mud-pumps": "productPumps",
+};
+
+export const guideRouteMap = {
+  "how-to-choose-water-well-drilling-rig": "guideWaterWell",
+  "iadc-roller-cone-drill-bit-classification": "guideBits",
+  "international-drilling-rig-rfq-checklist": "guideRfq",
+};
+
+const basePageKeys = [
   "home",
   "about",
   "services",
@@ -25,6 +51,11 @@ const pageKeys = [
   "references",
   "contact",
 ];
+
+const productPageKeys = Object.values(productRouteMap);
+const guidePageKeys = ["guideHub", ...Object.values(guideRouteMap)];
+const allPageKeys = [...basePageKeys, ...productPageKeys, ...guidePageKeys];
+
 
 function esc(value) {
   return String(value)
@@ -124,6 +155,7 @@ function navLinks(lang, current) {
 
   const isServicesActive = ["services", "water", "geothermal", "geotechnical", "mineral"].includes(current);
   const isEquipActive = ["equipment", "rigs", "pipes", "bits"].includes(current);
+  const isGuideActive = ["guides", "guideHub", "guideWaterWell", "guideBits", "guideRfq"].includes(current);
 
   return `
     <a class="nav-link" href="${r.home}"${current === "home" ? ' aria-current="page"' : ''}>${esc(copy.crumbs.home)}</a>
@@ -173,6 +205,7 @@ function navLinks(lang, current) {
       </div>
     </div>
 
+    <a class="nav-link" href="${r.guideHub}"${isGuideActive ? ' aria-current="page"' : ''}>${esc(copy.nav.guides || (isTr ? "Teknik Rehber" : isAr ? "الأدلة الهندسية" : "Engineering Guides"))}</a>
     <a class="nav-link" href="${r.references}"${current === "references" ? ' aria-current="page"' : ''}>${esc(copy.nav.references)}</a>
     <a class="nav-link" href="${r.contact}"${current === "contact" ? ' aria-current="page"' : ''}>${esc(copy.nav.contact)}</a>
   `;
@@ -200,6 +233,7 @@ function mobileNavLinks(lang, current) {
       <a href="${r.pipes}">↳ ${isTr ? "Sondaj Tijleri (Borular)" : isAr ? "أنابيب الحفر" : "Drill Pipes"}</a>
       <a href="${r.bits}">↳ ${isTr ? "Sondaj Matkapları (IADC)" : isAr ? "رؤوس الحفر" : "Drill Bits"}</a>
     </div>
+    <a href="${r.guideHub}" style="font-weight:700;color:var(--cyan);">${esc(copy.nav.guides || (isTr ? "Teknik Mühendislik Rehberi" : isAr ? "الأدلة الهندسية" : "Engineering Guides"))}</a>
     <a href="${r.references}">${esc(copy.nav.references)}</a>
     <a href="${r.contact}" style="font-weight:700;color:var(--signal);">${esc(copy.nav.contact)} & Teklif Formu</a>
   `;
@@ -550,9 +584,11 @@ function layout({ lang, pageKey, title, description, extraHead = "", schema = []
     ? pageKey
     : ["water", "geothermal", "geotechnical", "mineral"].includes(pageKey)
       ? "services"
-      : ["rigs", "pipes", "bits"].includes(pageKey)
+      : ["rigs", "pipes", "bits", ...productPageKeys].includes(pageKey)
         ? "equipment"
-        : "";
+        : guidePageKeys.includes(pageKey)
+          ? "guides"
+          : "";
 
   const graph = {
     "@context": "https://schema.org",
@@ -602,6 +638,12 @@ function layout({ lang, pageKey, title, description, extraHead = "", schema = []
   <meta name="twitter:image" content="${esc(originUrl("/assets/hero-field-rig.jpg"))}" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#EA580C" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="KD SONDAJ" />
+  <link rel="apple-touch-icon" href="/assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -1313,6 +1355,379 @@ function pageContact(lang) {
   });
 }
 
+function renderProductPage(lang, product) {
+  const copy = locales[lang];
+  const p = product[lang] || product.tr;
+  const isTr = lang === "tr";
+  const isAr = lang === "ar";
+  const productRouteKey = productRouteMap[product.id];
+  const path = routes[lang][productRouteKey];
+
+  const specsRows = product.specsTable.map((s) => `
+    <tr>
+      <td>${esc(s[lang] || s.tr || s.param)}</td>
+      <td>${esc(s.val)}</td>
+    </tr>
+  `).join("");
+
+  const appItems = p.applications.map((app) => `
+    <li style="margin-bottom:0.6rem;display:flex;align-items:flex-start;gap:0.6rem;">
+      <span style="color:var(--signal);font-weight:700;">✓</span>
+      <span>${esc(app)}</span>
+    </li>
+  `).join("");
+
+  const geoFaq = p.geoAnswers.map((item) => `
+    <div class="geo-qa-item">
+      <strong>Q: ${esc(item.q)}</strong>
+      <p>A: ${esc(item.a)}</p>
+    </div>
+  `).join("");
+
+  const main = `
+  <section class="page-hero">
+    <div class="wrap">
+      ${crumbsHtml(lang, [
+        { name: copy.nav.equipment, path: routes[lang].equipment },
+        { name: isTr ? "Sondaj Makineleri" : isAr ? "حفارات الحفر" : "Drilling Rigs", path: routes[lang].rigs },
+        { name: p.name, path: path }
+      ])}
+      <div class="telemetry-pill shimmer-badge">
+        <span class="beacon-dot"></span>
+        <span>${esc(product.depthStr)} // ${esc(product.hp || "HEAVY DUTY")}</span>
+      </div>
+      <h1>${esc(p.h1)}</h1>
+      <p class="lead">${esc(p.tagline)}</p>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:1.5rem;">
+    <div class="wrap">
+      <div class="product-detail-layout">
+        <!-- Main Technical Presentation -->
+        <div>
+          <div class="product-gallery-card reveal-on-scroll">
+            <img src="${product.image || "/assets/trailer-rig.jpg"}" alt="${esc(p.name)}" />
+          </div>
+
+          <div class="panel reveal-on-scroll" style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.75rem;margin-bottom:2rem;">
+            <h2 style="font-size:1.35rem;margin-bottom:0.75rem;">${isTr ? "Mühendislik İncelemesi & Tasarım Amacı" : isAr ? "نظرة عامة على التصميم الهندسي" : "Engineering Overview & Purpose"}</h2>
+            <p style="font-size:1.02rem;line-height:1.75;color:var(--text-soft);margin-bottom:1.25rem;">${esc(p.summary)}</p>
+            
+            <h3 style="font-size:1.1rem;margin-top:1.5rem;margin-bottom:0.75rem;">${isTr ? "Saha Uygulama Alanları" : isAr ? "مجالات التطبيق الميداني" : "Field Applications"}</h3>
+            <ul style="list-style:none;padding:0;margin:0 0 1.5rem;">
+              ${appItems}
+            </ul>
+
+            <div style="background:var(--bg-subtle);border-left:4px solid var(--signal);padding:1rem 1.25rem;border-radius:var(--radius-xs);">
+              <strong style="color:var(--text-main);display:block;margin-bottom:0.35rem;">${isTr ? "Formasyon ve Kayaç Uyumluluğu" : isAr ? "التوافق مع الطبقات الجيولوجية" : "Geological Stratum Compatibility"}:</strong>
+              <p style="margin:0;font-size:0.92rem;color:var(--text-soft);">${esc(p.formations)}</p>
+            </div>
+          </div>
+
+          <div class="reveal-on-scroll">
+            <h2 style="font-size:1.35rem;margin-bottom:0.75rem;">${isTr ? "Detaylı Teknik Spesifikasyon Tablosu" : isAr ? "جدول المواصفات الفنية التفصيلية" : "Technical Specifications Table"}</h2>
+            <div class="table-wrap">
+              <table class="product-specs-table">
+                <thead>
+                  <tr>
+                    <th>${isTr ? "Mühendislik Parametresi" : isAr ? "المعيار الهندسي" : "Engineering Parameter"}</th>
+                    <th>${isTr ? "Sertifikalı Değer / Kapasite" : isAr ? "القيمة المعتمدة / السعة" : "Certified Rating / Metric"}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${specsRows}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- GEO Q&A Section -->
+          <div class="geo-qa-box reveal-on-scroll">
+            <h3>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              ${isTr ? "Sık Sorulan Mühendislik Soruları & Cevapları" : isAr ? "الأسئلة الهندسية الشائعة وإجاباتها" : "Engineering Q&A Direct Answers"}
+            </h3>
+            ${geoFaq}
+          </div>
+        </div>
+
+        <!-- Sticky RFQ & Commercial Inquire Sidebar -->
+        <aside class="reveal-on-scroll">
+          <div class="rfq-sticky-card">
+            <span class="telemetry-pill shimmer-badge" style="margin-bottom:1rem;"><span class="beacon-dot"></span> B2B DOĞRUDAN FABRİKA</span>
+            <h3 style="font-size:1.35rem;margin-bottom:0.5rem;">${esc(p.name)}</h3>
+            <div class="rfq-price-tag">${isTr ? "Proje Bazlı Özel Fiyat Teklifi" : isAr ? "عرض سعر مخصص حسب المواصفات" : "Custom B2B Quotation"}</div>
+            <p style="font-size:0.88rem;color:var(--text-soft);margin-bottom:1.25rem;">
+              ${isTr ? "Kuyu derinliği, şasi tercihi (MAN / Mercedes / Dorse), çamur pompası ve tij çaplarına göre doğrudan mühendislik teklifi alın." : isAr ? "احصل على عرض سعر مباشر من المصنع حسب متطلبات العمق والشاسيه ومضخة الطين." : "Direct factory quote tailored to your borehole depth, chassis brand, mud hydraulics, and drill string."}
+            </p>
+
+            <ul class="rfq-feature-list">
+              <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ${isTr ? "CE & ISO 9001:2015 İmalat Güvencesi" : isAr ? "شهادات الجودة الأوروبية CE و ISO" : "CE & ISO 9001:2015 Certified Manufacturing"}</li>
+              <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ${isTr ? "Uluslararası Liman Teslimi (FOB Mersin / CIF)" : isAr ? "تسليم الموانئ الخليجية (FOB / CIF)" : "Worldwide Port Delivery (FOB Mersin / CIF Jebel Ali / Jeddah)"}</li>
+              <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ${isTr ? "1 Yıl Fabrika Garantisi & Süpervizör Eğitimi" : isAr ? "ضمان مصنعي وتدريب ميداني للمشغلين" : "1-Year Factory Warranty & On-site Field Commissioning"}</li>
+            </ul>
+
+            <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem;">
+              <a class="btn btn-wa" href="https://wa.me/${site.whatsappE164}?text=${encodeURIComponent(isTr ? `Merhaba, ${p.name} makinesi için teknik şartname ve fiyat teklifi talep ediyorum.` : isAr ? `مرحباً، أطلب عرض سعر ومواصفات لحفارة ${p.name}.` : `Hello, I request technical specs and quotation for ${p.name}.`)}" target="_blank" rel="noopener" style="width:100%;justify-content:center;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
+                WhatsApp: 0541 191 63 01
+              </a>
+              <a class="btn btn-signal" href="${routes[lang].contact}" style="width:100%;justify-content:center;">
+                📝 ${isTr ? "Resmi Teklif Formu Doldur" : isAr ? "نموذج طلب عرض السعر" : "Submit Official RFQ Form"}
+              </a>
+              <a class="btn btn-secondary" href="tel:+905411916301" style="width:100%;justify-content:center;">
+                📞 +90 541 191 63 01
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>`;
+
+  // B2B Google 2026 Developer Product Schema (Zero deceptive Merchant Center errors)
+  const productSchema = {
+    "@type": "Product",
+    "@id": `${originUrl(path)}#product`,
+    name: p.name,
+    description: p.seoDesc,
+    image: originUrl(product.image || "/assets/trailer-rig.jpg"),
+    category: "Industrial Drilling Machinery",
+    brand: {
+      "@type": "Brand",
+      name: site.name
+    },
+    manufacturer: {
+      "@id": `${site.origin}/#organization`
+    },
+    additionalProperty: product.specsTable.map((s) => ({
+      "@type": "PropertyValue",
+      name: s[lang] || s.param,
+      value: s.val
+    })),
+    offers: {
+      "@type": "Offer",
+      url: originUrl(path),
+      priceCurrency: "USD",
+      price: "0",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        description: "B2B Custom Quotation based on project depth and delivery port terms"
+      },
+      availability: "https://schema.org/PreOrder",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@id": `${site.origin}/#organization`
+      }
+    }
+  };
+
+  const faqSchema = {
+    "@type": "FAQPage",
+    mainEntity: p.geoAnswers.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a
+      }
+    }))
+  };
+
+  return layout({
+    lang,
+    pageKey: productRouteKey,
+    title: p.seoTitle,
+    description: p.seoDesc,
+    schema: [
+      breadcrumbsLd([
+        { name: copy.nav.equipment, path: routes[lang].equipment },
+        { name: isTr ? "Sondaj Makineleri" : isAr ? "حفارات الحفر" : "Drilling Rigs", path: routes[lang].rigs },
+        { name: p.name, path: path }
+      ]),
+      productSchema,
+      faqSchema
+    ],
+    main
+  });
+}
+
+function renderGuidePage(lang, guide) {
+  const copy = locales[lang];
+  const g = guide[lang] || guide.tr;
+  const isTr = lang === "tr";
+  const isAr = lang === "ar";
+  const guideRouteKey = guideRouteMap[guide.id];
+  const path = routes[lang][guideRouteKey];
+
+  const sectionsHtml = g.content.map((sec) => `
+    <h2>${esc(sec.h2)}</h2>
+    <p>${esc(sec.p)}</p>
+  `).join("");
+
+  const main = `
+  <section class="page-hero">
+    <div class="wrap">
+      ${crumbsHtml(lang, [
+        { name: isTr ? "Mühendislik Rehberi" : isAr ? "الأدلة الهندسية" : "Engineering Guides", path: routes[lang].guideHub },
+        { name: g.title, path: path }
+      ])}
+      <div class="telemetry-pill shimmer-badge">
+        <span class="beacon-dot"></span>
+        <span>${esc(guide.category)} // ${esc(guide.readingTime)}</span>
+      </div>
+      <h1>${esc(g.title)}</h1>
+      <p class="lead">${esc(g.summary)}</p>
+    </div>
+  </section>
+
+  <article class="block" style="padding-top:1rem;">
+    <div class="wrap guide-article-wrap">
+      <div class="guide-meta-bar">
+        <span>👨‍🔧 <strong>KD SONDAJ Engineering Group</strong></span>
+        <span>📅 2026 Edition</span>
+        <span>⏱️ ${esc(guide.readingTime)}</span>
+        <span>🏷️ ${esc(guide.category)}</span>
+      </div>
+
+      <div class="guide-prose reveal-on-scroll">
+        ${sectionsHtml}
+
+        <blockquote>
+          ${isTr 
+            ? "Mühendislik Tavsiyesi: Projenize en uygun kule tonajı ve tork konfigürasyonunu kuyu jeolojinize göre belirlemek için KD SONDAJ teknik ekibi ile iletişime geçebilirsiniz."
+            : isAr 
+            ? "توصية هندسية: لتحديد حمولة البرج وعزم الدوران الأمثل لطبقات أرض مشروعك، تواصل مباشرة مع الفريق الهندسي في KD SONDAJ."
+            : "Engineering Notice: For tailored hook-load ratings, torque calculation, and mud hydraulic modeling matched to your strata, contact KD SONDAJ engineering."}
+        </blockquote>
+      </div>
+
+      <div class="showcase-banner reveal-on-scroll" style="margin-top:3rem;">
+        <img class="showcase-img" src="/assets/hero-field-rig.jpg" alt="KD SONDAJ" />
+        <div class="showcase-content">
+          <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> TEKNİK DANIŞMANLIK &amp; TEKLİF</span>
+          <h3>${isTr ? "Projeniz İçin Doğru Kuleyi Birlikte Belirleyelim" : isAr ? "دعنا نحدد الحفارة المناسبة لمشروعك" : "Consult Our Drilling Engineers"}</h3>
+          <p>${isTr ? "Uzman mühendislerimiz kuyu derinliği ve arazi parametrelerinizi değerlendirerek en ekonomik ve dayanıklı makineyi önerir." : isAr ? "يقوم مهندسونا بدراسة عمق البئر والتكوين الصخري لاقتراح الحفارة الأكثر كفاءة." : "Our engineers analyze borehole depth and rock formation to recommend the most cost-effective rig package."}</p>
+          <div class="cta-row" style="margin-top:1rem;">
+            <a class="btn btn-wa" href="https://wa.me/${site.whatsappE164}?text=${encodeURIComponent(isTr ? `Merhaba, ${g.title} rehberiniz hakkında teknik danışmanlık almak istiyorum.` : isAr ? `مرحباً، أود استشارة هندسية بناءً على دليل ${g.title}.` : `Hello, I would like to consult on ${g.title}.`)}" target="_blank" rel="noopener">
+              WhatsApp: 0541 191 63 01
+            </a>
+            <a class="btn btn-signal" href="${routes[lang].contact}">
+              ${isTr ? "Teklif Formu" : isAr ? "طلب تسعير" : "Request RFQ"}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>`;
+
+  const articleSchema = {
+    "@type": "TechArticle",
+    "@id": `${originUrl(path)}#article`,
+    headline: g.title,
+    description: g.seoDesc,
+    author: {
+      "@type": "Organization",
+      name: "KD SONDAJ Senior Engineering Team",
+      url: site.origin
+    },
+    publisher: {
+      "@id": `${site.origin}/#organization`
+    },
+    datePublished: "2026-01-15T08:00:00+03:00",
+    dateModified: "2026-10-11T12:00:00+03:00",
+    inLanguage: lang
+  };
+
+  return layout({
+    lang,
+    pageKey: guideRouteKey,
+    title: g.seoTitle,
+    description: g.seoDesc,
+    schema: [
+      breadcrumbsLd([
+        { name: isTr ? "Mühendislik Rehberi" : isAr ? "الأدلة الهندسية" : "Engineering Guides", path: routes[lang].guideHub },
+        { name: g.title, path: path }
+      ]),
+      articleSchema
+    ],
+    main
+  });
+}
+
+function renderGuideHub(lang) {
+  const copy = locales[lang];
+  const isTr = lang === "tr";
+  const isAr = lang === "ar";
+  const path = routes[lang].guideHub;
+
+  const title = isTr ? "Teknik Mühendislik ve Sondaj Rehberi" : isAr ? "الأدلة الهندسية والتقنية للحفر" : "Technical Drilling Engineering Guides";
+  const desc = isTr
+    ? "Su kuyusu açma, IADC matkap sınıflandırması, kule kanca yükü hesaplama ve uluslararası sondaj makinesi alım şartnameleri üzerine teknik kaynaklar."
+    : isAr
+    ? "أدلة هندسية حول حفر آبار المياه، وتصنيف رؤوس الحفر IADC، وحسابات حمولة الأبراج، ودفاتر شروط توريد الحفارات."
+    : "Comprehensive engineering publications on water well rig selection, IADC roller cone bit classification, and international machinery procurement specifications.";
+
+  const guideCards = guideList.map((g) => {
+    const gl = g[lang] || g.tr;
+    const rKey = guideRouteMap[g.id];
+    return `
+      <article class="guide-card reveal-on-scroll">
+        <div>
+          <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> ${esc(g.category)}</span>
+          <h2 style="font-size:1.3rem;margin-bottom:0.6rem;line-height:1.4;">
+            <a href="${routes[lang][rKey]}" style="color:var(--text-main);text-decoration:none;">${esc(gl.title)}</a>
+          </h2>
+          <p style="font-size:0.92rem;color:var(--text-soft);margin-bottom:1.25rem;">${esc(gl.summary)}</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem;">
+          <span style="font-size:0.82rem;color:var(--text-muted);">${esc(g.readingTime)}</span>
+          <a class="more" href="${routes[lang][rKey]}">${isTr ? "Rehberi Oku" : isAr ? "اقرأ الدليل" : "Read Full Guide"} →</a>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  const main = `
+  <section class="page-hero">
+    <div class="wrap">
+      ${crumbsHtml(lang, [{ name: title, path: path }])}
+      <div class="telemetry-pill shimmer-badge">
+        <span class="beacon-dot"></span>
+        <span>TOPICAL AUTHORITY // GOOGLE 2026 E-E-A-T</span>
+      </div>
+      <h1>${esc(title)}</h1>
+      <p class="lead">${esc(desc)}</p>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:1.5rem;">
+    <div class="wrap">
+      <div class="cards three">
+        ${guideCards}
+      </div>
+    </div>
+  </section>`;
+
+  return layout({
+    lang,
+    pageKey: "guideHub",
+    title: isTr ? "Sondaj Makineleri & Kuyu Mühendisliği Rehberi | KD SONDAJ" : isAr ? "دليل هندسة الحفارات وآبار المياه | KD SONDAJ" : "Drilling Rig Engineering Guides & Knowledge Base | KD SONDAJ",
+    description: desc,
+    schema: [
+      breadcrumbsLd([{ name: title, path: path }]),
+      {
+        "@type": "CollectionPage",
+        name: title,
+        description: desc,
+        url: originUrl(path)
+      }
+    ],
+    main
+  });
+}
+
 function page404() {
   const copy = tr.pages.notFound;
   return `<!DOCTYPE html>
@@ -1324,6 +1739,8 @@ function page404() {
   <meta name="description" content="${esc(copy.description)}" />
   <meta name="robots" content="noindex" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#EA580C" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet" />
@@ -1367,7 +1784,7 @@ function write(path, contents) {
 
 function buildSitemap() {
   const urls = ["tr", "en", "ar"].flatMap((lang) =>
-    pageKeys.map((key) => {
+    allPageKeys.map((key) => {
       const loc = originUrl(routes[lang][key]);
       return `  <url>
     <loc>${loc}</loc>
@@ -1388,13 +1805,14 @@ ${urls.join("\n")}
 
 function buildRoutes() {
   const list = ["tr", "en", "ar"].flatMap((lang) =>
-    pageKeys.map((key) => ({
+    allPageKeys.map((key) => ({
       path: routes[lang][key],
       file: routes[lang][key] === "/" ? "index.html" : `${routes[lang][key].replace(/^\//, "")}index.html`,
       lang,
       page: key,
     }))
   );
+  list.push({ path: "/admin/", file: "admin/index.html", indexable: false });
   list.push({ path: "/404.html", file: "404.html", indexable: false });
   return JSON.stringify({ routes: list }, null, 2);
 }
@@ -1405,36 +1823,147 @@ mkdirSync(join(dist, "assets"), { recursive: true });
 cpSync(join(root, "src/styles/site.css"), join(dist, "assets/site.css"));
 cpSync(join(root, "src/js/site.js"), join(dist, "assets/site.js"));
 cpSync(join(root, "src/assets"), join(dist, "assets"), { recursive: true });
+cpSync(join(root, "src/sw.js"), join(dist, "sw.js"));
 
 for (const lang of ["tr", "en", "ar"]) {
-  for (const key of pageKeys) {
+  // Base Pages (13)
+  for (const key of basePageKeys) {
     write(fileFor(routes[lang][key]), renderers[key](lang));
+  }
+
+  // 11 Product Deep Pages
+  for (const product of productList) {
+    const rKey = productRouteMap[product.id];
+    write(fileFor(routes[lang][rKey]), renderProductPage(lang, product));
+  }
+
+  // Guide Hub (1)
+  write(fileFor(routes[lang].guideHub), renderGuideHub(lang));
+
+  // 3 Topical Authority Guides
+  for (const guide of guideList) {
+    const rKey = guideRouteMap[guide.id];
+    write(fileFor(routes[lang][rKey]), renderGuidePage(lang, guide));
   }
 }
 
+// Admin / Command Center
+write(join(dist, "admin/index.html"), generateAdminDashboardHtml());
+
+// 404 & Sitemap
 write(join(dist, "404.html"), page404());
 write(join(dist, "sitemap.xml"), buildSitemap());
+
+// robots.txt with explicit OAI-SearchBot and other crawler permissions
 write(
   join(dist, "robots.txt"),
-  `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${site.origin}/sitemap.xml\n`
+  `User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: Applebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: ${site.origin}/sitemap.xml
+`
 );
+
+// IndexNow verification key file at domain root
+write(join(dist, `${INDEXNOW_KEY}.txt`), INDEXNOW_KEY);
+
+// LLMs.txt for Generative Engine Optimization (GEO)
+write(join(dist, "llms.txt"), generateLlmsTxt());
+write(join(dist, "llms-full.txt"), generateLlmsFullTxt());
+
+// Build routes list
 write(join(dist, "manus-routes.json"), buildRoutes());
+
+// Progressive Web App Manifest
 write(
   join(dist, "site.webmanifest"),
   JSON.stringify(
     {
-      name: "KD SONDAJ",
+      name: "KD SONDAJ — Sondaj Makineleri & Ekipman",
       short_name: "KD SONDAJ",
+      description: "KD SONDAJ 1500–3000m Dorse ve Kamyon Üstü Sondaj Makineleri, Ekipman ve Uluslararası Mühendislik",
       start_url: "/",
-      display: "browser",
+      scope: "/",
+      display: "standalone",
       background_color: "#FFFFFF",
       theme_color: "#EA580C",
+      orientation: "portrait-primary",
       lang: "tr",
-      icons: [{ src: "/assets/favicon.svg", type: "image/svg+xml", sizes: "any" }],
+      categories: ["business", "productivity", "utilities"],
+      icons: [
+        {
+          src: "/assets/favicon.svg",
+          sizes: "any",
+          type: "image/svg+xml",
+          purpose: "any maskable"
+        },
+        {
+          src: "/assets/logo.svg",
+          sizes: "any",
+          type: "image/svg+xml",
+          purpose: "any"
+        }
+      ],
+      shortcuts: [
+        {
+          name: "Teklif İste",
+          short_name: "Teklif",
+          description: "Mühendislik teklif formu",
+          url: "/iletisim/",
+          icons: [{ src: "/assets/favicon.svg", sizes: "any" }]
+        },
+        {
+          name: "Sondaj Makineleri",
+          short_name: "Kuleler",
+          description: "300–3000m Kule Kataloğu",
+          url: "/ekipman/sondaj-makineleri/",
+          icons: [{ src: "/assets/favicon.svg", sizes: "any" }]
+        },
+        {
+          name: "WhatsApp Destek",
+          short_name: "WhatsApp",
+          description: "0541 191 63 01",
+          url: "https://wa.me/905411916301",
+          icons: [{ src: "/assets/favicon.svg", sizes: "any" }]
+        }
+      ]
     },
     null,
     2
   )
 );
 
-console.log("Built KD SONDAJ static site into dist/");
+console.log(`Built KD SONDAJ static site into dist/ (Total ${allPageKeys.length * 3} localized pages + admin + PWA + GEO)`);
+

@@ -1,16 +1,69 @@
 {
-  "name": "KD SONDAJ",
+  "name": "KD SONDAJ — Sondaj Makineleri & Ekipman",
   "short_name": "KD SONDAJ",
+  "description": "KD SONDAJ 1500–3000m Dorse ve Kamyon Üstü Sondaj Makineleri, Ekipman ve Uluslararası Mühendislik",
   "start_url": "/",
-  "display": "browser",
+  "scope": "/",
+  "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#EA580C",
+  "orientation": "portrait-primary",
   "lang": "tr",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
   "icons": [
     {
       "src": "/assets/favicon.svg",
+      "sizes": "any",
       "type": "image/svg+xml",
-      "sizes": "any"
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Teklif İste",
+      "short_name": "Teklif",
+      "description": "Mühendislik teklif formu",
+      "url": "/iletisim/",
+      "icons": [
+        {
+          "src": "/assets/favicon.svg",
+          "sizes": "any"
+        }
+      ]
+    },
+    {
+      "name": "Sondaj Makineleri",
+      "short_name": "Kuleler",
+      "description": "300–3000m Kule Kataloğu",
+      "url": "/ekipman/sondaj-makineleri/",
+      "icons": [
+        {
+          "src": "/assets/favicon.svg",
+          "sizes": "any"
+        }
+      ]
+    },
+    {
+      "name": "WhatsApp Destek",
+      "short_name": "WhatsApp",
+      "description": "0541 191 63 01",
+      "url": "https://wa.me/905411916301",
+      "icons": [
+        {
+          "src": "/assets/favicon.svg",
+          "sizes": "any"
+        }
+      ]
     }
   ]
 }

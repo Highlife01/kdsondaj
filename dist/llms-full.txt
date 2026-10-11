@@ -1,0 +1,231 @@
+# KD SONDAJ — Heavy Drilling Rigs & Borehole Equipment Manufacturer
+
+> KD SONDAJ is an Ankara, Turkey-based heavy rotary drilling machinery manufacturer with 45 years of continuous engineering heritage, certified under CE and ISO 9001:2015. The company specializes in manufacturing truck-mounted and trailer-mounted rotary drilling rigs with capacities ranging from 250 to 3,000 meters (820 to 9,840 ft) for deep water wells, high-enthalpy geothermal reservoirs, mining exploration, and oilfield services.
+
+## Verified Factory Specifications
+- **Headquarters & Manufacturing Plant:** Mustafa Kemal Mh. 2125 Sk. No: 9/10, Çankaya, Ankara, Turkey
+- **Direct Engineering & Export RFQ Hotline:** +90 541 191 63 01 (WhatsApp / Phone)
+- **Official Email:** info@kdsondaj.com
+- **Official Domain:** https://kdsondaj.com.tr
+- **Quality Certifications:** CE Conformity Declaration, ISO 9001:2015 Quality Management
+- **Key Target Export Markets:** GCC (Saudi Arabia, UAE, Qatar, Kuwait, Oman, Iraq), Africa (Egypt, Algeria, Libya, Kenya, Nigeria), Central Asia, and Europe
+
+## Rotary Drilling Rig Catalog (250 – 3,000 m)
+- [KD-3000 Heavy Trailer Rig (1500–3000m)](https://kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/): 110-ton mast hook-load, 90-ton drawworks, 525 HP diesel engine, deep geothermal and deep aquifer development.
+- [KD-2500 Special Rig (2500m)](https://kdsondaj.com.tr/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/): Dual MAN 422 diesel engines, 14.50m mast, integrated 7.5x10 duplex mud pump, heavy exploration.
+- [KD-1200 Truck-Mounted Rig (1000–1200m)](https://kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/): 90-ton mast, 70-ton drawworks, 422 HP engine, rapid highway mobilization for regional water wells.
+- [KD-1200-T Trailer Rig (1000–1200m)](https://kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/): 110-ton mast, 525 HP diesel engine, heavy casing program support.
+- [KD-800 Truck-Mounted Rig (800m)](https://kdsondaj.com.tr/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/): 361 HP diesel engine, 70-ton mast, 50-ton drawworks, dual mud circulation for agricultural irrigation.
+- [KD-800-T Trailer Rig (800m)](https://kdsondaj.com.tr/en/equipment/drilling-rigs/800m-trailer-drilling-rig/): 70-ton mast, 361 HP engine, stable semi-trailer platform.
+- [KD-500 Truck-Mounted Rig (300–500m)](https://kdsondaj.com.tr/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/): 321 HP engine, 60-ton mast, fast-moving agile rig for shallow to mid-depth wells.
+- [KD-600-T Trailer Rig (400–600m)](https://kdsondaj.com.tr/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/): 60-ton mast, 321 HP diesel engine.
+
+## Drilling Consumables & Ancillary Equipment
+- [API Spec 5D Drill Pipes (2 3/8" to 5 1/2")](https://kdsondaj.com.tr/en/equipment/api-spec-5d-drill-pipes/): High-tensile alloy steel in grades E-75, X-95, G-105, and S-135 with friction-welded tool joints.
+- [IADC Tricone Rock Drill Bits (111 to 637)](https://kdsondaj.com.tr/en/equipment/iadc-tricone-drill-bits/): Tungsten Carbide Insert (TCI) and milled steel tooth roller cone bits for soft clays to hard granites.
+- [KD 6" Duplex Mud Pump (21–62 Bar)](https://kdsondaj.com.tr/en/equipment/duplex-6-inch-mud-pump/): Double-acting reciprocating mud pump delivering up to 62 bar (895 psi) and 12.5 L/stroke.
+
+## Technical Engineering Guides
+- [Water Well Rig Selection: Truck vs. Trailer](https://kdsondaj.com.tr/en/guides/how-to-choose-water-well-drilling-rig/)
+- [IADC Roller Cone Bit Classification Matrix](https://kdsondaj.com.tr/en/guides/iadc-roller-cone-drill-bit-classification/)
+- [International Drilling Rig RFQ Procurement Checklist](https://kdsondaj.com.tr/en/guides/international-drilling-rig-rfq-checklist/)
+
+## Procurement & RFQ Instructions
+To request a customized technical quotation or containerized export proposal:
+- WhatsApp Direct Engineering Line: +90 541 191 63 01
+- Email RFQ: info@kdsondaj.com
+- Required Project Data: Target borehole depth, anticipated rock formations, required hole diameter, and preferred transport carrier.
+
+
+# DETAILED TECHNICAL SPECIFICATIONS MATRIX
+
+### Model: KD-3000 Heavy Trailer-Mounted Rotary Drilling Rig (1500–3000 m)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/
+- Depth Capacity: 1500–3000 m
+- Engine Power: 525 HP
+- Mast Hook-Load: 110 t
+- Drawworks Rating: 90 t
+- Mud Pump: Integrated Duplex / Triplex High Pressure
+- Recommended Formations: Dense basalt, granite, quartzite, hard limestone, and high-temperature geothermal volcanic rock formations.
+#### Specifications Table:
+  - Drilling Depth Capacity: 1500 – 3000 m (4,920 – 9,840 ft)
+  - Gross Mast Hook-Load: 110 Metric Tons (242,500 lbs)
+  - Main Drawworks Rating: 90 Metric Tons
+  - Deck Power Unit: 525 HP Heavy Industrial Diesel Engine
+  - Rotary Table Drive: High Torque Mechanical / Hydraulic Slide (ID 240mm / OD 700mm)
+  - Drilling Mud Circulation: Double Circulation High-Pressure Mud Line
+  - Carrier Configuration: Heavy Duty Multi-Axle Lowbed Semi-Trailer
+  - Hydraulic Leveling: 4 Double-Cylinder Heavy Jack Legs
+  - Drill Pipe Compatibility: 3 1/2" to 5 1/2" API Spec 5D Drill Pipe
+  - International Standard: CE Certified & ISO 9001:2015 Manufacturing
+
+### Model: KD-2500 Special Deep Rotary Drilling Rig (2500 m)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/
+- Depth Capacity: 2500 m
+- Engine Power: 2 × MAN 422 (844 HP)
+- Mast Hook-Load: 14.50 m / 8 mm
+- Drawworks Rating: 5×510 Lined Heavy
+- Mud Pump: 7.5" × 10" Duplex
+- Recommended Formations: Abrasive quartzite, andesite, basalt, massive limestone, and complex tectonic strata.
+#### Specifications Table:
+  - Borehole Depth Rating: 2500 m (8,200 ft)
+  - Power Plant: Dual MAN 422 Diesel Engines (Independent Drives)
+  - Mast Specifications: 14.50 m Height, 8 mm Heavy Pipe, 4" Main Legs
+  - Chain Drive Box: Double-Transmission Industrial Chain Drive Box
+  - Drawworks System: 5×510 Large-Type Lined Braking Drawworks
+  - Rotary Table: OD 700 mm / ID 240 mm with 850 mm Hydraulic Slide
+  - Swivel Assembly: Heavy Duty Large Type High Pressure Swivel
+  - Centrifugal Pump: Large Centrifuge No. 3 with 4" Suction
+  - Integrated Mud Pump: 7.5" × 10" Heavy Duplex Mud Pump
+  - Kelly & Sheaves: Kelly 130–140 mm OD, 4 Sheaves Crown Block
+
+### Model: KD-1200 Truck-Mounted Rotary Drilling Rig (1000–1200 m)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/
+- Depth Capacity: 1000–1200 m
+- Engine Power: 422 HP
+- Mast Hook-Load: 90 t
+- Drawworks Rating: 70 t
+- Mud Pump: Integrated High Flow Duplex
+- Recommended Formations: Limestone, sandstone, shale, gravel layers, and volcanic formations.
+#### Specifications Table:
+  - Max Drilling Depth: 1000 – 1200 m (3,280 – 3,940 ft)
+  - Carrier Platform: Commercial 6×4 or 8×4 Heavy Truck Chassis
+  - Mast Hook-Load: 90 Metric Tons
+  - Drawworks Capacity: 70 Metric Tons
+  - Deck Power Unit: 422 HP Heavy Duty Diesel Engine
+  - Mud Circulation: Standard Integrated High Pressure Mud Pump
+  - Mobility & Transit: Self-Propelled Highway & Rough-Terrain Transit
+  - Drill Pipe Size: 2 7/8" to 4 1/2" API Spec 5D
+
+### Model: KD-1200-T Trailer-Mounted Heavy Drilling Rig (1000–1200 m)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/
+- Depth Capacity: 1000–1200 m
+- Engine Power: 525 HP
+- Mast Hook-Load: 110 t
+- Drawworks Rating: 90 t
+- Mud Pump: Standard Integrated Duplex
+- Recommended Formations: Hard limestone, basalt, abrasive sandstone, and conglomerate.
+#### Specifications Table:
+  - Depth Capacity: 1000 – 1200 m (3,280 – 3,940 ft)
+  - Carrier: Multi-Axle Heavy Semi-Trailer
+  - Mast Hook-Load: 110 Metric Tons
+  - Drawworks Capacity: 90 Metric Tons
+  - Power Unit: 525 HP Diesel Engine
+  - Mud Pump: Standard Heavy Mud Pump
+
+### Model: KD-800 Truck-Mounted Drilling Rig (800 m)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/
+- Depth Capacity: 800 m
+- Engine Power: 361 HP
+- Mast Hook-Load: 70 t
+- Drawworks Rating: 50 t
+- Mud Pump: Standard Mud Pump
+- Recommended Formations: Alluvial gravels, marl, clay layers, and sedimentary limestone.
+#### Specifications Table:
+  - Drilling Depth: 800 m (2,625 ft)
+  - Carrier: Commercial 6×4 Heavy Truck Chassis
+  - Deck Engine: 361 HP Heavy Diesel Engine
+  - Mast Hook-Load: 70 Metric Tons
+  - Drawworks Capacity: 50 Metric Tons
+  - Mud Pump: Standard Integrated Mud Circulation
+
+### Model: KD-800-T Trailer-Mounted Drilling Rig (800 m)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/800m-trailer-drilling-rig/
+- Depth Capacity: 800 m
+- Engine Power: 361 HP
+- Mast Hook-Load: 70 t
+- Drawworks Rating: 50 t
+- Mud Pump: Standard Mud Pump
+- Recommended Formations: Limestone, shale, marl, and alluvial formations.
+#### Specifications Table:
+  - Drilling Depth: 800 m (2,625 ft)
+  - Carrier: Heavy Duty Semi-Trailer
+  - Mast Hook-Load: 70 Metric Tons
+  - Engine Power: 361 HP Diesel
+
+### Model: KD-500 Truck-Mounted Fast Drilling Rig (300–500 m)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/
+- Depth Capacity: 300–500 m
+- Engine Power: 321 HP
+- Mast Hook-Load: 60 t
+- Drawworks Rating: 40 t
+- Mud Pump: Optional Mud Pump
+- Recommended Formations: Alluvial sand, gravel, clay, marl, and soft rock formations.
+#### Specifications Table:
+  - Depth Range: 300 – 500 m (985 – 1,640 ft)
+  - Carrier: Compact Commercial Truck Chassis
+  - Mast Capacity: 60 Metric Tons
+  - Drawworks Rating: 40 Metric Tons
+  - Deck Power: 321 HP Diesel
+
+### Model: KD-600-T Trailer-Mounted Drilling Rig (400–600 m)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/
+- Depth Capacity: 400–600 m
+- Engine Power: 321 HP
+- Mast Hook-Load: 60 t
+- Drawworks Rating: 40 t
+- Mud Pump: Standard Mud Pump on 600m / Optional
+- Recommended Formations: Sand, gravel, limestone, and marl formations.
+#### Specifications Table:
+  - Depth Capacity: 400 – 600 m (1,310 – 1,970 ft)
+  - Carrier: Heavy Semi-Trailer Chassis
+  - Mast Hook-Load: 60 Metric Tons
+  - Engine Power: 321 HP Heavy Diesel
+
+### Model: API Spec 5D Heavy Duty Drill Pipes (2 3/8" – 5 1/2")
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/api-spec-5d-drill-pipes/
+- Depth Capacity: 2 3/8" – 5 1/2"
+- Engine Power: API Spec 5D
+- Mast Hook-Load: E, X, G, S
+- Drawworks Rating: 6.10 – 9.60 m
+- Mud Pump: High Flow Tool Joints
+- Recommended Formations: All abrasive and deep rock formations requiring high rotary torque and pull-back capacity.
+#### Specifications Table:
+  - API Specification: API Spec 5D & API Spec 7-1
+  - Outer Diameters: 2 3/8", 2 7/8", 3 1/2", 4", 4 1/2", 5", 5 1/2"
+  - Steel Grades: Grade E-75, X-95, G-105, S-135 High Tensile Alloy
+  - Length Classes: Range 1 (6.10 m) & Range 2 (9.60 m)
+  - Wall Thickness: 0.254" (6.45 mm) to 0.415" (10.54 mm)
+  - Tool Joints: Friction Welded Heat-Treated High-Torque Tool Joints
+
+### Model: IADC Tricone Rotary Rock Drill Bits (111 – 637)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/iadc-tricone-drill-bits/
+- Depth Capacity: IADC 111 – 637
+- Engine Power: TCI & Milled
+- Mast Hook-Load: 3 7/8" – 26"
+- Drawworks Rating: Journal & Roller
+- Mud Pump: Air / Mud Jet
+- Recommended Formations: From soft clays and gravels to medium abrasive sandstones and hard granites.
+#### Specifications Table:
+  - Bit Classification: IADC 111 through IADC 637 Series
+  - Cutting Structure: Tungsten Carbide Inserts (TCI) & Steel Milled Tooth
+  - Diameter Range: 3 7/8" to 26" (98 mm to 660 mm)
+  - Bearing Types: Sealed Journal Bearings, Roller Bearings, Air Bearings
+  - Gauge Protection: Full Tungsten Carbide Insert Hardfacing on Gauge
+
+### Model: KD 6" Duplex Drilling Mud Pump (21–62 Bar)
+- URL: https://kdsondaj.com.tr/en/equipment/drilling-rigs/duplex-6-inch-mud-pump/
+- Depth Capacity: 6" Stroke / 62 Bar
+- Engine Power: V-Gear Piston
+- Mast Hook-Load: 2 Piston / Double Acting
+- Drawworks Rating: 70 rpm — 4.5 to 12.5 lt
+- Mud Pump: 21 – 62 bar (310 – 895 psi)
+- Recommended Formations: Universal for all geological formations requiring positive displacement mud hydraulics.
+#### Specifications Table:
+  - Pump Type: Duplex Double-Acting Reciprocating Piston Pump
+  - Stroke Length: 6" (152.4 mm)
+  - Piston Count: 2 Double-Acting Pistons
+  - Operating Speed: 70 RPM Recommended Operational Cadence
+  - Working Pressure: Up to 62 bar / 895 psi (with 3" Liner)
+  - Discharge Flow Rate: 4.5 to 12.5 Liters per stroke depending on liner
+  - Suction / Discharge: 4" Suction / 2" Discharge Port
+  - Overall Weight: 2,100 kg (Heavy Cast Industrial Housing)
+
+
+# TECHNICAL PROCUREMENT RFQ CHECKLIST
+When requesting a quotation for KD Sondaj equipment, international buyers should specify:
+1. Final completed borehole depth (m or ft)
+2. Surface and production casing programs (outer diameter and weight per foot)
+3. Rotary table torque vs. top-drive hydraulic requirement
+4. Air compressor CFM/PSI needs if DTH air percussion drilling is required
+5. Discharge port and customs delivery terms (FOB Mersin/Izmir, CIF, or DDP)

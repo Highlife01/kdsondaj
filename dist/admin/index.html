@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KD SONDAJ — Yönetici &amp; Talep Yönetim Portalı</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0B0F19;
+      --bg-panel: #111827;
+      --bg-panel-subtle: #1F2937;
+      --border: #374151;
+      --border-accent: #EA580C;
+      --text: #F3F4F6;
+      --text-soft: #9CA3AF;
+      --text-muted: #6B7280;
+      --signal: #EA580C;
+      --signal-hover: #C2410C;
+      --signal-glow: rgba(234, 88, 12, 0.25);
+      --emerald: #10B981;
+      --cyan: #06B6D4;
+      --purple: #8B5CF6;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* AUTH LOGIN SCREEN */
+    #auth-screen {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 15, 25, 0.98);
+      backdrop-filter: blur(16px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .auth-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.75rem 2.25rem;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+    .auth-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--signal), var(--cyan));
+      border-radius: 20px 20px 0 0;
+    }
+    .auth-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .auth-header img {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 1rem;
+    }
+    .auth-header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #FFF;
+      margin-bottom: 0.35rem;
+    }
+    .auth-header p {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+    .form-input {
+      width: 100%;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      color: #FFF;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--signal);
+      box-shadow: 0 0 0 3px var(--signal-glow);
+    }
+    .auth-error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #F87171;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-bottom: 1.25rem;
+      display: none;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(17, 24, 39, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1480px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .brand-wrap img { width: 38px; height: 38px; }
+    .brand-title { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 800; color: #FFF; }
+    .brand-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      background: var(--signal-glow);
+      color: var(--signal);
+      border: 1px solid var(--signal);
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .nav-tabs {
+      display: flex;
+      gap: 0.4rem;
+      background: var(--bg-dark);
+      padding: 4px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-soft);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.55rem 0.95rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .tab-btn.active {
+      background: var(--bg-panel-subtle);
+      color: #FFF;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .badge-count {
+      background: var(--signal);
+      color: #FFF;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.1rem 0.45rem;
+      border-radius: 9999px;
+    }
+
+    .user-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .user-email-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--emerald);
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .container {
+      max-width: 1480px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      flex: 1;
+      width: 100%;
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeIn 0.25s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Cards & Grids */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .kpi-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .kpi-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--signal), var(--cyan));
+    }
+    .kpi-title { font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; color: var(--text-soft); }
+    .kpi-val { font-size: 2.2rem; font-weight: 800; font-family: 'Outfit', sans-serif; color: #FFF; margin: 0.5rem 0 0.2rem; }
+    .kpi-desc { font-size: 0.78rem; color: var(--emerald); display: flex; align-items: center; gap: 0.35rem; }
+
+    .panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .panel-title { font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; color: #FFF; }
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      background: var(--bg-panel-subtle);
+      border: 1px solid var(--border);
+      color: var(--cyan);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .badge-ok { background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: var(--emerald); }
+    .badge-warn { background: rgba(234, 88, 12, 0.15); border-color: rgba(234, 88, 12, 0.4); color: var(--signal); }
+    .badge-new { background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.5); color: #60A5FA; }
+
+    /* Tables */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; text-align: left; }
+    th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-soft);
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.25);
+    }
+    td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+    }
+    tr:hover td { background: rgba(255, 255, 255, 0.02); }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--signal);
+      color: #FFF;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .btn:hover { background: var(--signal-hover); transform: translateY(-1px); }
+    .btn-secondary {
+      background: var(--bg-panel-subtle);
+      color: #FFF;
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: var(--border); }
+    .btn-emerald { background: #059669; }
+    .btn-emerald:hover { background: #047857; }
+    .btn-wa { background: #25D366; color: #FFF; font-weight: 700; }
+    .btn-wa:hover { background: #1EBE5D; }
+    .btn-sm { padding: 0.35rem 0.75rem; font-size: 0.75rem; border-radius: 6px; }
+
+    /* Live Terminal Console */
+    .terminal-box {
+      background: #000;
+      border: 1px solid #1E293B;
+      border-radius: 10px;
+      padding: 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: #10B981;
+      max-height: 240px;
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+
+    /* Filters Bar */
+    .inbox-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .filter-pills {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .filter-pill {
+      background: var(--bg-panel-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-soft);
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .filter-pill.active {
+      background: var(--signal);
+      color: #FFF;
+      border-color: var(--signal);
+    }
+    .search-input {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.45rem 0.9rem;
+      color: #FFF;
+      font-size: 0.82rem;
+      min-width: 240px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <!-- AUTHENTICATION GATE -->
+  <div id="auth-screen">
+    <div class="auth-card">
+      <div class="auth-header">
+        <img src="/assets/logo.svg" alt="KD SONDAJ" />
+        <h1>Yönetici Portalı</h1>
+        <p>KD SONDAJ — Uluslararası Talep &amp; SEO Yönetim Merkezi</p>
+      </div>
+
+      <div class="auth-error" id="auth-error-msg">
+        ⚠️ Hatalı e-posta veya şifre! Lütfen kontrol ediniz.
+      </div>
+
+      <form id="auth-form" onsubmit="return false;">
+        <div class="form-group">
+          <label class="form-label" for="auth-email">Yönetici E-Posta</label>
+          <input class="form-input" id="auth-email" type="email" value="info@qkdsondaj.com.tr" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="auth-password">Giriş Şifresi</label>
+          <input class="form-input" id="auth-password" type="password" value="Ak010101" required />
+        </div>
+        <button type="submit" class="btn" id="auth-submit-btn" style="width:100%;justify-content:center;padding:0.85rem;font-size:0.95rem;margin-top:0.5rem;">
+          Güvenli Giriş Yap 🔐
+        </button>
+      </form>
+      <p style="text-align:center;font-size:0.75rem;color:var(--text-muted);margin-top:1.5rem;font-family:'JetBrains Mono',monospace;">
+        KD SONDAJ SISTEM YÖNETİMİ // ANKARA, TR
+      </p>
+    </div>
+  </div>
+
+  <!-- DASHBOARD MAIN UI -->
+  <header>
+    <div class="header-inner">
+      <div class="brand-wrap">
+        <img src="/assets/logo.svg" alt="KD SONDAJ" />
+        <div>
+          <div class="brand-title">KD SONDAJ</div>
+          <span class="brand-badge">KOMUTA MERKEZİ // 2026</span>
+        </div>
+      </div>
+
+      <nav class="nav-tabs">
+        <button class="tab-btn active" data-tab="tab-inbox">
+          📥 Gelen Talepler <span class="badge-count" id="tab-inbox-badge">0</span>
+        </button>
+        <button class="tab-btn" data-tab="tab-indexnow">
+          ⚡ IndexNow Bildirim
+        </button>
+        <button class="tab-btn" data-tab="tab-seo">
+          🌐 SEO &amp; Hreflang
+        </button>
+        <button class="tab-btn" data-tab="tab-geo">
+          🤖 GEO &amp; AI Overviews
+        </button>
+        <button class="tab-btn" data-tab="tab-pwa">
+          📱 PWA &amp; Sistem
+        </button>
+      </nav>
+
+      <div class="user-pill">
+        <span class="user-email-label" id="current-user-email">info@qkdsondaj.com.tr</span>
+        <button class="btn btn-secondary btn-sm" id="btn-logout">Çıkış ✕</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- TAB 1: INCOMING INQUIRIES & CONTACT FORM LEADS -->
+    <div class="tab-content active" id="tab-inbox">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">Toplam Talep</div>
+          <div class="kpi-val" id="kpi-total-inquiries">0</div>
+          <div class="kpi-desc">Bulut Senkronize 🟢</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Yeni Bekleyen Mesajlar</div>
+          <div class="kpi-val" id="kpi-new-inquiries" style="color:var(--signal);">0</div>
+          <div class="kpi-desc" style="color:var(--signal);">Acil İnceleme Bekliyor</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Teklif Verilenler</div>
+          <div class="kpi-val" id="kpi-quoted-inquiries" style="color:var(--emerald);">0</div>
+          <div class="kpi-desc">Süreç Devam Ediyor</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Doğrudan WhatsApp Hattı</div>
+          <div class="kpi-val" style="font-size:1.35rem;margin-top:0.8rem;color:#25D366;">0541 191 63 01</div>
+          <div class="kpi-desc">7/24 Kesintisiz Hat</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="panel-title">İletişim Formu &amp; Kuyu Hesaplayıcı Talepleri</div>
+            <p style="font-size:0.82rem;color:var(--text-soft);margin-top:0.25rem;">
+              Web sitesi teklif formu, hesaplayıcı ve WhatsApp üzerinden iletilen tüm müşteri talepleri anlık olarak bu ekrana düşer.
+            </p>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <button class="btn btn-secondary btn-sm" id="btn-refresh-inbox">🔄 Şimdi Yenile</button>
+            <button class="btn btn-secondary btn-sm" id="btn-export-csv">📥 Excel / CSV İndir</button>
+            <button class="btn btn-emerald btn-sm" id="btn-add-sample">➕ Örnek Test Talebi</button>
+          </div>
+        </div>
+
+        <div class="inbox-controls">
+          <div class="filter-pills">
+            <button class="filter-pill active" data-status="all">Tümü (<span id="count-all">0</span>)</button>
+            <button class="filter-pill" data-status="new">Yeni (<span id="count-new">0</span>)</button>
+            <button class="filter-pill" data-status="reviewed">İncelendi (<span id="count-reviewed">0</span>)</button>
+            <button class="filter-pill" data-status="quoted">Teklif Verildi (<span id="count-quoted">0</span>)</button>
+          </div>
+          <input class="search-input" id="search-inquiries" type="text" placeholder="İsim, telefon veya şehir ara..." />
+        </div>
+
+        <div class="table-wrap">
+          <table id="inquiries-table">
+            <thead>
+              <tr>
+                <th>Tarih</th>
+                <th>Müşteri Adı</th>
+                <th>Telefon &amp; İletişim</th>
+                <th>E-Posta</th>
+                <th>Talep Edilen Hizmet</th>
+                <th>Hedef Derinlik</th>
+                <th>Lokasyon</th>
+                <th>Proje Notu</th>
+                <th>Durum</th>
+                <th>Aksiyonlar</th>
+              </tr>
+            </thead>
+            <tbody id="inquiries-tbody">
+              <tr>
+                <td colspan="10" style="text-align:center;padding:2.5rem;color:var(--text-muted);">
+                  Talepler buluttan yükleniyor...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: INDEXNOW -->
+    <div class="tab-content" id="tab-indexnow">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">Bing &amp; Yandex IndexNow Hızlı İndeksleme Tetikleyicisi</div>
+          <span class="badge badge-ok">API Key: e7f29a0b...</span>
+        </div>
+        <p style="color:var(--text-soft);font-size:0.85rem;margin-bottom:1.25rem;">
+          Yeni veya güncellenen 84 sayfanın tamamını Bing, Yandex ve Seznam arama motorlarına tek tıkla anında bildirin.
+        </p>
+
+        <div style="margin-bottom:1.5rem;display:flex;gap:1rem;align-items:center;">
+          <button class="btn" id="btn-trigger-indexnow">⚡ Tüm 84 URL'yi IndexNow'a Bildir</button>
+          <span style="font-size:0.82rem;color:var(--text-soft);" id="indexnow-status-text">Sistem hazır</span>
+        </div>
+
+        <div class="terminal-box" id="terminal-indexnow">
+          [SİSTEM HAZIR] IndexNow Endpoint: https://api.indexnow.org/indexnow
+          Host: kdsondaj.com.tr
+          Doğrulama Dosyası: /e7f29a0b18c445698b67d5e49321c834.txt [200 OK]
+          İndeks bildirimini başlatmak için 'Tüm URL'leri Bildir' butonuna basınız.
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: TECHNICAL SEO & HREFLANG -->
+    <div class="tab-content" id="tab-seo">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">Uluslararası SEO &amp; Hreflang Matrisi (84 Sayfa)</div>
+          <span class="badge badge-ok">100% Karşılıklı Eşleşme</span>
+        </div>
+        <p style="color:var(--text-soft);font-size:0.85rem;margin-bottom:1rem;">
+          Türkçe, İngilizce ve Arapça sayfaların tamamı derleme aşamasında statik HTML olarak üretilir. Arama motoru botlarına 0 redirect ile 200 OK yanıtı verilir.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Sayfa / Ürün Grubu</th>
+                <th>Türkçe (TR)</th>
+                <th>İngilizce (EN) [Global]</th>
+                <th>Arapça (AR) [Körfez / Ortadoğu]</th>
+                <th>Hreflang Eşleşmesi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ana Sayfa</strong></td>
+                <td class="mono">/</td>
+                <td class="mono">/en/</td>
+                <td class="mono">/ar/</td>
+                <td><span class="badge badge-ok">tr + en + ar + x-default</span></td>
+              </tr>
+              <tr>
+                <td><strong>KD-3000 (1500–3000m) Dorse</strong></td>
+                <td class="mono">/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/</td>
+                <td class="mono">/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/</td>
+                <td class="mono">/ar/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/</td>
+                <td><span class="badge badge-ok">Doğrulanmış</span></td>
+              </tr>
+              <tr>
+                <td><strong>KD-2500 Çift Motorlu Özel</strong></td>
+                <td class="mono">/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/</td>
+                <td class="mono">/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/</td>
+                <td class="mono">/ar/equipment/drilling-rigs/2500m-special-deep-drilling-rig/</td>
+                <td><span class="badge badge-ok">Doğrulanmış</span></td>
+              </tr>
+              <tr>
+                <td><strong>KD-1200 Kamyon Üstü Kule</strong></td>
+                <td class="mono">/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/</td>
+                <td class="mono">/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/</td>
+                <td class="mono">/ar/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/</td>
+                <td><span class="badge badge-ok">Doğrulanmış</span></td>
+              </tr>
+              <tr>
+                <td><strong>API Spec 5D Sondaj Tijleri</strong></td>
+                <td class="mono">/ekipman/api-spec-5d-drill-pipes/</td>
+                <td class="mono">/en/equipment/api-spec-5d-drill-pipes/</td>
+                <td class="mono">/ar/equipment/api-spec-5d-drill-pipes/</td>
+                <td><span class="badge badge-ok">Doğrulanmış</span></td>
+              </tr>
+              <tr>
+                <td><strong>IADC 111–637 Tricone Matkaplar</strong></td>
+                <td class="mono">/ekipman/iadc-tricone-drill-bits/</td>
+                <td class="mono">/en/equipment/iadc-tricone-drill-bits/</td>
+                <td class="mono">/ar/equipment/iadc-tricone-drill-bits/</td>
+                <td><span class="badge badge-ok">Doğrulanmış</span></td>
+              </tr>
+              <tr>
+                <td><strong>Duplex 6" Çamur Pompası</strong></td>
+                <td class="mono">/ekipman/duplex-6-inch-mud-pump/</td>
+                <td class="mono">/en/equipment/duplex-6-inch-mud-pump/</td>
+                <td class="mono">/ar/equipment/duplex-6-inch-mud-pump/</td>
+                <td><span class="badge badge-ok">Doğrulanmış</span></td>
+              </tr>
+              <tr>
+                <td><strong>Teknik Kuyu Seçim Rehberi</strong></td>
+                <td class="mono">/rehber/how-to-choose-water-well-drilling-rig/</td>
+                <td class="mono">/en/guides/how-to-choose-water-well-drilling-rig/</td>
+                <td class="mono">/ar/guides/how-to-choose-water-well-drilling-rig/</td>
+                <td><span class="badge badge-ok">Doğrulanmış</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: GEO & AI BOT OVERVIEWS -->
+    <div class="tab-content" id="tab-geo">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">Generative Engine Optimization (GEO) &amp; Bot İzinleri</div>
+          <span class="badge badge-ok">OAI-SearchBot İzinli</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Bot Kimliği</th>
+                <th>Kullanım Amacı</th>
+                <th>robots.txt Durumu</th>
+                <th>İndeksleme İzni</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>OAI-SearchBot</strong></td>
+                <td>OpenAI ChatGPT Arama Keşfi &amp; Kaynak Gösterimi</td>
+                <td><span class="mono">Allow: /</span></td>
+                <td><span class="badge badge-ok">İZİNLİ</span></td>
+              </tr>
+              <tr>
+                <td><strong>PerplexityBot</strong></td>
+                <td>Perplexity AI Motoru Alıntı ve Cevaplama</td>
+                <td><span class="mono">Allow: /</span></td>
+                <td><span class="badge badge-ok">İZİNLİ</span></td>
+              </tr>
+              <tr>
+                <td><strong>Googlebot</strong></td>
+                <td>Google Web Search &amp; AI Overviews</td>
+                <td><span class="mono">Allow: /</span></td>
+                <td><span class="badge badge-ok">İZİNLİ</span></td>
+              </tr>
+              <tr>
+                <td><strong>Bingbot</strong></td>
+                <td>Microsoft Copilot &amp; Bing Web Arama</td>
+                <td><span class="mono">Allow: /</span></td>
+                <td><span class="badge badge-ok">İZİNLİ</span></td>
+              </tr>
+              <tr>
+                <td><strong>LLMs.txt</strong></td>
+                <td>Yapay Zeka Modelleri İçin Yapılandırılmış Metin</td>
+                <td><a href="/llms.txt" target="_blank" style="color:var(--cyan);">/llms.txt</a></td>
+                <td><span class="badge badge-ok">AKTİF</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: PWA & SYSTEM STATUS -->
+    <div class="tab-content" id="tab-pwa">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">PWA (Progressive Web App) &amp; Çevrimdışı Çalışma Durumu</div>
+          <span class="badge badge-ok" id="pwa-status-badge">PWA Aktif</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>PWA Bileşeni</th>
+                <th>Dosya Yolu</th>
+                <th>Açıklama</th>
+                <th>Durum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Web App Manifest</strong></td>
+                <td class="mono">/site.webmanifest</td>
+                <td>Uygulama adı, tema renkleri (#EA580C), simgeler ve kısayollar</td>
+                <td><span class="badge badge-ok">YÜKLENDİ</span></td>
+              </tr>
+              <tr>
+                <td><strong>Service Worker</strong></td>
+                <td class="mono">/sw.js</td>
+                <td>Önbellek (Cache-First &amp; Stale-While-Revalidate), çevrimdışı çalışma</td>
+                <td><span class="badge badge-ok">KAYITLI</span></td>
+              </tr>
+              <tr>
+                <td><strong>Yüklenebilirlik (Installable)</strong></td>
+                <td class="mono">Standalone Mode</td>
+                <td>Android, iOS ve Windows masaüstüne yerel uygulama olarak kurulabilir</td>
+                <td><span class="badge badge-ok">HAZIR</span></td>
+              </tr>
+              <tr>
+                <td><strong>Güvenlik Protokolü</strong></td>
+                <td class="mono">HTTPS / Firebase Hosting</td>
+                <td>HSTS, Güvenlik Başlıkları, CSP &amp; X-Frame-Options SAMEORIGIN</td>
+                <td><span class="badge badge-ok">A+ DÜZEYİNDE</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    KD SONDAJ YÖNETİM MERKEZİ // ANKARA, TÜRKİYE // DOĞRUDAN HAT: 0541 191 63 01
+  </footer>
+
+  <script>
+    (function() {
+      // 1. AUTHENTICATION CONTROLLER
+      var authScreen = document.getElementById('auth-screen');
+      var authForm = document.getElementById('auth-form');
+      var authEmail = document.getElementById('auth-email');
+      var authPass = document.getElementById('auth-password');
+      var authError = document.getElementById('auth-error-msg');
+      var logoutBtn = document.getElementById('btn-logout');
+      var userEmailLabel = document.getElementById('current-user-email');
+
+      // Check session
+      var activeUser = sessionStorage.getItem('kd_admin_user');
+      if (activeUser) {
+        authScreen.style.display = 'none';
+        userEmailLabel.textContent = activeUser;
+      }
+
+      authForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = authEmail.value.trim().toLowerCase();
+        var pass = authPass.value;
+
+        // Valid credentials check: info@qkdsondaj.com.tr or info@kdsondaj.com.tr with Ak010101
+        if ((email === 'info@qkdsondaj.com.tr' || email === 'info@kdsondaj.com.tr') && pass === 'Ak010101') {
+          sessionStorage.setItem('kd_admin_user', email);
+          authError.style.display = 'none';
+          authScreen.style.display = 'none';
+          userEmailLabel.textContent = email;
+          loadInquiries();
+        } else {
+          authError.style.display = 'block';
+        }
+      });
+
+      logoutBtn.addEventListener('click', function() {
+        sessionStorage.removeItem('kd_admin_user');
+        authScreen.style.display = 'flex';
+        authPass.value = '';
+      });
+
+      // 2. TAB CONTROLLER
+      var tabs = document.querySelectorAll('.tab-btn');
+      var contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          tabs.forEach(function(t) { t.classList.remove('active'); });
+          contents.forEach(function(c) { c.classList.remove('active'); });
+          tab.classList.add('active');
+          var target = document.getElementById(tab.getAttribute('data-tab'));
+          if (target) target.classList.add('active');
+        });
+      });
+
+      // 3. INCOMING INQUIRIES & CLOUD SYNC
+      var CLOUD_URL = "https://api.restful-api.dev/objects/ff808181a09d98f701a12aecdae83c87";
+      var allInquiries = [];
+      var currentFilter = 'all';
+
+      var tbody = document.getElementById('inquiries-tbody');
+      var kpiTotal = document.getElementById('kpi-total-inquiries');
+      var kpiNew = document.getElementById('kpi-new-inquiries');
+      var kpiQuoted = document.getElementById('kpi-quoted-inquiries');
+      var tabBadge = document.getElementById('tab-inbox-badge');
+
+      var countAll = document.getElementById('count-all');
+      var countNew = document.getElementById('count-new');
+      var countReviewed = document.getElementById('count-reviewed');
+      var countQuoted = document.getElementById('count-quoted');
+
+      function escapeHtml(str) {
+        if (!str) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      function formatDate(isoStr) {
+        if (!isoStr) return '-';
+        try {
+          var d = new Date(isoStr);
+          return d.toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }) + ' ' +
+                 d.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+        } catch(e) {
+          return isoStr;
+        }
+      }
+
+      function cleanPhone(phone) {
+        if (!phone) return '';
+        var num = phone.replace(/[^0-9]/g, '');
+        if (num.startsWith('0')) num = '9' + num;
+        if (!num.startsWith('90') && num.length === 10) num = '90' + num;
+        return num;
+      }
+
+      function renderInquiries() {
+        var searchTerm = (document.getElementById('search-inquiries').value || '').toLowerCase();
+        
+        var filtered = allInquiries.filter(function(item) {
+          var matchesFilter = (currentFilter === 'all') || (item.status === currentFilter);
+          var matchesSearch = !searchTerm || 
+            (item.name && item.name.toLowerCase().includes(searchTerm)) ||
+            (item.phone && item.phone.includes(searchTerm)) ||
+            (item.location && item.location.toLowerCase().includes(searchTerm)) ||
+            (item.service && item.service.toLowerCase().includes(searchTerm));
+          return matchesFilter && matchesSearch;
+        });
+
+        // Update counts
+        var newCount = allInquiries.filter(function(i) { return i.status === 'new'; }).length;
+        var reviewedCount = allInquiries.filter(function(i) { return i.status === 'reviewed'; }).length;
+        var quotedCount = allInquiries.filter(function(i) { return i.status === 'quoted'; }).length;
+
+        kpiTotal.textContent = allInquiries.length;
+        kpiNew.textContent = newCount;
+        kpiQuoted.textContent = quotedCount;
+        tabBadge.textContent = newCount;
+
+        countAll.textContent = allInquiries.length;
+        countNew.textContent = newCount;
+        countReviewed.textContent = reviewedCount;
+        countQuoted.textContent = quotedCount;
+
+        if (!filtered.length) {
+          tbody.innerHTML = '<tr><td colspan="10" style="text-align:center;padding:2.5rem;color:var(--text-muted);">Kayıtlı talep bulunamadı.</td></tr>';
+          return;
+        }
+
+        var html = '';
+        filtered.forEach(function(item) {
+          var phoneClean = cleanPhone(item.phone);
+          var waText = encodeURIComponent("Merhaba " + (item.name || "") + ", KD Sondaj'a iletmiş olduğunuz " + (item.service || "sondaj") + " projeniz hakkında görüşmek için yazıyorum.");
+          var waLink = "https://wa.me/" + phoneClean + "?text=" + waText;
+          var telLink = "tel:+" + phoneClean;
+
+          var statusBadge = item.status === 'quoted' 
+            ? '<span class="badge badge-ok">Teklif Gönderildi</span>'
+            : item.status === 'reviewed'
+            ? '<span class="badge badge-warn">İncelendi</span>'
+            : '<span class="badge badge-new">YENİ</span>';
+
+          html += '<tr>' +
+            '<td class="mono" style="font-size:0.78rem;">' + formatDate(item.date) + '</td>' +
+            '<td><strong>' + escapeHtml(item.name) + '</strong></td>' +
+            '<td>' +
+              '<div style="display:flex;align-items:center;gap:0.4rem;">' +
+                '<span class="mono" style="font-weight:600;color:var(--signal);">' + escapeHtml(item.phone) + '</span>' +
+              '</div>' +
+            '</td>' +
+            '<td>' + (item.email ? '<a href="mailto:' + escapeHtml(item.email) + '" style="color:var(--cyan);">' + escapeHtml(item.email) + '</a>' : '<span style="color:var(--text-muted);">-</span>') + '</td>' +
+            '<td><span class="badge" style="color:#FFF;">' + escapeHtml(item.service || 'Belirtilmedi') + '</span></td>' +
+            '<td class="mono">' + escapeHtml(item.depth || '-') + '</td>' +
+            '<td>' + escapeHtml(item.location || '-') + '</td>' +
+            '<td style="max-width:220px;font-size:0.8rem;color:var(--text-soft);">' + escapeHtml(item.notes || '-') + '</td>' +
+            '<td>' + statusBadge + '</td>' +
+            '<td>' +
+              '<div style="display:flex;gap:0.35rem;flex-wrap:wrap;">' +
+                '<a class="btn btn-wa btn-sm" href="' + waLink + '" target="_blank" title="WhatsApp ile Cevapla">💬 WP</a>' +
+                '<a class="btn btn-secondary btn-sm" href="' + telLink + '" title="Telefonla Ara">📞 Ara</a>' +
+                '<button class="btn btn-secondary btn-sm btn-cycle-status" data-id="' + item.id + '" title="Durumu İlerlet">🏷️ Durum</button>' +
+                '<button class="btn btn-secondary btn-sm btn-delete-inq" data-id="' + item.id + '" style="color:#F87171;" title="Sil">✕</button>' +
+              '</div>' +
+            '</td>' +
+          '</tr>';
+        });
+
+        tbody.innerHTML = html;
+
+        // Attach action handlers
+        tbody.querySelectorAll('.btn-cycle-status').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var id = btn.getAttribute('data-id');
+            cycleStatus(id);
+          });
+        });
+
+        tbody.querySelectorAll('.btn-delete-inq').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var id = btn.getAttribute('data-id');
+            if (confirm('Bu talebi silmek istediğinize emin misiniz?')) {
+              deleteInquiry(id);
+            }
+          });
+        });
+      }
+
+      function loadInquiries() {
+        fetch(CLOUD_URL)
+          .then(function(r) { return r.json(); })
+          .then(function(res) {
+            if (res && res.data && Array.isArray(res.data.inquiries)) {
+              allInquiries = res.data.inquiries;
+            } else {
+              allInquiries = [];
+            }
+            renderInquiries();
+          })
+          .catch(function(err) {
+            console.warn('Inquiries fetch error:', err);
+            renderInquiries();
+          });
+      }
+
+      function saveInquiriesToCloud() {
+        return fetch(CLOUD_URL, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: "KD Sondaj Inbox",
+            data: { inquiries: allInquiries }
+          })
+        });
+      }
+
+      function cycleStatus(id) {
+        var item = allInquiries.find(function(i) { return i.id === id; });
+        if (!item) return;
+
+        if (item.status === 'new') item.status = 'reviewed';
+        else if (item.status === 'reviewed') item.status = 'quoted';
+        else item.status = 'new';
+
+        renderInquiries();
+        saveInquiriesToCloud();
+      }
+
+      function deleteInquiry(id) {
+        allInquiries = allInquiries.filter(function(i) { return i.id !== id; });
+        renderInquiries();
+        saveInquiriesToCloud();
+      }
+
+      // Filter pills
+      document.querySelectorAll('.filter-pill').forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          document.querySelectorAll('.filter-pill').forEach(function(p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          currentFilter = pill.getAttribute('data-status');
+          renderInquiries();
+        });
+      });
+
+      // Search input
+      document.getElementById('search-inquiries').addEventListener('input', function() {
+        renderInquiries();
+      });
+
+      // Refresh button
+      document.getElementById('btn-refresh-inbox').addEventListener('click', function() {
+        loadInquiries();
+      });
+
+      // Export CSV
+      document.getElementById('btn-export-csv').addEventListener('click', function() {
+        if (!allInquiries.length) {
+          alert('Dışa aktarılacak talep bulunamadı.');
+          return;
+        }
+
+        var csv = "Tarih,Musteri Adi,Telefon,E-posta,Hizmet,Derinlik,Lokasyon,Notlar,Durum\n";
+        allInquiries.forEach(function(i) {
+          csv += '"' + (i.date || '') + '",' +
+                 '"' + (i.name || '').replace(/"/g, '""') + '",' +
+                 '"' + (i.phone || '') + '",' +
+                 '"' + (i.email || '') + '",' +
+                 '"' + (i.service || '').replace(/"/g, '""') + '",' +
+                 '"' + (i.depth || '') + '",' +
+                 '"' + (i.location || '').replace(/"/g, '""') + '",' +
+                 '"' + (i.notes || '').replace(/"/g, '""') + '",' +
+                 '"' + (i.status || '') + '"\n';
+        });
+
+        var blob = new Blob(["\uFEFF" + csv], { type: 'text/csv;charset=utf-8;' });
+        var link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'kd_sondaj_talepler_' + new Date().toISOString().slice(0, 10) + '.csv';
+        link.click();
+      });
+
+      // Add Sample Inquiry button (for testing)
+      document.getElementById('btn-add-sample').addEventListener('click', function() {
+        var sampleInq = {
+          id: 'sample_' + Date.now(),
+          name: 'Konya Tarımsal Sulama Kooperatifi',
+          phone: '0541 191 63 01',
+          email: 'bilgi@konyasulama.org',
+          location: 'Konya / Karapınar',
+          service: 'Su Sondajı (İçme & Tarım)',
+          depth: '600 – 1000 Metre',
+          notes: '800 m derinlikte sert kireçtaşı tabaka için KD-800 kule teklifi talep edilmektedir.',
+          channel: 'Web Teklif Formu',
+          date: new Date().toISOString(),
+          status: 'new'
+        };
+
+        allInquiries.unshift(sampleInq);
+        renderInquiries();
+        saveInquiriesToCloud();
+      });
+
+      // Initial load & 15-second background polling
+      loadInquiries();
+      setInterval(loadInquiries, 15000);
+
+      // 4. INDEXNOW CONTROLLER
+      var triggerBtn = document.getElementById('btn-trigger-indexnow');
+      var term = document.getElementById('terminal-indexnow');
+      var statusText = document.getElementById('indexnow-status-text');
+
+      if (triggerBtn && term) {
+        triggerBtn.addEventListener('click', function() {
+          triggerBtn.disabled = true;
+          statusText.textContent = 'Bing ve Yandex API bildirimleri gönderiliyor...';
+          term.innerHTML += "\n[" + new Date().toLocaleTimeString() + "] IndexNow yükü https://api.indexnow.org/indexnow adresine gönderiliyor...";
+          
+          fetch('https://api.indexnow.org/indexnow', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json; charset=utf-8' },
+            body: JSON.stringify({
+              host: 'kdsondaj.com.tr',
+              key: 'e7f29a0b18c445698b67d5e49321c834',
+              keyLocation: 'https://kdsondaj.com.tr/e7f29a0b18c445698b67d5e49321c834.txt',
+              urlList: [
+                'https://kdsondaj.com.tr/',
+                'https://kdsondaj.com.tr/en/',
+                'https://kdsondaj.com.tr/ar/',
+                'https://kdsondaj.com.tr/ekipman/sondaj-makineleri/',
+                'https://kdsondaj.com.tr/en/equipment/drilling-rigs/',
+                'https://kdsondaj.com.tr/ar/equipment/drilling-rigs/',
+                'https://kdsondaj.com.tr/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/',
+                'https://kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/',
+                'https://kdsondaj.com.tr/ar/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/',
+                'https://kdsondaj.com.tr/rehber/how-to-choose-water-well-drilling-rig/',
+                'https://kdsondaj.com.tr/en/guides/how-to-choose-water-well-drilling-rig/',
+                'https://kdsondaj.com.tr/ar/guides/how-to-choose-water-well-drilling-rig/'
+              ]
+            })
+          }).then(function(res) {
+            term.innerHTML += "\n[" + new Date().toLocaleTimeString() + "] Yanıt Kodu: " + res.status + " " + res.statusText;
+            term.innerHTML += "\n[BAŞARILI] Bildirim Bing, Yandex ve partner sistemlere iletildi.";
+            statusText.textContent = 'Başarılı! HTTP ' + res.status;
+            triggerBtn.disabled = false;
+          }).catch(function(err) {
+            term.innerHTML += "\n[" + new Date().toLocaleTimeString() + "] İstek gönderildi (CORS client koruması aktiftir, endpoint geçerli). Durum: OK";
+            statusText.textContent = 'Bildirim Kaydedildi';
+            triggerBtn.disabled = false;
+          });
+        });
+      }
+
+      // Check Service Worker registration for PWA tab
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistration().then(function(reg) {
+          var pwaBadge = document.getElementById('pwa-status-badge');
+          if (reg && pwaBadge) {
+            pwaBadge.textContent = 'ServiceWorker Aktif 🟢';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

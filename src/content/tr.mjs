@@ -6,6 +6,7 @@ export const tr = {
     about: "Hakkımızda",
     services: "Hizmetler",
     equipment: "Ekipman",
+    guides: "Teknik Rehber",
     references: "Referanslar",
     contact: "İletişim",
   },

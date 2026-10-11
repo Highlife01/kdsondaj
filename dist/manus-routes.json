@@ -79,6 +79,96 @@
       "page": "contact"
     },
     {
+      "path": "/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/",
+      "file": "ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/index.html",
+      "lang": "tr",
+      "page": "productTrailer3000"
+    },
+    {
+      "path": "/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/",
+      "file": "ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/index.html",
+      "lang": "tr",
+      "page": "productSpecial2500"
+    },
+    {
+      "path": "/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/",
+      "file": "ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/index.html",
+      "lang": "tr",
+      "page": "productTruck1200"
+    },
+    {
+      "path": "/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/",
+      "file": "ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/index.html",
+      "lang": "tr",
+      "page": "productTrailer1200"
+    },
+    {
+      "path": "/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/",
+      "file": "ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/index.html",
+      "lang": "tr",
+      "page": "productTruck800"
+    },
+    {
+      "path": "/ekipman/sondaj-makineleri/800m-dorse-sondaj-makinesi/",
+      "file": "ekipman/sondaj-makineleri/800m-dorse-sondaj-makinesi/index.html",
+      "lang": "tr",
+      "page": "productTrailer800"
+    },
+    {
+      "path": "/ekipman/sondaj-makineleri/300-500m-kamyon-sondaj-makinesi/",
+      "file": "ekipman/sondaj-makineleri/300-500m-kamyon-sondaj-makinesi/index.html",
+      "lang": "tr",
+      "page": "productTruck500"
+    },
+    {
+      "path": "/ekipman/sondaj-makineleri/400-600m-dorse-sondaj-makinesi/",
+      "file": "ekipman/sondaj-makineleri/400-600m-dorse-sondaj-makinesi/index.html",
+      "lang": "tr",
+      "page": "productTrailer600"
+    },
+    {
+      "path": "/ekipman/api-spec-5d-drill-pipes/",
+      "file": "ekipman/api-spec-5d-drill-pipes/index.html",
+      "lang": "tr",
+      "page": "productPipes"
+    },
+    {
+      "path": "/ekipman/iadc-tricone-drill-bits/",
+      "file": "ekipman/iadc-tricone-drill-bits/index.html",
+      "lang": "tr",
+      "page": "productBits"
+    },
+    {
+      "path": "/ekipman/duplex-6-inch-mud-pump/",
+      "file": "ekipman/duplex-6-inch-mud-pump/index.html",
+      "lang": "tr",
+      "page": "productPumps"
+    },
+    {
+      "path": "/rehber/",
+      "file": "rehber/index.html",
+      "lang": "tr",
+      "page": "guideHub"
+    },
+    {
+      "path": "/rehber/how-to-choose-water-well-drilling-rig/",
+      "file": "rehber/how-to-choose-water-well-drilling-rig/index.html",
+      "lang": "tr",
+      "page": "guideWaterWell"
+    },
+    {
+      "path": "/rehber/iadc-roller-cone-drill-bit-classification/",
+      "file": "rehber/iadc-roller-cone-drill-bit-classification/index.html",
+      "lang": "tr",
+      "page": "guideBits"
+    },
+    {
+      "path": "/rehber/international-drilling-rig-rfq-checklist/",
+      "file": "rehber/international-drilling-rig-rfq-checklist/index.html",
+      "lang": "tr",
+      "page": "guideRfq"
+    },
+    {
       "path": "/en/",
       "file": "en/index.html",
       "lang": "en",
@@ -157,6 +247,96 @@
       "page": "contact"
     },
     {
+      "path": "/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/",
+      "file": "en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/index.html",
+      "lang": "en",
+      "page": "productTrailer3000"
+    },
+    {
+      "path": "/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/",
+      "file": "en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/index.html",
+      "lang": "en",
+      "page": "productSpecial2500"
+    },
+    {
+      "path": "/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/",
+      "file": "en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/index.html",
+      "lang": "en",
+      "page": "productTruck1200"
+    },
+    {
+      "path": "/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/",
+      "file": "en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/index.html",
+      "lang": "en",
+      "page": "productTrailer1200"
+    },
+    {
+      "path": "/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/",
+      "file": "en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/index.html",
+      "lang": "en",
+      "page": "productTruck800"
+    },
+    {
+      "path": "/en/equipment/drilling-rigs/800m-trailer-drilling-rig/",
+      "file": "en/equipment/drilling-rigs/800m-trailer-drilling-rig/index.html",
+      "lang": "en",
+      "page": "productTrailer800"
+    },
+    {
+      "path": "/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/",
+      "file": "en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/index.html",
+      "lang": "en",
+      "page": "productTruck500"
+    },
+    {
+      "path": "/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/",
+      "file": "en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/index.html",
+      "lang": "en",
+      "page": "productTrailer600"
+    },
+    {
+      "path": "/en/equipment/api-spec-5d-drill-pipes/",
+      "file": "en/equipment/api-spec-5d-drill-pipes/index.html",
+      "lang": "en",
+      "page": "productPipes"
+    },
+    {
+      "path": "/en/equipment/iadc-tricone-drill-bits/",
+      "file": "en/equipment/iadc-tricone-drill-bits/index.html",
+      "lang": "en",
+      "page": "productBits"
+    },
+    {
+      "path": "/en/equipment/duplex-6-inch-mud-pump/",
+      "file": "en/equipment/duplex-6-inch-mud-pump/index.html",
+      "lang": "en",
+      "page": "productPumps"
+    },
+    {
+      "path": "/en/guides/",
+      "file": "en/guides/index.html",
+      "lang": "en",
+      "page": "guideHub"
+    },
+    {
+      "path": "/en/guides/how-to-choose-water-well-drilling-rig/",
+      "file": "en/guides/how-to-choose-water-well-drilling-rig/index.html",
+      "lang": "en",
+      "page": "guideWaterWell"
+    },
+    {
+      "path": "/en/guides/iadc-roller-cone-drill-bit-classification/",
+      "file": "en/guides/iadc-roller-cone-drill-bit-classification/index.html",
+      "lang": "en",
+      "page": "guideBits"
+    },
+    {
+      "path": "/en/guides/international-drilling-rig-rfq-checklist/",
+      "file": "en/guides/international-drilling-rig-rfq-checklist/index.html",
+      "lang": "en",
+      "page": "guideRfq"
+    },
+    {
       "path": "/ar/",
       "file": "ar/index.html",
       "lang": "ar",
@@ -233,6 +413,101 @@
       "file": "ar/contact/index.html",
       "lang": "ar",
       "page": "contact"
+    },
+    {
+      "path": "/ar/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/",
+      "file": "ar/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/index.html",
+      "lang": "ar",
+      "page": "productTrailer3000"
+    },
+    {
+      "path": "/ar/equipment/drilling-rigs/2500m-special-deep-drilling-rig/",
+      "file": "ar/equipment/drilling-rigs/2500m-special-deep-drilling-rig/index.html",
+      "lang": "ar",
+      "page": "productSpecial2500"
+    },
+    {
+      "path": "/ar/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/",
+      "file": "ar/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/index.html",
+      "lang": "ar",
+      "page": "productTruck1200"
+    },
+    {
+      "path": "/ar/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/",
+      "file": "ar/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/index.html",
+      "lang": "ar",
+      "page": "productTrailer1200"
+    },
+    {
+      "path": "/ar/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/",
+      "file": "ar/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/index.html",
+      "lang": "ar",
+      "page": "productTruck800"
+    },
+    {
+      "path": "/ar/equipment/drilling-rigs/800m-trailer-drilling-rig/",
+      "file": "ar/equipment/drilling-rigs/800m-trailer-drilling-rig/index.html",
+      "lang": "ar",
+      "page": "productTrailer800"
+    },
+    {
+      "path": "/ar/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/",
+      "file": "ar/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/index.html",
+      "lang": "ar",
+      "page": "productTruck500"
+    },
+    {
+      "path": "/ar/equipment/drilling-rigs/400-600m-trailer-drilling-rig/",
+      "file": "ar/equipment/drilling-rigs/400-600m-trailer-drilling-rig/index.html",
+      "lang": "ar",
+      "page": "productTrailer600"
+    },
+    {
+      "path": "/ar/equipment/api-spec-5d-drill-pipes/",
+      "file": "ar/equipment/api-spec-5d-drill-pipes/index.html",
+      "lang": "ar",
+      "page": "productPipes"
+    },
+    {
+      "path": "/ar/equipment/iadc-tricone-drill-bits/",
+      "file": "ar/equipment/iadc-tricone-drill-bits/index.html",
+      "lang": "ar",
+      "page": "productBits"
+    },
+    {
+      "path": "/ar/equipment/duplex-6-inch-mud-pump/",
+      "file": "ar/equipment/duplex-6-inch-mud-pump/index.html",
+      "lang": "ar",
+      "page": "productPumps"
+    },
+    {
+      "path": "/ar/guides/",
+      "file": "ar/guides/index.html",
+      "lang": "ar",
+      "page": "guideHub"
+    },
+    {
+      "path": "/ar/guides/how-to-choose-water-well-drilling-rig/",
+      "file": "ar/guides/how-to-choose-water-well-drilling-rig/index.html",
+      "lang": "ar",
+      "page": "guideWaterWell"
+    },
+    {
+      "path": "/ar/guides/iadc-roller-cone-drill-bit-classification/",
+      "file": "ar/guides/iadc-roller-cone-drill-bit-classification/index.html",
+      "lang": "ar",
+      "page": "guideBits"
+    },
+    {
+      "path": "/ar/guides/international-drilling-rig-rfq-checklist/",
+      "file": "ar/guides/international-drilling-rig-rfq-checklist/index.html",
+      "lang": "ar",
+      "page": "guideRfq"
+    },
+    {
+      "path": "/admin/",
+      "file": "admin/index.html",
+      "indexable": false
     },
     {
       "path": "/404.html",

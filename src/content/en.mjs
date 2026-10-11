@@ -6,6 +6,7 @@ export const en = {
     about: "About",
     services: "Services",
     equipment: "Equipment",
+    guides: "Engineering Guides",
     references: "References",
     contact: "Contact",
   },

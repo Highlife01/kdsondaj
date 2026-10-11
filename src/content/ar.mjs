@@ -6,6 +6,7 @@ export const ar = {
     about: "نبذة عنا",
     services: "خدماتنا",
     equipment: "المعدات",
+    guides: "الأدلة الهندسية",
     references: "المراجع",
     contact: "اتصل بنا",
   },
