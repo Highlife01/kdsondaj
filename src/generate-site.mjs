@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync, cpSync, rmSync, existsSync } from "node:fs";
+import { mkdirSync, writeFileSync, cpSync, rmSync, existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { site, routes } from "./config.mjs";
@@ -643,7 +643,8 @@ function layout({ lang, pageKey, title, description, extraHead = "", schema = []
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="KD SONDAJ" />
-  <link rel="apple-touch-icon" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -1924,10 +1925,28 @@ write(
       categories: ["business", "productivity", "utilities"],
       icons: [
         {
+          src: "/assets/icon-192.png",
+          sizes: "192x192",
+          type: "image/png",
+          purpose: "any"
+        },
+        {
+          src: "/assets/icon-512.png",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "any"
+        },
+        {
+          src: "/assets/icon-maskable-512.png",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "maskable"
+        },
+        {
           src: "/assets/favicon.svg",
           sizes: "any",
           type: "image/svg+xml",
-          purpose: "any maskable"
+          purpose: "any"
         },
         {
           src: "/assets/logo.svg",
@@ -1964,6 +1983,10 @@ write(
     2
   )
 );
+// Progressive Web App Service Worker
+if (existsSync(join(root, "src", "sw.js"))) {
+  write(join(dist, "sw.js"), readFileSync(join(root, "src", "sw.js"), "utf8"));
+}
 
 console.log(`Built KD SONDAJ static site into dist/ (Total ${allPageKeys.length * 3} localized pages + admin + PWA + GEO)`);
 

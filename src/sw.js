@@ -14,6 +14,9 @@ const PRECACHE_ASSETS = [
   "/assets/site.js",
   "/assets/logo.svg",
   "/assets/favicon.svg",
+  "/assets/icon-192.png",
+  "/assets/icon-512.png",
+  "/assets/apple-touch-icon.png",
   "/site.webmanifest"
 ];
 
