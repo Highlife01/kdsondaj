@@ -1,0 +1,9 @@
+{
+  "name": "kdsondaj",
+  "framework": "static",
+  "build": "npm run build",
+  "output": "dist",
+  "routesFile": "dist/manus-routes.json",
+  "languages": ["tr", "en", "ar"],
+  "storage": "none"
+}

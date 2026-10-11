@@ -1,0 +1,16 @@
+{
+  "name": "KD SONDAJ",
+  "short_name": "KD SONDAJ",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F2F0EA",
+  "theme_color": "#F26A2E",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

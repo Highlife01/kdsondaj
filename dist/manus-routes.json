@@ -1,0 +1,243 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "file": "index.html",
+      "lang": "tr",
+      "page": "home"
+    },
+    {
+      "path": "/hakkimizda/",
+      "file": "hakkimizda/index.html",
+      "lang": "tr",
+      "page": "about"
+    },
+    {
+      "path": "/hizmetler/",
+      "file": "hizmetler/index.html",
+      "lang": "tr",
+      "page": "services"
+    },
+    {
+      "path": "/hizmetler/su-sondaji/",
+      "file": "hizmetler/su-sondaji/index.html",
+      "lang": "tr",
+      "page": "water"
+    },
+    {
+      "path": "/hizmetler/jeotermal-sondaj/",
+      "file": "hizmetler/jeotermal-sondaj/index.html",
+      "lang": "tr",
+      "page": "geothermal"
+    },
+    {
+      "path": "/hizmetler/jeoteknik-sondaj/",
+      "file": "hizmetler/jeoteknik-sondaj/index.html",
+      "lang": "tr",
+      "page": "geotechnical"
+    },
+    {
+      "path": "/hizmetler/maden-arama-sondaj/",
+      "file": "hizmetler/maden-arama-sondaj/index.html",
+      "lang": "tr",
+      "page": "mineral"
+    },
+    {
+      "path": "/ekipman/",
+      "file": "ekipman/index.html",
+      "lang": "tr",
+      "page": "equipment"
+    },
+    {
+      "path": "/ekipman/sondaj-makineleri/",
+      "file": "ekipman/sondaj-makineleri/index.html",
+      "lang": "tr",
+      "page": "rigs"
+    },
+    {
+      "path": "/ekipman/sondaj-tijleri/",
+      "file": "ekipman/sondaj-tijleri/index.html",
+      "lang": "tr",
+      "page": "pipes"
+    },
+    {
+      "path": "/ekipman/sondaj-matkaplari/",
+      "file": "ekipman/sondaj-matkaplari/index.html",
+      "lang": "tr",
+      "page": "bits"
+    },
+    {
+      "path": "/referanslar/",
+      "file": "referanslar/index.html",
+      "lang": "tr",
+      "page": "references"
+    },
+    {
+      "path": "/iletisim/",
+      "file": "iletisim/index.html",
+      "lang": "tr",
+      "page": "contact"
+    },
+    {
+      "path": "/en/",
+      "file": "en/index.html",
+      "lang": "en",
+      "page": "home"
+    },
+    {
+      "path": "/en/about/",
+      "file": "en/about/index.html",
+      "lang": "en",
+      "page": "about"
+    },
+    {
+      "path": "/en/services/",
+      "file": "en/services/index.html",
+      "lang": "en",
+      "page": "services"
+    },
+    {
+      "path": "/en/services/water-well-drilling/",
+      "file": "en/services/water-well-drilling/index.html",
+      "lang": "en",
+      "page": "water"
+    },
+    {
+      "path": "/en/services/geothermal-drilling/",
+      "file": "en/services/geothermal-drilling/index.html",
+      "lang": "en",
+      "page": "geothermal"
+    },
+    {
+      "path": "/en/services/geotechnical-drilling/",
+      "file": "en/services/geotechnical-drilling/index.html",
+      "lang": "en",
+      "page": "geotechnical"
+    },
+    {
+      "path": "/en/services/mineral-exploration-drilling/",
+      "file": "en/services/mineral-exploration-drilling/index.html",
+      "lang": "en",
+      "page": "mineral"
+    },
+    {
+      "path": "/en/equipment/",
+      "file": "en/equipment/index.html",
+      "lang": "en",
+      "page": "equipment"
+    },
+    {
+      "path": "/en/equipment/drilling-rigs/",
+      "file": "en/equipment/drilling-rigs/index.html",
+      "lang": "en",
+      "page": "rigs"
+    },
+    {
+      "path": "/en/equipment/drill-pipes/",
+      "file": "en/equipment/drill-pipes/index.html",
+      "lang": "en",
+      "page": "pipes"
+    },
+    {
+      "path": "/en/equipment/drill-bits/",
+      "file": "en/equipment/drill-bits/index.html",
+      "lang": "en",
+      "page": "bits"
+    },
+    {
+      "path": "/en/references/",
+      "file": "en/references/index.html",
+      "lang": "en",
+      "page": "references"
+    },
+    {
+      "path": "/en/contact/",
+      "file": "en/contact/index.html",
+      "lang": "en",
+      "page": "contact"
+    },
+    {
+      "path": "/ar/",
+      "file": "ar/index.html",
+      "lang": "ar",
+      "page": "home"
+    },
+    {
+      "path": "/ar/about/",
+      "file": "ar/about/index.html",
+      "lang": "ar",
+      "page": "about"
+    },
+    {
+      "path": "/ar/services/",
+      "file": "ar/services/index.html",
+      "lang": "ar",
+      "page": "services"
+    },
+    {
+      "path": "/ar/services/water-well-drilling/",
+      "file": "ar/services/water-well-drilling/index.html",
+      "lang": "ar",
+      "page": "water"
+    },
+    {
+      "path": "/ar/services/geothermal-drilling/",
+      "file": "ar/services/geothermal-drilling/index.html",
+      "lang": "ar",
+      "page": "geothermal"
+    },
+    {
+      "path": "/ar/services/geotechnical-drilling/",
+      "file": "ar/services/geotechnical-drilling/index.html",
+      "lang": "ar",
+      "page": "geotechnical"
+    },
+    {
+      "path": "/ar/services/mineral-exploration-drilling/",
+      "file": "ar/services/mineral-exploration-drilling/index.html",
+      "lang": "ar",
+      "page": "mineral"
+    },
+    {
+      "path": "/ar/equipment/",
+      "file": "ar/equipment/index.html",
+      "lang": "ar",
+      "page": "equipment"
+    },
+    {
+      "path": "/ar/equipment/drilling-rigs/",
+      "file": "ar/equipment/drilling-rigs/index.html",
+      "lang": "ar",
+      "page": "rigs"
+    },
+    {
+      "path": "/ar/equipment/drill-pipes/",
+      "file": "ar/equipment/drill-pipes/index.html",
+      "lang": "ar",
+      "page": "pipes"
+    },
+    {
+      "path": "/ar/equipment/drill-bits/",
+      "file": "ar/equipment/drill-bits/index.html",
+      "lang": "ar",
+      "page": "bits"
+    },
+    {
+      "path": "/ar/references/",
+      "file": "ar/references/index.html",
+      "lang": "ar",
+      "page": "references"
+    },
+    {
+      "path": "/ar/contact/",
+      "file": "ar/contact/index.html",
+      "lang": "ar",
+      "page": "contact"
+    },
+    {
+      "path": "/404.html",
+      "file": "404.html",
+      "indexable": false
+    }
+  ]
+}

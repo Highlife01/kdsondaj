@@ -1,0 +1,10 @@
+{
+  "name": "kdsondaj",
+  "private": true,
+  "version": "1.0.0",
+  "description": "KD SONDAJ static multilingual site",
+  "type": "module",
+  "scripts": {
+    "build": "node src/generate-site.mjs"
+  }
+}
