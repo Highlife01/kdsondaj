@@ -170,7 +170,7 @@ export const tr = {
     contact: {
       title: "İletişim | KD SONDAJ",
       description:
-        "Çankaya / Ankara. WhatsApp +90 541 191 63 01, info@kdsondaj.com. Doğrudan mühendislik hattı.",
+        "Çankaya / Ankara. WhatsApp +90 541 191 63 01, indo@kdsondaj.com.tr. Doğrudan mühendislik hattı.",
       kicker: "06 / Hat",
       h1: "Projenizi derinlik ve formasyonla birlikte yazın.",
       lead: "Site formunda veri saklanmaz. Tel, WhatsApp veya e-posta ile doğrudan mühendislik hattına ulaşın.",

@@ -33,4 +33,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://kdsondaj.com.tr/sitemap.xml
+Sitemap: https://www.kdsondaj.com.tr/sitemap.xml

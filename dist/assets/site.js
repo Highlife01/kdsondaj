@@ -341,7 +341,7 @@
           successBanner.scrollIntoView({ behavior: "smooth", block: "center" });
         }
 
-        var mailUrl = "mailto:info@kdsondaj.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        var mailUrl = "mailto:indo@kdsondaj.com.tr?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
         window.location.href = mailUrl;
       });
     }

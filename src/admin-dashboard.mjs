@@ -1,7 +1,7 @@
 /**
  * KD SONDAJ — Global SEO & GEO Command Center & B2B Inquiries Inbox
  * Credentials:
- *   Email: info@qkdsondaj.com.tr (or info@kdsondaj.com.tr)
+ *   Email: indo@kdsondaj.com.tr
  *   Password: Ak010101
  * 
  * Features:
@@ -440,7 +440,7 @@ export function generateAdminDashboardHtml() {
       <form id="auth-form" onsubmit="return false;">
         <div class="form-group">
           <label class="form-label" for="auth-email">Yönetici E-Posta</label>
-          <input class="form-input" id="auth-email" type="email" value="info@qkdsondaj.com.tr" required />
+          <input class="form-input" id="auth-email" type="email" value="indo@kdsondaj.com.tr" required />
         </div>
         <div class="form-group">
           <label class="form-label" for="auth-password">Giriş Şifresi</label>
@@ -486,7 +486,7 @@ export function generateAdminDashboardHtml() {
       </nav>
 
       <div class="user-pill">
-        <span class="user-email-label" id="current-user-email">info@qkdsondaj.com.tr</span>
+        <span class="user-email-label" id="current-user-email">indo@kdsondaj.com.tr</span>
         <button class="btn btn-secondary btn-sm" id="btn-logout">Çıkış ✕</button>
       </div>
     </div>
@@ -810,8 +810,8 @@ export function generateAdminDashboardHtml() {
         var email = authEmail.value.trim().toLowerCase();
         var pass = authPass.value;
 
-        // Valid credentials check: info@qkdsondaj.com.tr or info@kdsondaj.com.tr with Ak010101
-        if ((email === 'info@qkdsondaj.com.tr' || email === 'info@kdsondaj.com.tr') && pass === 'Ak010101') {
+        // Valid credentials check: indo@kdsondaj.com.tr with Ak010101 (strictly indo@)
+        if (email === 'indo@kdsondaj.com.tr' && pass === 'Ak010101') {
           sessionStorage.setItem('kd_admin_user', email);
           authError.style.display = 'none';
           authScreen.style.display = 'none';

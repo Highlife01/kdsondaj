@@ -1,7 +1,7 @@
 export const site = {
   name: "KD SONDAJ",
-  origin: "https://kdsondaj.com.tr",
-  email: "info@kdsondaj.com",
+  origin: "https://www.kdsondaj.com.tr",
+  email: "indo@kdsondaj.com.tr",
   phone: "+90 541 191 63 01",
   whatsappE164: "905411916301",
   address: {

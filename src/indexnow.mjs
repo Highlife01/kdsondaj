@@ -4,7 +4,7 @@
  */
 
 export const INDEXNOW_KEY = "e7f29a0b18c445698b67d5e49321c834";
-export const INDEXNOW_HOST = "kdsondaj.com.tr";
+export const INDEXNOW_HOST = "www.kdsondaj.com.tr";
 
 export async function submitIndexNow(urlList) {
   const payload = {

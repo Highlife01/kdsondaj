@@ -170,7 +170,7 @@ export const en = {
     contact: {
       title: "Contact | KD SONDAJ",
       description:
-        "Cankaya / Ankara. WhatsApp +90 541 191 63 01, info@kdsondaj.com. Direct engineering line.",
+        "Cankaya / Ankara. WhatsApp +90 541 191 63 01, indo@kdsondaj.com.tr. Direct engineering line.",
       kicker: "06 / Line",
       h1: "Send the project with depth and formation.",
       lead: "No form data is stored on this site. Reach engineering by phone, WhatsApp or email.",
