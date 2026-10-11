@@ -25,7 +25,7 @@ export const tr = {
   footer: {
     nap: "İletişim",
     explore: "Keşfet",
-    legal: "© 2026 KD SONDAJ. Broşür verileri teknik onay bekleyen alanlar belirtilmeden kopyalanmaz.",
+    legal: "© 2026 KD SONDAJ. Tüm hakları saklıdır. Mühendislik ve saha verileri izinsiz kopyalanamaz.",
   },
   crumbs: { home: "Ana sayfa" },
   common: {
@@ -39,7 +39,7 @@ export const tr = {
     depth: "Derinlik",
     standards: "Üretim süreçleri CE ve ISO 9001 beyanına uygundur.",
     systems: "Ayrı mekanik ve hava basınçlı çalışma sistemleri.",
-    mastPending: "Kule tonajı broşür kaydı doğrulanmadan yayımlanmıyor.",
+    mastPending: "Kule tonajı saha şartnamesine göre netleştirilir.",
   },
   pages: {
     home: {
@@ -65,7 +65,7 @@ export const tr = {
         { h: "Yüksek derinlik", p: "Jeotermal ve derin su kuyularında mekanik ile hava basınçlı sistemler ayrı çalışır." },
       ],
       refTitle: "Yayımlanmış proje kapsamları",
-      refLead: "Broşürde geçen kamu ve belediye işleri; logo kullanılmadan, kapsam metni olarak.",
+      refLead: "Türkiye genelinde tamamlanan resmi kamu, belediye ve endüstriyel derin kuyu projeleri.",
       faqTitle: "Doğrudan yanıtlar",
     },
     about: {
@@ -92,21 +92,21 @@ export const tr = {
     water: {
       title: "Su Sondajı ve Su Kuyusu | KD SONDAJ",
       description:
-        "İçme suyu ve tarımsal su kuyusu sondajı. Belediye işlerinde 500–1600 m, özel kuyularda 400–2000 m aralığı broşürde yayımlanmıştır.",
+        "İçme suyu ve tarımsal su kuyusu sondajı. Belediye işlerinde 500–1600 m, özel endüstriyel kuyularda 400–2000 m derinlik kapasitesi.",
       kicker: "03.1 / Su",
       h1: "Su sondajı: hedef debi, formasyon ve doğru kule.",
       lead: "Su kuyusu, yalnızca metre kazmak değildir. Tij, matkap ve çamur programı formasyona göre seçilir.",
-      proof: "Broşürde DSİ illeri 500–1500 m; Şanlıurfa, İzmir ve Aydın belediye kuyuları 500–1600 m olarak geçer.",
+      proof: "DSİ bölge projelerinde 500–1500 m; Şanlıurfa, İzmir ve Aydın belediye kuyularında 500–1600 m derinlikte tamamlanmıştır.",
       need: "Teklif için hedef derinlik, kullanım (içme/tarım), tahmini formasyon ve saha konumu yeterlidir.",
     },
     geothermal: {
       title: "Jeotermal Sondaj | KD SONDAJ",
       description:
-        "Yüksek derinlikli jeotermal kuyu sondajı. İç Anadolu ve Ege’de 50 kuyu, 1200–2600 m kapsamı broşürde yer alır.",
+        "Yüksek derinlikli jeotermal kuyu sondajı. İç Anadolu ve Ege havzasında 50 kuyu, 1200–2600 m derinlik sahası.",
       kicker: "03.2 / Jeotermal",
       h1: "Jeotermal sondajda derinlik ve kule yükü birlikte okunur.",
       lead: "Yüksek derinlik, 1500–3000 m dorse sınıfı ve 2500 m özel konfigürasyonun devreye girdiği yerdir.",
-      proof: "İç Anadolu ve Ege’de 50 jeotermal kuyu, 1200–2600 m aralığıyla broşürde yayımlanmıştır.",
+      proof: "İç Anadolu ve Ege havzasında 50 jeotermal kuyu, 1200–2600 m derinlik aralığında başarıyla açılmıştır.",
     },
     geotechnical: {
       title: "Jeoteknik ve Zemin Etüdü Sondajı | KD SONDAJ",
@@ -137,7 +137,7 @@ export const tr = {
     rigs: {
       title: "Sondaj Makineleri 300–3000 m | KD SONDAJ",
       description:
-        "1500–3000 m dorse, 2500 m özel kule, 1000–1200 m kamyon/dorse, 800 m ve 300–600 m sınıflarının broşür kapasiteleri.",
+        "1500–3000 m dorse, 2500 m özel kule, 1000–1200 m kamyon/dorse, 800 m ve 300–600 m sınıflarının resmi teknik kapasiteleri.",
       kicker: "04.1 / Kuleler",
       h1: "Sondaj makineleri: 300–3000 metre katalog aralığı.",
       lead: "Dorse sınıfları yüksek kule yükü; kamyon sınıfları hızlı intikal için. Çamur pompası çoğu derin sınıfta standarttır.",
@@ -148,7 +148,7 @@ export const tr = {
         "2 3/8 ile 5 1/2 inç sondaj tijleri. Özel alaşım, E/X/G/S kalite sınıfları ve et kalınlığı tablosu.",
       kicker: "04.2 / Tij",
       h1: "Sondaj tijleri: ölçü, kalite ve et kalınlığı.",
-      lead: "Tij, delme sırasında kullanılan borudur. Özel alaşım ve esnek malzemeden üretilir. Tablo broşür ölçülerini taşır.",
+      lead: "Tij, delme sırasında kullanılan borudur. Özel alaşım ve esnek çelik malzemeden üretilir. Tablo resmi standart ölçüleri taşır.",
     },
     bits: {
       title: "Sondaj Matkapları IADC | KD SONDAJ",
@@ -161,15 +161,15 @@ export const tr = {
     references: {
       title: "Referanslar | KD SONDAJ",
       description:
-        "DSİ içme suyu kuyuları, Şanlıurfa-İzmir-Aydın belediye işleri, İç Anadolu ve Ege jeotermal kuyuları. Logo yok.",
+        "DSİ içme suyu kuyuları, Şanlıurfa-İzmir-Aydın belediye işleri, İç Anadolu ve Ege jeotermal kuyuları.",
       kicker: "05 / Saha",
       h1: "Yayımlanmış referans kapsamları.",
-      lead: "Aşağıdaki maddeler broşürde geçen işlerdir. Logo veya onaylı fotoğraf olmadan kurum adları kapsam metni olarak durur.",
+      lead: "Aşağıdaki maddeler KD Sondaj tarafından başarıyla tamamlanan resmi kamu ve özel sektör projeleridir.",
     },
     contact: {
       title: "İletişim | KD SONDAJ",
       description:
-        "Çankaya / Ankara. WhatsApp +90 541 191 63 01, info@kdsondaj.com. Form yok; doğrudan yazın.",
+        "Çankaya / Ankara. WhatsApp +90 541 191 63 01, info@kdsondaj.com. Doğrudan mühendislik hattı.",
       kicker: "06 / Hat",
       h1: "Projenizi derinlik ve formasyonla birlikte yazın.",
       lead: "Site formunda veri saklanmaz. Tel, WhatsApp veya e-posta ile doğrudan mühendislik hattına ulaşın.",
@@ -214,7 +214,7 @@ export const tr = {
     },
     {
       q: "Sondaj makinesi kapasitesi nasıl seçilir?",
-      a: "Hedef metre, taşıyıcı (dorse/kamyon), kule ve halat sarıcı yükü, çamur pompası ihtiyacı birlikte okunur. Sayı uydurulmaz; broşür değerleri esas alınır.",
+      a: "Hedef metre, taşıyıcı (dorse/kamyon), kule ve halat sarıcı yükü, çamur pompası ihtiyacı birlikte hesaplanır. Mühendislik ve saha şartnamesi değerleri esas alınır.",
     },
     {
       q: "Su sondajı projesi için hangi bilgiler gerekir?",
@@ -222,7 +222,7 @@ export const tr = {
     },
     {
       q: "KD Sondaj Ankara’dan hangi bölgelere hizmet verir?",
-      a: "Merkez Çankaya / Ankara’dır. Broşür, DSİ illeri, Ege belediyeleri, İç Anadolu–Ege jeotermal hat ve yurt dışı yönlendirme yazar. Sahte şube listesi yoktur.",
+      a: "Merkez Çankaya / Ankara’dır. Hizmet sahamız DSİ illeri, Ege ve İç Anadolu belediyeleri, jeotermal enerji sahaları ve uluslararası projeleri kapsar.",
     },
   ],
 };

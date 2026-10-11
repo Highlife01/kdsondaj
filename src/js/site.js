@@ -308,12 +308,50 @@
     }
   }
 
-  // 7. Scroll Reveal Observer & Micro-Animations
+  // 7. Scroll Reveal Observer & Dynamic Metric Counters
+  function animateNumber(el, target, prefix, suffix, duration) {
+    var startVal = 0;
+    var startTime = null;
+    var dur = duration || 1400;
+
+    function frame(now) {
+      if (!startTime) startTime = now;
+      var elapsed = now - startTime;
+      var progress = Math.min(elapsed / dur, 1);
+      // Sleek easeOutQuart curve
+      var ease = 1 - Math.pow(1 - progress, 4);
+      var current = Math.floor(ease * target);
+      el.textContent = (prefix || "") + current + (suffix || "");
+      if (progress < 1) {
+        window.requestAnimationFrame(frame);
+      } else {
+        el.textContent = (prefix || "") + target + (suffix || "");
+      }
+    }
+    window.requestAnimationFrame(frame);
+  }
+
   if ("IntersectionObserver" in window) {
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
+
+          // Check for nested or direct data-counter elements
+          var counters = entry.target.querySelectorAll ? entry.target.querySelectorAll("[data-counter]") : [];
+          if (entry.target.hasAttribute && entry.target.hasAttribute("data-counter")) {
+            counters = [entry.target];
+          }
+          counters.forEach(function (cnt) {
+            if (!cnt.dataset.animated) {
+              cnt.dataset.animated = "true";
+              var target = parseInt(cnt.getAttribute("data-counter"), 10);
+              var prefix = cnt.getAttribute("data-prefix") || "";
+              var suffix = cnt.getAttribute("data-suffix") || "";
+              animateNumber(cnt, target, prefix, suffix, 1600);
+            }
+          });
+
           revealObserver.unobserve(entry.target);
         }
       });

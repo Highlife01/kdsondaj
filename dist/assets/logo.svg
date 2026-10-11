@@ -2,7 +2,7 @@
   <!-- Outer Gold Circle -->
   <circle cx="50" cy="50" r="44" stroke="#C59B27" stroke-width="4.5" fill="#FFFFFF"/>
   
-  <!-- Stylized KD Monogram from Official Brochure -->
+  <!-- Stylized KD Monogram -->
   <!-- Left Vertical Stem -->
   <path d="M34 26 L42 26 L42 74 L34 74 Z" fill="#C59B27"/>
   

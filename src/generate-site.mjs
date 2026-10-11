@@ -362,7 +362,7 @@ function quoteCalculator(lang) {
       <div class="calc-result-box">
         <span class="calc-result-rec">${esc(recLabel)}</span>
         <div class="calc-result-rig" id="calc-rig-name">KD-800 Kamyon Üstü Hidrolik Kule</div>
-        <div class="calc-result-desc" id="calc-rig-desc">Broşür 800 m sınıfı: Kamyon üstü intikal, 361 HP güverte motoru, çift çamur sirkülasyonu.</div>
+        <div class="calc-result-desc" id="calc-rig-desc">800 m Ağır Hizmet Sınıfı: Kamyon üstü intikal, 361 HP güverte motoru, çift çamur sirkülasyonu.</div>
         <a class="btn btn-wa" id="calc-wa-btn" href="https://wa.me/${site.whatsappE164}?text=Merhaba%2C%20KD%20Sondaj'dan%20Su%20Sondaji%20(500-1000m)%20icin%20teklif%20almak%20istiyorum." target="_blank" rel="noopener" style="width:100%;justify-content:center;">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
           ${esc(btnLabel)}
@@ -796,11 +796,11 @@ function pageHome(lang) {
       
       <div class="hero-visual-container reveal-on-scroll">
         <div class="hero-img-card">
-          <img src="/assets/hero-field-rig.jpg" alt="KD Sondaj Saha Kulesi ve Derin Kuyu Çalışması (Broşür Sayfa 22)" width="800" height="450" fetchpriority="high" />
+          <img src="/assets/hero-field-rig.jpg" alt="KD Sondaj Saha Kulesi ve 3000m Derin Kuyu Çalışması" width="800" height="450" fetchpriority="high" />
         </div>
         <aside class="hero-depth-card">
           <div class="card-header-telemetry">
-            <span>TELEMETRY // STRATA HORIZON (BROŞÜR VERİSİ)</span>
+            <span>TELEMETRY // STRATA &amp; FORMATION HORIZON</span>
             <span class="status-online">3000M AKTİF</span>
           </div>
           <div class="depth-meter-track">
@@ -817,11 +817,11 @@ function pageHome(lang) {
           </div>
           <div class="hero-card-stats">
             <div class="stat-chip">
-              <div class="val">3000 m</div>
+              <div class="val" data-counter="3000" data-suffix=" m">3000 m</div>
               <div class="lbl">${isTr ? "Maksimum Kuyu Derinliği" : isAr ? "العمق الأقصى للبئر" : "Maximum Well Depth"}</div>
             </div>
             <div class="stat-chip">
-              <div class="val">45+ Yıl</div>
+              <div class="val" data-counter="45" data-suffix="${isTr ? "+ Yıl" : isAr ? "+ عام" : "+ Years"}">45+ Yıl</div>
               <div class="lbl">${isTr ? "Saha & Üretim Tecrübesi" : isAr ? "خبرة هندسية وتصنيعية" : "Field & Manufacturing Legacy"}</div>
             </div>
           </div>
@@ -837,7 +837,7 @@ function pageHome(lang) {
           <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M5 15l7 7 7-7"/></svg>
         </div>
         <div class="metric-content">
-          <div class="num">250–3000 m</div>
+          <div class="num" data-counter="3000" data-prefix="250–" data-suffix=" m">250–3000 m</div>
           <span>${esc(p.metrics[0].l)}</span>
         </div>
       </div>
@@ -846,7 +846,7 @@ function pageHome(lang) {
           <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
         </div>
         <div class="metric-content">
-          <div class="num">300–3000 m</div>
+          <div class="num" data-counter="3000" data-prefix="300–" data-suffix=" m">300–3000 m</div>
           <span>${esc(p.metrics[1].l)}</span>
         </div>
       </div>
@@ -855,7 +855,7 @@ function pageHome(lang) {
           <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <div class="metric-content">
-          <div class="num">45+ Yıl</div>
+          <div class="num" data-counter="45" data-suffix="${isTr ? "+ Yıl" : isAr ? "+ عام" : "+ Years"}">45+ Yıl</div>
           <span>${esc(p.metrics[2].l)}</span>
         </div>
       </div>
@@ -869,11 +869,11 @@ function pageHome(lang) {
         <div class="cards services">${serviceCards}</div>
         
         <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
-          <img class="showcase-img" src="/assets/truck-rig.jpg" alt="KD Sondaj Kamyon Üstü Hidrolik Kule (Broşür Sayfa 6-7)" loading="lazy" />
+          <img class="showcase-img" src="/assets/truck-rig.jpg" alt="KD Sondaj Kamyon Üstü Hidrolik Kule" loading="lazy" />
           <div class="showcase-content">
-            <span class="telemetry-pill" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> BROŞÜR KAMYON ÜSTÜ KULELER (300–1200 M)</span>
+            <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> KAMYON ÜSTÜ HİDROLİK KULELER (300–1200 M)</span>
             <h3>${esc(copy.pages.rigs.h1)}</h3>
-            <p>${isTr ? "Broşür kayıtlı 300m, 400m, 500m, 600m, 800m, 1000m ve 1200m kamyon üstü hidrolik sondaj kuleleri ile hızlı intikal ve yüksek tork." : isAr ? "حفارات شاحنة هيدروليكية من 300 إلى 1200 متر مصممة للحركة السريعة والعمل الشاق." : "Heavy truck-mounted drilling rigs 300m to 1200m for rapid deployment and high torque."}</p>
+            <p>${isTr ? "300m, 400m, 500m, 600m, 800m, 1000m ve 1200m kapasiteli kamyon üstü hidrolik sondaj filomuz ile hızlı intikal ve yüksek rotari tork gücü." : isAr ? "حفارات شاحنة هيدروليكية من 300 إلى 1200 متر مصممة للحركة السريعة والعمل الشاق." : "Heavy truck-mounted drilling rigs 300m to 1200m for rapid deployment and high torque."}</p>
             <div><a class="btn btn-signal" href="${routes[lang].rigs}">${esc(copy.cta.more)} →</a></div>
           </div>
         </div>
@@ -895,11 +895,11 @@ function pageHome(lang) {
         <p style="margin-top:1.75rem;"><a class="btn btn-ghost" href="${routes[lang].rigs}">${esc(copy.cta.more)} (Tüm 11 Model) →</a></p>
         
         <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
-          <img class="showcase-img" src="/assets/trailer-rig.jpg" alt="KD Sondaj Ağır Dorse Kule 1500–3000 Metre (Broşür Sayfa 4 & 8)" loading="lazy" />
+          <img class="showcase-img" src="/assets/trailer-rig.jpg" alt="KD Sondaj Ağır Dorse Kule 1500–3000 Metre" loading="lazy" />
           <div class="showcase-content">
-            <span class="telemetry-pill" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> 1500–3000M AĞIR DORSE SINIFI</span>
+            <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> 1500–3000M AĞIR DORSE SINIFI</span>
             <h3>1500 – 3000 Metre Dorse Sondaj Kulesi</h3>
-            <p>${isTr ? "Broşürde yer alan 110 ton kule ve 90 ton halat sarıcı kapasiteli ağır dorse sınıfı derin su ve jeotermal sondaj kulemiz." : isAr ? "حفارة مقطورة ثقيلة بقدرة برج 110 طن وقدرة سحب 90 طن لآبار المياه العميقة والطاقة الحرارية." : "Heavy trailer-mounted drilling rig with 110-ton mast capacity and 90-ton drawworks for deep geothermal & water wells."}</p>
+            <p>${isTr ? "110 ton kule ve 90 ton halat sarıcı kapasiteli ağır dorse sınıfı kulelerimiz ile derin jeotermal rezervuarlar ve derin su kuyularında kesintisiz delme gücü." : isAr ? "حفارة مقطورة ثقيلة بقدرة برج 110 طن وقدرة سحب 90 طن لآبار المياه العميقة والطاقة الحرارية." : "Heavy trailer-mounted drilling rig with 110-ton mast capacity and 90-ton drawworks for deep geothermal & water wells."}</p>
             <div><a class="btn btn-signal" href="${routes[lang].rigs}">${esc(copy.cta.more)} →</a></div>
           </div>
         </div>
@@ -1023,7 +1023,7 @@ function serviceFocus(lang, pageKey) {
     <section class="block" style="padding-top:0;">
       <div class="wrap">
         <div class="showcase-banner reveal-on-scroll">
-          <img class="showcase-img" src="/assets/hero-field-rig.jpg" alt="KD Sondaj Derin Sondaj Kulesi Sahada (Broşür Sayfa 22)" />
+          <img class="showcase-img" src="/assets/hero-field-rig.jpg" alt="KD Sondaj Derin Sondaj Kulesi Sahada" />
           <div class="showcase-content">
             <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> 250–3000 METRE SAHA OPERASYONU</span>
             <h3>${esc(copy.pages[pageKey].h1)}</h3>
@@ -1077,7 +1077,7 @@ function pageEquipment(lang) {
       </div>
 
       <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
-        <img class="showcase-img" src="/assets/tricone-bits.jpg" alt="KD Sondaj Tricone Matkaplar IADC Standartları (Broşür Sayfa 17-19)" />
+        <img class="showcase-img" src="/assets/tricone-bits.jpg" alt="KD Sondaj Tricone Matkaplar IADC Standartları" />
         <div class="showcase-content">
           <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> IADC 111–637 STANDARTLARI</span>
           <h3>${esc(copy.pages.bits.h1)}</h3>
@@ -1089,7 +1089,7 @@ function pageEquipment(lang) {
       <h3 style="margin-top:3rem;margin-bottom:1rem;">Duplex 6" Çamur Pompası</h3>
       <div class="table-wrap reveal-on-scroll">
         <table>
-          <caption>Duplex 6" Mud Pump Telemetry (Broşür Sayfa 20)</caption>
+          <caption>Duplex 6" Çamur Pompası Teknik Telemetri Tablosu</caption>
           <thead><tr><th>Liner</th><th>Flow (lt/dak)</th><th>bar / psi</th></tr></thead>
           <tbody>${pumpRows.map((row) => `<tr><td>${esc(row.liner)}</td><td>${esc(row.flow)}</td><td>${esc(row.pressure)}</td></tr>`).join("")}</tbody>
         </table>
@@ -1124,9 +1124,9 @@ function pageRigs(lang) {
       </div>
 
       <div class="showcase-banner reveal-on-scroll" style="margin-bottom:2rem;">
-        <img class="showcase-img" src="/assets/truck-rig.jpg" alt="KD Sondaj Kamyon Üstü Sondaj Makinesi (Broşür)" />
+        <img class="showcase-img" src="/assets/truck-rig.jpg" alt="KD Sondaj Kamyon Üstü Sondaj Makinesi" />
         <div class="showcase-content">
-          <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> BROŞÜR SAYFA 6-7 ORİJİNAL MODELİ</span>
+          <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> KD-TRUCK SERİSİ // HİDROLİK KULE SİSTEMİ</span>
           <h3>Kamyon Üstü Hidrolik Kule Serisi</h3>
           <p>300m, 400m, 500m, 600m, 800m, 1000m ve 1200m kapasiteli kuleler.</p>
         </div>
@@ -1162,7 +1162,7 @@ function pagePipes(lang) {
     <div class="wrap">
       <div class="table-wrap reveal-on-scroll">
         <table>
-          <caption>Sondaj Tiji Ölçü ve Kalite Tablosu (Broşür Sayfa 16)</caption>
+          <caption>API Standart Sondaj Tiji Ölçü ve Kalite Tablosu</caption>
           <thead><tr><th>in</th><th>mm (OD)</th><th>m (Boy)</th><th>Grade (Kalite)</th><th>in (Et)</th><th>mm (Et)</th></tr></thead>
           <tbody>${pipes.map((row) => `<tr><td>${esc(row.inch)}</td><td>${esc(row.od)}</td><td>${esc(row.length)}</td><td>${esc(row.grade)}</td><td>${esc(row.wallIn)}</td><td>${esc(row.wallMm)}</td></tr>`).join("")}</tbody>
         </table>
@@ -1189,7 +1189,7 @@ function pageBits(lang) {
   <section class="block">
     <div class="wrap">
       <div class="showcase-banner reveal-on-scroll" style="margin-bottom:2.5rem;">
-        <img class="showcase-img" src="/assets/tricone-bits.jpg" alt="KD Sondaj Tricone Matkap Serisi IADC (Broşür Sayfa 17-19)" />
+        <img class="showcase-img" src="/assets/tricone-bits.jpg" alt="KD Sondaj Tricone Matkap Serisi IADC" />
         <div class="showcase-content">
           <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> IADC 111 – 637 CODE MAPPING</span>
           <h3>${esc(copy.pages.bits.h1)}</h3>

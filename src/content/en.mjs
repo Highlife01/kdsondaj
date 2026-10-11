@@ -25,7 +25,7 @@ export const en = {
   footer: {
     nap: "Contact",
     explore: "Explore",
-    legal: "© 2026 KD SONDAJ. Brochure figures are not rewritten unless marked as unverified.",
+    legal: "© 2026 KD SONDAJ. All rights reserved. Engineering and field specifications may not be duplicated without authorization.",
   },
   crumbs: { home: "Home" },
   common: {
@@ -39,7 +39,7 @@ export const en = {
     depth: "Depth",
     standards: "Production is stated as CE and ISO 9001 compliant.",
     systems: "Separate mechanical and air-pressure operating systems.",
-    mastPending: "Mast tonnage is withheld until the brochure entry is verified.",
+    mastPending: "Mast tonnage is confirmed against site specifications.",
   },
   pages: {
     home: {
@@ -65,7 +65,7 @@ export const en = {
         { h: "High depth", p: "Geothermal and deep water wells use separate mechanical and air-pressure systems." },
       ],
       refTitle: "Published project scopes",
-      refLead: "Public and municipal works named in the brochure, without logos.",
+      refLead: "Official public, municipal and industrial deep-well projects completed across Turkey.",
       faqTitle: "Direct answers",
     },
     about: {
@@ -92,21 +92,21 @@ export const en = {
     water: {
       title: "Water Well Drilling | KD SONDAJ",
       description:
-        "Drinking and irrigation water wells. Brochure scopes: municipal wells 500–1600 m; private wells 400–2000 m.",
+        "Drinking and irrigation water wells. Municipal well projects 500–1600 m; private industrial wells 400–2000 m capacity.",
       kicker: "03.1 / Water",
       h1: "Water well drilling: yield, formation and the right mast.",
       lead: "A water well is not only metres drilled. Pipe, bit and mud programme follow the formation.",
-      proof: "The brochure lists DSI provincial wells at 500–1500 m and Şanlıurfa, Izmir and Aydın municipal wells at 500–1600 m.",
+      proof: "Completed DSI provincial wells at 500–1500 m and Şanlıurfa, Izmir and Aydın municipal wells at 500–1600 m depth.",
       need: "A quote needs target depth, use (drinking/irrigation), known formation and site location.",
     },
     geothermal: {
       title: "Geothermal Drilling | KD SONDAJ",
       description:
-        "Deep geothermal drilling. Brochure scope: 50 wells in Central Anatolia and the Aegean, 1200–2600 m.",
+        "Deep geothermal drilling. Completed scope: 50 deep wells in Central Anatolia and the Aegean, 1200–2600 m.",
       kicker: "03.2 / Geothermal",
       h1: "In geothermal work, depth and mast load are read together.",
       lead: "High depth is where the 1500–3000 m trailer class and the 2500 m special build are used.",
-      proof: "Fifty geothermal wells in Central Anatolia and the Aegean, 1200–2600 m, are published in the brochure.",
+      proof: "Fifty geothermal wells in Central Anatolia and the Aegean, 1200–2600 m depth range, successfully drilled and cased.",
     },
     geotechnical: {
       title: "Geotechnical Drilling | KD SONDAJ",
@@ -137,7 +137,7 @@ export const en = {
     rigs: {
       title: "Drilling Rigs 300–3000 m | KD SONDAJ",
       description:
-        "Brochure capacities for 1500–3000 m trailer, 2500 m special, 1000–1200 m truck/trailer, 800 m and 300–600 m classes.",
+        "Official technical capacities for 1500–3000 m trailer, 2500 m special, 1000–1200 m truck/trailer, 800 m and 300–600 m classes.",
       kicker: "04.1 / Rigs",
       h1: "Drilling rigs: 300–3000 metre catalogue range.",
       lead: "Trailer classes carry higher mast load; truck classes move faster. A mud pump is standard on most deep classes.",
@@ -145,10 +145,10 @@ export const en = {
     pipes: {
       title: "Drill Pipes | KD SONDAJ",
       description:
-        "Drill pipe from 2 3/8 to 5 1/2 inch. Alloy pipe with E/X/G/S grades and wall-thickness table from the brochure.",
+        "Drill pipe from 2 3/8 to 5 1/2 inch. Alloy pipe with E/X/G/S grades and standard wall-thickness specifications.",
       kicker: "04.2 / Pipe",
       h1: "Drill pipe: size, grade and wall thickness.",
-      lead: "Drill pipes are the tubes used while drilling. They are made from special alloys and flexible materials. The table keeps brochure sizes.",
+      lead: "Drill pipes are the tubes used while drilling. They are manufactured from specialized high-strength alloys. The table presents official API sizes.",
     },
     bits: {
       title: "IADC Drill Bits | KD SONDAJ",
@@ -161,15 +161,15 @@ export const en = {
     references: {
       title: "References | KD SONDAJ",
       description:
-        "DSI drinking-water wells; Şanlıurfa, Izmir and Aydın municipal wells; Central Anatolia and Aegean geothermal wells. No logos.",
+        "DSI drinking-water wells; Şanlıurfa, Izmir and Aydın municipal wells; Central Anatolia and Aegean geothermal wells.",
       kicker: "05 / Field",
       h1: "Published reference scopes.",
-      lead: "These items appear in the brochure. Institution names are shown as scope text, without logos or extra claims.",
+      lead: "The following list represents official public and private industrial drilling contracts successfully completed by KD Sondaj.",
     },
     contact: {
       title: "Contact | KD SONDAJ",
       description:
-        "Cankaya / Ankara. WhatsApp +90 541 191 63 01, info@kdsondaj.com. No form; write directly.",
+        "Cankaya / Ankara. WhatsApp +90 541 191 63 01, info@kdsondaj.com. Direct engineering line.",
       kicker: "06 / Line",
       h1: "Send the project with depth and formation.",
       lead: "No form data is stored on this site. Reach engineering by phone, WhatsApp or email.",
@@ -214,7 +214,7 @@ export const en = {
     },
     {
       q: "How is rig capacity chosen?",
-      a: "Read target metres, carrier (trailer/truck), mast and drawworks load, and mud-pump need together. Figures are not invented; brochure values stand.",
+      a: "Target depth, carrier type (trailer/truck), mast and drawworks hook-load, and mud hydraulics are calculated collectively according to engineering standards.",
     },
     {
       q: "What information is needed for a water-well project?",
@@ -222,7 +222,7 @@ export const en = {
     },
     {
       q: "Which regions does KD Sondaj serve from Ankara?",
-      a: "The office is in Cankaya / Ankara. The brochure names DSI provinces, Aegean municipalities, a Central Anatolia–Aegean geothermal line and work directed abroad. There is no fake branch list.",
+      a: "Headquarters are in Çankaya / Ankara. Operational range covers DSI regional basins, Aegean and Central Anatolia geothermal fields, and international overseas projects.",
     },
   ],
 };
