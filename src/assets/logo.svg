@@ -1,33 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="KD SONDAJ">
-  <defs>
-    <linearGradient id="kd-grad-orange" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF7A30"/>
-      <stop offset="100%" stop-color="#E14D11"/>
-    </linearGradient>
-    <linearGradient id="kd-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1A2230"/>
-      <stop offset="100%" stop-color="#0E131C"/>
-    </linearGradient>
-    <linearGradient id="kd-grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00D2FF"/>
-      <stop offset="100%" stop-color="#0080FF"/>
-    </linearGradient>
-  </defs>
-  <!-- Background Rounded Badge -->
-  <rect width="64" height="64" rx="14" fill="url(#kd-grad-dark)"/>
-  <rect x="1" y="1" width="62" height="62" rx="13" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="KD SONDAJ">
+  <!-- Outer Gold Circle -->
+  <circle cx="50" cy="50" r="44" stroke="#C59B27" stroke-width="4.5" fill="#FFFFFF"/>
+  
+  <!-- Stylized KD Monogram from Official Brochure -->
+  <!-- Left Vertical Stem -->
+  <path d="M34 26 L42 26 L42 74 L34 74 Z" fill="#C59B27"/>
+  
+  <!-- Upper Diagonal Arm with Hatched Industrial Lines -->
+  <path d="M44 48 L64 26 L74 26 L52 50 Z" fill="#C59B27"/>
+  <line x1="56" y1="28" x2="62" y2="34" stroke="#FFFFFF" stroke-width="1.8"/>
+  <line x1="60" y1="32" x2="66" y2="38" stroke="#FFFFFF" stroke-width="1.8"/>
+  <line x1="64" y1="36" x2="70" y2="42" stroke="#FFFFFF" stroke-width="1.8"/>
 
-  <!-- Subterranean Drill Bit & Tower Hexagon Icon -->
-  <path d="M32 9 L48 18 L48 36 L32 55 L16 36 L16 18 Z" fill="none" stroke="url(#kd-grad-orange)" stroke-width="2.5" stroke-linejoin="round"/>
-  
-  <!-- Central Drill Core Column -->
-  <path d="M32 9 L32 45" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
-  
-  <!-- Drill Bit Chevron Cutter Teeth -->
-  <path d="M23 27 L32 34 L41 27" fill="none" stroke="url(#kd-grad-orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M26 38 L32 43 L38 38" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  
-  <!-- Bottom Diamond Penetrator Point -->
-  <polygon points="32,49 28,45 36,45" fill="url(#kd-grad-orange)"/>
-  <circle cx="32" cy="54" r="2" fill="url(#kd-grad-cyan)"/>
+  <!-- Lower Diagonal Arm -->
+  <path d="M47 45 L73 74 L63 74 L39 48 Z" fill="#C59B27"/>
 </svg>

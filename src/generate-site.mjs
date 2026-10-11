@@ -227,7 +227,7 @@ function crumbsHtml(lang, items) {
 }
 
 function section(index, title, inner) {
-  return `<div class="section">
+  return `<div class="section reveal-on-scroll">
     <div class="section-sidebar">
       <div class="section-index-badge">NO. ${esc(index)}</div>
       <div class="section-kicker">KD SONDAJ</div>
@@ -254,7 +254,7 @@ function machineCard(machine, copy, lang) {
 
   if (machine.special) {
     const facts = machine.facts[lang] || machine.facts.tr;
-    return `<article class="rig-card" data-carrier="${carrierClass}">
+    return `<article class="rig-card reveal-on-scroll" data-carrier="${carrierClass}">
       <div class="rig-header">
         <div class="rig-depth-badge">${esc(machine.depth)}</div>
         <span class="carrier-tag ${carrierClass}">${esc(carrier)}</span>
@@ -270,7 +270,7 @@ function machineCard(machine, copy, lang) {
   }
 
   const mud = machine.mud === true ? copy.common.mudYes : machine.mud === "optional" ? copy.common.mudOpt : "";
-  return `<article class="rig-card" data-carrier="${carrierClass}">
+  return `<article class="rig-card reveal-on-scroll" data-carrier="${carrierClass}">
     <div class="rig-header">
       <div class="rig-depth-badge">${esc(machine.depth)}</div>
       <span class="carrier-tag ${carrierClass}">${esc(carrier)}</span>
@@ -287,8 +287,8 @@ function machineCard(machine, copy, lang) {
       </div>
     </div>
     <div class="rig-features">
-      ${mud ? `<p style="color:var(--cyan);font-weight:600;">✓ ${esc(mud)}</p>` : ""}
-      <p style="color:var(--text-muted);font-size:0.82rem;">${esc(copy.common.systems)}</p>
+      ${mud ? `<p style="color:var(--cyan);font-weight:700;">✓ ${esc(mud)}</p>` : ""}
+      <p style="color:var(--text-muted);font-size:0.84rem;">${esc(copy.common.systems)}</p>
     </div>
     <a class="rig-inquire-btn" href="${waUrl}" target="_blank" rel="noopener">
       <span>${esc(btnLabel)} (0541 191 63 01)</span>
@@ -339,7 +339,7 @@ function quoteCalculator(lang) {
   const btnLabel = isTr ? "WhatsApp ile Teklif İste (0541 191 63 01)" : isAr ? "طلب تسعير عبر واتساب (0541 191 63 01)" : "Request Quote on WhatsApp (0541 191 63 01)";
 
   return `
-  <div class="calc-widget" id="rig-calculator" data-lang="${lang}">
+  <div class="calc-widget reveal-on-scroll" id="rig-calculator" data-lang="${lang}">
     <div class="calc-grid">
       <div class="calc-options">
         <div>
@@ -362,7 +362,7 @@ function quoteCalculator(lang) {
       <div class="calc-result-box">
         <span class="calc-result-rec">${esc(recLabel)}</span>
         <div class="calc-result-rig" id="calc-rig-name">KD-800 Kamyon Üstü Hidrolik Kule</div>
-        <div class="calc-result-desc" id="calc-rig-desc">500–1000 m derinlikler için yüksek manevra kabiliyetli kamyon üstü ünite, çift çamur sirkülasyonu ve yüksek tork.</div>
+        <div class="calc-result-desc" id="calc-rig-desc">Broşür 800 m sınıfı: Kamyon üstü intikal, 361 HP güverte motoru, çift çamur sirkülasyonu.</div>
         <a class="btn btn-wa" id="calc-wa-btn" href="https://wa.me/${site.whatsappE164}?text=Merhaba%2C%20KD%20Sondaj'dan%20Su%20Sondaji%20(500-1000m)%20icin%20teklif%20almak%20istiyorum." target="_blank" rel="noopener" style="width:100%;justify-content:center;">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
           ${esc(btnLabel)}
@@ -478,7 +478,7 @@ function contactForm(lang) {
   };
 
   return `
-  <div class="contact-form-card" id="contact-form-wrapper">
+  <div class="contact-form-card reveal-on-scroll" id="contact-form-wrapper">
     <h3 style="font-size:1.6rem;margin-bottom:0.5rem;">${esc(t.title)}</h3>
     <p style="margin-bottom:1.75rem;font-size:0.95rem;color:var(--text-soft);">${esc(t.subtitle)}</p>
     
@@ -595,11 +595,11 @@ function layout({ lang, pageKey, title, description, extraHead = "", schema = []
   <meta property="og:title" content="${esc(title)}" />
   <meta property="og:description" content="${esc(description)}" />
   <meta property="og:url" content="${esc(canonical)}" />
-  <meta property="og:image" content="${esc(originUrl("/assets/hero-rig.jpg"))}" />
+  <meta property="og:image" content="${esc(originUrl("/assets/hero-field-rig.jpg"))}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${esc(title)}" />
   <meta name="twitter:description" content="${esc(description)}" />
-  <meta name="twitter:image" content="${esc(originUrl("/assets/hero-rig.jpg"))}" />
+  <meta name="twitter:image" content="${esc(originUrl("/assets/hero-field-rig.jpg"))}" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -721,7 +721,7 @@ function pageHome(lang) {
 
   const serviceCards = copy.services
     .map(
-      (item) => `<article class="card">
+      (item) => `<article class="card reveal-on-scroll">
       <div class="card-icon">${getServiceIcon(item.key)}</div>
       <h3>${esc(item.h)}</h3>
       <p>${esc(item.p)}</p>
@@ -731,7 +731,7 @@ function pageHome(lang) {
     .join("");
 
   const why = p.why.map((item, idx) => `
-    <article class="card">
+    <article class="card reveal-on-scroll">
       <div class="card-icon">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
@@ -741,14 +741,14 @@ function pageHome(lang) {
   `).join("");
 
   const refs = copy.refs.map((item) => `
-    <article class="ref-item">
+    <article class="ref-item reveal-on-scroll">
       <span class="ref-badge">VERIFIED</span>
       <p>${esc(item)}</p>
     </article>
   `).join("");
 
   const faq = copy.faq
-    .map((item) => `<details><summary>${esc(item.q)}</summary><p>${esc(item.a)}</p></details>`)
+    .map((item) => `<details class="reveal-on-scroll"><summary>${esc(item.q)}</summary><p>${esc(item.a)}</p></details>`)
     .join("");
 
   const strataLabels = isTr ? [
@@ -770,18 +770,14 @@ function pageHome(lang) {
 
   const main = `
   <section class="hero">
-    <div class="hero-bg-wrapper">
-      <img class="hero-bg-img" src="/assets/hero-rig.jpg" alt="KD Sondaj Heavy Rotary Drilling Rig" width="1920" height="1080" />
-      <div class="hero-overlay"></div>
-    </div>
     <div class="wrap hero-grid">
-      <div>
-        <div class="telemetry-pill">
-          <span class="pulse-dot"></span>
-          <span>${esc(p.kicker)}</span>
-          <span class="pill-tag">3000M MAX DEPTH</span>
+      <div class="reveal-on-scroll">
+        <div class="telemetry-pill shimmer-badge">
+          <span class="beacon-dot"></span>
+          <span>45 YILLIK ÜRETİM &amp; SAHA TECRÜBESİ</span>
+          <span class="pill-tag">3000M KAPASİTE</span>
         </div>
-        <h1>${esc(p.h1).replace("250–3000", '<span class="gradient-text">250–3000</span>')}</h1>
+        <h1>${esc(p.h1).replace("250–3000", '<span class="highlight-orange">250–3000</span>')}</h1>
         <p class="lead">${esc(p.lead)}</p>
         <p class="hero-proof-text">${esc(p.proof)}</p>
         <div class="cta-row">
@@ -792,40 +788,51 @@ function pageHome(lang) {
           <a class="btn btn-signal" href="${routes[lang].contact}">
             📝 Teklif Formu
           </a>
-          <a class="btn btn-ghost" href="${routes[lang].rigs}">${esc(copy.cta.rigs)} →</a>
+          <a class="btn btn-ghost" href="${routes[lang].rigs}">
+            ${esc(copy.cta.rigs)} →
+          </a>
         </div>
       </div>
-      <aside class="hero-depth-card">
-        <div class="card-header-telemetry">
-          <span>TELEMETRY // STRATA HORIZON</span>
-          <span class="status-online">3000M ACTIVE</span>
+      
+      <div class="hero-visual-container reveal-on-scroll">
+        <div class="hero-img-card">
+          <img src="/assets/hero-field-rig.jpg" alt="KD Sondaj Saha Kulesi ve Derin Kuyu Çalışması (Broşür Sayfa 22)" width="800" height="450" fetchpriority="high" />
         </div>
-        <div class="depth-strata-list">
-          ${strataLabels.map((s, idx) => `
-            <div class="strata-item ${idx === 3 ? "active" : ""}">
-              <div class="strata-node"></div>
-              <div class="strata-depth">${esc(s.depth)}</div>
-              <div class="strata-label">${esc(s.label)}</div>
+        <aside class="hero-depth-card">
+          <div class="card-header-telemetry">
+            <span>TELEMETRY // STRATA HORIZON (BROŞÜR VERİSİ)</span>
+            <span class="status-online">3000M AKTİF</span>
+          </div>
+          <div class="depth-meter-track">
+            <div class="depth-meter-fill"></div>
+          </div>
+          <div class="depth-strata-list">
+            ${strataLabels.map((s, idx) => `
+              <div class="strata-item ${idx === 3 ? "active" : ""}">
+                <div class="strata-node"></div>
+                <div class="strata-depth">${esc(s.depth)}</div>
+                <div class="strata-label">${esc(s.label)}</div>
+              </div>
+            `).join("")}
+          </div>
+          <div class="hero-card-stats">
+            <div class="stat-chip">
+              <div class="val">3000 m</div>
+              <div class="lbl">${isTr ? "Maksimum Kuyu Derinliği" : isAr ? "العمق الأقصى للبئر" : "Maximum Well Depth"}</div>
             </div>
-          `).join("")}
-        </div>
-        <div class="hero-card-stats">
-          <div class="stat-chip">
-            <div class="val">3000 m</div>
-            <div class="lbl">${isTr ? "Maksimum Kuyu Derinliği" : isAr ? "العمق الأقصى للبئر" : "Maximum Well Depth"}</div>
+            <div class="stat-chip">
+              <div class="val">45+ Yıl</div>
+              <div class="lbl">${isTr ? "Saha & Üretim Tecrübesi" : isAr ? "خبرة هندسية وتصنيعية" : "Field & Manufacturing Legacy"}</div>
+            </div>
           </div>
-          <div class="stat-chip">
-            <div class="val">45+ Yıl</div>
-            <div class="lbl">${isTr ? "Saha & Üretim Tecrübesi" : isAr ? "خبرة هندسية وتصنيعية" : "Field & Manufacturing Legacy"}</div>
-          </div>
-        </div>
-      </aside>
+        </aside>
+      </div>
     </div>
   </section>
 
   <section class="metrics-band">
     <div class="wrap metrics-grid">
-      <div class="metric-item">
+      <div class="metric-item reveal-on-scroll">
         <div class="metric-icon-box">
           <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M5 15l7 7 7-7"/></svg>
         </div>
@@ -834,7 +841,7 @@ function pageHome(lang) {
           <span>${esc(p.metrics[0].l)}</span>
         </div>
       </div>
-      <div class="metric-item">
+      <div class="metric-item reveal-on-scroll delay-1">
         <div class="metric-icon-box">
           <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
         </div>
@@ -843,7 +850,7 @@ function pageHome(lang) {
           <span>${esc(p.metrics[1].l)}</span>
         </div>
       </div>
-      <div class="metric-item">
+      <div class="metric-item reveal-on-scroll delay-2">
         <div class="metric-icon-box">
           <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
@@ -861,13 +868,13 @@ function pageHome(lang) {
         <p>${esc(p.servicesLead)}</p>
         <div class="cards services">${serviceCards}</div>
         
-        <div class="showcase-banner" style="margin-top:2.5rem;">
-          <img class="showcase-img" src="/assets/geothermal-rig.jpg" alt="KD Sondaj Geothermal Rig in Action" loading="lazy" />
+        <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
+          <img class="showcase-img" src="/assets/truck-rig.jpg" alt="KD Sondaj Kamyon Üstü Hidrolik Kule (Broşür Sayfa 6-7)" loading="lazy" />
           <div class="showcase-content">
-            <span class="telemetry-pill" style="margin-bottom:0.75rem;"><span class="pulse-dot"></span> 1200–2600M SAHA KANITI</span>
-            <h3>${esc(copy.services.find(s => s.key === "gt")?.h || "Jeotermal Sondaj")}</h3>
-            <p>${isTr ? "İç Anadolu ve Ege’de 50 jeotermal kuyu, yüksek kule tonajı ve özel çamur programı ile başarıyla tamamlanmıştır." : isAr ? "تم إنجاز 50 بئراً للطاقة الحرارية الأرضية في وسط الأناضول وبحر إيجة بنجاح." : "50 geothermal wells completed across Central Anatolia and Aegean with heavy-duty rig tonnage."}</p>
-            <div><a class="btn btn-signal" href="${routes[lang].geothermal}">${esc(copy.cta.more)} →</a></div>
+            <span class="telemetry-pill" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> BROŞÜR KAMYON ÜSTÜ KULELER (300–1200 M)</span>
+            <h3>${esc(copy.pages.rigs.h1)}</h3>
+            <p>${isTr ? "Broşür kayıtlı 300m, 400m, 500m, 600m, 800m, 1000m ve 1200m kamyon üstü hidrolik sondaj kuleleri ile hızlı intikal ve yüksek tork." : isAr ? "حفارات شاحنة هيدروليكية من 300 إلى 1200 متر مصممة للحركة السريعة والعمل الشاق." : "Heavy truck-mounted drilling rigs 300m to 1200m for rapid deployment and high torque."}</p>
+            <div><a class="btn btn-signal" href="${routes[lang].rigs}">${esc(copy.cta.more)} →</a></div>
           </div>
         </div>
       `)}
@@ -887,6 +894,16 @@ function pageHome(lang) {
         </div>
         <p style="margin-top:1.75rem;"><a class="btn btn-ghost" href="${routes[lang].rigs}">${esc(copy.cta.more)} (Tüm 11 Model) →</a></p>
         
+        <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
+          <img class="showcase-img" src="/assets/trailer-rig.jpg" alt="KD Sondaj Ağır Dorse Kule 1500–3000 Metre (Broşür Sayfa 4 & 8)" loading="lazy" />
+          <div class="showcase-content">
+            <span class="telemetry-pill" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> 1500–3000M AĞIR DORSE SINIFI</span>
+            <h3>1500 – 3000 Metre Dorse Sondaj Kulesi</h3>
+            <p>${isTr ? "Broşürde yer alan 110 ton kule ve 90 ton halat sarıcı kapasiteli ağır dorse sınıfı derin su ve jeotermal sondaj kulemiz." : isAr ? "حفارة مقطورة ثقيلة بقدرة برج 110 طن وقدرة سحب 90 طن لآبار المياه العميقة والطاقة الحرارية." : "Heavy trailer-mounted drilling rig with 110-ton mast capacity and 90-ton drawworks for deep geothermal & water wells."}</p>
+            <div><a class="btn btn-signal" href="${routes[lang].rigs}">${esc(copy.cta.more)} →</a></div>
+          </div>
+        </div>
+
         ${quoteCalculator(lang)}
       `)}
     </div>
@@ -940,8 +957,8 @@ function simplePage(lang, pageKey, extras = "") {
   <section class="page-hero">
     <div class="wrap">
       ${crumbsHtml(lang, [{ name: p.h1, path: routes[lang][pageKey] }])}
-      <div class="telemetry-pill">
-        <span class="pulse-dot"></span>
+      <div class="telemetry-pill shimmer-badge">
+        <span class="beacon-dot"></span>
         <span>${esc(p.kicker)}</span>
       </div>
       <h1>${esc(p.h1)}</h1>
@@ -974,7 +991,7 @@ function pageServices(lang) {
   const cards = copy.services
     .map(
       (item) => `
-      <article class="card">
+      <article class="card reveal-on-scroll">
         <div class="card-icon">${getServiceIcon(item.key)}</div>
         <h3>${esc(item.h)}</h3>
         <p>${esc(item.p)}</p>
@@ -1001,16 +1018,16 @@ function pageServices(lang) {
 function serviceFocus(lang, pageKey) {
   const copy = locales[lang];
   let extraBanner = "";
-  if (pageKey === "geothermal") {
+  if (pageKey === "geothermal" || pageKey === "water") {
     extraBanner = `
     <section class="block" style="padding-top:0;">
       <div class="wrap">
-        <div class="showcase-banner">
-          <img class="showcase-img" src="/assets/geothermal-rig.jpg" alt="KD Sondaj Geothermal Drilling Rig" />
+        <div class="showcase-banner reveal-on-scroll">
+          <img class="showcase-img" src="/assets/hero-field-rig.jpg" alt="KD Sondaj Derin Sondaj Kulesi Sahada (Broşür Sayfa 22)" />
           <div class="showcase-content">
-            <span class="telemetry-pill"><span class="pulse-dot"></span> 1200–2600 METER GEOTHERMAL HORIZON</span>
-            <h3>${esc(copy.pages.geothermal.h1)}</h3>
-            <p>${esc(copy.pages.geothermal.lead)}</p>
+            <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> 250–3000 METRE SAHA OPERASYONU</span>
+            <h3>${esc(copy.pages[pageKey].h1)}</h3>
+            <p>${esc(copy.pages[pageKey].lead)}</p>
           </div>
         </div>
       </div>
@@ -1039,19 +1056,19 @@ function pageEquipment(lang) {
   <section class="block">
     <div class="wrap">
       <div class="cards three">
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <article class="card reveal-on-scroll">
+          <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
           <h3>${esc(copy.pages.rigs.h1)}</h3>
           <p>${esc(copy.pages.rigs.lead)}</p>
           <a class="more" href="${routes[lang].rigs}">${esc(copy.cta.more)} →</a>
         </article>
-        <article class="card">
+        <article class="card reveal-on-scroll delay-1">
           <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 12h16"/><path d="M12 4v16"/></svg></div>
           <h3>${esc(copy.pages.pipes.h1)}</h3>
           <p>${esc(copy.pages.pipes.lead)}</p>
           <a class="more" href="${routes[lang].pipes}">${esc(copy.cta.more)} →</a>
         </article>
-        <article class="card">
+        <article class="card reveal-on-scroll delay-2">
           <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
           <h3>${esc(copy.pages.bits.h1)}</h3>
           <p>${esc(copy.pages.bits.lead)}</p>
@@ -1059,10 +1076,10 @@ function pageEquipment(lang) {
         </article>
       </div>
 
-      <div class="showcase-banner" style="margin-top:2.5rem;">
-        <img class="showcase-img" src="/assets/drill-bits.jpg" alt="KD Sondaj PDC and Roller Cone Bits" />
+      <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
+        <img class="showcase-img" src="/assets/tricone-bits.jpg" alt="KD Sondaj Tricone Matkaplar IADC Standartları (Broşür Sayfa 17-19)" />
         <div class="showcase-content">
-          <span class="telemetry-pill"><span class="pulse-dot"></span> HIGH-GRADE DRILL TOOLS</span>
+          <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> IADC 111–637 STANDARTLARI</span>
           <h3>${esc(copy.pages.bits.h1)}</h3>
           <p>${esc(copy.pages.bits.lead)}</p>
           <div><a class="btn btn-signal" href="${routes[lang].bits}">${esc(copy.cta.more)} →</a></div>
@@ -1070,9 +1087,9 @@ function pageEquipment(lang) {
       </div>
 
       <h3 style="margin-top:3rem;margin-bottom:1rem;">Duplex 6" Çamur Pompası</h3>
-      <div class="table-wrap">
+      <div class="table-wrap reveal-on-scroll">
         <table>
-          <caption>Duplex 6" Mud Pump Telemetry</caption>
+          <caption>Duplex 6" Mud Pump Telemetry (Broşür Sayfa 20)</caption>
           <thead><tr><th>Liner</th><th>Flow (lt/dak)</th><th>bar / psi</th></tr></thead>
           <tbody>${pumpRows.map((row) => `<tr><td>${esc(row.liner)}</td><td>${esc(row.flow)}</td><td>${esc(row.pressure)}</td></tr>`).join("")}</tbody>
         </table>
@@ -1105,6 +1122,16 @@ function pageRigs(lang) {
         <button type="button" class="filter-btn" data-filter="trailer">${isTr ? "Dorse Kuleler (Ağır Tip)" : isAr ? "حفارات مقطورة" : "Trailer Rigs"}</button>
         <button type="button" class="filter-btn" data-filter="truck">${isTr ? "Kamyon Üstü (Hızlı İntikal)" : isAr ? "حفارات شاحنة" : "Truck Rigs"}</button>
       </div>
+
+      <div class="showcase-banner reveal-on-scroll" style="margin-bottom:2rem;">
+        <img class="showcase-img" src="/assets/truck-rig.jpg" alt="KD Sondaj Kamyon Üstü Sondaj Makinesi (Broşür)" />
+        <div class="showcase-content">
+          <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> BROŞÜR SAYFA 6-7 ORİJİNAL MODELİ</span>
+          <h3>Kamyon Üstü Hidrolik Kule Serisi</h3>
+          <p>300m, 400m, 500m, 600m, 800m, 1000m ve 1200m kapasiteli kuleler.</p>
+        </div>
+      </div>
+
       <div class="cards four">
         ${machines.map((item) => machineCard(item, copy, lang)).join("")}
       </div>
@@ -1133,9 +1160,9 @@ function pagePipes(lang) {
   const extra = `
   <section class="block">
     <div class="wrap">
-      <div class="table-wrap">
+      <div class="table-wrap reveal-on-scroll">
         <table>
-          <caption>Sondaj Tiji Ölçü ve Kalite Tablosu</caption>
+          <caption>Sondaj Tiji Ölçü ve Kalite Tablosu (Broşür Sayfa 16)</caption>
           <thead><tr><th>in</th><th>mm (OD)</th><th>m (Boy)</th><th>Grade (Kalite)</th><th>in (Et)</th><th>mm (Et)</th></tr></thead>
           <tbody>${pipes.map((row) => `<tr><td>${esc(row.inch)}</td><td>${esc(row.od)}</td><td>${esc(row.length)}</td><td>${esc(row.grade)}</td><td>${esc(row.wallIn)}</td><td>${esc(row.wallMm)}</td></tr>`).join("")}</tbody>
         </table>
@@ -1150,8 +1177,8 @@ function pageBits(lang) {
   const copy = locales[lang];
   const cards = bitGroups
     .map(
-      (item) => `<article class="card">
-        <span class="telemetry-pill" style="margin-bottom:0.75rem;"><span class="pulse-dot"></span> ${esc(item.codes)}</span>
+      (item) => `<article class="card reveal-on-scroll">
+        <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> ${esc(item.codes)}</span>
         <h3>${esc(item.formation[lang])}</h3>
         <p>${esc(item.text[lang])}</p>
       </article>`
@@ -1161,10 +1188,10 @@ function pageBits(lang) {
   const extra = `
   <section class="block">
     <div class="wrap">
-      <div class="showcase-banner" style="margin-bottom:2.5rem;">
-        <img class="showcase-img" src="/assets/drill-bits.jpg" alt="KD Sondaj Drill Bits Showcase" />
+      <div class="showcase-banner reveal-on-scroll" style="margin-bottom:2.5rem;">
+        <img class="showcase-img" src="/assets/tricone-bits.jpg" alt="KD Sondaj Tricone Matkap Serisi IADC (Broşür Sayfa 17-19)" />
         <div class="showcase-content">
-          <span class="telemetry-pill"><span class="pulse-dot"></span> IADC 111 – 637 CODE MAPPING</span>
+          <span class="telemetry-pill shimmer-badge"><span class="beacon-dot"></span> IADC 111 – 637 CODE MAPPING</span>
           <h3>${esc(copy.pages.bits.h1)}</h3>
           <p>${esc(copy.pages.bits.lead)}</p>
         </div>
@@ -1183,7 +1210,7 @@ function pageReferences(lang) {
     <div class="wrap">
       <div class="list-cards">
         ${copy.refs.map((item) => `
-          <article class="ref-item">
+          <article class="ref-item reveal-on-scroll">
             <span class="ref-badge">VERIFIED</span>
             <p>${esc(item)}</p>
           </article>
@@ -1203,9 +1230,9 @@ function pageContact(lang) {
   <section class="page-hero">
     <div class="wrap">
       ${crumbsHtml(lang, [{ name: p.h1, path: routes[lang].contact }])}
-      <div class="telemetry-pill">
-        <span class="pulse-dot"></span>
-        <span>0541 191 63 01 // DOĞRUDAN MÜHENDİSLİK & TEKLİF HATTI</span>
+      <div class="telemetry-pill shimmer-badge">
+        <span class="beacon-dot"></span>
+        <span>0541 191 63 01 // DOĞRUDAN MÜHENDİSLİK &amp; TEKLİF HATTI</span>
       </div>
       <h1>${esc(p.h1)}</h1>
       <p class="lead">${esc(p.lead)}</p>
@@ -1220,35 +1247,35 @@ function pageContact(lang) {
         </div>
 
         <div class="contact-info-panel">
-          <div class="contact-card-highlight">
+          <div class="contact-card-highlight reveal-on-scroll">
             <span class="section-index-badge">HIZLI İLETİŞİM</span>
-            <h3 style="margin-top:0.75rem;margin-bottom:0.4rem;">WhatsApp Destek & Teklif Hattı</h3>
+            <h3 style="margin-top:0.75rem;margin-bottom:0.4rem;">WhatsApp Destek &amp; Teklif Hattı</h3>
             <p style="font-size:0.95rem;margin-bottom:1.25rem;">Hemen mesaj gönderin, hedef derinlik ve kuyu parametrelerinizi doğrudan mühendislik ekibimizle görüşün.</p>
             <a class="btn btn-wa" href="${whatsapp(copy)}" target="_blank" rel="noopener" style="width:100%;">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-2.79 4.23c-.14 0-.37.05-.57.27-.2.21-.76.74-.76 1.81s.78 2.11.89 2.25c.11.15 1.51 2.42 3.73 3.3 1.85.73 2.22.59 2.62.55.4-.04 1.29-.53 1.47-1.04.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.27-.22-.11-1.29-.64-1.49-.71-.2-.07-.35-.11-.49.11-.15.21-.56.71-.69.86-.13.14-.26.16-.48.05-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.21-.01-.33.1-.44.1-.1.22-.26.33-.39.11-.13.15-.21.22-.36.07-.14.04-.27-.02-.38-.06-.11-.49-1.17-.67-1.6-.17-.42-.35-.36-.49-.37z"/></svg>
               0541 191 63 01
             </a>
           </div>
 
-          <article class="card">
+          <article class="card reveal-on-scroll">
             <div class="card-icon">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
-            <h3>Telefon & Çağrı</h3>
+            <h3>Telefon &amp; Çağrı</h3>
             <p style="margin-bottom:0.6rem;"><a href="tel:+905411916301" style="font-weight:700;color:var(--signal);font-size:1.15rem;">+90 541 191 63 01</a></p>
             <p style="font-size:0.86rem;color:var(--text-muted);margin:0;">Haftanın 6 günü 08:30 – 19:00 arası kesintisiz teknik destek.</p>
           </article>
 
-          <article class="card">
+          <article class="card reveal-on-scroll">
             <div class="card-icon">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <h3>E-Posta & İhale Şartnameleri</h3>
+            <h3>E-Posta &amp; İhale Şartnameleri</h3>
             <p style="margin-bottom:0.6rem;"><a href="mailto:${site.email}" style="font-weight:700;color:var(--signal);font-size:1.05rem;">${site.email}</a></p>
             <p style="font-size:0.86rem;color:var(--text-muted);margin:0;">Teknik şartnameler, jeolojik raporlar ve ihale teklif dosyaları için yazabilirsiniz.</p>
           </article>
 
-          <article class="card">
+          <article class="card reveal-on-scroll">
             <div class="card-icon">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
@@ -1400,8 +1427,8 @@ write(
       short_name: "KD SONDAJ",
       start_url: "/",
       display: "browser",
-      background_color: "#07090D",
-      theme_color: "#FF6624",
+      background_color: "#FFFFFF",
+      theme_color: "#EA580C",
       lang: "tr",
       icons: [{ src: "/assets/favicon.svg", type: "image/svg+xml", sizes: "any" }],
     },

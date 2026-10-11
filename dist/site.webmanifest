@@ -3,8 +3,8 @@
   "short_name": "KD SONDAJ",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#07090D",
-  "theme_color": "#FF6624",
+  "background_color": "#FFFFFF",
+  "theme_color": "#EA580C",
   "lang": "tr",
   "icons": [
     {

@@ -307,4 +307,24 @@
       });
     }
   }
+
+  // 7. Scroll Reveal Observer & Micro-Animations
+  if ("IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
+      el.classList.add("is-visible");
+    });
+  }
 })();
