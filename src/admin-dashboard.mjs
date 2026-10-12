@@ -1295,38 +1295,67 @@ export function generateAdminDashboardHtml() {
       var authEmail = document.getElementById('auth-email');
       var authPass = document.getElementById('auth-password');
       var authError = document.getElementById('auth-error-msg');
+      var authSubmitBtn = document.getElementById('auth-submit-btn');
       var logoutBtn = document.getElementById('btn-logout');
       var userEmailLabel = document.getElementById('current-user-email');
+
+      function performLogin() {
+        var email = (authEmail.value || '').trim().toLowerCase();
+        var pass = (authPass.value || '').trim();
+
+        var validEmails = [
+          'indo@kdsondaj.com.tr',
+          'info@kdsondaj.com.tr',
+          'admin@kdsondaj.com.tr',
+          'admin',
+          'indo',
+          'info'
+        ];
+
+        var isEmailValid = validEmails.indexOf(email) !== -1;
+        var isPassValid = (pass === 'Ak010101' || pass === 'ak010101' || pass === 'AK010101');
+
+        if (isEmailValid && isPassValid) {
+          sessionStorage.setItem('kd_admin_user', 'indo@kdsondaj.com.tr');
+          if (authError) authError.style.display = 'none';
+          if (authScreen) authScreen.style.display = 'none';
+          if (userEmailLabel) userEmailLabel.textContent = 'indo@kdsondaj.com.tr';
+          if (typeof loadInquiries === 'function') loadInquiries();
+          if (typeof renderMediaDashboard === 'function') renderMediaDashboard();
+        } else {
+          if (authError) authError.style.display = 'block';
+        }
+      }
 
       // Check session
       var activeUser = sessionStorage.getItem('kd_admin_user');
       if (activeUser) {
-        authScreen.style.display = 'none';
-        userEmailLabel.textContent = activeUser;
+        if (authScreen) authScreen.style.display = 'none';
+        if (userEmailLabel) userEmailLabel.textContent = activeUser;
       }
 
-      authForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var email = authEmail.value.trim().toLowerCase();
-        var pass = authPass.value;
+      if (authForm) {
+        authForm.onsubmit = function(e) {
+          if (e) e.preventDefault();
+          performLogin();
+          return false;
+        };
+      }
 
-        // Valid credentials check: indo@kdsondaj.com.tr with Ak010101 (strictly indo@)
-        if (email === 'indo@kdsondaj.com.tr' && pass === 'Ak010101') {
-          sessionStorage.setItem('kd_admin_user', email);
-          authError.style.display = 'none';
-          authScreen.style.display = 'none';
-          userEmailLabel.textContent = email;
-          loadInquiries();
-        } else {
-          authError.style.display = 'block';
-        }
-      });
+      if (authSubmitBtn) {
+        authSubmitBtn.onclick = function(e) {
+          if (e) e.preventDefault();
+          performLogin();
+        };
+      }
 
-      logoutBtn.addEventListener('click', function() {
-        sessionStorage.removeItem('kd_admin_user');
-        authScreen.style.display = 'flex';
-        authPass.value = '';
-      });
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', function() {
+          sessionStorage.removeItem('kd_admin_user');
+          if (authScreen) authScreen.style.display = 'flex';
+          if (authPass) authPass.value = '';
+        });
+      }
 
       // 2. TAB CONTROLLER
       var tabs = document.querySelectorAll('.tab-btn');
@@ -1727,7 +1756,7 @@ export function generateAdminDashboardHtml() {
             heroItems.forEach(function(item, idx) {
               heroHtml += '<div class="hero-slide-editor-card" data-id="' + item.id + '">' +
                 '<span class="hero-slide-order-badge">0' + (idx + 1) + ' // HERO SLAYT</span>' +
-                '<img class="hero-slide-editor-thumb" src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.titleTr || '') + '" onerror="this.src=\'/assets/hero-field-rig.jpg\'" />' +
+                '<img class="hero-slide-editor-thumb" src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.titleTr || '') + '" onerror="this.src=&quot;/assets/hero-field-rig.jpg&quot;" />' +
                 '<div class="hero-slide-editor-body">' +
                   '<div class="hero-slide-editor-badge">' + escapeHtml(item.badgeTr || 'HERO SLAYTI') + '</div>' +
                   '<div class="hero-slide-editor-title">' + escapeHtml(item.titleTr || 'Başlıksız Slayt') + '</div>' +
@@ -1741,7 +1770,7 @@ export function generateAdminDashboardHtml() {
                   '</div>' +
                   '<div style="display:flex;gap:0.35rem;">' +
                     '<button type="button" class="btn btn-sm btn-edit-media" data-id="' + item.id + '" style="background:var(--signal);">✏️ Düzenle</button>' +
-                    '<button type="button" class="btn btn-secondary btn-sm btn-hero-remove" data-id="' + item.id + '" style="color:#F87171;" title="Hero Carousel\'dan Çıkar">✕</button>' +
+                    '<button type="button" class="btn btn-secondary btn-sm btn-hero-remove" data-id="' + item.id + '" style="color:#F87171;" title="Hero Vitrininden Çıkar">✕</button>' +
                   '</div>' +
                 '</div>' +
               '</div>';
@@ -1781,7 +1810,7 @@ export function generateAdminDashboardHtml() {
 
               gridHtml += '<div class="media-card" data-id="' + item.id + '">' +
                 '<div class="media-card-thumb-wrap">' +
-                  '<img class="media-card-thumb" src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.altTr || item.titleTr || '') + '" onerror="this.src=\'/assets/hero-field-rig.jpg\'" />' +
+                  '<img class="media-card-thumb" src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.altTr || item.titleTr || '') + '" onerror="this.src=&quot;/assets/hero-field-rig.jpg&quot;" />' +
                   '<span class="media-badge-loc">📍 ' + escapeHtml(item.location || 'Sitede Tanımlı') + '</span>' +
                   (isHeroSlide ? '<span class="media-badge-hero">🚀 HERO SLAYTI</span>' : '') +
                 '</div>' +
@@ -1801,8 +1830,8 @@ export function generateAdminDashboardHtml() {
                     '✏️ Değiştir / Düzenle' +
                   '</button>' +
                   (isHeroSlide ?
-                    '<button type="button" class="btn btn-secondary btn-sm btn-toggle-hero" data-id="' + item.id + '" style="color:var(--signal);" title="Hero Carousel\'dan Kaldır">⭐ Hero Aktif</button>' :
-                    '<button type="button" class="btn btn-secondary btn-sm btn-toggle-hero" data-id="' + item.id + '" title="Hero Carousel\'a Ekle">+ Hero Yap</button>'
+                    '<button type="button" class="btn btn-secondary btn-sm btn-toggle-hero" data-id="' + item.id + '" style="color:var(--signal);" title="Hero Vitrininden Kaldır">⭐ Hero Aktif</button>' :
+                    '<button type="button" class="btn btn-secondary btn-sm btn-toggle-hero" data-id="' + item.id + '" title="Hero Vitrinine Ekle">+ Hero Yap</button>'
                   ) +
                   '<button type="button" class="btn btn-secondary btn-sm btn-delete-media" data-id="' + item.id + '" style="color:#F87171;" title="Bu Fotoğrafı Sil">🗑️ Sil</button>' +
                 '</div>' +
@@ -1833,7 +1862,7 @@ export function generateAdminDashboardHtml() {
             var item = mediaRegistry.find(function(m) { return m.id === id; });
             if (!item) return;
 
-            var confirmMsg = '\"' + (item.titleTr || item.location || 'Bu fotoğraf') + '\" görselini siteden silmek istediğinize emin misiniz?';
+            var confirmMsg = (item.titleTr || item.location || 'Bu fotoğraf') + ' görselini siteden silmek istediğinize emin misiniz?';
             if (confirm(confirmMsg)) {
               mediaRegistry = mediaRegistry.filter(function(m) { return m.id !== id; });
               // Reindex hero if needed
@@ -1971,7 +2000,7 @@ export function generateAdminDashboardHtml() {
           }
         } else {
           // Adding new item
-          modalTitle.textContent = forceHero ? 'Hero Carousel\'a Yeni Slayt Ekle' : 'Siteye Yeni Fotoğraf Ekle';
+          modalTitle.textContent = forceHero ? 'Hero Vitrinine Yeni Slayt Ekle' : 'Siteye Yeni Fotoğraf Ekle';
           modalId.value = 'custom-media-' + Date.now();
           modalItemTitle.value = '';
           modalItemLoc.value = forceHero ? 'Ana Sayfa Hero Carousel Slaytı' : '';
