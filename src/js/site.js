@@ -6,6 +6,101 @@
 (function () {
   "use strict";
 
+  // Dynamic Media & Hero Overrides from Dashboard
+  (function applyMediaOverrides() {
+    try {
+      var saved = localStorage.getItem("kd_site_media");
+      if (!saved) return;
+      var mediaList = JSON.parse(saved);
+      if (!Array.isArray(mediaList)) return;
+
+      // 1. Hero slides overrides
+      var heroOverrides = mediaList.filter(function (m) { return m.isHero; });
+      heroOverrides.sort(function (a, b) { return (a.slideIndex || 0) - (b.slideIndex || 0); });
+
+      if (heroOverrides.length) {
+        var heroImgs = document.querySelectorAll(".hero-slide-item .hero-slide-img");
+        var heroTitles = document.querySelectorAll(".hero-slide-text-item .hero-h1");
+        var heroBadges = document.querySelectorAll(".hero-slide-text-item .hero-badge-pill span:last-child");
+        var heroLeads = document.querySelectorAll(".hero-slide-text-item .hero-lead");
+        var heroTabTitles = document.querySelectorAll(".hero-tab-card .hero-tab-title");
+
+        heroOverrides.forEach(function (item, idx) {
+          if (heroImgs[idx] && item.src) {
+            heroImgs[idx].src = item.src;
+            if (item.altTr) heroImgs[idx].alt = item.altTr;
+            if (heroImgs[idx].closest(".hero-slide-item")) {
+              heroImgs[idx].closest(".hero-slide-item").style.display = "";
+            }
+          }
+          if (heroTitles[idx] && item.titleTr) {
+            heroTitles[idx].textContent = item.titleTr;
+            if (heroTitles[idx].closest(".hero-slide-text-item")) {
+              heroTitles[idx].closest(".hero-slide-text-item").style.display = "";
+            }
+          }
+          if (heroBadges[idx] && item.badgeTr) heroBadges[idx].textContent = item.badgeTr;
+          if (heroLeads[idx] && item.leadTr) heroLeads[idx].textContent = item.leadTr;
+          if (heroTabTitles[idx] && (item.tabTitleTr || item.titleTr)) {
+            heroTabTitles[idx].textContent = item.tabTitleTr || item.titleTr;
+            if (heroTabTitles[idx].closest(".hero-tab-card")) {
+              heroTabTitles[idx].closest(".hero-tab-card").style.display = "";
+            }
+          }
+        });
+
+        // Hide excess slides if user configured fewer than default
+        for (var i = heroOverrides.length; i < heroImgs.length; i++) {
+          if (heroImgs[i] && heroImgs[i].closest(".hero-slide-item")) {
+            heroImgs[i].closest(".hero-slide-item").style.display = "none";
+          }
+          if (heroTitles[i] && heroTitles[i].closest(".hero-slide-text-item")) {
+            heroTitles[i].closest(".hero-slide-text-item").style.display = "none";
+          }
+          if (heroTabTitles[i] && heroTabTitles[i].closest(".hero-tab-card")) {
+            heroTabTitles[i].closest(".hero-tab-card").style.display = "none";
+          }
+        }
+      }
+
+      // 2. Product and section image overrides
+      mediaList.forEach(function (item) {
+        if (!item.src) return;
+        var elements = [];
+
+        if (item.targetElement) {
+          try {
+            var found = document.querySelectorAll(item.targetElement);
+            found.forEach(function (el) { elements.push(el); });
+          } catch (e) {}
+        }
+        if (item.id) {
+          try {
+            var byId = document.querySelectorAll('[data-product-id="' + item.id + '"], [data-machine-id="' + item.id + '"], [data-media-id="' + item.id + '"]');
+            byId.forEach(function (el) {
+              if (elements.indexOf(el) === -1) elements.push(el);
+            });
+          } catch (e) {}
+        }
+
+        elements.forEach(function (el) {
+          if (el.tagName === "IMG") {
+            el.src = item.src;
+            if (item.altTr) el.alt = item.altTr;
+          } else {
+            var imgChild = el.querySelector("img");
+            if (imgChild) {
+              imgChild.src = item.src;
+              if (item.altTr) imgChild.alt = item.altTr;
+            }
+          }
+        });
+      });
+    } catch (e) {
+      console.warn("Media overrides error:", e);
+    }
+  })();
+
   // 1. Mobile Menu Drawer Navigation
   var menuBtn = document.getElementById("menu-toggle");
   var mobilePanel = document.getElementById("mobile-panel");

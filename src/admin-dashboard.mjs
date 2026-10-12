@@ -16,6 +16,7 @@
 import { keywordMatrix } from "./data/keywords.mjs";
 import { productList } from "./data/products.mjs";
 import { guideList } from "./data/guides.mjs";
+import { defaultMediaItems } from "./data/media.mjs";
 import { site, routes } from "./config.mjs";
 import { INDEXNOW_KEY } from "./indexnow.mjs";
 
@@ -24,6 +25,7 @@ const CLOUD_API_URL = "https://api.restful-api.dev/objects/" + CLOUD_INBOX_ID;
 
 export function generateAdminDashboardHtml() {
   const totalUrls = (13 + productList.length + guideList.length + 1) * 3; // 84+ pages
+  const defaultMediaJson = JSON.stringify(defaultMediaItems);
 
   return `<!DOCTYPE html>
 <html lang="tr" dir="ltr">
@@ -413,6 +415,292 @@ export function generateAdminDashboardHtml() {
       min-width: 240px;
     }
 
+    /* Media Manager & Hero Editor Styles */
+    .media-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .media-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .media-card:hover {
+      border-color: var(--signal);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.4);
+    }
+    .media-card-thumb-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+    .media-card-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+    .media-card:hover .media-card-thumb {
+      transform: scale(1.05);
+    }
+    .media-badge-loc {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(8px);
+      color: #38BDF8;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 8px;
+      max-width: 82%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+    .media-badge-hero {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: linear-gradient(135deg, #EA580C, #D97706);
+      color: #FFF;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.05em;
+      box-shadow: 0 2px 6px rgba(234,88,12,0.4);
+    }
+    .media-card-body {
+      padding: 1.25rem;
+      flex: 1;
+    }
+    .media-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+    .media-card-loc-desc {
+      font-size: 0.8rem;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+    .media-card-path {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-soft);
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 0.35rem 0.6rem;
+      border-radius: 6px;
+      word-break: break-all;
+      margin-bottom: 0.75rem;
+    }
+    .media-card-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 0.6rem;
+    }
+    .media-card-actions {
+      padding: 0.85rem 1.25rem;
+      background: rgba(0, 0, 0, 0.25);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* Hero Slides Visual Editor Bar */
+    .hero-slides-editor {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .hero-slide-editor-card {
+      background: var(--bg-panel-subtle);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+    .hero-slide-editor-card:hover {
+      border-color: var(--signal);
+    }
+    .hero-slide-order-badge {
+      position: absolute;
+      top: 0.65rem;
+      left: 0.65rem;
+      background: var(--signal);
+      color: #FFF;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      z-index: 2;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+    .hero-slide-editor-thumb {
+      aspect-ratio: 16 / 10;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      background: #000;
+    }
+    .hero-slide-editor-body {
+      padding: 1rem;
+      flex: 1;
+    }
+    .hero-slide-editor-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+    .hero-slide-editor-badge {
+      font-size: 0.72rem;
+      color: var(--signal);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hero-slide-editor-actions {
+      padding: 0.75rem 1rem;
+      background: rgba(0,0,0,0.3);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      max-width: 620px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: var(--text-soft);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+    .modal-close:hover { color: #FFF; }
+    .dropzone-area {
+      border: 2px dashed var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: rgba(0,0,0,0.25);
+      margin-bottom: 1rem;
+    }
+    .dropzone-area:hover, .dropzone-area.dragover {
+      border-color: var(--signal);
+      background: rgba(234, 88, 12, 0.08);
+    }
+    .dropzone-preview {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 1rem;
+      display: none;
+      border: 1px solid var(--border);
+    }
+    .toast-msg {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #10B981;
+      color: #FFF;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      z-index: 2000;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 1.5rem 2rem;
@@ -470,6 +758,9 @@ export function generateAdminDashboardHtml() {
       <nav class="nav-tabs">
         <button class="tab-btn active" data-tab="tab-inbox">
           📥 Gelen Talepler <span class="badge-count" id="tab-inbox-badge">0</span>
+        </button>
+        <button class="tab-btn" data-tab="tab-media">
+          🖼️ Fotoğraf &amp; Hero <span class="badge-count" id="tab-media-badge">${defaultMediaItems.length}</span>
         </button>
         <button class="tab-btn" data-tab="tab-indexnow">
           ⚡ IndexNow Bildirim
@@ -781,7 +1072,216 @@ export function generateAdminDashboardHtml() {
         </div>
       </div>
     </div>
+    <!-- TAB 6: MEDIA & HERO CAROUSEL MANAGEMENT -->
+    <div class="tab-content" id="tab-media">
+      <!-- Media KPI Overview -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">Toplam Kayıtlı Fotoğraf</div>
+          <div class="kpi-val" id="kpi-media-total">0</div>
+          <div class="kpi-desc"><span>✓</span> Sitedeki tüm aktif görsel envanteri</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Hero Carousel Slaytları</div>
+          <div class="kpi-val" id="kpi-media-hero" style="color:var(--signal);">0</div>
+          <div class="kpi-desc"><span>🚀</span> Ana sayfa tepe vitrininde aktif</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Ürün &amp; Makine Kartları</div>
+          <div class="kpi-val" id="kpi-media-prod" style="color:var(--cyan);">0</div>
+          <div class="kpi-desc"><span>🚜</span> Dorse, kamyon ve ekipmanlar</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Yerleşim Eşleşme Oranı</div>
+          <div class="kpi-val" style="color:var(--emerald);">%100</div>
+          <div class="kpi-desc"><span>📍</span> Tüm fotoğrafların yeri etiketlendi</div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Editor Panel -->
+      <div class="panel" style="border: 1px solid rgba(234, 88, 12, 0.45); background: linear-gradient(180deg, rgba(234, 88, 12, 0.06) 0%, var(--bg-panel) 100%);">
+        <div class="panel-head">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.6rem;">
+              <span style="font-size:1.4rem;">🚀</span>
+              <h2 class="panel-title">Ana Sayfa Hero Carousel Slaytları (Canlı Görsel &amp; Sıra Düzenleyici)</h2>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text-soft);margin-top:0.35rem;">
+              Bu alandaki fotoğraflar doğrudan web sitesinin en üstündeki dev vitrin slider'ında gösterilir. Fotoğrafları anında değiştirebilir, yerlerini öne/arkaya kaydırabilir veya yeni slayt ekleyebilirsiniz.
+            </p>
+          </div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <button class="btn btn-sm" id="btn-add-hero-slide" style="background:var(--signal);">
+              <span>+ Hero Slaytı Ekle</span>
+            </button>
+            <button class="btn btn-secondary btn-sm" id="btn-preview-site" onclick="window.open('/', '_blank')">
+              <span>👁️ Canlı Sitede Gör</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-slides-editor" id="hero-slides-container">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- All Site Photos Panel with Location Directory -->
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.6rem;">
+              <span style="font-size:1.4rem;">📍</span>
+              <h2 class="panel-title">Sitedeki Bütün Fotoğraflar &amp; Yerleşim Konumları</h2>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text-soft);margin-top:0.35rem;">
+              Sitede yer alan tüm görseller aşağıda konumlarıyla listelenmiştir. Dilediğiniz fotoğrafı bilgisayarınızdan yenisiyle değiştirebilir, silebilir veya yeni fotoğraf ekleyebilirsiniz.
+            </p>
+          </div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <button class="btn btn-emerald btn-sm" id="btn-add-general-photo">
+              <span>+ Yeni Fotoğraf Ekle</span>
+            </button>
+            <button class="btn btn-secondary btn-sm" id="btn-export-media-json" title="Görsel Yapılandırmasını İndir">
+              <span>📥 Yapılandırmayı İndir</span>
+            </button>
+            <button class="btn btn-secondary btn-sm" id="btn-reset-media" style="color:#F87171;" title="İlk Fabrika Varsayılanlarına Döndür">
+              <span>🔄 Fabrika Ayarları</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Bar & Search -->
+        <div class="media-toolbar">
+          <div class="filter-pills" id="media-filter-pills">
+            <button type="button" class="filter-pill active" data-cat="all">Tümü (<span id="cat-count-all">0</span>)</button>
+            <button type="button" class="filter-pill" data-cat="hero">Hero Carousel (<span id="cat-count-hero">0</span>)</button>
+            <button type="button" class="filter-pill" data-cat="products">Ürünler &amp; Makineler (<span id="cat-count-products">0</span>)</button>
+            <button type="button" class="filter-pill" data-cat="services">Hizmetler (<span id="cat-count-services">0</span>)</button>
+            <button type="button" class="filter-pill" data-cat="brand">Marka &amp; Logo (<span id="cat-count-brand">0</span>)</button>
+          </div>
+          <input class="search-input" id="search-media" type="text" placeholder="Fotoğraf veya konum ara (örn: KD-3000, hero, su sondajı)..." />
+        </div>
+
+        <!-- Grid of All Media Items -->
+        <div class="media-grid" id="all-media-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </div>
   </main>
+
+  <!-- PHOTO EDIT & ADD MODAL -->
+  <div class="modal-overlay" id="media-modal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 id="modal-media-title" style="font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:700;color:#FFF;">Fotoğrafı Düzenle</h3>
+        <button type="button" class="modal-close" id="btn-close-media-modal">✕</button>
+      </div>
+
+      <form id="media-modal-form" onsubmit="return false;">
+        <input type="hidden" id="modal-item-id" />
+
+        <div class="form-group">
+          <label class="form-label" for="modal-item-title">Fotoğraf Başlığı / Adı *</label>
+          <input class="form-input" id="modal-item-title" type="text" required placeholder="Örn: KD-3000 Ağır Dorse Platformu" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modal-item-location">Sitedeki Konumu &amp; Yerleşim Yeri *</label>
+          <input class="form-input" id="modal-item-location" type="text" required placeholder="Örn: Katalog &amp; Ürün Sayfası: KD-3000 Ağır Dorse Kulesi (1500–3000m)" />
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="form-group">
+            <label class="form-label" for="modal-item-category">Kategori</label>
+            <select class="form-input" id="modal-item-category">
+              <option value="hero">Hero Carousel (Ana Sayfa Slayt)</option>
+              <option value="products">Ürünler &amp; Sondaj Makineleri</option>
+              <option value="services">Hizmet Sayfaları</option>
+              <option value="brand">Marka &amp; Logo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-item-ratio">Önerilen Boyut / Oran</label>
+            <input class="form-input" id="modal-item-ratio" type="text" placeholder="16:10 (1920x1200px) veya (800x500px)" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modal-item-selector">Hedef CSS Seçici (Otomatik Bağlantı)</label>
+          <input class="form-input mono" id="modal-item-selector" type="text" placeholder="Örn: a[href*='1500-3000m'] img" />
+        </div>
+
+        <!-- Image Upload Dropzone -->
+        <div class="form-group">
+          <label class="form-label">Görsel Yükle (Bilgisayardan Dosya Seç veya Sürükle Bırak)</label>
+          <div class="dropzone-area" id="modal-dropzone">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">📁</div>
+            <div style="font-weight:700;color:#FFF;font-size:0.95rem;">Fotoğraf dosyasını buraya sürükleyin</div>
+            <div style="color:var(--text-soft);font-size:0.8rem;margin-top:0.25rem;">veya tıklayarak bilgisayarınızdan seçin (JPG, PNG, WEBP)</div>
+            <input type="file" id="modal-file-input" accept="image/*" style="display:none;" />
+            <img id="modal-img-preview" class="dropzone-preview" alt="Önizleme" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modal-item-src">VEYA Görsel URL'si (Doğrudan Link / Dosya Yolu)</label>
+          <input class="form-input" id="modal-item-src" type="text" placeholder="/assets/rig-3000m-heavy.jpg veya https://..." />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modal-item-alt">SEO Alt Açıklama Metni</label>
+          <input class="form-input" id="modal-item-alt" type="text" placeholder="Arama motorları için açıklayıcı metin" />
+        </div>
+
+        <!-- Hero Settings Section -->
+        <div id="modal-hero-settings" style="background:rgba(234, 88, 12, 0.08);border:1px solid rgba(234, 88, 12, 0.3);border-radius:12px;padding:1.25rem;margin-top:1.25rem;">
+          <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
+            <input type="checkbox" id="modal-is-hero" style="width:18px;height:18px;cursor:pointer;" />
+            <label for="modal-is-hero" style="font-weight:700;color:#FFF;cursor:pointer;font-size:0.9rem;">
+              🚀 Bu fotoğraf Ana Sayfa Hero Carousel'da gösterilsin
+            </label>
+          </div>
+
+          <div id="modal-hero-fields" style="display:none;flex-direction:column;gap:0.75rem;">
+            <div style="display:grid;grid-template-columns:100px 1fr;gap:1rem;">
+              <div>
+                <label class="form-label" for="modal-hero-order">Slayt Sırası</label>
+                <input class="form-input" id="modal-hero-order" type="number" min="1" max="20" value="1" />
+              </div>
+              <div>
+                <label class="form-label" for="modal-hero-badge">Hero Üst Rozet / Kicker</label>
+                <input class="form-input" id="modal-hero-badge" type="text" placeholder="Örn: AĞIR HİZMET DERİN KUYU SONDAJ KULESİ" />
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label" for="modal-hero-lead">Hero Açıklama Metni (Lead Text)</label>
+              <textarea class="form-input" id="modal-hero-lead" rows="2" placeholder="Slaytın altında yer alan tanıtım cümlesi..."></textarea>
+            </div>
+
+            <div>
+              <label class="form-label" for="modal-hero-tab">Hero Alt Sekme Başlığı</label>
+              <input class="form-input" id="modal-hero-tab" type="text" placeholder="Örn: 3000M AĞIR DORSE" />
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:flex-end;gap:0.75rem;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-modal">Vazgeç</button>
+          <button type="button" class="btn" id="btn-save-modal" style="background:var(--emerald);">
+            💾 Değişiklikleri Kaydet &amp; Canlıya Al
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-msg" id="media-toast">
+    <span style="font-size:1.2rem;">✓</span>
+    <span id="media-toast-text">Fotoğraf başarıyla güncellendi!</span>
+  </div>
 
   <footer>
     KD SONDAJ YÖNETİM MERKEZİ // ANKARA, TÜRKİYE // DOĞRUDAN HAT: 0541 191 63 01
@@ -1139,6 +1639,578 @@ export function generateAdminDashboardHtml() {
           });
         });
       }
+
+      // 5. MEDIA & HERO CAROUSEL CONTROLLER
+      var defaultMediaRegistry = ${defaultMediaJson};
+      var mediaRegistry = [];
+
+      try {
+        var storedMedia = localStorage.getItem('kd_site_media');
+        if (storedMedia) {
+          mediaRegistry = JSON.parse(storedMedia);
+        }
+      } catch(e) {
+        console.warn('Error reading kd_site_media:', e);
+      }
+
+      if (!Array.isArray(mediaRegistry) || mediaRegistry.length === 0) {
+        mediaRegistry = JSON.parse(JSON.stringify(defaultMediaRegistry));
+      }
+
+      var currentMediaCat = 'all';
+
+      function showToast(msg) {
+        var toast = document.getElementById('media-toast');
+        var toastText = document.getElementById('media-toast-text');
+        if (toast && toastText) {
+          toastText.textContent = msg;
+          toast.classList.add('show');
+          setTimeout(function() {
+            toast.classList.remove('show');
+          }, 3500);
+        }
+      }
+
+      function saveMedia(notify) {
+        localStorage.setItem('kd_site_media', JSON.stringify(mediaRegistry));
+        renderMediaDashboard();
+        if (notify) {
+          showToast('Değişiklikler canlıya alındı & kaydedildi! ✓');
+        }
+      }
+
+      function renderMediaDashboard() {
+        var heroContainer = document.getElementById('hero-slides-container');
+        var allGrid = document.getElementById('all-media-grid');
+        var searchInput = document.getElementById('search-media');
+        var query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+
+        // Count totals
+        var totalCount = mediaRegistry.length;
+        var heroItems = mediaRegistry.filter(function(m) { return m.isHero; });
+        heroItems.sort(function(a, b) { return (a.slideIndex || 0) - (b.slideIndex || 0); });
+
+        var prodCount = mediaRegistry.filter(function(m) { return m.section === 'products'; }).length;
+        var srvCount = mediaRegistry.filter(function(m) { return m.section === 'services'; }).length;
+        var brandCount = mediaRegistry.filter(function(m) { return m.section === 'brand'; }).length;
+
+        // Update KPIs
+        var kpiTotal = document.getElementById('kpi-media-total');
+        var kpiHero = document.getElementById('kpi-media-hero');
+        var kpiProd = document.getElementById('kpi-media-prod');
+        var tabBadge = document.getElementById('tab-media-badge');
+
+        if (kpiTotal) kpiTotal.textContent = totalCount;
+        if (kpiHero) kpiHero.textContent = heroItems.length;
+        if (kpiProd) kpiProd.textContent = prodCount;
+        if (tabBadge) tabBadge.textContent = totalCount;
+
+        // Update category filter pill counters
+        var cAll = document.getElementById('cat-count-all');
+        var cHero = document.getElementById('cat-count-hero');
+        var cProd = document.getElementById('cat-count-products');
+        var cSrv = document.getElementById('cat-count-services');
+        var cBrand = document.getElementById('cat-count-brand');
+
+        if (cAll) cAll.textContent = totalCount;
+        if (cHero) cHero.textContent = heroItems.length;
+        if (cProd) cProd.textContent = prodCount;
+        if (cSrv) cSrv.textContent = srvCount;
+        if (cBrand) cBrand.textContent = brandCount;
+
+        // 1. RENDER HERO VISUAL EDITOR SLIDES
+        if (heroContainer) {
+          if (heroItems.length === 0) {
+            heroContainer.innerHTML = '<div style="grid-column:1/-1;padding:2rem;text-align:center;color:var(--text-muted);background:rgba(0,0,0,0.2);border-radius:12px;">Henüz aktif hero slaytı bulunmuyor. Yeni slayt ekleyebilir veya aşağıdaki listeden hero yapabilirsiniz.</div>';
+          } else {
+            var heroHtml = '';
+            heroItems.forEach(function(item, idx) {
+              heroHtml += '<div class="hero-slide-editor-card" data-id="' + item.id + '">' +
+                '<span class="hero-slide-order-badge">0' + (idx + 1) + ' // HERO SLAYT</span>' +
+                '<img class="hero-slide-editor-thumb" src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.titleTr || '') + '" onerror="this.src=\'/assets/hero-field-rig.jpg\'" />' +
+                '<div class="hero-slide-editor-body">' +
+                  '<div class="hero-slide-editor-badge">' + escapeHtml(item.badgeTr || 'HERO SLAYTI') + '</div>' +
+                  '<div class="hero-slide-editor-title">' + escapeHtml(item.titleTr || 'Başlıksız Slayt') + '</div>' +
+                  '<div style="font-size:0.75rem;color:var(--cyan);margin-top:0.35rem;font-weight:600;">' + escapeHtml(item.location || 'Ana Sayfa Hero') + '</div>' +
+                  '<div style="font-size:0.75rem;color:var(--text-soft);margin-top:0.35rem;line-height:1.4;">' + escapeHtml(item.leadTr ? item.leadTr.substring(0, 90) + '...' : '-') + '</div>' +
+                '</div>' +
+                '<div class="hero-slide-editor-actions">' +
+                  '<div style="display:flex;gap:0.3rem;">' +
+                    '<button type="button" class="btn btn-secondary btn-sm btn-hero-move-up" data-id="' + item.id + '" ' + (idx === 0 ? 'disabled style="opacity:0.4;cursor:not-allowed;"' : '') + ' title="Sırayı Öne Al">◀</button>' +
+                    '<button type="button" class="btn btn-secondary btn-sm btn-hero-move-down" data-id="' + item.id + '" ' + (idx === heroItems.length - 1 ? 'disabled style="opacity:0.4;cursor:not-allowed;"' : '') + ' title="Sırayı Arkaya Al">▶</button>' +
+                  '</div>' +
+                  '<div style="display:flex;gap:0.35rem;">' +
+                    '<button type="button" class="btn btn-sm btn-edit-media" data-id="' + item.id + '" style="background:var(--signal);">✏️ Düzenle</button>' +
+                    '<button type="button" class="btn btn-secondary btn-sm btn-hero-remove" data-id="' + item.id + '" style="color:#F87171;" title="Hero Carousel\'dan Çıkar">✕</button>' +
+                  '</div>' +
+                '</div>' +
+              '</div>';
+            });
+            heroContainer.innerHTML = heroHtml;
+          }
+        }
+
+        // 2. RENDER ALL SITE PHOTOS GRID
+        if (allGrid) {
+          var filtered = mediaRegistry.filter(function(item) {
+            // Category filter
+            if (currentMediaCat === 'hero' && !item.isHero) return false;
+            if (currentMediaCat === 'products' && item.section !== 'products') return false;
+            if (currentMediaCat === 'services' && item.section !== 'services') return false;
+            if (currentMediaCat === 'brand' && item.section !== 'brand') return false;
+
+            // Search filter
+            if (query) {
+              var t = (item.titleTr || '').toLowerCase();
+              var l = (item.location || '').toLowerCase();
+              var s = (item.targetElement || '').toLowerCase();
+              var a = (item.altTr || '').toLowerCase();
+              if (!t.includes(query) && !l.includes(query) && !s.includes(query) && !a.includes(query)) {
+                return false;
+              }
+            }
+            return true;
+          });
+
+          if (filtered.length === 0) {
+            allGrid.innerHTML = '<div style="grid-column:1/-1;padding:3rem;text-align:center;color:var(--text-muted);background:rgba(0,0,0,0.2);border-radius:12px;">Seçilen kriterlere uygun fotoğraf bulunamadı.</div>';
+          } else {
+            var gridHtml = '';
+            filtered.forEach(function(item) {
+              var isHeroSlide = Boolean(item.isHero);
+
+              gridHtml += '<div class="media-card" data-id="' + item.id + '">' +
+                '<div class="media-card-thumb-wrap">' +
+                  '<img class="media-card-thumb" src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.altTr || item.titleTr || '') + '" onerror="this.src=\'/assets/hero-field-rig.jpg\'" />' +
+                  '<span class="media-badge-loc">📍 ' + escapeHtml(item.location || 'Sitede Tanımlı') + '</span>' +
+                  (isHeroSlide ? '<span class="media-badge-hero">🚀 HERO SLAYTI</span>' : '') +
+                '</div>' +
+                '<div class="media-card-body">' +
+                  '<div class="media-card-title">' + escapeHtml(item.titleTr || 'İsimsiz Fotoğraf') + '</div>' +
+                  '<div class="media-card-loc-detail">' +
+                    '<div style="color:var(--text-soft);margin-bottom:0.25rem;"><strong>Yerleşim Yeri:</strong> ' + escapeHtml(item.location || '-') + '</div>' +
+                    '<div class="mono" style="font-size:0.72rem;color:var(--cyan);"><strong>Seçici:</strong> ' + escapeHtml(item.targetElement || '-') + '</div>' +
+                  '</div>' +
+                  '<div class="media-card-meta">' +
+                    '<span>Önerilen: <strong>' + escapeHtml(item.recommendedRatio || '16:10') + '</strong></span>' +
+                    '<span style="text-transform:uppercase;color:var(--signal);font-weight:700;">' + escapeHtml(item.section || 'genel') + '</span>' +
+                  '</div>' +
+                '</div>' +
+                '<div class="media-card-actions">' +
+                  '<button type="button" class="btn btn-sm btn-edit-media" data-id="' + item.id + '" style="flex:1;justify-content:center;background:var(--signal);">' +
+                    '✏️ Değiştir / Düzenle' +
+                  '</button>' +
+                  (isHeroSlide ?
+                    '<button type="button" class="btn btn-secondary btn-sm btn-toggle-hero" data-id="' + item.id + '" style="color:var(--signal);" title="Hero Carousel\'dan Kaldır">⭐ Hero Aktif</button>' :
+                    '<button type="button" class="btn btn-secondary btn-sm btn-toggle-hero" data-id="' + item.id + '" title="Hero Carousel\'a Ekle">+ Hero Yap</button>'
+                  ) +
+                  '<button type="button" class="btn btn-secondary btn-sm btn-delete-media" data-id="' + item.id + '" style="color:#F87171;" title="Bu Fotoğrafı Sil">🗑️ Sil</button>' +
+                '</div>' +
+              '</div>';
+            });
+            allGrid.innerHTML = gridHtml;
+          }
+        }
+
+        // Attach action handlers for rendered items
+        attachMediaCardListeners();
+      }
+
+      function attachMediaCardListeners() {
+        // Edit buttons
+        document.querySelectorAll('.btn-edit-media').forEach(function(btn) {
+          btn.onclick = function() {
+            var id = btn.getAttribute('data-id');
+            var item = mediaRegistry.find(function(m) { return m.id === id; });
+            if (item) openMediaModal(item, false);
+          };
+        });
+
+        // Delete buttons
+        document.querySelectorAll('.btn-delete-media').forEach(function(btn) {
+          btn.onclick = function() {
+            var id = btn.getAttribute('data-id');
+            var item = mediaRegistry.find(function(m) { return m.id === id; });
+            if (!item) return;
+
+            var confirmMsg = '\"' + (item.titleTr || item.location || 'Bu fotoğraf') + '\" görselini siteden silmek istediğinize emin misiniz?';
+            if (confirm(confirmMsg)) {
+              mediaRegistry = mediaRegistry.filter(function(m) { return m.id !== id; });
+              // Reindex hero if needed
+              var hIndex = 0;
+              mediaRegistry.forEach(function(m) {
+                if (m.isHero) m.slideIndex = hIndex++;
+              });
+              saveMedia(true);
+            }
+          };
+        });
+
+        // Toggle Hero buttons
+        document.querySelectorAll('.btn-toggle-hero').forEach(function(btn) {
+          btn.onclick = function() {
+            var id = btn.getAttribute('data-id');
+            var item = mediaRegistry.find(function(m) { return m.id === id; });
+            if (!item) return;
+
+            if (item.isHero) {
+              item.isHero = false;
+            } else {
+              var heroCount = mediaRegistry.filter(function(m) { return m.isHero; }).length;
+              item.isHero = true;
+              item.slideIndex = heroCount;
+              if (!item.badgeTr) item.badgeTr = 'KD SONDAJ // 2026';
+              if (!item.tabTitleTr) item.tabTitleTr = (item.titleTr || 'HERO SLAYT').substring(0, 20);
+            }
+
+            // Reindex all heroes
+            var hIndex = 0;
+            mediaRegistry.forEach(function(m) {
+              if (m.isHero) m.slideIndex = hIndex++;
+            });
+            saveMedia(true);
+          };
+        });
+
+        // Hero move buttons
+        document.querySelectorAll('.btn-hero-move-up').forEach(function(btn) {
+          btn.onclick = function() {
+            var id = btn.getAttribute('data-id');
+            var heroList = mediaRegistry.filter(function(m) { return m.isHero; });
+            heroList.sort(function(a, b) { return (a.slideIndex || 0) - (b.slideIndex || 0); });
+            var curIdx = heroList.findIndex(function(m) { return m.id === id; });
+            if (curIdx > 0) {
+              var temp = heroList[curIdx].slideIndex;
+              heroList[curIdx].slideIndex = heroList[curIdx - 1].slideIndex;
+              heroList[curIdx - 1].slideIndex = temp;
+              saveMedia(true);
+            }
+          };
+        });
+
+        document.querySelectorAll('.btn-hero-move-down').forEach(function(btn) {
+          btn.onclick = function() {
+            var id = btn.getAttribute('data-id');
+            var heroList = mediaRegistry.filter(function(m) { return m.isHero; });
+            heroList.sort(function(a, b) { return (a.slideIndex || 0) - (b.slideIndex || 0); });
+            var curIdx = heroList.findIndex(function(m) { return m.id === id; });
+            if (curIdx < heroList.length - 1 && curIdx !== -1) {
+              var temp = heroList[curIdx].slideIndex;
+              heroList[curIdx].slideIndex = heroList[curIdx + 1].slideIndex;
+              heroList[curIdx + 1].slideIndex = temp;
+              saveMedia(true);
+            }
+          };
+        });
+
+        // Hero remove buttons
+        document.querySelectorAll('.btn-hero-remove').forEach(function(btn) {
+          btn.onclick = function() {
+            var id = btn.getAttribute('data-id');
+            var item = mediaRegistry.find(function(m) { return m.id === id; });
+            if (item) {
+              item.isHero = false;
+              var hIndex = 0;
+              mediaRegistry.forEach(function(m) {
+                if (m.isHero) m.slideIndex = hIndex++;
+              });
+              saveMedia(true);
+            }
+          };
+        });
+      }
+
+      // MODAL CONTROLLER
+      var mediaModal = document.getElementById('media-modal');
+      var modalTitle = document.getElementById('modal-media-title');
+      var modalId = document.getElementById('modal-item-id');
+      var modalItemTitle = document.getElementById('modal-item-title');
+      var modalItemLoc = document.getElementById('modal-item-location');
+      var modalItemCat = document.getElementById('modal-item-category');
+      var modalItemRatio = document.getElementById('modal-item-ratio');
+      var modalItemSel = document.getElementById('modal-item-selector');
+      var modalItemSrc = document.getElementById('modal-item-src');
+      var modalItemAlt = document.getElementById('modal-item-alt');
+      var modalIsHero = document.getElementById('modal-is-hero');
+      var modalHeroFields = document.getElementById('modal-hero-fields');
+      var modalHeroOrder = document.getElementById('modal-hero-order');
+      var modalHeroBadge = document.getElementById('modal-hero-badge');
+      var modalHeroLead = document.getElementById('modal-hero-lead');
+      var modalHeroTab = document.getElementById('modal-hero-tab');
+      var modalDropzone = document.getElementById('modal-dropzone');
+      var modalFileInput = document.getElementById('modal-file-input');
+      var modalImgPreview = document.getElementById('modal-img-preview');
+
+      function openMediaModal(item, forceHero) {
+        if (!mediaModal) return;
+
+        if (item) {
+          modalTitle.textContent = 'Fotoğrafı Düzenle & Değiştir';
+          modalId.value = item.id;
+          modalItemTitle.value = item.titleTr || '';
+          modalItemLoc.value = item.location || '';
+          modalItemCat.value = item.section || 'products';
+          modalItemRatio.value = item.recommendedRatio || '16:10 (800x500px)';
+          modalItemSel.value = item.targetElement || '';
+          modalItemSrc.value = item.src || '';
+          modalItemAlt.value = item.altTr || '';
+
+          var isHero = Boolean(item.isHero);
+          modalIsHero.checked = isHero;
+          modalHeroFields.style.display = isHero ? 'flex' : 'none';
+          modalHeroOrder.value = (item.slideIndex !== undefined ? item.slideIndex + 1 : 1);
+          modalHeroBadge.value = item.badgeTr || '';
+          modalHeroLead.value = item.leadTr || '';
+          modalHeroTab.value = item.tabTitleTr || '';
+
+          if (item.src) {
+            modalImgPreview.src = item.src;
+            modalImgPreview.style.display = 'block';
+          } else {
+            modalImgPreview.style.display = 'none';
+          }
+        } else {
+          // Adding new item
+          modalTitle.textContent = forceHero ? 'Hero Carousel\'a Yeni Slayt Ekle' : 'Siteye Yeni Fotoğraf Ekle';
+          modalId.value = 'custom-media-' + Date.now();
+          modalItemTitle.value = '';
+          modalItemLoc.value = forceHero ? 'Ana Sayfa Hero Carousel Slaytı' : '';
+          modalItemCat.value = forceHero ? 'hero' : 'products';
+          modalItemRatio.value = forceHero ? '16:10 (1920x1200px)' : '16:10 (800x500px)';
+          modalItemSel.value = '';
+          modalItemSrc.value = '';
+          modalItemAlt.value = '';
+
+          var heroCount = mediaRegistry.filter(function(m) { return m.isHero; }).length;
+          modalIsHero.checked = Boolean(forceHero);
+          modalHeroFields.style.display = forceHero ? 'flex' : 'none';
+          modalHeroOrder.value = heroCount + 1;
+          modalHeroBadge.value = forceHero ? 'YENİ SONDAJ KULESİ' : '';
+          modalHeroLead.value = '';
+          modalHeroTab.value = '';
+
+          modalImgPreview.style.display = 'none';
+          modalImgPreview.src = '';
+        }
+
+        mediaModal.classList.add('open');
+      }
+
+      function closeMediaModal() {
+        if (mediaModal) mediaModal.classList.remove('open');
+      }
+
+      if (modalIsHero) {
+        modalIsHero.addEventListener('change', function() {
+          modalHeroFields.style.display = this.checked ? 'flex' : 'none';
+          if (this.checked && modalItemCat.value !== 'hero') {
+            modalItemCat.value = 'hero';
+          }
+        });
+      }
+
+      // Dropzone & File upload
+      if (modalDropzone && modalFileInput) {
+        modalDropzone.addEventListener('click', function() {
+          modalFileInput.click();
+        });
+
+        modalFileInput.addEventListener('change', function(e) {
+          if (e.target.files && e.target.files[0]) {
+            handleUploadedFile(e.target.files[0]);
+          }
+        });
+
+        modalDropzone.addEventListener('dragover', function(e) {
+          e.preventDefault();
+          modalDropzone.classList.add('dragover');
+        });
+
+        modalDropzone.addEventListener('dragleave', function() {
+          modalDropzone.classList.remove('dragover');
+        });
+
+        modalDropzone.addEventListener('drop', function(e) {
+          e.preventDefault();
+          modalDropzone.classList.remove('dragover');
+          if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+            handleUploadedFile(e.dataTransfer.files[0]);
+          }
+        });
+      }
+
+      function handleUploadedFile(file) {
+        var reader = new FileReader();
+        reader.onload = function(evt) {
+          var base64 = evt.target.result;
+          modalItemSrc.value = base64;
+          modalImgPreview.src = base64;
+          modalImgPreview.style.display = 'block';
+          if (!modalItemTitle.value) {
+            modalItemTitle.value = file.name.replace(/\\.[^/.]+$/, '').replace(/[-_]/g, ' ');
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+
+      if (modalItemSrc) {
+        modalItemSrc.addEventListener('input', function() {
+          var val = this.value.trim();
+          if (val) {
+            modalImgPreview.src = val;
+            modalImgPreview.style.display = 'block';
+          } else {
+            modalImgPreview.style.display = 'none';
+          }
+        });
+      }
+
+      var btnCloseModal = document.getElementById('btn-close-media-modal');
+      var btnCancelModal = document.getElementById('btn-cancel-modal');
+      var btnSaveModal = document.getElementById('btn-save-modal');
+
+      if (btnCloseModal) btnCloseModal.addEventListener('click', closeMediaModal);
+      if (btnCancelModal) btnCancelModal.addEventListener('click', closeMediaModal);
+
+      if (btnSaveModal) {
+        btnSaveModal.addEventListener('click', function() {
+          var id = modalId.value;
+          var title = modalItemTitle.value.trim();
+          var loc = modalItemLoc.value.trim();
+          var src = modalItemSrc.value.trim();
+          var cat = modalItemCat.value;
+          var ratio = modalItemRatio.value.trim();
+          var sel = modalItemSel.value.trim();
+          var alt = modalItemAlt.value.trim();
+          var isHero = modalIsHero.checked;
+
+          if (!title) {
+            alert('Lütfen fotoğraf için bir başlık / isim giriniz.');
+            modalItemTitle.focus();
+            return;
+          }
+          if (!loc) {
+            alert('Lütfen fotoğrafın sitedeki yerleşim konumunu belirtiniz.');
+            modalItemLoc.focus();
+            return;
+          }
+          if (!src) {
+            alert('Lütfen bir fotoğraf dosyası yükleyin veya geçerli bir görsel bağlantısı giriniz.');
+            modalItemSrc.focus();
+            return;
+          }
+
+          var existing = mediaRegistry.find(function(m) { return m.id === id; });
+          var slideIdx = isHero ? (parseInt(modalHeroOrder.value, 10) - 1 || 0) : 0;
+
+          if (existing) {
+            existing.titleTr = title;
+            existing.location = loc;
+            existing.src = src;
+            existing.section = cat;
+            existing.recommendedRatio = ratio || '16:10';
+            existing.targetElement = sel;
+            existing.altTr = alt;
+            existing.isHero = isHero;
+            if (isHero) {
+              existing.slideIndex = slideIdx;
+              existing.badgeTr = modalHeroBadge.value.trim() || 'KD SONDAJ';
+              existing.leadTr = modalHeroLead.value.trim() || '';
+              existing.tabTitleTr = modalHeroTab.value.trim() || title;
+            }
+          } else {
+            var newItem = {
+              id: id,
+              section: cat,
+              location: loc,
+              targetElement: sel,
+              recommendedRatio: ratio || '16:10',
+              src: src,
+              titleTr: title,
+              altTr: alt || title,
+              isHero: isHero,
+              slideIndex: slideIdx,
+              badgeTr: isHero ? (modalHeroBadge.value.trim() || 'KD SONDAJ') : '',
+              leadTr: isHero ? (modalHeroLead.value.trim() || '') : '',
+              tabTitleTr: isHero ? (modalHeroTab.value.trim() || title) : ''
+            };
+            mediaRegistry.unshift(newItem);
+          }
+
+          // Reindex hero items properly
+          var heroList = mediaRegistry.filter(function(m) { return m.isHero; });
+          heroList.sort(function(a, b) { return (a.slideIndex || 0) - (b.slideIndex || 0); });
+          heroList.forEach(function(m, i) { m.slideIndex = i; });
+
+          saveMedia(true);
+          closeMediaModal();
+        });
+      }
+
+      // Add Buttons
+      var btnAddGeneral = document.getElementById('btn-add-general-photo');
+      var btnAddHero = document.getElementById('btn-add-hero-slide');
+
+      if (btnAddGeneral) {
+        btnAddGeneral.addEventListener('click', function() {
+          openMediaModal(null, false);
+        });
+      }
+
+      if (btnAddHero) {
+        btnAddHero.addEventListener('click', function() {
+          openMediaModal(null, true);
+        });
+      }
+
+      // Export JSON
+      var btnExportJson = document.getElementById('btn-export-media-json');
+      if (btnExportJson) {
+        btnExportJson.addEventListener('click', function() {
+          var dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(mediaRegistry, null, 2));
+          var dlAnchor = document.createElement('a');
+          dlAnchor.setAttribute('href', dataStr);
+          dlAnchor.setAttribute('download', 'media-config.json');
+          document.body.appendChild(dlAnchor);
+          dlAnchor.click();
+          dlAnchor.remove();
+          showToast('media-config.json başarıyla indirildi! ✓');
+        });
+      }
+
+      // Reset to defaults
+      var btnReset = document.getElementById('btn-reset-media');
+      if (btnReset) {
+        btnReset.addEventListener('click', function() {
+          if (confirm('Bütün fotoğrafları ve hero ayarlarını fabrika varsayılan ayarlarına sıfırlamak istediğinize emin misiniz?')) {
+            mediaRegistry = JSON.parse(JSON.stringify(defaultMediaRegistry));
+            saveMedia(true);
+            showToast('Tüm fotoğraflar fabrika ayarlarına sıfırlandı! 🔄');
+          }
+        });
+      }
+
+      // Category filter pills
+      var pills = document.querySelectorAll('#media-filter-pills .filter-pill');
+      pills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          pills.forEach(function(p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          currentMediaCat = pill.getAttribute('data-cat');
+          renderMediaDashboard();
+        });
+      });
+
+      // Search input
+      var searchInput = document.getElementById('search-media');
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          renderMediaDashboard();
+        });
+      }
+
+      // Initial render for media dashboard
+      renderMediaDashboard();
 
       // Check Service Worker registration for PWA tab
       if ('serviceWorker' in navigator) {

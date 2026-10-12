@@ -431,10 +431,10 @@ function productCardAsiaplast(p, copy, lang) {
   const ctaLabel = isTr ? "Teknik Detay & Teklif" : isAr ? "المواصفات والتسعير" : "Specs & Quote";
 
   return `
-    <a href="${url}" class="asiaplast-card reveal-on-scroll" data-carrier="${p.carrier}">
+    <a href="${url}" class="asiaplast-card reveal-on-scroll" data-carrier="${p.carrier}" data-product-id="${p.id}">
       <div>
         <div class="asiaplast-card-media">
-          <img src="${p.image}" alt="${esc(localized.name)}" loading="lazy" />
+          <img src="${p.image}" data-product-id="${p.id}" alt="${esc(localized.name)}" loading="lazy" />
           <div class="media-dark-tint"></div>
           <span class="badge-top-left">${categoryBadge}</span>
           ${specBadge ? `<span class="badge-bottom-left">${esc(specBadge)}</span>` : ""}
@@ -471,10 +471,10 @@ function machineCard(machine, copy, lang) {
 
   if (machine.special) {
     const facts = machine.facts[lang] || machine.facts.tr;
-    return `<article class="rig-card reveal-on-scroll" data-carrier="${carrierClass}">
+    return `<article class="rig-card reveal-on-scroll" data-carrier="${carrierClass}" data-machine-id="${machine.id}">
       ${cardImg ? `
         <a href="${productUrl || '#'}" class="rig-card-media" aria-label="${esc(machine.depth)} ${esc(carrier)}">
-          <img src="${cardImg}" alt="KD Sondaj ${esc(machine.depth)} ${esc(carrier)}" loading="lazy" />
+          <img src="${cardImg}" data-machine-id="${machine.id}" alt="KD Sondaj ${esc(machine.depth)} ${esc(carrier)}" loading="lazy" />
           ${productUrl ? `<span class="rig-media-zoom">${isTr ? "Detayları İncele →" : isAr ? "عرض التفاصيل →" : "View Details →"}</span>` : ""}
         </a>
       ` : ""}
@@ -501,10 +501,10 @@ function machineCard(machine, copy, lang) {
   }
 
   const mud = machine.mud === true ? copy.common.mudYes : machine.mud === "optional" ? copy.common.mudOpt : "";
-  return `<article class="rig-card reveal-on-scroll" data-carrier="${carrierClass}">
+  return `<article class="rig-card reveal-on-scroll" data-carrier="${carrierClass}" data-machine-id="${machine.id}">
     ${cardImg ? `
       <a href="${productUrl || '#'}" class="rig-card-media" aria-label="${esc(machine.depth)} ${esc(carrier)}">
-        <img src="${cardImg}" alt="KD Sondaj ${esc(machine.depth)} ${esc(carrier)}" loading="lazy" />
+        <img src="${cardImg}" data-machine-id="${machine.id}" alt="KD Sondaj ${esc(machine.depth)} ${esc(carrier)}" loading="lazy" />
         ${productUrl ? `<span class="rig-media-zoom">${isTr ? "Detayları İncele →" : isAr ? "عرض التفاصيل →" : "View Details →"}</span>` : ""}
       </a>
     ` : ""}
