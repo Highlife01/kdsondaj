@@ -924,12 +924,10 @@ function layout({ lang, pageKey, title, description, extraHead = "", schema = []
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-col">
-        <a class="brand" href="${routes[lang].home}" style="margin-bottom:1rem;">
-          <div class="brand-icon">
-            <img src="/assets/logo.svg" width="34" height="34" alt="${esc(site.name)}" />
-          </div>
+        <a class="brand" href="${routes[lang].home}" style="margin-bottom:1rem;" aria-label="${esc(site.name)}">
+          <span class="brand-badge">KD</span>
           <div class="brand-text">
-            <span class="brand-title">${esc(site.name)}</span>
+            <span class="brand-title">KD<span class="brand-accent">SONDAJ</span></span>
             <span class="brand-sub">${esc(copy.brandSub)}</span>
           </div>
         </a>
@@ -1005,15 +1003,218 @@ function pageHome(lang) {
     { depth: "1000 – 1600 m", label: "DSİ & Belediye Derin Kuyular" },
     { depth: "2000 – 3000 m", label: "Yüksek Entalpi Jeotermal Dorse" }
   ] : isAr ? [
-    { depth: "0 – 250 م", label: "الطبقة السطحية ومياه الآبار العذبة" },
-    { depth: "300 – 800 م", label: "حفارات هيدروليكية مثبتة على شاحنات" },
-    { depth: "1000 – 1600 م", label: "مشاريع مياه الشرب البلدية والعميقة" },
-    { depth: "2000 – 3000 م", label: "حفارات مقطورة عملاقة للطاقة الحرارية" }
+    {
+      img: "/assets/hero-field-rig.jpg",
+      chip: "٤٥ عاماً من الخبرة الصناعية والميدانية · قدرة حفر ٣٠٠٠ متر",
+      title: "حفارات آبار مياه عميقة وطاقة حرارية حتى ٣٠٠٠ متر",
+      lead: "حفارات مقطورة وشاحنة هيدروليكية ثقيلة، طاولات حفر دوارة عالية العزم وقدرة حفر مستمرة وموثوقة.",
+      badges: ["عمق حفر يصل ٣٠٠٠ متر", "برج حفر قدرة ١١٠ طن", "معايير الجودة العالمية ISO و API"],
+      tabLabel: "حفارة القمة ٣٠٠٠ متر"
+    },
+    {
+      img: "/assets/trailer-rig.jpg",
+      chip: "سلسلة الحفارات المقطورة الثقيلة · ١٥٠٠ - ٣٠٠٠ متر",
+      title: "حفارات مقطورة عملاقة للطبقات العميقة ومشاريع الطاقة",
+      lead: "محركا ديزل MAN 422، ونش سحب ثقيل 5×510 ومضخة طين دوبلكس ثنائية الأسطوانات لمشاريع الآبار الكبرى.",
+      badges: ["محركا ديزل مزدوجان", "ونش سحب فائق التحمل", "طاولة دوارة 70 دورة/دقيقة"],
+      tabLabel: "مقطورة ثقيلة ١٥٠٠-٣٠٠٠م"
+    },
+    {
+      img: "/assets/truck-rig.jpg",
+      chip: "حفارات شاحنة هيدروليكية · ٣٠٠ - ١٢٠٠ متر",
+      title: "حفارات شاحنة هيدروليكية سريعة الانتشار وعالية العزم",
+      lead: "مثبتة على شاحنات 6x4 و 8x4 مع 4 ركائز هيدروليكية لتسوية البرج ومناورة عالية في التضاريس الوعرة.",
+      badges: ["شاسيه شاحنة 6x4 و 8x4", "٤ ركائز هيدروليكية", "برج حفر بارتفاع ١٤.٥ م"],
+      tabLabel: "حفارات شاحنة ٣٠٠-١٢٠٠م"
+    },
+    {
+      img: "/assets/geothermal-rig.jpg",
+      chip: "حفارات الطاقة الحرارية والمشاريع الخاصة · ٢٥٠٠ متر",
+      title: "أنظمة حفر آبار الطاقة الحرارية عالية الحرارة والضغط",
+      lead: "متوافقة مع موانع الانفجار BOP ومجهزة بخطوط دوران عالية التدفق لأقصى درجات الأمان الميداني.",
+      badges: ["مقاومة درجات الحرارة العالية", "تحكم بأمان الآبار BOP", "تصنيع هندسي مخصص"],
+      tabLabel: "طاقة حرارية ومشاريع خاصة"
+    },
+    {
+      img: "/assets/drill-pipes.jpg",
+      chip: "أنابيب حفر ومعدات الآبار بمواصفات معهد البترول الأمريكي",
+      title: "أنابيب حفر API ورؤوس حفر مخروطية ومضخات طين دوبلكس",
+      lead: "أنابيب حفر من فولاذ E, X, G, S عالية المتانة، رؤوس حفر IADC ومضخات طين مزدوجة المفعول.",
+      badges: ["معايير API Spec 5D & 7-1", "مضخة طين دوبلكس 6 إنش", "رؤوس حفر تريكون IADC"],
+      tabLabel: "أنابيب API ومضخات ومعدات"
+    }
   ] : [
-    { depth: "0 – 250 m", label: "Surface & Shallow Aquifers" },
-    { depth: "300 – 800 m", label: "Truck-Mounted Hydraulic Systems" },
-    { depth: "1000 – 1600 m", label: "Deep Municipal & Public Wells" },
-    { depth: "2000 – 3000 m", label: "Heavy Trailer Geothermal Reservoirs" }
+    {
+      img: "/assets/hero-field-rig.jpg",
+      chip: "45 YEARS DRILLING & MANUFACTURING LEGACY · 3000M RATING",
+      title: "Engineered Deep Geothermal & Water Well Drilling Rigs up to 3000m",
+      lead: "Heavy trailer-mounted and truck hydraulic drilling rigs engineered with high-torque rotary tables and continuous borehole endurance.",
+      badges: ["3000m Depth Rating", "110-Ton Mast Capacity", "ISO & API Quality Standard"],
+      tabLabel: "3000M FLAGSHIP RIG"
+    },
+    {
+      img: "/assets/trailer-rig.jpg",
+      chip: "HEAVY TRAILER RIG SERIES · 1500–3000 METERS",
+      title: "Heavy-Duty Trailer Drilling Rigs for Deep Reservoirs & Aquifers",
+      lead: "Powered by dual MAN 422 diesel engines, 5x510 heavy drawworks, and 7.5\" x 10\" duplex double-acting mud pump.",
+      badges: ["Dual Independent Diesel Engines", "5×510 Heavy Drawworks", "70 RPM Rotary Table"],
+      tabLabel: "1500–3000M HEAVY TRAILER"
+    },
+    {
+      img: "/assets/truck-rig.jpg",
+      chip: "TRUCK-MOUNTED HYDRAULIC SERIES · 300–1200 METERS",
+      title: "Rapid-Mobilization Heavy Truck Drilling Rigs for Tough Terrains",
+      lead: "Built on 6x4 and 8x4 heavy commercial chassis with 4 hydraulic leveling jacks, compact footprint and agile field navigation.",
+      badges: ["6x4 & 8x4 Heavy Chassis", "4 Hydraulic Leveling Jacks", "14.50m Mast Height"],
+      tabLabel: "300–1200M TRUCK MOUNTED"
+    },
+    {
+      img: "/assets/geothermal-rig.jpg",
+      chip: "GEOTHERMAL & SPECIAL PROJECTS · 2500 METERS",
+      title: "High-Temperature & High-Pressure Geothermal Exploration Rigs",
+      lead: "Equipped for well control equipment, BOP compatibility, and high-volume mud circulation lines for maximum field safety.",
+      badges: ["High-Temp Resistant", "BOP Well Control Ready", "Custom Engineered Mast"],
+      tabLabel: "GEOTHERMAL & SPECIAL RIGS"
+    },
+    {
+      img: "/assets/drill-pipes.jpg",
+      chip: "API SPEC 5D DRILL PIPES & DOWNHOLE TOOLS",
+      title: "Heavy-Duty Drill Pipes, Mud Pumps & Downhole Tooling",
+      lead: "API Spec 5D / Spec 7-1 certified drill pipes in steel grades E, X, G, S, IADC tricone bits, and Duplex reciprocating mud pumps.",
+      badges: ["API Spec 5D & 7-1 Certified", "Duplex 6\" Mud Pumps", "IADC Tricone Rock Bits"],
+      tabLabel: "API PIPES, PUMPS & TOOLS"
+    }
+  ];
+
+  const modernProducts = [
+    {
+      slug: "trailer-1500-3000",
+      routeKey: "productTrailer3000",
+      img: "/assets/trailer-rig.jpg",
+      cat: "trailer",
+      topBadge: isTr ? "🚜 Dorse Kule" : isAr ? "🚜 حفارة مقطورة" : "🚜 Trailer Rig",
+      bottomBadge: isTr ? "1500–3000 m · 110T Kule" : isAr ? "١٥٠٠–٣٠٠٠ م · برج ١١٠ طن" : "1500–3000m · 110T Mast",
+      title: isTr ? "1500–3000m Dorse Sondaj Kulesi" : isAr ? "حفارة مقطورة ١٥٠٠ - ٣٠٠٠ متر" : "1500–3000m Trailer Drilling Rig",
+      desc: isTr ? "Çift MAN 422 motor, 5x510 vinç, derin jeotermal ve akifer kuyu açma kulesi." : isAr ? "محركا ديزل مزدوجان MAN 422، ونش 5x510 لحفر الآبار العميقة والطاقة الحرارية." : "Dual MAN 422 engines, 5x510 drawworks for deep geothermal and water aquifers.",
+      moq: isTr ? "KAPASİTE: 3000 M" : isAr ? "القدرة: ٣٠٠٠ م" : "CAPACITY: 3000M"
+    },
+    {
+      slug: "special-2500",
+      routeKey: "productSpecial2500",
+      img: "/assets/geothermal-rig.jpg",
+      cat: "trailer",
+      topBadge: isTr ? "🌋 Jeotermal" : isAr ? "🌋 طاقة حرارية" : "🌋 Geothermal",
+      bottomBadge: isTr ? "2500 m · Özel İmalat" : isAr ? "٢٥٠٠ م · تصنيع خاص" : "2500m · Custom Build",
+      title: isTr ? "2500m Özel Derin Kuyu Kulesi" : isAr ? "حفارة آبار عميقة ٢٥٠٠ متر خاصة" : "2500m Deep Geothermal Rig",
+      desc: isTr ? "Jeotermal rezervuar ve yüksek basınçlı derin formasyonlar için özel imalat kule." : isAr ? "حفارة مخصصة لطبقات الأرض الحرارية والضغوط العالية." : "Custom-engineered rig for geothermal reservoirs and high-pressure deep horizons.",
+      moq: isTr ? "KAPASİTE: 2500 M" : isAr ? "القدرة: ٢٥٠٠ م" : "CAPACITY: 2500M"
+    },
+    {
+      slug: "trailer-1000-1200",
+      routeKey: "productTrailer1200",
+      img: "/assets/trailer-rig.jpg",
+      cat: "trailer",
+      topBadge: isTr ? "🚜 Dorse Kule" : isAr ? "🚜 حفارة مقطورة" : "🚜 Trailer Rig",
+      bottomBadge: isTr ? "1000–1200 m · 90T Kule" : isAr ? "١٠٠٠–١٢٠٠ م · برج ٩٠ طن" : "1000–1200m · 90T Mast",
+      title: isTr ? "1000–1200m Dorse Sondaj Kulesi" : isAr ? "حفارة مقطورة ١٠٠٠ - ١٢٠٠ متر" : "1000–1200m Trailer Drilling Rig",
+      desc: isTr ? "DSİ, belediye ve sulama kooperatifleri için yüksek torklu derin kuyu kulesi." : isAr ? "حفارة مقطورة مثالية لمشاريع مياه الشرب البلدية والزراعية الكبرى." : "High-torque deep well rig for municipal water and agricultural cooperatives.",
+      moq: isTr ? "KAPASİTE: 1200 M" : isAr ? "القدرة: ١٢٠٠ م" : "CAPACITY: 1200M"
+    },
+    {
+      slug: "truck-1000-1200",
+      routeKey: "productTruck1200",
+      img: "/assets/truck-rig.jpg",
+      cat: "truck",
+      topBadge: isTr ? "🚚 Kamyon Kule" : isAr ? "🚚 حفارة شاحنة" : "🚚 Truck Rig",
+      bottomBadge: isTr ? "1000–1200 m · 8x4 Şasi" : isAr ? "١٠٠٠–١٢٠٠ م · شاسيه 8x4" : "1000–1200m · 8x4 Chassis",
+      title: isTr ? "1000–1200m Kamyon Üstü Kule" : isAr ? "حفارة شاحنة ١٠٠٠ - ١٢٠٠ متر" : "1000–1200m Truck Mounted Rig",
+      desc: isTr ? "8x4 kamyon şasisi üzerinde yüksek manevra ve intikal kabiliyetine sahip hidrolik kule." : isAr ? "حفارة هيدروليكية مدمجة على شاحنة 8x4 بحركة سريعة وعزم دوران قوي." : "Heavy hydraulic rig on 8x4 chassis delivering rapid mobilization and high torque.",
+      moq: isTr ? "KAPASİTE: 1200 M" : isAr ? "القدرة: ١٢٠٠ م" : "CAPACITY: 1200M"
+    },
+    {
+      slug: "truck-800",
+      routeKey: "productTruck800",
+      img: "/assets/truck-rig.jpg",
+      cat: "truck",
+      topBadge: isTr ? "🚚 Kamyon Kule" : isAr ? "🚚 حفارة شاحنة" : "🚚 Truck Rig",
+      bottomBadge: isTr ? "800 m · 6x4 Şasi" : isAr ? "٨٠٠ م · شاسيه 6x4" : "800m · 6x4 Chassis",
+      title: isTr ? "800m Kamyon Üstü Hidrolik Kule" : isAr ? "حفارة شاحنة ٨٠٠ متر هيدروليكية" : "800m Truck Mounted Rig",
+      desc: isTr ? "Orta ve derin su kuyuları için optimum yakıt sarfiyatı ve hızlı kuyu tamamlama." : isAr ? "كفاءة وقود مثالية وسرعة إنجاز عالية لآبار المياه المتوسطة والعميقة." : "Optimal fuel economy and fast well completion for mid to deep water aquifers.",
+      moq: isTr ? "KAPASİTE: 800 M" : isAr ? "القدرة: ٨٠٠ م" : "CAPACITY: 800M"
+    },
+    {
+      slug: "drill-pipes",
+      routeKey: "productPipes",
+      img: "/assets/drill-pipes.jpg",
+      cat: "equipment",
+      topBadge: isTr ? "🔩 Tij &amp; Boru" : isAr ? "🔩 أنابيب حفر" : "🔩 Drill Pipes",
+      bottomBadge: isTr ? "2 3/8\" – 5 1/2\" · API Spec 5D" : isAr ? "٢ ٣/٨ إلى ٥ ١/٢ إنش · معايير API" : "2 3/8\" – 5 1/2\" · API Spec 5D",
+      title: isTr ? "API Spec 5D Sondaj Tijleri" : isAr ? "أنابيب حفر معتمدة API Spec 5D" : "API Spec 5D Drill Pipes",
+      desc: isTr ? "E, X, G, S kalite dikişsiz çelik gövde ve sürtünme kaynaklı sert dolgulu takım contaları." : isAr ? "أنابيب فولاذية غير ملحومة من درجات E, X, G, S مع وصلات ملحومة بالاحتكاك." : "Seamless drill pipes in steel grades E, X, G, S with hardbanded friction-welded tool joints.",
+      moq: isTr ? "STANDART: API 5D" : isAr ? "المعيار: API 5D" : "STANDARD: API 5D"
+    },
+    {
+      slug: "mud-pumps",
+      routeKey: "productPumps",
+      img: "/assets/mud-pump.jpg",
+      cat: "equipment",
+      topBadge: isTr ? "⚙️ Çamur Pompası" : isAr ? "⚙️ مضخة طين" : "⚙️ Mud Pump",
+      bottomBadge: isTr ? "21–62 Bar · 895 PSI" : isAr ? "٢١-٦٢ بار · ٨٩٥ PSI" : "21–62 Bar · 895 PSI",
+      title: isTr ? "Duplex 6\" Çift Piston Çamur Pompası" : isAr ? "مضخة طين دوبلكس ثنائية الأسطوانة 6 إنش" : "Duplex 6\" Reciprocating Mud Pump",
+      desc: isTr ? "Çift etkili pistonlu resiprokal çamur pompası, zorlu sirkülasyon koşullarına dayanıklı." : isAr ? "مضخة طين ترددية مزدوجة المفعول تتحمل أقسى ظروف تدوير سائل الحفر." : "Heavy-duty double-acting reciprocating mud pump built for demanding drilling fluids.",
+      moq: isTr ? "BASINÇ: 62 BAR" : isAr ? "الضغط: ٦٢ بار" : "PRESSURE: 62 BAR"
+    },
+    {
+      slug: "drill-bits",
+      routeKey: "productBits",
+      img: "/assets/tricone-bits.jpg",
+      cat: "equipment",
+      topBadge: isTr ? "💎 Sondaj Matkabı" : isAr ? "💎 رؤوس حفر" : "💎 Drill Bits",
+      bottomBadge: isTr ? "IADC 111–637 · TCI / Freze" : isAr ? "IADC 111–637 · كربيد وفولاذ" : "IADC 111–637 · TCI / Steel Tooth",
+      title: isTr ? "IADC Tricone Döner Konili Matkaplar" : isAr ? "رؤوس حفر مخروطية دوارة IADC Tricone" : "IADC Tricone Roller Cone Bits",
+      desc: isTr ? "Yumuşak alüvyondan en sert kuvarsit ve bazalt formasyonlarına kadar yüksek penetrasyon hızı." : isAr ? "سرعة اختراق فائقة من طبقات الطمي الرخوة حتى أصلب صخور البازلت والكوارتز." : "High penetration rate engineered from soft alluvium to ultra-hard basalt and quartzite formations.",
+      moq: isTr ? "IADC SERTİFİKALI" : isAr ? "معتمد IADC" : "IADC CERTIFIED"
+    }
+  ];
+
+  const b2bCards = isTr ? [
+    { num: "1", title: "Şartnameye Uygun İmalat", desc: "Kuyu hedef derinliği, kule kaldırma tonajı, vinç tambur kapasitesi ve hidrolik güç üniteleri tam proje teknik şartnamenize göre üretilir." },
+    { num: "2", title: "İhracat & Global Lojistik", desc: "Orta Doğu, Kuzey Afrika, Türki Cumhuriyetler ve Balkanlar'a anahtar teslim gümrükleme, konteyner & lowbed lojistiği ve tam ihracat dokümantasyonu." },
+    { num: "3", title: "45 Yıllık Saha & İmalat Mirası", desc: "1980'den bu yana Türkiye'nin ve bölgenin en zorlu jeolojik formasyonlarında test edilmiş, yüzlerce kule imal etmiş sağlam mühendislik mirası." },
+    { num: "4", title: "Hızlı Teklif & 7/24 Teknik Servis", desc: "Kapsamlı teknik şartname ve fiyat teklifleri 24 saat içinde yanıtlanır; saha kurulumu, operatör eğitimi ve garantili yedek parça temini sağlanır." }
+  ] : isAr ? [
+    { num: "1", title: "تصنيع وفق الشروط والمواصفات", desc: "يتم تصنيع البرج وقدرة السحب ومحركات الديزل وأنظمة الهيدروليك بدقة تامة حسب العمق المطلوب والشروط الفنية لمشروعك." },
+    { num: "2", title: "شحن وتصدير دولي معتمد", desc: "تجهيز الشحن والشاحنات المنخفضة Lowbed وحاويات التصدير للشرق الأوسط وشمال أفريقيا ودول البلقان مع كافة الوثائق الجمركية." },
+    { num: "3", title: "٤٥ عاماً من الخبرة الصناعية", desc: "منذ عام ١٩٨٠ في قلب قطاع الحفر؛ مئات الحفارات العاملة في أعتى التضاريس الجيولوجية الصعبة والمشاريع الكبرى." },
+    { num: "4", title: "تسعير سريع ودعم فني متواصل", desc: "تسعير وعروض مواصفات فنية خلال ٢٤ ساعة مع تدريب مشغلي الحفارات ميدانياً وضمان قطع الغيار الأصلية." }
+  ] : [
+    { num: "1", title: "Specification-Driven Production", desc: "Mast tonnage, drawworks spooling, engine horsepower and hydraulic units built strictly to your project depth and formation specs." },
+    { num: "2", title: "Global Export & Heavy Logistics", desc: "Turnkey container and lowbed export logistics to Middle East, North Africa, Central Asia and Europe with full export documentation." },
+    { num: "3", title: "45-Year Manufacturing Legacy", desc: "Since 1980, hundreds of drilling rigs manufactured and field-proven across the most demanding hydrogeological formations." },
+    { num: "4", title: "Responsive Quoting & Field Support", desc: "Detailed technical datasheets and quotations delivered within 24 hours; on-site commissioning and guaranteed spare parts support." }
+  ];
+
+  const sectors = isTr ? [
+    { icon: "🌋", title: "Jeotermal Enerji Santralleri (JES)", desc: "Yüksek sıcaklık ve entalpiye sahip derin jeotermal rezervuarlar için BOP kuyu kontrol uyumlu ağır dorse kuleler." },
+    { icon: "💧", title: "DSİ & Belediye Şehir Suyu", desc: "1000–2000m derinlikte kesintisiz içme ve kullanma suyu temini sağlayan yüksek debili derin kuyu sondajları." },
+    { icon: "🌾", title: "Tarımsal Sulama Kooperatifleri", desc: "Geniş çaplı akifer açma, yüksek debili dalgıç pompa borulaması ve optimum yakıt verimliliği sağlayan kamyon kuleler." },
+    { icon: "⛏️", title: "Karotlu Maden & Cevher Arama", desc: "Tel hatlı (wireline) elmaslı karotiyer sistemleri ile yüksek karot yüzdesi sağlayan hassas maden arama kuleleri." },
+    { icon: "🏗️", title: "Jeoteknik & Zemin İyileştirme", desc: "Baraj, otoyol, tünel ve temel enjeksiyon & fore kazık sondajları için yüksek torklu hidrolik delme üniteleri." },
+    { icon: "🏭", title: "Endüstriyel Tesis & Fabrika Suyu", desc: "Kesintisiz üretim proses suyu ihtiyacı olan fabrikalar ve sanayi bölgeleri için garantili endüstriyel su kuyuları." }
+  ] : isAr ? [
+    { icon: "🌋", title: "محطات الطاقة الحرارية الأرضية", desc: "حفارات مقطورة ثقيلة متوافقة مع موانع الانفجار BOP لآبار الطاقة الحرارية ذات درجات الحرارة والضغوط العالية." },
+    { icon: "💧", title: "مشاريع مياه الشرب البلدية", desc: "حفر آبار مياه عميقة من ١٠٠٠ إلى ٢٠٠٠ متر لتأمين مياه الشرب للمدن والمؤسسات المائية الحكومية." },
+    { icon: "🌾", title: "مشاريع الري والزراعة الكبرى", desc: "حفر آبار مياه زراعية بأقطار واسعة وتجهيز المضخات الغاطسة بكفاءة تشغيل واستهلاك وقود اقتصادي." },
+    { icon: "⛏️", title: "استكشاف المعادن بالعينات اللبية", desc: "أنظمة حفر سلكية Wireline ذات رؤوس ألماسية لاستخراج عينات الصخور بدقة ونسبة استرداد عالية." },
+    { icon: "🏗️", title: "أعمال الجيوتقنية وتحسين التربة", desc: "حفر السدود والأنفاق وحقن الأساسات والخوازيق بوحدات هيدروليكية عالية العزم." },
+    { icon: "🏭", title: "تأمين مياه المصانع والمنشآت", desc: "حفر آبار مياه صناعية مستمرة لتأمين خطوط الإنتاج والمنشآت الصناعية الكبرى." }
+  ] : [
+    { icon: "🌋", title: "Geothermal Power Plants", desc: "BOP-compatible heavy trailer rigs engineered for high-enthalpy and high-temperature deep geothermal reservoirs." },
+    { icon: "💧", title: "Municipal Water Supply", desc: "Deep water well drilling from 1000m to 2000m ensuring uninterrupted public drinking water supplies." },
+    { icon: "🌾", title: "Agricultural Irrigation", desc: "Large-diameter borehole drilling, high-flow submersible pumping, and fuel-efficient truck-mounted rigs." },
+    { icon: "⛏️", title: "Mineral Exploration & Coring", desc: "Wireline diamond coring systems delivering high core recovery rates for mineral discovery and reservoir logging." },
+    { icon: "🏗️", title: "Geotechnical & Soil Stabilization", desc: "High-torque hydraulic drilling units for dams, tunnels, foundation grouting, and micropile installations." },
+    { icon: "🏭", title: "Industrial Plant Water Supply", desc: "Guaranteed industrial water well engineering for factories and industrial zones requiring continuous process water." }
   ];
 
   const main = `
@@ -1324,6 +1525,7 @@ function pageHome(lang) {
     main,
   });
 }
+
 
 function simplePage(lang, pageKey, extras = "") {
   const copy = locales[lang];
