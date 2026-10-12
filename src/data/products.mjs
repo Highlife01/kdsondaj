@@ -110,7 +110,7 @@ export const productList = [
     mast: "14.50 m / 8 mm",
     drawworks: "5×510 Lined Heavy",
     mudPump: "7.5\" × 10\" Duplex",
-    image: "/assets/hero-field-rig.jpg",
+    image: "/assets/geothermal-rig.jpg",
     specsTable: [
       { param: "Borehole Depth Rating", val: "2500 m (8,200 ft)", tr: "Kuyu Derinlik Kapasitesi", ar: "عمق الحفر المقنن" },
       { param: "Power Plant", val: "Dual MAN 422 Diesel Engines (Independent Drives)", tr: "Çift MAN 422 Dizel Motor", ar: "محركا ديزل مزدوجان MAN 422" },
@@ -536,7 +536,7 @@ export const productList = [
     mast: "E, X, G, S",
     drawworks: "6.10 – 9.60 m",
     mudPump: "High Flow Tool Joints",
-    image: "/assets/tricone-bits.jpg",
+    image: "/assets/drill-pipes.jpg",
     specsTable: [
       { param: "API Specification", val: "API Spec 5D & API Spec 7-1", tr: "API Şartnamesi", ar: "مواصفات معهد البترول الأمريكي API" },
       { param: "Outer Diameters", val: "2 3/8\", 2 7/8\", 3 1/2\", 4\", 4 1/2\", 5\", 5 1/2\"", tr: "Dış Çap Ölçüleri", ar: "الأقطار الخارجية للأنابيب" },
@@ -641,7 +641,7 @@ export const productList = [
     mast: "2 Piston / Double Acting",
     drawworks: "70 rpm — 4.5 to 12.5 lt",
     mudPump: "21 – 62 bar (310 – 895 psi)",
-    image: "/assets/truck-rig.jpg",
+    image: "/assets/mud-pump.jpg",
     specsTable: [
       { param: "Pump Type", val: "Duplex Double-Acting Reciprocating Piston Pump", tr: "Pompa Tipi", ar: "نوع المضخة (دوبلكس ثنائية الأسطوانات مزدوجة المفعول)" },
       { param: "Stroke Length", val: "6\" (152.4 mm)", tr: "Strok Boyu", ar: "طول الشوط 6 إنش" },

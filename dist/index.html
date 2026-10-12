@@ -42,12 +42,10 @@
   <header class="site-header">
     <div class="wrap">
       <div class="header-row">
-        <a class="brand" href="/">
-          <div class="brand-icon">
-            <img src="/assets/logo.svg" width="34" height="34" alt="KD SONDAJ" />
-          </div>
+        <a class="brand" href="/" aria-label="KD SONDAJ">
+          <span class="brand-badge">KD</span>
           <div class="brand-text">
-            <span class="brand-title">KD SONDAJ</span>
+            <span class="brand-title">KD<span class="brand-accent">SONDAJ</span></span>
             <span class="brand-sub">Sondaj sistemleri</span>
           </div>
         </a>
@@ -105,9 +103,13 @@
   </nav>
         <div class="header-actions">
           <nav class="lang-switcher" aria-label="Language"><a class="lang-btn" href="/" hreflang="tr-TR" aria-current="page">TR</a><a class="lang-btn" href="/en/" hreflang="en">EN</a><a class="lang-btn" href="/ar/" hreflang="ar">AR</a></nav>
-          <a class="btn btn-wa header-cta" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-            0541 191 63 01
+          <a class="header-cta-quote" href="/iletisim/">
+            <span>📋</span>
+            <span>Teklif İste</span>
+          </a>
+          <a class="header-cta-wa" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener">
+            <span class="pulse-dot-green"></span>
+            <span>0541 191 63 01</span>
           </a>
           <button class="menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-panel" aria-label="Menu">☰</button>
         </div>
@@ -145,304 +147,657 @@
     </div>
   </header>
   <main id="main">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="reveal-on-scroll">
-        <div class="telemetry-pill shimmer-badge">
-          <span class="beacon-dot"></span>
-          <span>45 YILLIK ÜRETİM &amp; SAHA TECRÜBESİ</span>
-          <span class="pill-tag">3000M KAPASİTE</span>
-        </div>
-        <h1>45 yıllık tecrübe, <span class="highlight-orange">250–3000</span> metre sondaj kapasitesi.</h1>
-        <p class="lead">Derinlik arttıkça doğru makine ve saha deneyimi daha kritik hale gelir. KD Sondaj, üretim altyapısını ve sahada kanıtlanmış hizmet hattını aynı çatı altında tutar.</p>
-        <p class="hero-proof-text">Kurumsal kuyu kapasitesi 250–3000 m’dir. Makine kataloğu başlıkları 300–3000 m aralığını kullanır.</p>
-        <div class="cta-row">
-          <a class="btn btn-wa" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-            0541 191 63 01
-          </a>
-          <a class="btn btn-signal" href="/iletisim/">
-            📝 Teklif Formu
-          </a>
-          <a class="btn btn-ghost" href="/ekipman/sondaj-makineleri/">
-            Makine kapasitelerini incele →
-          </a>
-        </div>
-      </div>
+  <!-- Asiaplast-Inspired Multi-Slide Interactive Hero Carousel -->
+  <section class="hero-carousel-section" id="hero-carousel">
+    <div class="hero-slides-wrapper">
       
-      <div class="hero-visual-container reveal-on-scroll">
-        <div class="hero-img-card">
-          <img src="/assets/hero-field-rig.jpg" alt="KD Sondaj Saha Kulesi ve 3000m Derin Kuyu Çalışması" width="800" height="450" fetchpriority="high" />
-        </div>
-        <aside class="hero-depth-card">
-          <div class="card-header-telemetry">
-            <span>TELEMETRY // STRATA &amp; FORMATION HORIZON</span>
-            <span class="status-online">3000M AKTİF</span>
-          </div>
-          <div class="depth-meter-track">
-            <div class="depth-meter-fill"></div>
-          </div>
-          <div class="depth-strata-list">
-            
-              <div class="strata-item ">
-                <div class="strata-node"></div>
-                <div class="strata-depth">0 – 250 m</div>
-                <div class="strata-label">Yüzey &amp; Sığ Su Akiferi</div>
+        <div class="hero-slide active" data-slide-index="0" aria-hidden="false">
+          <img class="hero-slide-bg" src="/assets/hero-field-rig.jpg" alt="3000 Metre Derin Jeotermal ve Su Sondaj Kuleleri" fetchpriority="high" loading="eager" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>45 YILLIK ÜRETİM & SAHA TECRÜBESİ · 3000M KAPASİTE</span>
               </div>
-            
-              <div class="strata-item ">
-                <div class="strata-node"></div>
-                <div class="strata-depth">300 – 800 m</div>
-                <div class="strata-label">Kamyon Üstü Hidrolik Kuleler</div>
+              <h1 class="hero-title">3000 Metre Derin Jeotermal ve Su Sondaj Kuleleri</h1>
+              <p class="hero-lead">Ağır dorse ve kamyon üstü hidrolik kuleler, yüksek torklu rotari tablaları ve kesintisiz kuyu açma gücü.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>3000 m Kuyu Derinliği</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>110 Ton Kule Kapasitesi</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>ISO & API Standartları</span>
+                  </span>
+                
               </div>
-            
-              <div class="strata-item ">
-                <div class="strata-node"></div>
-                <div class="strata-depth">1000 – 1600 m</div>
-                <div class="strata-label">DSİ &amp; Belediye Derin Kuyular</div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/iletisim/">
+                  <span>📋</span>
+                  <span>Teklif İste</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/ekipman/sondaj-makineleri/">
+                  <span>Modelleri İncele</span>
+                  <span class="arrow-sym">→</span>
+                </a>
               </div>
-            
-              <div class="strata-item active">
-                <div class="strata-node"></div>
-                <div class="strata-depth">2000 – 3000 m</div>
-                <div class="strata-label">Yüksek Entalpi Jeotermal Dorse</div>
-              </div>
-            
-          </div>
-          <div class="hero-card-stats">
-            <div class="stat-chip">
-              <div class="val" data-counter="3000" data-suffix=" m">3000 m</div>
-              <div class="lbl">Maksimum Kuyu Derinliği</div>
-            </div>
-            <div class="stat-chip">
-              <div class="val" data-counter="45" data-suffix="+ Yıl">45+ Yıl</div>
-              <div class="lbl">Saha & Üretim Tecrübesi</div>
             </div>
           </div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <section class="metrics-band">
-    <div class="wrap metrics-grid">
-      <div class="metric-item reveal-on-scroll">
-        <div class="metric-icon-box">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M5 15l7 7 7-7"/></svg>
         </div>
-        <div class="metric-content">
-          <div class="num" data-counter="3000" data-prefix="250–" data-suffix=" m">250–3000 m</div>
-          <span>Kuyu kapasitesi</span>
-        </div>
-      </div>
-      <div class="metric-item reveal-on-scroll delay-1">
-        <div class="metric-icon-box">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <div class="metric-content">
-          <div class="num" data-counter="3000" data-prefix="300–" data-suffix=" m">300–3000 m</div>
-          <span>Makine kataloğu</span>
-        </div>
-      </div>
-      <div class="metric-item reveal-on-scroll delay-2">
-        <div class="metric-icon-box">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="metric-content">
-          <div class="num" data-counter="45" data-suffix="+ Yıl">45+ Yıl</div>
-          <span>Sektör tecrübesi</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 01</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Sekiz hizmet alanı</h2>
-      </div>
       
-        <p>Petrol ve sudan jeotermal, jeoteknik ve karotlu maden aramaya kadar aynı saha disiplinini kullanırız.</p>
-        <div class="cards services"><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 22 5-18h2l5 18"/><path d="M7 16h10"/><path d="M8.5 11h7"/><circle cx="12" cy="2" r="1"/></svg></div>
-      <h3>Petrol sondajı</h3>
-      <p>Enerji kuyularında kule yükü, çamur ve saha emniyeti öne çıkar.</p>
-      <a class="more" href="/hizmetler/">Devamı →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-      <h3>Su sondajı</h3>
-      <p>İçme ve tarım kuyuları; belediye işlerinde 500–1600 m kapsamı yayımlıdır.</p>
-      <a class="more" href="/hizmetler/su-sondaji/">Devamı →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-      <h3>Zemin etüdü</h3>
-      <p>Yapı ve saha öncesi zemin delgisi; jeoteknik hatla birlikte okunur.</p>
-      <a class="more" href="/hizmetler/jeoteknik-sondaj/">Devamı →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m12 12 4-4"/><circle cx="12" cy="12" r="3"/></svg></div>
-      <h3>Gözlem kuyuları</h3>
-      <p>İzleme ve ölçüm kuyuları. Amaç üretim değil, veri ve kontrol.</p>
-      <a class="more" href="/hizmetler/jeoteknik-sondaj/">Devamı →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg></div>
-      <h3>Karotlu maden arama</h3>
-      <p>Örnek bütünlüğü için karot programı ve ayrı saha planı.</p>
-      <a class="more" href="/hizmetler/maden-arama-sondaj/">Devamı →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-      <h3>Jeoteknik etüd sondajları</h3>
-      <p>Log, numune ve kapatma disiplini. Orta derinlik kuleleri.</p>
-      <a class="more" href="/hizmetler/jeoteknik-sondaj/">Devamı →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
-      <h3>Jeotermal sondajlar</h3>
-      <p>Yüksek derinlik ve 1200–2600 m yayımlanmış jeotermal kapsam.</p>
-      <a class="more" href="/hizmetler/jeotermal-sondaj/">Devamı →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-      <h3>Su arama ve su bulma</h3>
-      <p>Arama ile kuyu açma ayrı işlerdir; ikisi aynı projede birleşebilir.</p>
-      <a class="more" href="/hizmetler/su-sondaji/">Devamı →</a>
-    </article></div>
-        
-        <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
-          <img class="showcase-img" src="/assets/truck-rig.jpg" alt="KD Sondaj Kamyon Üstü Hidrolik Kule" loading="lazy" />
-          <div class="showcase-content">
-            <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> KAMYON ÜSTÜ HİDROLİK KULELER (300–1200 M)</span>
-            <h3>Sondaj makineleri: 300–3000 metre katalog aralığı.</h3>
-            <p>300m, 400m, 500m, 600m, 800m, 1000m ve 1200m kapasiteli kamyon üstü hidrolik sondaj filomuz ile hızlı intikal ve yüksek rotari tork gücü.</p>
-            <div><a class="btn btn-signal" href="/ekipman/sondaj-makineleri/">Devamı →</a></div>
+        <div class="hero-slide " data-slide-index="1" aria-hidden="true">
+          <img class="hero-slide-bg" src="/assets/trailer-rig.jpg" alt="Derin Akiferler ve Rezervuarlar İçin Ağır Dorse Kuleler" loading="lazy" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>AĞIR DORSE SERİSİ · 1500–3000 METRE</span>
+              </div>
+              <h1 class="hero-title">Derin Akiferler ve Rezervuarlar İçin Ağır Dorse Kuleler</h1>
+              <p class="hero-lead">Çift MAN 422 motor tahrikli, 5x510 ağır vinçli ve 7.5&quot; x 10&quot; çift pistonlu çamur pompası ile donatılmış amiral gemisi kuleler.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>Çift Bağımsız MAN Dizel</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>5×510 Ağır Vinç</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>70 RPM Rotari Tabla</span>
+                  </span>
+                
+              </div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/iletisim/">
+                  <span>📋</span>
+                  <span>Teklif İste</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/ekipman/sondaj-makineleri/">
+                  <span>Modelleri İncele</span>
+                  <span class="arrow-sym">→</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       
+        <div class="hero-slide " data-slide-index="2" aria-hidden="true">
+          <img class="hero-slide-bg" src="/assets/truck-rig.jpg" alt="Hızlı İntikal Eden Kamyon Üstü Hidrolik Sondaj Kuleleri" loading="lazy" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>KAMYON ÜSTÜ HİDROLİK SERİ · 300–1200 METRE</span>
+              </div>
+              <h1 class="hero-title">Hızlı İntikal Eden Kamyon Üstü Hidrolik Sondaj Kuleleri</h1>
+              <p class="hero-lead">6x4 ve 8x4 ağır şasiler üzerine kurulu, 4 hidrolik ayak krikolu, kompakt ve zorlu arazi koşullarında üstün manevra kabiliyeti.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>6x4 & 8x4 Ağır Şasi</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>4 Hidrolik Dengeleme Ayağı</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>14.50 m Kule Boyu</span>
+                  </span>
+                
+              </div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/iletisim/">
+                  <span>📋</span>
+                  <span>Teklif İste</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/ekipman/sondaj-makineleri/">
+                  <span>Modelleri İncele</span>
+                  <span class="arrow-sym">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="hero-slide " data-slide-index="3" aria-hidden="true">
+          <img class="hero-slide-bg" src="/assets/geothermal-rig.jpg" alt="Yüksek Sıcaklık ve Basınç Dayanımlı Jeotermal Sistemler" loading="lazy" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>JEOTERMAL & ÖZEL PROJELER · 2500 METRE</span>
+              </div>
+              <h1 class="hero-title">Yüksek Sıcaklık ve Basınç Dayanımlı Jeotermal Sistemler</h1>
+              <p class="hero-lead">Kuyu kontrol ekipmanları, blowout preventer (BOP) uyumlu kule yapısı ve yüksek debili sirkülasyon hatları ile maksimum saha emniyeti.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>Yüksek Sıcaklık Donanımı</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>BOP Kuyu Kontrolü</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>Özel Kule İmalatı</span>
+                  </span>
+                
+              </div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/iletisim/">
+                  <span>📋</span>
+                  <span>Teklif İste</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/ekipman/sondaj-makineleri/">
+                  <span>Modelleri İncele</span>
+                  <span class="arrow-sym">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="hero-slide " data-slide-index="4" aria-hidden="true">
+          <img class="hero-slide-bg" src="/assets/drill-pipes.jpg" alt="Ağır Hizmet Sondaj Boruları ve Kuyu İçi Ekipmanları" loading="lazy" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>API SPEC 5D SONDAJ TİJLERİ & EKİPMANLAR</span>
+              </div>
+              <h1 class="hero-title">Ağır Hizmet Sondaj Boruları ve Kuyu İçi Ekipmanları</h1>
+              <p class="hero-lead">E, X, G, S çelik kalitelerinde API Spec 5D / Spec 7-1 sertifikalı tijler, IADC tricone matkaplar ve Duplex çamur pompaları.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>API Spec 5D & 7-1</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>Duplex 6" Çamur Pompası</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>IADC Tricone Matkaplar</span>
+                  </span>
+                
+              </div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/iletisim/">
+                  <span>📋</span>
+                  <span>Teklif İste</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/ekipman/sondaj-makineleri/">
+                  <span>Modelleri İncele</span>
+                  <span class="arrow-sym">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+      <div class="hero-arrows-row">
+        <button id="hero-prev" class="hero-arrow-btn" type="button" aria-label="Previous Slide">‹</button>
+        <button id="hero-next" class="hero-arrow-btn" type="button" aria-label="Next Slide">›</button>
+      </div>
     </div>
-  </div>
+
+    <!-- Asiaplast Signature Bottom Interactive Tabs Bar -->
+    <div class="hero-bottom-tabs-bar">
+      <div class="wrap">
+        <div class="hero-tabs-grid">
+          
+            <button type="button" class="hero-tab-btn active" data-target-slide="0">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">01</span>
+                <span class="hero-tab-live">LIVE</span>
+              </div>
+              <p class="hero-tab-label">3000M AMİRAL GEMİSİ KULE</p>
+              <div class="hero-tab-progress-bar"></div>
+            </button>
+          
+            <button type="button" class="hero-tab-btn " data-target-slide="1">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">02</span>
+                
+              </div>
+              <p class="hero-tab-label">1500–3000M AĞIR DORSE</p>
+              
+            </button>
+          
+            <button type="button" class="hero-tab-btn " data-target-slide="2">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">03</span>
+                
+              </div>
+              <p class="hero-tab-label">300–1200M KAMYON ÜSTÜ</p>
+              
+            </button>
+          
+            <button type="button" class="hero-tab-btn " data-target-slide="3">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">04</span>
+                
+              </div>
+              <p class="hero-tab-label">JEOTERMAL &amp; ÖZEL KULELER</p>
+              
+            </button>
+          
+            <button type="button" class="hero-tab-btn " data-target-slide="4">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">05</span>
+                
+              </div>
+              <p class="hero-tab-label">API TİJ, POMPA &amp; EKİPMAN</p>
+              
+            </button>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Infinite Marquee Ticker Strip -->
+    <div class="hero-marquee-strip" aria-hidden="true">
+      <div class="hero-marquee-track">
+        <span><span>•</span> 3000M JEOTERMAL SONDAJ KULELERİ</span>
+        <span><span>•</span> KAMYON ÜSTÜ HİDROLİK KULELER</span>
+        <span><span>•</span> API SPEC 5D SONDAJ TİJLERİ</span>
+        <span><span>•</span> DUPLEX ÇİFT PİSTON ÇAMUR POMPALARI</span>
+        <span><span>•</span> IADC TRICONE DÖNER KONİLİ MATKAPLAR</span>
+        <span><span>•</span> 45+ YILLIK İMALAT TECRÜBESİ</span>
+        <span><span>•</span> B2B GLOBAL İHRACAT &amp; LOJİSTİK</span>
+        <span><span>•</span> DSİ &amp; BELEDİYE DERİN SU KUYULARI</span>
+        <span><span>•</span> 3000M JEOTERMAL SONDAJ KULELERİ</span>
+        <span><span>•</span> KAMYON ÜSTÜ HİDROLİK KULELER</span>
+        <span><span>•</span> API SPEC 5D SONDAJ TİJLERİ</span>
+        <span><span>•</span> DUPLEX ÇİFT PİSTON ÇAMUR POMPALARI</span>
+        <span><span>•</span> IADC TRICONE DÖNER KONİLİ MATKAPLAR</span>
+        <span><span>•</span> 45+ YILLIK İMALAT TECRÜBESİ</span>
+        <span><span>•</span> B2B GLOBAL İHRACAT &amp; LOJİSTİK</span>
+        <span><span>•</span> DSİ &amp; BELEDİYE DERİN SU KUYULARI</span>
+      </div>
     </div>
   </section>
 
-  <section class="block">
+  <!-- Modern Product Range Catalog (Asiaplast Style Cards) -->
+  <section class="section-block bg-slate-subtle" id="catalog">
     <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 02</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Dorse ve kamyon kapasite sınıfları</h2>
+      <div class="section-header-modern">
+        <span class="chip-badge">Katalog</span>
+        <h2 class="h2-modern">Ürün ve Makine Yelpazesi</h2>
+        <p class="lead-sub">Uluslararası standartlarda imal edilen dorse ve kamyon üstü sondaj kuleleri, tijler ve kuyu içi ekipmanları.</p>
       </div>
-      
-        <div class="filter-bar">
-          <button type="button" class="filter-btn active" data-filter="all">Tüm Kuleler</button>
-          <button type="button" class="filter-btn" data-filter="trailer">Dorse Kuleler (Ağır Tip)</button>
-          <button type="button" class="filter-btn" data-filter="truck">Kamyon Üstü (Hızlı İntikal)</button>
-        </div>
-        <div class="cards four">
-          <article class="rig-card reveal-on-scroll" data-carrier="trailer">
-    <div class="rig-header">
-      <div class="rig-depth-badge">1500–3000 m</div>
-      <span class="carrier-tag trailer">Dorse</span>
-    </div>
-    <div class="spec-grid">
-      <div class="spec-item">
-        <dt>Güverte motoru</dt>
-        <dd>525 HP</dd>
-      </div>
-      <div class="spec-item"><dt>Kule kapasitesi</dt><dd>110 t</dd></div>
-      <div class="spec-item">
-        <dt>Halat sarıcı</dt>
-        <dd>90 t</dd>
-      </div>
-    </div>
-    <div class="rig-features">
-      <p style="color:var(--cyan);font-weight:700;">✓ Çamur pompalı</p>
-      <p style="color:var(--text-muted);font-size:0.84rem;">Ayrı mekanik ve hava basınçlı çalışma sistemleri.</p>
-    </div>
-    <a class="rig-inquire-btn" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%201500%E2%80%933000%20m%20(Dorse)%20makineniz%20hakk%C4%B1nda%20teknik%20detay%20ve%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">
-      <span>Teklif İste (0541 191 63 01)</span>
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-    </a>
-  </article><article class="rig-card reveal-on-scroll" data-carrier="trailer">
-      <div class="rig-header">
-        <div class="rig-depth-badge">2500 m</div>
-        <span class="carrier-tag trailer">Dorse</span>
-      </div>
-      <div class="rig-features">
-        <ul style="margin:0;padding-inline-start:1.1rem;color:var(--text-soft);"><li>2 × MAN 422 dizel motor</li><li>14,50 m kule / 8 mm / 4 inç boru</li><li>Çift şanzımanlı zincir kutusu</li><li>Halat sarıcı 5×510, büyük tip, balatalı</li><li>Rotary Ø dış 700 mm / iç 240 mm, hidrolik kızak 850 mm</li><li>Büyük tip su başlığı</li><li>Santrifüj büyük tip no. 3, 4 inç emme</li><li>4 adet çift denge ayaklı hidrolik denge</li><li>Su hortumu 3 inç R2; emici 4 inç</li><li>Kelli 4 makara / servis 4 makara</li><li>Kelli dış çap 130–140 mm</li><li>Yedek matkap sapları 8.5 / 12.5 / 17.5</li><li>Çamur pompası 7,5×10</li></ul>
-      </div>
-      <a class="rig-inquire-btn" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%202500%20m%20(Dorse)%20makineniz%20hakk%C4%B1nda%20teknik%20detay%20ve%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">
-        <span>Teklif İste (0541 191 63 01)</span>
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-      </a>
-    </article><article class="rig-card reveal-on-scroll" data-carrier="truck">
-    <div class="rig-header">
-      <div class="rig-depth-badge">1000–1200 m</div>
-      <span class="carrier-tag truck">Kamyon</span>
-    </div>
-    <div class="spec-grid">
-      <div class="spec-item">
-        <dt>Güverte motoru</dt>
-        <dd>422 HP</dd>
-      </div>
-      <div class="spec-item"><dt>Kule kapasitesi</dt><dd>90 t</dd></div>
-      <div class="spec-item">
-        <dt>Halat sarıcı</dt>
-        <dd>70 t</dd>
-      </div>
-    </div>
-    <div class="rig-features">
-      <p style="color:var(--cyan);font-weight:700;">✓ Çamur pompalı</p>
-      <p style="color:var(--text-muted);font-size:0.84rem;">Ayrı mekanik ve hava basınçlı çalışma sistemleri.</p>
-    </div>
-    <a class="rig-inquire-btn" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%201000%E2%80%931200%20m%20(Kamyon)%20makineniz%20hakk%C4%B1nda%20teknik%20detay%20ve%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">
-      <span>Teklif İste (0541 191 63 01)</span>
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-    </a>
-  </article><article class="rig-card reveal-on-scroll" data-carrier="trailer">
-    <div class="rig-header">
-      <div class="rig-depth-badge">1000–1200 m</div>
-      <span class="carrier-tag trailer">Dorse</span>
-    </div>
-    <div class="spec-grid">
-      <div class="spec-item">
-        <dt>Güverte motoru</dt>
-        <dd>525 HP</dd>
-      </div>
-      <div class="spec-item"><dt>Kule kapasitesi</dt><dd>110 t</dd></div>
-      <div class="spec-item">
-        <dt>Halat sarıcı</dt>
-        <dd>90 t</dd>
-      </div>
-    </div>
-    <div class="rig-features">
-      <p style="color:var(--cyan);font-weight:700;">✓ Çamur pompalı</p>
-      <p style="color:var(--text-muted);font-size:0.84rem;">Ayrı mekanik ve hava basınçlı çalışma sistemleri.</p>
-    </div>
-    <a class="rig-inquire-btn" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%201000%E2%80%931200%20m%20(Dorse)%20makineniz%20hakk%C4%B1nda%20teknik%20detay%20ve%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">
-      <span>Teklif İste (0541 191 63 01)</span>
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-    </a>
-  </article>
-        </div>
-        <p style="margin-top:1.75rem;"><a class="btn btn-ghost" href="/ekipman/sondaj-makineleri/">Devamı (Tüm 11 Model) →</a></p>
-        
-        <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
-          <img class="showcase-img" src="/assets/trailer-rig.jpg" alt="KD Sondaj Ağır Dorse Kule 1500–3000 Metre" loading="lazy" />
-          <div class="showcase-content">
-            <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> 1500–3000M AĞIR DORSE SINIFI</span>
-            <h3>1500 – 3000 Metre Dorse Sondaj Kulesi</h3>
-            <p>110 ton kule ve 90 ton halat sarıcı kapasiteli ağır dorse sınıfı kulelerimiz ile derin jeotermal rezervuarlar ve derin su kuyularında kesintisiz delme gücü.</p>
-            <div><a class="btn btn-signal" href="/ekipman/sondaj-makineleri/">Devamı →</a></div>
-          </div>
-        </div>
 
+      <div class="catalog-filter-bar">
+        <button type="button" class="filter-btn active" data-filter="all">Tüm Modeller</button>
+        <button type="button" class="filter-btn" data-filter="trailer">Dorse Kuleler</button>
+        <button type="button" class="filter-btn" data-filter="truck">Kamyon Üstü</button>
+        <button type="button" class="filter-btn" data-filter="equipment">Ekipman &amp; Pompalar</button>
+      </div>
+
+      <div class="product-grid-modern">
         
+          <article class="modern-prod-card" data-category="trailer">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/trailer-rig.jpg" alt="1500–3000m Dorse Sondaj Kulesi" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🚜 Dorse Kule</span>
+                <span class="prod-badge-bottom">1500–3000 m · 110T Kule</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/">1500–3000m Dorse Sondaj Kulesi</a>
+                </h3>
+                <p class="prod-card-desc">Çift MAN 422 motor, 5x510 vinç, derin jeotermal ve akifer kuyu açma kulesi.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">KAPASİTE: 3000 M</span>
+              <a class="prod-card-action" href="/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/">
+                <span>Teknik Şartname</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="trailer">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/geothermal-rig.jpg" alt="2500m Özel Derin Kuyu Kulesi" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🌋 Jeotermal</span>
+                <span class="prod-badge-bottom">2500 m · Özel İmalat</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/">2500m Özel Derin Kuyu Kulesi</a>
+                </h3>
+                <p class="prod-card-desc">Jeotermal rezervuar ve yüksek basınçlı derin formasyonlar için özel imalat kule.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">KAPASİTE: 2500 M</span>
+              <a class="prod-card-action" href="/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/">
+                <span>Teknik Şartname</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="trailer">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/trailer-rig.jpg" alt="1000–1200m Dorse Sondaj Kulesi" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🚜 Dorse Kule</span>
+                <span class="prod-badge-bottom">1000–1200 m · 90T Kule</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/">1000–1200m Dorse Sondaj Kulesi</a>
+                </h3>
+                <p class="prod-card-desc">DSİ, belediye ve sulama kooperatifleri için yüksek torklu derin kuyu kulesi.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">KAPASİTE: 1200 M</span>
+              <a class="prod-card-action" href="/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/">
+                <span>Teknik Şartname</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="truck">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/truck-rig.jpg" alt="1000–1200m Kamyon Üstü Kule" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🚚 Kamyon Kule</span>
+                <span class="prod-badge-bottom">1000–1200 m · 8x4 Şasi</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/">1000–1200m Kamyon Üstü Kule</a>
+                </h3>
+                <p class="prod-card-desc">8x4 kamyon şasisi üzerinde yüksek manevra ve intikal kabiliyetine sahip hidrolik kule.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">KAPASİTE: 1200 M</span>
+              <a class="prod-card-action" href="/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/">
+                <span>Teknik Şartname</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="truck">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/truck-rig.jpg" alt="800m Kamyon Üstü Hidrolik Kule" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🚚 Kamyon Kule</span>
+                <span class="prod-badge-bottom">800 m · 6x4 Şasi</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/">800m Kamyon Üstü Hidrolik Kule</a>
+                </h3>
+                <p class="prod-card-desc">Orta ve derin su kuyuları için optimum yakıt sarfiyatı ve hızlı kuyu tamamlama.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">KAPASİTE: 800 M</span>
+              <a class="prod-card-action" href="/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/">
+                <span>Teknik Şartname</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="equipment">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/drill-pipes.jpg" alt="API Spec 5D Sondaj Tijleri" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🔩 Tij &amp; Boru</span>
+                <span class="prod-badge-bottom">2 3/8" – 5 1/2" · API Spec 5D</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/ekipman/api-spec-5d-drill-pipes/">API Spec 5D Sondaj Tijleri</a>
+                </h3>
+                <p class="prod-card-desc">E, X, G, S kalite dikişsiz çelik gövde ve sürtünme kaynaklı sert dolgulu takım contaları.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">STANDART: API 5D</span>
+              <a class="prod-card-action" href="/ekipman/api-spec-5d-drill-pipes/">
+                <span>Teknik Şartname</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="equipment">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/mud-pump.jpg" alt="Duplex 6&quot; Çift Piston Çamur Pompası" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">⚙️ Çamur Pompası</span>
+                <span class="prod-badge-bottom">21–62 Bar · 895 PSI</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/ekipman/duplex-6-inch-mud-pump/">Duplex 6&quot; Çift Piston Çamur Pompası</a>
+                </h3>
+                <p class="prod-card-desc">Çift etkili pistonlu resiprokal çamur pompası, zorlu sirkülasyon koşullarına dayanıklı.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">BASINÇ: 62 BAR</span>
+              <a class="prod-card-action" href="/ekipman/duplex-6-inch-mud-pump/">
+                <span>Teknik Şartname</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="equipment">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/tricone-bits.jpg" alt="IADC Tricone Döner Konili Matkaplar" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">💎 Sondaj Matkabı</span>
+                <span class="prod-badge-bottom">IADC 111–637 · TCI / Freze</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/ekipman/iadc-tricone-drill-bits/">IADC Tricone Döner Konili Matkaplar</a>
+                </h3>
+                <p class="prod-card-desc">Yumuşak alüvyondan en sert kuvarsit ve bazalt formasyonlarına kadar yüksek penetrasyon hızı.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">IADC SERTİFİKALI</span>
+              <a class="prod-card-action" href="/ekipman/iadc-tricone-drill-bits/">
+                <span>Teknik Şartname</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B Excellence Matrix (Asiaplast 4-Column Numbered Cards) -->
+  <section class="section-block border-y" id="b2b-excellence">
+    <div class="wrap">
+      <div class="section-header-center">
+        <span class="chip-badge">B2B Güvencesi</span>
+        <h2 class="h2-modern">Sondaj Ekipleri Neden KD SONDAJ'ı Tercih Ediyor?</h2>
+        <p class="lead-sub">Tasarım ve çelik imalatından anahtar teslim gümrükleme ve saha devreye almaya kadar tek sorumlu üretici ortak.</p>
+      </div>
+
+      <div class="b2b-grid">
+        
+          <div class="b2b-card">
+            <span class="b2b-num-badge">1</span>
+            <h3 class="b2b-card-title">Şartnameye Uygun İmalat</h3>
+            <p class="b2b-card-desc">Kuyu hedef derinliği, kule kaldırma tonajı, vinç tambur kapasitesi ve hidrolik güç üniteleri tam proje teknik şartnamenize göre üretilir.</p>
+          </div>
+        
+          <div class="b2b-card">
+            <span class="b2b-num-badge">2</span>
+            <h3 class="b2b-card-title">İhracat &amp; Global Lojistik</h3>
+            <p class="b2b-card-desc">Orta Doğu, Kuzey Afrika, Türki Cumhuriyetler ve Balkanlar'a anahtar teslim gümrükleme, konteyner &amp; lowbed lojistiği ve tam ihracat dokümantasyonu.</p>
+          </div>
+        
+          <div class="b2b-card">
+            <span class="b2b-num-badge">3</span>
+            <h3 class="b2b-card-title">45 Yıllık Saha &amp; İmalat Mirası</h3>
+            <p class="b2b-card-desc">1980'den bu yana Türkiye'nin ve bölgenin en zorlu jeolojik formasyonlarında test edilmiş, yüzlerce kule imal etmiş sağlam mühendislik mirası.</p>
+          </div>
+        
+          <div class="b2b-card">
+            <span class="b2b-num-badge">4</span>
+            <h3 class="b2b-card-title">Hızlı Teklif &amp; 7/24 Teknik Servis</h3>
+            <p class="b2b-card-desc">Kapsamlı teknik şartname ve fiyat teklifleri 24 saat içinde yanıtlanır; saha kurulumu, operatör eğitimi ve garantili yedek parça temini sağlanır.</p>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries & Sectors We Serve (Asiaplast 6-Card Clean Grid) -->
+  <section class="section-block bg-slate-subtle" id="sectors">
+    <div class="wrap">
+      <div class="section-header-center">
+        <span class="chip-badge">Sektörler</span>
+        <h2 class="h2-modern">Hizmet Verdiğimiz Başlıca Sektörler</h2>
+        <p class="lead-sub">Farklı kuyu derinliği ve jeolojik formasyon gereksinimlerine özel mühendislik çözümleri.</p>
+      </div>
+
+      <div class="sectors-grid">
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">🌋</span>
+            <h3 class="sector-card-title">Jeotermal Enerji Santralleri (JES)</h3>
+            <p class="sector-card-desc">Yüksek sıcaklık ve entalpiye sahip derin jeotermal rezervuarlar için BOP kuyu kontrol uyumlu ağır dorse kuleler.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">💧</span>
+            <h3 class="sector-card-title">DSİ &amp; Belediye Şehir Suyu</h3>
+            <p class="sector-card-desc">1000–2000m derinlikte kesintisiz içme ve kullanma suyu temini sağlayan yüksek debili derin kuyu sondajları.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">🌾</span>
+            <h3 class="sector-card-title">Tarımsal Sulama Kooperatifleri</h3>
+            <p class="sector-card-desc">Geniş çaplı akifer açma, yüksek debili dalgıç pompa borulaması ve optimum yakıt verimliliği sağlayan kamyon kuleler.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">⛏️</span>
+            <h3 class="sector-card-title">Karotlu Maden &amp; Cevher Arama</h3>
+            <p class="sector-card-desc">Tel hatlı (wireline) elmaslı karotiyer sistemleri ile yüksek karot yüzdesi sağlayan hassas maden arama kuleleri.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">🏗️</span>
+            <h3 class="sector-card-title">Jeoteknik &amp; Zemin İyileştirme</h3>
+            <p class="sector-card-desc">Baraj, otoyol, tünel ve temel enjeksiyon &amp; fore kazık sondajları için yüksek torklu hidrolik delme üniteleri.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">🏭</span>
+            <h3 class="sector-card-title">Endüstriyel Tesis &amp; Fabrika Suyu</h3>
+            <p class="sector-card-desc">Kesintisiz üretim proses suyu ihtiyacı olan fabrikalar ve sanayi bölgeleri için garantili endüstriyel su kuyuları.</p>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Subterranean Quote & Rig Selector Calculator -->
+  <section class="section-block" id="calculator">
+    <div class="wrap">
+      
   <div class="calc-widget reveal-on-scroll" id="rig-calculator" data-lang="tr">
     <div class="calc-grid">
       <div class="calc-options">
@@ -474,119 +829,114 @@
       </div>
     </div>
   </div>
-      
-    </div>
-  </div>
     </div>
   </section>
 
-  <section class="block">
+  <!-- Asiaplast-Style Modern FAQ Accordion -->
+  <section class="section-block border-y" id="faq">
     <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 03</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Neden KD Sondaj</h2>
+      <div class="faq-modern-grid">
+        <div>
+          <span class="chip-badge">Sıkça Sorulanlar</span>
+          <h2 class="h2-modern">Merak Edilen Sorular ve Cevaplar</h2>
+          <p class="lead-sub" style="margin-bottom:1.5rem;">İmalat süreleri, kule teslimat şartları, gümrükleme ve teknik servis hakkında en çok sorulan konular.</p>
+          <a class="btn-primary-gradient" href="/iletisim/">
+            <span>📋</span>
+            <span>Özel Teklif İste</span>
+          </a>
+        </div>
+
+        <div class="faq-modern-list">
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>KD Sondaj hangi derinliklerde çalışır?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Kurumsal kuyu kapasitesi 250–3000 metredir. Makine kataloğu başlıkları 300–3000 metre aralığını kullanır. Jeotermal referans kapsamında 1200–2600 m geçer.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>KD Sondaj hangi hizmetleri sunar?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Petrol sondajı, su sondajı, zemin etüdü, gözlem kuyuları, karotlu maden arama, jeoteknik etüd, jeotermal sondaj, su arama ve su bulma.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>Jeotermal sondaj için hangi makine seçenekleri vardır?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Yüksek derinlik için 1500–3000 m dorse, 1000–1200 m kamyon/dorse ve 2500 m özel konfigürasyon katalogdadır. Nihai seçim formasyon ve kule yüküne göre yapılır.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>Sondaj makinesi kapasitesi nasıl seçilir?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Hedef metre, taşıyıcı (dorse/kamyon), kule ve halat sarıcı yükü, çamur pompası ihtiyacı birlikte hesaplanır. Mühendislik ve saha şartnamesi değerleri esas alınır.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>Su sondajı projesi için hangi bilgiler gerekir?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Hedef derinlik, kuyu amacı, saha ili ve biliniyorsa formasyon notu. Telefon veya e-posta yeterlidir; sitede form saklanmaz.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>KD Sondaj Ankara’dan hangi bölgelere hizmet verir?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Merkez Çankaya / Ankara’dır. Hizmet sahamız DSİ illeri, Ege ve İç Anadolu belediyeleri, jeotermal enerji sahaları ve uluslararası projeleri kapsar.</p>
+              </div>
+            </details>
+          
+        </div>
       </div>
-      <div class="cards three">
-    <article class="card reveal-on-scroll">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3>Saha önce</h3>
-      <p>Referans derinliği ve hizmet türü, genel sloganlardan önce gelir.</p>
-    </article>
-  
-    <article class="card reveal-on-scroll">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3>Üretim altyapısı</h3>
-      <p>Hammadde girişinden satış sonrası hizmete kadar kalite tek süreç olarak ele alınır.</p>
-    </article>
-  
-    <article class="card reveal-on-scroll">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3>Yüksek derinlik</h3>
-      <p>Jeotermal ve derin su kuyularında mekanik ile hava basınçlı sistemler ayrı çalışır.</p>
-    </article>
-  </div>
-    </div>
-  </div>
     </div>
   </section>
 
-  <section class="block">
-    <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 04</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Yayımlanmış proje kapsamları</h2>
+  <!-- Asiaplast-Style Ready for Bulk Quotation CTA Banner -->
+  <section class="bulk-quote-section" id="bulk-quote">
+    <div class="wrap bulk-quote-wrap">
+      <span class="chip-badge">Küresel İhracat Masası</span>
+      <h2 class="bulk-quote-title">Sondaj Kulenizi veya Ekipmanınızı Birlikte Projelendirelim</h2>
+      <p class="bulk-quote-lead">Hedef kuyu derinliği, arazi yapısı ve lokasyon bilgilerinizi iletin — 24 saat içinde detaylı teknik veri föyü ve şartname teklifinizi sunalım.</p>
+      
+      <div class="bulk-quote-ctas">
+        <a class="btn-primary-gradient" href="/iletisim/">
+          <span>📋</span>
+          <span>Teklif Formunu Doldur</span>
+        </a>
+        <a class="btn-white-pill" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener">
+          <span class="pulse-dot-green"></span>
+          <span>WhatsApp: 0541 191 63 01</span>
+        </a>
+        <a class="btn-link-pill" href="/ekipman/sondaj-makineleri/">
+          <span>Kule Kataloğu</span>
+          <span class="arrow-sym">→</span>
+        </a>
       </div>
-      
-        <p>Türkiye genelinde tamamlanan resmi kamu, belediye ve endüstriyel derin kuyu projeleri.</p>
-        <div class="list-cards">
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>DSİ Genel Müdürlüğü’nün Türkiye’nin birçok ilinde içme suyu sondaj yapım işi (500–1500 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>Şanlıurfa Belediyesi içme suyu kuyuları (500–1600 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>İzmir Belediyesi içme suyu kuyuları (500–1600 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>Aydın Belediyesi içme suyu kuyuları (500–1600 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>İç Anadolu ve Ege’de 50 jeotermal kuyu (1200–2600 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>Türkiye genelinde yüzlerce özel kuyu (400–2000 m).</p>
-    </article>
-  </div>
-      
-    </div>
-  </div>
     </div>
   </section>
-
-  <section class="block">
-    <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 05</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Doğrudan yanıtlar</h2>
-      </div>
-      <div class="faq"><details class="reveal-on-scroll"><summary>KD Sondaj hangi derinliklerde çalışır?</summary><p>Kurumsal kuyu kapasitesi 250–3000 metredir. Makine kataloğu başlıkları 300–3000 metre aralığını kullanır. Jeotermal referans kapsamında 1200–2600 m geçer.</p></details><details class="reveal-on-scroll"><summary>KD Sondaj hangi hizmetleri sunar?</summary><p>Petrol sondajı, su sondajı, zemin etüdü, gözlem kuyuları, karotlu maden arama, jeoteknik etüd, jeotermal sondaj, su arama ve su bulma.</p></details><details class="reveal-on-scroll"><summary>Jeotermal sondaj için hangi makine seçenekleri vardır?</summary><p>Yüksek derinlik için 1500–3000 m dorse, 1000–1200 m kamyon/dorse ve 2500 m özel konfigürasyon katalogdadır. Nihai seçim formasyon ve kule yüküne göre yapılır.</p></details><details class="reveal-on-scroll"><summary>Sondaj makinesi kapasitesi nasıl seçilir?</summary><p>Hedef metre, taşıyıcı (dorse/kamyon), kule ve halat sarıcı yükü, çamur pompası ihtiyacı birlikte hesaplanır. Mühendislik ve saha şartnamesi değerleri esas alınır.</p></details><details class="reveal-on-scroll"><summary>Su sondajı projesi için hangi bilgiler gerekir?</summary><p>Hedef derinlik, kuyu amacı, saha ili ve biliniyorsa formasyon notu. Telefon veya e-posta yeterlidir; sitede form saklanmaz.</p></details><details class="reveal-on-scroll"><summary>KD Sondaj Ankara’dan hangi bölgelere hizmet verir?</summary><p>Merkez Çankaya / Ankara’dır. Hizmet sahamız DSİ illeri, Ege ve İç Anadolu belediyeleri, jeotermal enerji sahaları ve uluslararası projeleri kapsar.</p></details></div>
-    </div>
-  </div>
-    </div>
-  </section></main>
+  </main>
   <section class="close-cta">
     <div class="wrap">
       <div class="close-cta-content">
@@ -608,12 +958,10 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-col">
-        <a class="brand" href="/" style="margin-bottom:1rem;">
-          <div class="brand-icon">
-            <img src="/assets/logo.svg" width="34" height="34" alt="KD SONDAJ" />
-          </div>
+        <a class="brand" href="/" style="margin-bottom:1rem;" aria-label="KD SONDAJ">
+          <span class="brand-badge">KD</span>
           <div class="brand-text">
-            <span class="brand-title">KD SONDAJ</span>
+            <span class="brand-title">KD<span class="brand-accent">SONDAJ</span></span>
             <span class="brand-sub">Sondaj sistemleri</span>
           </div>
         </a>
@@ -644,9 +992,21 @@
       <button class="back-to-top" id="back-to-top" type="button" aria-label="Yukarı Çık">↑ Back to Top</button>
     </div>
   </footer>
-  <a class="wa-float" href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener" aria-label="WhatsApp: 0541 191 63 01">
-    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-2.79 4.23c-.14 0-.37.05-.57.27-.2.21-.76.74-.76 1.81s.78 2.11.89 2.25c.11.15 1.51 2.42 3.73 3.3 1.85.73 2.22.59 2.62.55.4-.04 1.29-.53 1.47-1.04.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.27-.22-.11-1.29-.64-1.49-.71-.2-.07-.35-.11-.49.11-.15.21-.56.71-.69.86-.13.14-.26.16-.48.05-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.21-.01-.33.1-.44.1-.1.22-.26.33-.39.11-.13.15-.21.22-.36.07-.14.04-.27-.02-.38-.06-.11-.49-1.17-.67-1.6-.17-.42-.35-.36-.49-.37z"/></svg>
-  </a>
+  <aside aria-label="WhatsApp Export Desk" class="wa-export-float">
+    <div class="wa-export-tooltip">
+      <div class="wa-pulse-container">
+        <span class="wa-pulse-ping"></span>
+        <span class="wa-pulse-dot"></span>
+      </div>
+      <div class="wa-tooltip-text">
+        <span class="wa-tooltip-title">WhatsApp İhracat & Teklif Masası</span>
+        <span class="wa-tooltip-status">+90 541 191 63 01 • Çevrimiçi</span>
+      </div>
+    </div>
+    <a href="https://wa.me/905411916301?text=Merhaba%2C%20KD%20Sondaj%E2%80%99dan%20teklif%20almak%20istiyorum.%20Hedef%20derinlik%20ve%20hizmet%3A" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: 0541 191 63 01" class="wa-export-btn">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-2.79 4.23c-.14 0-.37.05-.57.27-.2.21-.76.74-.76 1.81s.78 2.11.89 2.25c.11.15 1.51 2.42 3.73 3.3 1.85.73 2.22.59 2.62.55.4-.04 1.29-.53 1.47-1.04.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.27-.22-.11-1.29-.64-1.49-.71-.2-.07-.35-.11-.49.11-.15.21-.56.71-.69.86-.13.14-.26.16-.48.05-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.21-.01-.33.1-.44.1-.1.22-.26.33-.39.11-.13.15-.21.22-.36.07-.14.04-.27-.02-.38-.06-.11-.49-1.17-.67-1.6-.17-.42-.35-.36-.49-.37z"/></svg>
+    </a>
+  </aside>
   <script src="/assets/site.js"></script>
 </body>
 </html>

@@ -657,21 +657,23 @@ function layout({ lang, pageKey, title, description, extraHead = "", schema = []
   <header class="site-header">
     <div class="wrap">
       <div class="header-row">
-        <a class="brand" href="${routes[lang].home}">
-          <div class="brand-icon">
-            <img src="/assets/logo.svg" width="34" height="34" alt="${esc(site.name)}" />
-          </div>
+        <a class="brand" href="${routes[lang].home}" aria-label="${esc(site.name)}">
+          <span class="brand-badge">KD</span>
           <div class="brand-text">
-            <span class="brand-title">${esc(site.name)}</span>
+            <span class="brand-title">KD<span class="brand-accent">SONDAJ</span></span>
             <span class="brand-sub">${esc(copy.brandSub)}</span>
           </div>
         </a>
         <nav class="nav-center">${navLinks(lang, navCurrent)}</nav>
         <div class="header-actions">
           <nav class="lang-switcher" aria-label="Language">${langSwitch(pageKey, lang)}</nav>
-          <a class="btn btn-wa header-cta" href="${whatsapp(copy)}" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-            0541 191 63 01
+          <a class="header-cta-quote" href="${routes[lang].contact}">
+            <span>📋</span>
+            <span>${lang === "tr" ? "Teklif İste" : lang === "ar" ? "طلب تسعير" : "Request Quote"}</span>
+          </a>
+          <a class="header-cta-wa" href="${whatsapp(copy)}" target="_blank" rel="noopener">
+            <span class="pulse-dot-green"></span>
+            <span>0541 191 63 01</span>
           </a>
           <button class="menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-panel" aria-label="Menu">☰</button>
         </div>
@@ -711,12 +713,10 @@ function layout({ lang, pageKey, title, description, extraHead = "", schema = []
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-col">
-        <a class="brand" href="${routes[lang].home}" style="margin-bottom:1rem;">
-          <div class="brand-icon">
-            <img src="/assets/logo.svg" width="34" height="34" alt="${esc(site.name)}" />
-          </div>
+        <a class="brand" href="${routes[lang].home}" style="margin-bottom:1rem;" aria-label="${esc(site.name)}">
+          <span class="brand-badge">KD</span>
           <div class="brand-text">
-            <span class="brand-title">${esc(site.name)}</span>
+            <span class="brand-title">KD<span class="brand-accent">SONDAJ</span></span>
             <span class="brand-sub">${esc(copy.brandSub)}</span>
           </div>
         </a>
@@ -747,9 +747,21 @@ function layout({ lang, pageKey, title, description, extraHead = "", schema = []
       <button class="back-to-top" id="back-to-top" type="button" aria-label="Yukarı Çık">↑ Back to Top</button>
     </div>
   </footer>
-  <a class="wa-float" href="${whatsapp(copy)}" target="_blank" rel="noopener" aria-label="WhatsApp: 0541 191 63 01">
-    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-2.79 4.23c-.14 0-.37.05-.57.27-.2.21-.76.74-.76 1.81s.78 2.11.89 2.25c.11.15 1.51 2.42 3.73 3.3 1.85.73 2.22.59 2.62.55.4-.04 1.29-.53 1.47-1.04.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.27-.22-.11-1.29-.64-1.49-.71-.2-.07-.35-.11-.49.11-.15.21-.56.71-.69.86-.13.14-.26.16-.48.05-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.21-.01-.33.1-.44.1-.1.22-.26.33-.39.11-.13.15-.21.22-.36.07-.14.04-.27-.02-.38-.06-.11-.49-1.17-.67-1.6-.17-.42-.35-.36-.49-.37z"/></svg>
-  </a>
+  <aside aria-label="WhatsApp Export Desk" class="wa-export-float">
+    <div class="wa-export-tooltip">
+      <div class="wa-pulse-container">
+        <span class="wa-pulse-ping"></span>
+        <span class="wa-pulse-dot"></span>
+      </div>
+      <div class="wa-tooltip-text">
+        <span class="wa-tooltip-title">${lang === "tr" ? "WhatsApp İhracat & Teklif Masası" : lang === "ar" ? "مكتب تصدير الحفارات واتساب" : "WhatsApp Drilling Export Desk"}</span>
+        <span class="wa-tooltip-status">+90 541 191 63 01 • ${lang === "tr" ? "Çevrimiçi" : lang === "ar" ? "متصل الآن" : "Online"}</span>
+      </div>
+    </div>
+    <a href="${whatsapp(copy)}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: 0541 191 63 01" class="wa-export-btn">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-2.79 4.23c-.14 0-.37.05-.57.27-.2.21-.76.74-.76 1.81s.78 2.11.89 2.25c.11.15 1.51 2.42 3.73 3.3 1.85.73 2.22.59 2.62.55.4-.04 1.29-.53 1.47-1.04.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.27-.22-.11-1.29-.64-1.49-.71-.2-.07-.35-.11-.49.11-.15.21-.56.71-.69.86-.13.14-.26.16-.48.05-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.21-.01-.33.1-.44.1-.1.22-.26.33-.39.11-.13.15-.21.22-.36.07-.14.04-.27-.02-.38-.06-.11-.49-1.17-.67-1.6-.17-.42-.35-.36-.49-.37z"/></svg>
+    </a>
+  </aside>
   <script src="/assets/site.js"></script>
 </body>
 </html>
@@ -762,216 +774,506 @@ function pageHome(lang) {
   const isTr = lang === "tr";
   const isAr = lang === "ar";
 
-  const serviceCards = copy.services
-    .map(
-      (item) => `<article class="card reveal-on-scroll">
-      <div class="card-icon">${getServiceIcon(item.key)}</div>
-      <h3>${esc(item.h)}</h3>
-      <p>${esc(item.p)}</p>
-      <a class="more" href="${routes[lang][item.href]}">${esc(copy.cta.more)} →</a>
-    </article>`
-    )
-    .join("");
-
-  const why = p.why.map((item, idx) => `
-    <article class="card reveal-on-scroll">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3>${esc(item.h)}</h3>
-      <p>${esc(item.p)}</p>
-    </article>
-  `).join("");
-
-  const refs = copy.refs.map((item) => `
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>${esc(item)}</p>
-    </article>
-  `).join("");
-
-  const faq = copy.faq
-    .map((item) => `<details class="reveal-on-scroll"><summary>${esc(item.q)}</summary><p>${esc(item.a)}</p></details>`)
-    .join("");
-
-  const strataLabels = isTr ? [
-    { depth: "0 – 250 m", label: "Yüzey & Sığ Su Akiferi" },
-    { depth: "300 – 800 m", label: "Kamyon Üstü Hidrolik Kuleler" },
-    { depth: "1000 – 1600 m", label: "DSİ & Belediye Derin Kuyular" },
-    { depth: "2000 – 3000 m", label: "Yüksek Entalpi Jeotermal Dorse" }
+  const heroSlides = isTr ? [
+    {
+      img: "/assets/hero-field-rig.jpg",
+      chip: "45 YILLIK ÜRETİM & SAHA TECRÜBESİ · 3000M KAPASİTE",
+      title: "3000 Metre Derin Jeotermal ve Su Sondaj Kuleleri",
+      lead: "Ağır dorse ve kamyon üstü hidrolik kuleler, yüksek torklu rotari tablaları ve kesintisiz kuyu açma gücü.",
+      badges: ["3000 m Kuyu Derinliği", "110 Ton Kule Kapasitesi", "ISO & API Standartları"],
+      tabLabel: "3000M AMİRAL GEMİSİ KULE"
+    },
+    {
+      img: "/assets/trailer-rig.jpg",
+      chip: "AĞIR DORSE SERİSİ · 1500–3000 METRE",
+      title: "Derin Akiferler ve Rezervuarlar İçin Ağır Dorse Kuleler",
+      lead: "Çift MAN 422 motor tahrikli, 5x510 ağır vinçli ve 7.5\" x 10\" çift pistonlu çamur pompası ile donatılmış amiral gemisi kuleler.",
+      badges: ["Çift Bağımsız MAN Dizel", "5×510 Ağır Vinç", "70 RPM Rotari Tabla"],
+      tabLabel: "1500–3000M AĞIR DORSE"
+    },
+    {
+      img: "/assets/truck-rig.jpg",
+      chip: "KAMYON ÜSTÜ HİDROLİK SERİ · 300–1200 METRE",
+      title: "Hızlı İntikal Eden Kamyon Üstü Hidrolik Sondaj Kuleleri",
+      lead: "6x4 ve 8x4 ağır şasiler üzerine kurulu, 4 hidrolik ayak krikolu, kompakt ve zorlu arazi koşullarında üstün manevra kabiliyeti.",
+      badges: ["6x4 & 8x4 Ağır Şasi", "4 Hidrolik Dengeleme Ayağı", "14.50 m Kule Boyu"],
+      tabLabel: "300–1200M KAMYON ÜSTÜ"
+    },
+    {
+      img: "/assets/geothermal-rig.jpg",
+      chip: "JEOTERMAL & ÖZEL PROJELER · 2500 METRE",
+      title: "Yüksek Sıcaklık ve Basınç Dayanımlı Jeotermal Sistemler",
+      lead: "Kuyu kontrol ekipmanları, blowout preventer (BOP) uyumlu kule yapısı ve yüksek debili sirkülasyon hatları ile maksimum saha emniyeti.",
+      badges: ["Yüksek Sıcaklık Donanımı", "BOP Kuyu Kontrolü", "Özel Kule İmalatı"],
+      tabLabel: "JEOTERMAL & ÖZEL KULELER"
+    },
+    {
+      img: "/assets/drill-pipes.jpg",
+      chip: "API SPEC 5D SONDAJ TİJLERİ & EKİPMANLAR",
+      title: "Ağır Hizmet Sondaj Boruları ve Kuyu İçi Ekipmanları",
+      lead: "E, X, G, S çelik kalitelerinde API Spec 5D / Spec 7-1 sertifikalı tijler, IADC tricone matkaplar ve Duplex çamur pompaları.",
+      badges: ["API Spec 5D & 7-1", "Duplex 6\" Çamur Pompası", "IADC Tricone Matkaplar"],
+      tabLabel: "API TİJ, POMPA & EKİPMAN"
+    }
   ] : isAr ? [
-    { depth: "0 – 250 م", label: "الطبقة السطحية ومياه الآبار العذبة" },
-    { depth: "300 – 800 م", label: "حفارات هيدروليكية مثبتة على شاحنات" },
-    { depth: "1000 – 1600 م", label: "مشاريع مياه الشرب البلدية والعميقة" },
-    { depth: "2000 – 3000 م", label: "حفارات مقطورة عملاقة للطاقة الحرارية" }
+    {
+      img: "/assets/hero-field-rig.jpg",
+      chip: "٤٥ عاماً من الخبرة الصناعية والميدانية · قدرة حفر ٣٠٠٠ متر",
+      title: "حفارات آبار مياه عميقة وطاقة حرارية حتى ٣٠٠٠ متر",
+      lead: "حفارات مقطورة وشاحنة هيدروليكية ثقيلة، طاولات حفر دوارة عالية العزم وقدرة حفر مستمرة وموثوقة.",
+      badges: ["عمق حفر يصل ٣٠٠٠ متر", "برج حفر قدرة ١١٠ طن", "معايير الجودة العالمية ISO و API"],
+      tabLabel: "حفارة القمة ٣٠٠٠ متر"
+    },
+    {
+      img: "/assets/trailer-rig.jpg",
+      chip: "سلسلة الحفارات المقطورة الثقيلة · ١٥٠٠ - ٣٠٠٠ متر",
+      title: "حفارات مقطورة عملاقة للطبقات العميقة ومشاريع الطاقة",
+      lead: "محركا ديزل MAN 422، ونش سحب ثقيل 5×510 ومضخة طين دوبلكس ثنائية الأسطوانات لمشاريع الآبار الكبرى.",
+      badges: ["محركا ديزل مزدوجان", "ونش سحب فائق التحمل", "طاولة دوارة 70 دورة/دقيقة"],
+      tabLabel: "مقطورة ثقيلة ١٥٠٠-٣٠٠٠م"
+    },
+    {
+      img: "/assets/truck-rig.jpg",
+      chip: "حفارات شاحنة هيدروليكية · ٣٠٠ - ١٢٠٠ متر",
+      title: "حفارات شاحنة هيدروليكية سريعة الانتشار وعالية العزم",
+      lead: "مثبتة على شاحنات 6x4 و 8x4 مع 4 ركائز هيدروليكية لتسوية البرج ومناورة عالية في التضاريس الوعرة.",
+      badges: ["شاسيه شاحنة 6x4 و 8x4", "٤ ركائز هيدروليكية", "برج حفر بارتفاع ١٤.٥ م"],
+      tabLabel: "حفارات شاحنة ٣٠٠-١٢٠٠م"
+    },
+    {
+      img: "/assets/geothermal-rig.jpg",
+      chip: "حفارات الطاقة الحرارية والمشاريع الخاصة · ٢٥٠٠ متر",
+      title: "أنظمة حفر آبار الطاقة الحرارية عالية الحرارة والضغط",
+      lead: "متوافقة مع موانع الانفجار BOP ومجهزة بخطوط دوران عالية التدفق لأقصى درجات الأمان الميداني.",
+      badges: ["مقاومة درجات الحرارة العالية", "تحكم بأمان الآبار BOP", "تصنيع هندسي مخصص"],
+      tabLabel: "طاقة حرارية ومشاريع خاصة"
+    },
+    {
+      img: "/assets/drill-pipes.jpg",
+      chip: "أنابيب حفر ومعدات الآبار بمواصفات معهد البترول الأمريكي",
+      title: "أنابيب حفر API ورؤوس حفر مخروطية ومضخات طين دوبلكس",
+      lead: "أنابيب حفر من فولاذ E, X, G, S عالية المتانة، رؤوس حفر IADC ومضخات طين مزدوجة المفعول.",
+      badges: ["معايير API Spec 5D & 7-1", "مضخة طين دوبلكس 6 إنش", "رؤوس حفر تريكون IADC"],
+      tabLabel: "أنابيب API ومضخات ومعدات"
+    }
   ] : [
-    { depth: "0 – 250 m", label: "Surface & Shallow Aquifers" },
-    { depth: "300 – 800 m", label: "Truck-Mounted Hydraulic Systems" },
-    { depth: "1000 – 1600 m", label: "Deep Municipal & Public Wells" },
-    { depth: "2000 – 3000 m", label: "Heavy Trailer Geothermal Reservoirs" }
+    {
+      img: "/assets/hero-field-rig.jpg",
+      chip: "45 YEARS DRILLING & MANUFACTURING LEGACY · 3000M RATING",
+      title: "Engineered Deep Geothermal & Water Well Drilling Rigs up to 3000m",
+      lead: "Heavy trailer-mounted and truck hydraulic drilling rigs engineered with high-torque rotary tables and continuous borehole endurance.",
+      badges: ["3000m Depth Rating", "110-Ton Mast Capacity", "ISO & API Quality Standard"],
+      tabLabel: "3000M FLAGSHIP RIG"
+    },
+    {
+      img: "/assets/trailer-rig.jpg",
+      chip: "HEAVY TRAILER RIG SERIES · 1500–3000 METERS",
+      title: "Heavy-Duty Trailer Drilling Rigs for Deep Reservoirs & Aquifers",
+      lead: "Powered by dual MAN 422 diesel engines, 5x510 heavy drawworks, and 7.5\" x 10\" duplex double-acting mud pump.",
+      badges: ["Dual Independent Diesel Engines", "5×510 Heavy Drawworks", "70 RPM Rotary Table"],
+      tabLabel: "1500–3000M HEAVY TRAILER"
+    },
+    {
+      img: "/assets/truck-rig.jpg",
+      chip: "TRUCK-MOUNTED HYDRAULIC SERIES · 300–1200 METERS",
+      title: "Rapid-Mobilization Heavy Truck Drilling Rigs for Tough Terrains",
+      lead: "Built on 6x4 and 8x4 heavy commercial chassis with 4 hydraulic leveling jacks, compact footprint and agile field navigation.",
+      badges: ["6x4 & 8x4 Heavy Chassis", "4 Hydraulic Leveling Jacks", "14.50m Mast Height"],
+      tabLabel: "300–1200M TRUCK MOUNTED"
+    },
+    {
+      img: "/assets/geothermal-rig.jpg",
+      chip: "GEOTHERMAL & SPECIAL PROJECTS · 2500 METERS",
+      title: "High-Temperature & High-Pressure Geothermal Exploration Rigs",
+      lead: "Equipped for well control equipment, BOP compatibility, and high-volume mud circulation lines for maximum field safety.",
+      badges: ["High-Temp Resistant", "BOP Well Control Ready", "Custom Engineered Mast"],
+      tabLabel: "GEOTHERMAL & SPECIAL RIGS"
+    },
+    {
+      img: "/assets/drill-pipes.jpg",
+      chip: "API SPEC 5D DRILL PIPES & DOWNHOLE TOOLS",
+      title: "Heavy-Duty Drill Pipes, Mud Pumps & Downhole Tooling",
+      lead: "API Spec 5D / Spec 7-1 certified drill pipes in steel grades E, X, G, S, IADC tricone bits, and Duplex reciprocating mud pumps.",
+      badges: ["API Spec 5D & 7-1 Certified", "Duplex 6\" Mud Pumps", "IADC Tricone Rock Bits"],
+      tabLabel: "API PIPES, PUMPS & TOOLS"
+    }
+  ];
+
+  const modernProducts = [
+    {
+      slug: "trailer-1500-3000",
+      routeKey: "productTrailer3000",
+      img: "/assets/trailer-rig.jpg",
+      cat: "trailer",
+      topBadge: isTr ? "🚜 Dorse Kule" : isAr ? "🚜 حفارة مقطورة" : "🚜 Trailer Rig",
+      bottomBadge: isTr ? "1500–3000 m · 110T Kule" : isAr ? "١٥٠٠–٣٠٠٠ م · برج ١١٠ طن" : "1500–3000m · 110T Mast",
+      title: isTr ? "1500–3000m Dorse Sondaj Kulesi" : isAr ? "حفارة مقطورة ١٥٠٠ - ٣٠٠٠ متر" : "1500–3000m Trailer Drilling Rig",
+      desc: isTr ? "Çift MAN 422 motor, 5x510 vinç, derin jeotermal ve akifer kuyu açma kulesi." : isAr ? "محركا ديزل مزدوجان MAN 422، ونش 5x510 لحفر الآبار العميقة والطاقة الحرارية." : "Dual MAN 422 engines, 5x510 drawworks for deep geothermal and water aquifers.",
+      moq: isTr ? "KAPASİTE: 3000 M" : isAr ? "القدرة: ٣٠٠٠ م" : "CAPACITY: 3000M"
+    },
+    {
+      slug: "special-2500",
+      routeKey: "productSpecial2500",
+      img: "/assets/geothermal-rig.jpg",
+      cat: "trailer",
+      topBadge: isTr ? "🌋 Jeotermal" : isAr ? "🌋 طاقة حرارية" : "🌋 Geothermal",
+      bottomBadge: isTr ? "2500 m · Özel İmalat" : isAr ? "٢٥٠٠ م · تصنيع خاص" : "2500m · Custom Build",
+      title: isTr ? "2500m Özel Derin Kuyu Kulesi" : isAr ? "حفارة آبار عميقة ٢٥٠٠ متر خاصة" : "2500m Deep Geothermal Rig",
+      desc: isTr ? "Jeotermal rezervuar ve yüksek basınçlı derin formasyonlar için özel imalat kule." : isAr ? "حفارة مخصصة لطبقات الأرض الحرارية والضغوط العالية." : "Custom-engineered rig for geothermal reservoirs and high-pressure deep horizons.",
+      moq: isTr ? "KAPASİTE: 2500 M" : isAr ? "القدرة: ٢٥٠٠ م" : "CAPACITY: 2500M"
+    },
+    {
+      slug: "trailer-1000-1200",
+      routeKey: "productTrailer1200",
+      img: "/assets/trailer-rig.jpg",
+      cat: "trailer",
+      topBadge: isTr ? "🚜 Dorse Kule" : isAr ? "🚜 حفارة مقطورة" : "🚜 Trailer Rig",
+      bottomBadge: isTr ? "1000–1200 m · 90T Kule" : isAr ? "١٠٠٠–١٢٠٠ م · برج ٩٠ طن" : "1000–1200m · 90T Mast",
+      title: isTr ? "1000–1200m Dorse Sondaj Kulesi" : isAr ? "حفارة مقطورة ١٠٠٠ - ١٢٠٠ متر" : "1000–1200m Trailer Drilling Rig",
+      desc: isTr ? "DSİ, belediye ve sulama kooperatifleri için yüksek torklu derin kuyu kulesi." : isAr ? "حفارة مقطورة مثالية لمشاريع مياه الشرب البلدية والزراعية الكبرى." : "High-torque deep well rig for municipal water and agricultural cooperatives.",
+      moq: isTr ? "KAPASİTE: 1200 M" : isAr ? "القدرة: ١٢٠٠ م" : "CAPACITY: 1200M"
+    },
+    {
+      slug: "truck-1000-1200",
+      routeKey: "productTruck1200",
+      img: "/assets/truck-rig.jpg",
+      cat: "truck",
+      topBadge: isTr ? "🚚 Kamyon Kule" : isAr ? "🚚 حفارة شاحنة" : "🚚 Truck Rig",
+      bottomBadge: isTr ? "1000–1200 m · 8x4 Şasi" : isAr ? "١٠٠٠–١٢٠٠ م · شاسيه 8x4" : "1000–1200m · 8x4 Chassis",
+      title: isTr ? "1000–1200m Kamyon Üstü Kule" : isAr ? "حفارة شاحنة ١٠٠٠ - ١٢٠٠ متر" : "1000–1200m Truck Mounted Rig",
+      desc: isTr ? "8x4 kamyon şasisi üzerinde yüksek manevra ve intikal kabiliyetine sahip hidrolik kule." : isAr ? "حفارة هيدروليكية مدمجة على شاحنة 8x4 بحركة سريعة وعزم دوران قوي." : "Heavy hydraulic rig on 8x4 chassis delivering rapid mobilization and high torque.",
+      moq: isTr ? "KAPASİTE: 1200 M" : isAr ? "القدرة: ١٢٠٠ م" : "CAPACITY: 1200M"
+    },
+    {
+      slug: "truck-800",
+      routeKey: "productTruck800",
+      img: "/assets/truck-rig.jpg",
+      cat: "truck",
+      topBadge: isTr ? "🚚 Kamyon Kule" : isAr ? "🚚 حفارة شاحنة" : "🚚 Truck Rig",
+      bottomBadge: isTr ? "800 m · 6x4 Şasi" : isAr ? "٨٠٠ م · شاسيه 6x4" : "800m · 6x4 Chassis",
+      title: isTr ? "800m Kamyon Üstü Hidrolik Kule" : isAr ? "حفارة شاحنة ٨٠٠ متر هيدروليكية" : "800m Truck Mounted Rig",
+      desc: isTr ? "Orta ve derin su kuyuları için optimum yakıt sarfiyatı ve hızlı kuyu tamamlama." : isAr ? "كفاءة وقود مثالية وسرعة إنجاز عالية لآبار المياه المتوسطة والعميقة." : "Optimal fuel economy and fast well completion for mid to deep water aquifers.",
+      moq: isTr ? "KAPASİTE: 800 M" : isAr ? "القدرة: ٨٠٠ م" : "CAPACITY: 800M"
+    },
+    {
+      slug: "drill-pipes",
+      routeKey: "productPipes",
+      img: "/assets/drill-pipes.jpg",
+      cat: "equipment",
+      topBadge: isTr ? "🔩 Tij &amp; Boru" : isAr ? "🔩 أنابيب حفر" : "🔩 Drill Pipes",
+      bottomBadge: isTr ? "2 3/8\" – 5 1/2\" · API Spec 5D" : isAr ? "٢ ٣/٨ إلى ٥ ١/٢ إنش · معايير API" : "2 3/8\" – 5 1/2\" · API Spec 5D",
+      title: isTr ? "API Spec 5D Sondaj Tijleri" : isAr ? "أنابيب حفر معتمدة API Spec 5D" : "API Spec 5D Drill Pipes",
+      desc: isTr ? "E, X, G, S kalite dikişsiz çelik gövde ve sürtünme kaynaklı sert dolgulu takım contaları." : isAr ? "أنابيب فولاذية غير ملحومة من درجات E, X, G, S مع وصلات ملحومة بالاحتكاك." : "Seamless drill pipes in steel grades E, X, G, S with hardbanded friction-welded tool joints.",
+      moq: isTr ? "STANDART: API 5D" : isAr ? "المعيار: API 5D" : "STANDARD: API 5D"
+    },
+    {
+      slug: "mud-pumps",
+      routeKey: "productPumps",
+      img: "/assets/mud-pump.jpg",
+      cat: "equipment",
+      topBadge: isTr ? "⚙️ Çamur Pompası" : isAr ? "⚙️ مضخة طين" : "⚙️ Mud Pump",
+      bottomBadge: isTr ? "21–62 Bar · 895 PSI" : isAr ? "٢١-٦٢ بار · ٨٩٥ PSI" : "21–62 Bar · 895 PSI",
+      title: isTr ? "Duplex 6\" Çift Piston Çamur Pompası" : isAr ? "مضخة طين دوبلكس ثنائية الأسطوانة 6 إنش" : "Duplex 6\" Reciprocating Mud Pump",
+      desc: isTr ? "Çift etkili pistonlu resiprokal çamur pompası, zorlu sirkülasyon koşullarına dayanıklı." : isAr ? "مضخة طين ترددية مزدوجة المفعول تتحمل أقسى ظروف تدوير سائل الحفر." : "Heavy-duty double-acting reciprocating mud pump built for demanding drilling fluids.",
+      moq: isTr ? "BASINÇ: 62 BAR" : isAr ? "الضغط: ٦٢ بار" : "PRESSURE: 62 BAR"
+    },
+    {
+      slug: "drill-bits",
+      routeKey: "productBits",
+      img: "/assets/tricone-bits.jpg",
+      cat: "equipment",
+      topBadge: isTr ? "💎 Sondaj Matkabı" : isAr ? "💎 رؤوس حفر" : "💎 Drill Bits",
+      bottomBadge: isTr ? "IADC 111–637 · TCI / Freze" : isAr ? "IADC 111–637 · كربيد وفولاذ" : "IADC 111–637 · TCI / Steel Tooth",
+      title: isTr ? "IADC Tricone Döner Konili Matkaplar" : isAr ? "رؤوس حفر مخروطية دوارة IADC Tricone" : "IADC Tricone Roller Cone Bits",
+      desc: isTr ? "Yumuşak alüvyondan en sert kuvarsit ve bazalt formasyonlarına kadar yüksek penetrasyon hızı." : isAr ? "سرعة اختراق فائقة من طبقات الطمي الرخوة حتى أصلب صخور البازلت والكوارتز." : "High penetration rate engineered from soft alluvium to ultra-hard basalt and quartzite formations.",
+      moq: isTr ? "IADC SERTİFİKALI" : isAr ? "معتمد IADC" : "IADC CERTIFIED"
+    }
+  ];
+
+  const b2bCards = isTr ? [
+    { num: "1", title: "Şartnameye Uygun İmalat", desc: "Kuyu hedef derinliği, kule kaldırma tonajı, vinç tambur kapasitesi ve hidrolik güç üniteleri tam proje teknik şartnamenize göre üretilir." },
+    { num: "2", title: "İhracat & Global Lojistik", desc: "Orta Doğu, Kuzey Afrika, Türki Cumhuriyetler ve Balkanlar'a anahtar teslim gümrükleme, konteyner & lowbed lojistiği ve tam ihracat dokümantasyonu." },
+    { num: "3", title: "45 Yıllık Saha & İmalat Mirası", desc: "1980'den bu yana Türkiye'nin ve bölgenin en zorlu jeolojik formasyonlarında test edilmiş, yüzlerce kule imal etmiş sağlam mühendislik mirası." },
+    { num: "4", title: "Hızlı Teklif & 7/24 Teknik Servis", desc: "Kapsamlı teknik şartname ve fiyat teklifleri 24 saat içinde yanıtlanır; saha kurulumu, operatör eğitimi ve garantili yedek parça temini sağlanır." }
+  ] : isAr ? [
+    { num: "1", title: "تصنيع وفق الشروط والمواصفات", desc: "يتم تصنيع البرج وقدرة السحب ومحركات الديزل وأنظمة الهيدروليك بدقة تامة حسب العمق المطلوب والشروط الفنية لمشروعك." },
+    { num: "2", title: "شحن وتصدير دولي معتمد", desc: "تجهيز الشحن والشاحنات المنخفضة Lowbed وحاويات التصدير للشرق الأوسط وشمال أفريقيا ودول البلقان مع كافة الوثائق الجمركية." },
+    { num: "3", title: "٤٥ عاماً من الخبرة الصناعية", desc: "منذ عام ١٩٨٠ في قلب قطاع الحفر؛ مئات الحفارات العاملة في أعتى التضاريس الجيولوجية الصعبة والمشاريع الكبرى." },
+    { num: "4", title: "تسعير سريع ودعم فني متواصل", desc: "تسعير وعروض مواصفات فنية خلال ٢٤ ساعة مع تدريب مشغلي الحفارات ميدانياً وضمان قطع الغيار الأصلية." }
+  ] : [
+    { num: "1", title: "Specification-Driven Production", desc: "Mast tonnage, drawworks spooling, engine horsepower and hydraulic units built strictly to your project depth and formation specs." },
+    { num: "2", title: "Global Export & Heavy Logistics", desc: "Turnkey container and lowbed export logistics to Middle East, North Africa, Central Asia and Europe with full export documentation." },
+    { num: "3", title: "45-Year Manufacturing Legacy", desc: "Since 1980, hundreds of drilling rigs manufactured and field-proven across the most demanding hydrogeological formations." },
+    { num: "4", title: "Responsive Quoting & Field Support", desc: "Detailed technical datasheets and quotations delivered within 24 hours; on-site commissioning and guaranteed spare parts support." }
+  ];
+
+  const sectors = isTr ? [
+    { icon: "🌋", title: "Jeotermal Enerji Santralleri (JES)", desc: "Yüksek sıcaklık ve entalpiye sahip derin jeotermal rezervuarlar için BOP kuyu kontrol uyumlu ağır dorse kuleler." },
+    { icon: "💧", title: "DSİ & Belediye Şehir Suyu", desc: "1000–2000m derinlikte kesintisiz içme ve kullanma suyu temini sağlayan yüksek debili derin kuyu sondajları." },
+    { icon: "🌾", title: "Tarımsal Sulama Kooperatifleri", desc: "Geniş çaplı akifer açma, yüksek debili dalgıç pompa borulaması ve optimum yakıt verimliliği sağlayan kamyon kuleler." },
+    { icon: "⛏️", title: "Karotlu Maden & Cevher Arama", desc: "Tel hatlı (wireline) elmaslı karotiyer sistemleri ile yüksek karot yüzdesi sağlayan hassas maden arama kuleleri." },
+    { icon: "🏗️", title: "Jeoteknik & Zemin İyileştirme", desc: "Baraj, otoyol, tünel ve temel enjeksiyon & fore kazık sondajları için yüksek torklu hidrolik delme üniteleri." },
+    { icon: "🏭", title: "Endüstriyel Tesis & Fabrika Suyu", desc: "Kesintisiz üretim proses suyu ihtiyacı olan fabrikalar ve sanayi bölgeleri için garantili endüstriyel su kuyuları." }
+  ] : isAr ? [
+    { icon: "🌋", title: "محطات الطاقة الحرارية الأرضية", desc: "حفارات مقطورة ثقيلة متوافقة مع موانع الانفجار BOP لآبار الطاقة الحرارية ذات درجات الحرارة والضغوط العالية." },
+    { icon: "💧", title: "مشاريع مياه الشرب البلدية", desc: "حفر آبار مياه عميقة من ١٠٠٠ إلى ٢٠٠٠ متر لتأمين مياه الشرب للمدن والمؤسسات المائية الحكومية." },
+    { icon: "🌾", title: "مشاريع الري والزراعة الكبرى", desc: "حفر آبار مياه زراعية بأقطار واسعة وتجهيز المضخات الغاطسة بكفاءة تشغيل واستهلاك وقود اقتصادي." },
+    { icon: "⛏️", title: "استكشاف المعادن بالعينات اللبية", desc: "أنظمة حفر سلكية Wireline ذات رؤوس ألماسية لاستخراج عينات الصخور بدقة ونسبة استرداد عالية." },
+    { icon: "🏗️", title: "أعمال الجيوتقنية وتحسين التربة", desc: "حفر السدود والأنفاق وحقن الأساسات والخوازيق بوحدات هيدروليكية عالية العزم." },
+    { icon: "🏭", title: "تأمين مياه المصانع والمنشآت", desc: "حفر آبار مياه صناعية مستمرة لتأمين خطوط الإنتاج والمنشآت الصناعية الكبرى." }
+  ] : [
+    { icon: "🌋", title: "Geothermal Power Plants", desc: "BOP-compatible heavy trailer rigs engineered for high-enthalpy and high-temperature deep geothermal reservoirs." },
+    { icon: "💧", title: "Municipal Water Supply", desc: "Deep water well drilling from 1000m to 2000m ensuring uninterrupted public drinking water supplies." },
+    { icon: "🌾", title: "Agricultural Irrigation", desc: "Large-diameter borehole drilling, high-flow submersible pumping, and fuel-efficient truck-mounted rigs." },
+    { icon: "⛏️", title: "Mineral Exploration & Coring", desc: "Wireline diamond coring systems delivering high core recovery rates for mineral discovery and reservoir logging." },
+    { icon: "🏗️", title: "Geotechnical & Soil Stabilization", desc: "High-torque hydraulic drilling units for dams, tunnels, foundation grouting, and micropile installations." },
+    { icon: "🏭", title: "Industrial Plant Water Supply", desc: "Guaranteed industrial water well engineering for factories and industrial zones requiring continuous process water." }
   ];
 
   const main = `
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="reveal-on-scroll">
-        <div class="telemetry-pill shimmer-badge">
-          <span class="beacon-dot"></span>
-          <span>45 YILLIK ÜRETİM &amp; SAHA TECRÜBESİ</span>
-          <span class="pill-tag">3000M KAPASİTE</span>
-        </div>
-        <h1>${esc(p.h1).replace("250–3000", '<span class="highlight-orange">250–3000</span>')}</h1>
-        <p class="lead">${esc(p.lead)}</p>
-        <p class="hero-proof-text">${esc(p.proof)}</p>
-        <div class="cta-row">
-          <a class="btn btn-wa" href="${whatsapp(copy)}" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-            0541 191 63 01
-          </a>
-          <a class="btn btn-signal" href="${routes[lang].contact}">
-            📝 Teklif Formu
-          </a>
-          <a class="btn btn-ghost" href="${routes[lang].rigs}">
-            ${esc(copy.cta.rigs)} →
-          </a>
-        </div>
-      </div>
-      
-      <div class="hero-visual-container reveal-on-scroll">
-        <div class="hero-img-card">
-          <img src="/assets/hero-field-rig.jpg" alt="KD Sondaj Saha Kulesi ve 3000m Derin Kuyu Çalışması" width="800" height="450" fetchpriority="high" />
-        </div>
-        <aside class="hero-depth-card">
-          <div class="card-header-telemetry">
-            <span>TELEMETRY // STRATA &amp; FORMATION HORIZON</span>
-            <span class="status-online">3000M AKTİF</span>
-          </div>
-          <div class="depth-meter-track">
-            <div class="depth-meter-fill"></div>
-          </div>
-          <div class="depth-strata-list">
-            ${strataLabels.map((s, idx) => `
-              <div class="strata-item ${idx === 3 ? "active" : ""}">
-                <div class="strata-node"></div>
-                <div class="strata-depth">${esc(s.depth)}</div>
-                <div class="strata-label">${esc(s.label)}</div>
+  <!-- Asiaplast-Inspired Multi-Slide Interactive Hero Carousel -->
+  <section class="hero-carousel-section" id="hero-carousel">
+    <div class="hero-slides-wrapper">
+      ${heroSlides.map((s, idx) => `
+        <div class="hero-slide ${idx === 0 ? "active" : ""}" data-slide-index="${idx}" aria-hidden="${idx === 0 ? "false" : "true"}">
+          <img class="hero-slide-bg" src="${s.img}" alt="${esc(s.title)}" ${idx === 0 ? 'fetchpriority="high" loading="eager"' : 'loading="lazy"'} />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>${s.chip}</span>
               </div>
-            `).join("")}
-          </div>
-          <div class="hero-card-stats">
-            <div class="stat-chip">
-              <div class="val" data-counter="3000" data-suffix=" m">3000 m</div>
-              <div class="lbl">${isTr ? "Maksimum Kuyu Derinliği" : isAr ? "العمق الأقصى للبئر" : "Maximum Well Depth"}</div>
+              <h1 class="hero-title">${esc(s.title)}</h1>
+              <p class="hero-lead">${esc(s.lead)}</p>
+              
+              <div class="hero-badges">
+                ${s.badges.map((b) => `
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>${b}</span>
+                  </span>
+                `).join("")}
+              </div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="${routes[lang].contact}">
+                  <span>📋</span>
+                  <span>${isTr ? "Teklif İste" : isAr ? "طلب تسعير" : "Request a Quote"}</span>
+                </a>
+                <a class="btn-white-pill" href="${whatsapp(copy)}" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="${routes[lang].rigs}">
+                  <span>${isTr ? "Modelleri İncele" : isAr ? "استكشف الموديلات" : "Explore Rigs"}</span>
+                  <span class="arrow-sym">→</span>
+                </a>
+              </div>
             </div>
-            <div class="stat-chip">
-              <div class="val" data-counter="45" data-suffix="${isTr ? "+ Yıl" : isAr ? "+ عام" : "+ Years"}">45+ Yıl</div>
-              <div class="lbl">${isTr ? "Saha & Üretim Tecrübesi" : isAr ? "خبرة هندسية وتصنيعية" : "Field & Manufacturing Legacy"}</div>
+          </div>
+        </div>
+      `).join("")}
+
+      <div class="hero-arrows-row">
+        <button id="hero-prev" class="hero-arrow-btn" type="button" aria-label="Previous Slide">‹</button>
+        <button id="hero-next" class="hero-arrow-btn" type="button" aria-label="Next Slide">›</button>
+      </div>
+    </div>
+
+    <!-- Asiaplast Signature Bottom Interactive Tabs Bar -->
+    <div class="hero-bottom-tabs-bar">
+      <div class="wrap">
+        <div class="hero-tabs-grid">
+          ${heroSlides.map((s, idx) => `
+            <button type="button" class="hero-tab-btn ${idx === 0 ? "active" : ""}" data-target-slide="${idx}">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">0${idx + 1}</span>
+                ${idx === 0 ? '<span class="hero-tab-live">LIVE</span>' : ""}
+              </div>
+              <p class="hero-tab-label">${esc(s.tabLabel)}</p>
+              ${idx === 0 ? '<div class="hero-tab-progress-bar"></div>' : ""}
+            </button>
+          `).join("")}
+        </div>
+      </div>
+    </div>
+
+    <!-- Infinite Marquee Ticker Strip -->
+    <div class="hero-marquee-strip" aria-hidden="true">
+      <div class="hero-marquee-track">
+        <span><span>•</span> 3000M JEOTERMAL SONDAJ KULELERİ</span>
+        <span><span>•</span> KAMYON ÜSTÜ HİDROLİK KULELER</span>
+        <span><span>•</span> API SPEC 5D SONDAJ TİJLERİ</span>
+        <span><span>•</span> DUPLEX ÇİFT PİSTON ÇAMUR POMPALARI</span>
+        <span><span>•</span> IADC TRICONE DÖNER KONİLİ MATKAPLAR</span>
+        <span><span>•</span> 45+ YILLIK İMALAT TECRÜBESİ</span>
+        <span><span>•</span> B2B GLOBAL İHRACAT &amp; LOJİSTİK</span>
+        <span><span>•</span> DSİ &amp; BELEDİYE DERİN SU KUYULARI</span>
+        <span><span>•</span> 3000M JEOTERMAL SONDAJ KULELERİ</span>
+        <span><span>•</span> KAMYON ÜSTÜ HİDROLİK KULELER</span>
+        <span><span>•</span> API SPEC 5D SONDAJ TİJLERİ</span>
+        <span><span>•</span> DUPLEX ÇİFT PİSTON ÇAMUR POMPALARI</span>
+        <span><span>•</span> IADC TRICONE DÖNER KONİLİ MATKAPLAR</span>
+        <span><span>•</span> 45+ YILLIK İMALAT TECRÜBESİ</span>
+        <span><span>•</span> B2B GLOBAL İHRACAT &amp; LOJİSTİK</span>
+        <span><span>•</span> DSİ &amp; BELEDİYE DERİN SU KUYULARI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Product Range Catalog (Asiaplast Style Cards) -->
+  <section class="section-block bg-slate-subtle" id="catalog">
+    <div class="wrap">
+      <div class="section-header-modern">
+        <span class="chip-badge">${isTr ? "Katalog" : isAr ? "الكتالوج" : "Catalog"}</span>
+        <h2 class="h2-modern">${isTr ? "Ürün ve Makine Yelpazesi" : isAr ? "سلسلة الحفارات والمعدات" : "Product &amp; Rig Range"}</h2>
+        <p class="lead-sub">${isTr ? "Uluslararası standartlarda imal edilen dorse ve kamyon üstü sondaj kuleleri, tijler ve kuyu içi ekipmanları." : isAr ? "حفارات مقطورة وشاحنة وأنابيب ومعدات آبار مصنعة بأعلى المعايير العالمية." : "Manufactured to high engineering specifications for global drilling contractors and public tenders."}</p>
+      </div>
+
+      <div class="catalog-filter-bar">
+        <button type="button" class="filter-btn active" data-filter="all">${isTr ? "Tüm Modeller" : isAr ? "جميع الموديلات" : "All Models"}</button>
+        <button type="button" class="filter-btn" data-filter="trailer">${isTr ? "Dorse Kuleler" : isAr ? "حفارات مقطورة" : "Trailer Rigs"}</button>
+        <button type="button" class="filter-btn" data-filter="truck">${isTr ? "Kamyon Üstü" : isAr ? "حفارات شاحنة" : "Truck Rigs"}</button>
+        <button type="button" class="filter-btn" data-filter="equipment">${isTr ? "Ekipman &amp; Pompalar" : isAr ? "المضخات والمعدات" : "Equipment &amp; Pumps"}</button>
+      </div>
+
+      <div class="product-grid-modern">
+        ${modernProducts.map((item) => `
+          <article class="modern-prod-card" data-category="${item.cat}">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="${item.img}" alt="${esc(item.title)}" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">${item.topBadge}</span>
+                <span class="prod-badge-bottom">${item.bottomBadge}</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="${routes[lang][item.routeKey]}">${esc(item.title)}</a>
+                </h3>
+                <p class="prod-card-desc">${esc(item.desc)}</p>
+              </div>
             </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">${item.moq}</span>
+              <a class="prod-card-action" href="${routes[lang][item.routeKey]}">
+                <span>${isTr ? "Teknik Şartname" : isAr ? "المواصفات الفنية" : "Technical Specs"}</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B Excellence Matrix (Asiaplast 4-Column Numbered Cards) -->
+  <section class="section-block border-y" id="b2b-excellence">
+    <div class="wrap">
+      <div class="section-header-center">
+        <span class="chip-badge">${isTr ? "B2B Güvencesi" : isAr ? "المعايير الموثوقة" : "B2B Excellence"}</span>
+        <h2 class="h2-modern">${isTr ? "Sondaj Ekipleri Neden KD SONDAJ'ı Tercih Ediyor?" : isAr ? "لماذا يختار المقاولون والشركات KD SONDAJ؟" : "Why Drilling Contractors Choose KD SONDAJ"}</h2>
+        <p class="lead-sub">${isTr ? "Tasarım ve çelik imalatından anahtar teslim gümrükleme ve saha devreye almaya kadar tek sorumlu üretici ortak." : isAr ? "شريك تصنيع هندسي متكامل ومسؤول من التصميم والتصنيع حتى الشحن والتشغيل الميداني." : "A single, accountable manufacturing partner from structural engineering to container export and on-site commissioning."}</p>
+      </div>
+
+      <div class="b2b-grid">
+        ${b2bCards.map((c) => `
+          <div class="b2b-card">
+            <span class="b2b-num-badge">${c.num}</span>
+            <h3 class="b2b-card-title">${esc(c.title)}</h3>
+            <p class="b2b-card-desc">${esc(c.desc)}</p>
           </div>
-        </aside>
+        `).join("")}
       </div>
     </div>
   </section>
 
-  <section class="metrics-band">
-    <div class="wrap metrics-grid">
-      <div class="metric-item reveal-on-scroll">
-        <div class="metric-icon-box">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M5 15l7 7 7-7"/></svg>
-        </div>
-        <div class="metric-content">
-          <div class="num" data-counter="3000" data-prefix="250–" data-suffix=" m">250–3000 m</div>
-          <span>${esc(p.metrics[0].l)}</span>
-        </div>
-      </div>
-      <div class="metric-item reveal-on-scroll delay-1">
-        <div class="metric-icon-box">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <div class="metric-content">
-          <div class="num" data-counter="3000" data-prefix="300–" data-suffix=" m">300–3000 m</div>
-          <span>${esc(p.metrics[1].l)}</span>
-        </div>
-      </div>
-      <div class="metric-item reveal-on-scroll delay-2">
-        <div class="metric-icon-box">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="metric-content">
-          <div class="num" data-counter="45" data-suffix="${isTr ? "+ Yıl" : isAr ? "+ عام" : "+ Years"}">45+ Yıl</div>
-          <span>${esc(p.metrics[2].l)}</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
+  <!-- Industries & Sectors We Serve (Asiaplast 6-Card Clean Grid) -->
+  <section class="section-block bg-slate-subtle" id="sectors">
     <div class="wrap">
-      ${section("01", p.servicesTitle, `
-        <p>${esc(p.servicesLead)}</p>
-        <div class="cards services">${serviceCards}</div>
-        
-        <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
-          <img class="showcase-img" src="/assets/truck-rig.jpg" alt="KD Sondaj Kamyon Üstü Hidrolik Kule" loading="lazy" />
-          <div class="showcase-content">
-            <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> KAMYON ÜSTÜ HİDROLİK KULELER (300–1200 M)</span>
-            <h3>${esc(copy.pages.rigs.h1)}</h3>
-            <p>${isTr ? "300m, 400m, 500m, 600m, 800m, 1000m ve 1200m kapasiteli kamyon üstü hidrolik sondaj filomuz ile hızlı intikal ve yüksek rotari tork gücü." : isAr ? "حفارات شاحنة هيدروليكية من 300 إلى 1200 متر مصممة للحركة السريعة والعمل الشاق." : "Heavy truck-mounted drilling rigs 300m to 1200m for rapid deployment and high torque."}</p>
-            <div><a class="btn btn-signal" href="${routes[lang].rigs}">${esc(copy.cta.more)} →</a></div>
+      <div class="section-header-center">
+        <span class="chip-badge">${isTr ? "Sektörler" : isAr ? "القطاعات" : "Sectors"}</span>
+        <h2 class="h2-modern">${isTr ? "Hizmet Verdiğimiz Başlıca Sektörler" : isAr ? "القطاعات والصناعات التي نخدمها" : "Key Industries We Serve"}</h2>
+        <p class="lead-sub">${isTr ? "Farklı kuyu derinliği ve jeolojik formasyon gereksinimlerine özel mühendislik çözümleri." : isAr ? "حلول هندسية مخصصة لأعماق الآبار المختلفة وظروف التكوينات الجيولوجية المتنوعة." : "Engineered drilling systems customized for complex formations and geological requirements."}</p>
+      </div>
+
+      <div class="sectors-grid">
+        ${sectors.map((s) => `
+          <div class="sector-card">
+            <span class="sector-card-icon">${s.icon}</span>
+            <h3 class="sector-card-title">${esc(s.title)}</h3>
+            <p class="sector-card-desc">${esc(s.desc)}</p>
           </div>
-        </div>
-      `)}
+        `).join("")}
+      </div>
     </div>
   </section>
 
-  <section class="block">
+  <!-- Interactive Subterranean Quote & Rig Selector Calculator -->
+  <section class="section-block" id="calculator">
     <div class="wrap">
-      ${section("02", p.equipTitle, `
-        <div class="filter-bar">
-          <button type="button" class="filter-btn active" data-filter="all">${isTr ? "Tüm Kuleler" : isAr ? "جميع الحفارات" : "All Rigs"}</button>
-          <button type="button" class="filter-btn" data-filter="trailer">${isTr ? "Dorse Kuleler (Ağır Tip)" : isAr ? "حفارات مقطورة" : "Trailer Rigs"}</button>
-          <button type="button" class="filter-btn" data-filter="truck">${isTr ? "Kamyon Üstü (Hızlı İntikal)" : isAr ? "حفارات شاحنة" : "Truck Rigs"}</button>
-        </div>
-        <div class="cards four">
-          ${machines.slice(0, 4).map((m) => machineCard(m, copy, lang)).join("")}
-        </div>
-        <p style="margin-top:1.75rem;"><a class="btn btn-ghost" href="${routes[lang].rigs}">${esc(copy.cta.more)} (Tüm 11 Model) →</a></p>
-        
-        <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
-          <img class="showcase-img" src="/assets/trailer-rig.jpg" alt="KD Sondaj Ağır Dorse Kule 1500–3000 Metre" loading="lazy" />
-          <div class="showcase-content">
-            <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> 1500–3000M AĞIR DORSE SINIFI</span>
-            <h3>1500 – 3000 Metre Dorse Sondaj Kulesi</h3>
-            <p>${isTr ? "110 ton kule ve 90 ton halat sarıcı kapasiteli ağır dorse sınıfı kulelerimiz ile derin jeotermal rezervuarlar ve derin su kuyularında kesintisiz delme gücü." : isAr ? "حفارة مقطورة ثقيلة بقدرة برج 110 طن وقدرة سحب 90 طن لآبار المياه العميقة والطاقة الحرارية." : "Heavy trailer-mounted drilling rig with 110-ton mast capacity and 90-ton drawworks for deep geothermal & water wells."}</p>
-            <div><a class="btn btn-signal" href="${routes[lang].rigs}">${esc(copy.cta.more)} →</a></div>
-          </div>
-        </div>
-
-        ${quoteCalculator(lang)}
-      `)}
+      ${quoteCalculator(lang)}
     </div>
   </section>
 
-  <section class="block">
+  <!-- Asiaplast-Style Modern FAQ Accordion -->
+  <section class="section-block border-y" id="faq">
     <div class="wrap">
-      ${section("03", p.whyTitle, `<div class="cards three">${why}</div>`)}
+      <div class="faq-modern-grid">
+        <div>
+          <span class="chip-badge">${isTr ? "Sıkça Sorulanlar" : isAr ? "الأسئلة الشائعة" : "FAQ"}</span>
+          <h2 class="h2-modern">${isTr ? "Merak Edilen Sorular ve Cevaplar" : isAr ? "الأسئلة الشائعة حول الحفارات والتصدير" : "Frequently Asked Questions"}</h2>
+          <p class="lead-sub" style="margin-bottom:1.5rem;">${isTr ? "İmalat süreleri, kule teslimat şartları, gümrükleme ve teknik servis hakkında en çok sorulan konular." : isAr ? "كل ما تود معرفته عن مدد التصنيع، الشحن الدولي، شروط التسليم والضمان الميداني." : "Everything you need to know about lead times, international delivery terms, shipping and spare parts guarantee."}</p>
+          <a class="btn-primary-gradient" href="${routes[lang].contact}">
+            <span>📋</span>
+            <span>${isTr ? "Özel Teklif İste" : isAr ? "طلب عرض خاص" : "Get Custom Quote"}</span>
+          </a>
+        </div>
+
+        <div class="faq-modern-list">
+          ${copy.faq.map((item) => `
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>${esc(item.q)}</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>${esc(item.a)}</p>
+              </div>
+            </details>
+          `).join("")}
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="block">
-    <div class="wrap">
-      ${section("04", p.refTitle, `
-        <p>${esc(p.refLead)}</p>
-        <div class="list-cards">${refs}</div>
-      `)}
+  <!-- Asiaplast-Style Ready for Bulk Quotation CTA Banner -->
+  <section class="bulk-quote-section" id="bulk-quote">
+    <div class="wrap bulk-quote-wrap">
+      <span class="chip-badge">${isTr ? "Küresel İhracat Masası" : isAr ? "مكتب التصدير الدولي" : "Global Export Desk"}</span>
+      <h2 class="bulk-quote-title">${isTr ? "Sondaj Kulenizi veya Ekipmanınızı Birlikte Projelendirelim" : isAr ? "هل أنت جاهز لتسعير حفارتك أو تجهيز مشروعك؟" : "Ready for a Complete Rig &amp; Equipment Quotation?"}</h2>
+      <p class="bulk-quote-lead">${isTr ? "Hedef kuyu derinliği, arazi yapısı ve lokasyon bilgilerinizi iletin — 24 saat içinde detaylı teknik veri föyü ve şartname teklifinizi sunalım." : isAr ? "أرسل عمق البئر المستهدف وطبيعة الأرض والبلد المستلم — وسنوافيك بعرض فني ومالي مفصل خلال ٢٤ ساعة." : "Send your target well depth, geology, and destination country — receive a comprehensive technical proposal within 24 hours."}</p>
+      
+      <div class="bulk-quote-ctas">
+        <a class="btn-primary-gradient" href="${routes[lang].contact}">
+          <span>📋</span>
+          <span>${isTr ? "Teklif Formunu Doldur" : isAr ? "نموذج طلب التسعير" : "Request a Quote"}</span>
+        </a>
+        <a class="btn-white-pill" href="${whatsapp(copy)}" target="_blank" rel="noopener">
+          <span class="pulse-dot-green"></span>
+          <span>WhatsApp: 0541 191 63 01</span>
+        </a>
+        <a class="btn-link-pill" href="${routes[lang].rigs}">
+          <span>${isTr ? "Kule Kataloğu" : isAr ? "كتالوج الحفارات" : "Browse Rig Catalog"}</span>
+          <span class="arrow-sym">→</span>
+        </a>
+      </div>
     </div>
   </section>
-
-  <section class="block">
-    <div class="wrap">
-      ${section("05", p.faqTitle, `<div class="faq">${faq}</div>`)}
-    </div>
-  </section>`;
+  `;
 
   return layout({
     lang,
@@ -991,6 +1293,7 @@ function pageHome(lang) {
     main,
   });
 }
+
 
 function simplePage(lang, pageKey, extras = "") {
   const copy = locales[lang];

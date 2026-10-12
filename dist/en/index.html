@@ -42,12 +42,10 @@
   <header class="site-header">
     <div class="wrap">
       <div class="header-row">
-        <a class="brand" href="/en/">
-          <div class="brand-icon">
-            <img src="/assets/logo.svg" width="34" height="34" alt="KD SONDAJ" />
-          </div>
+        <a class="brand" href="/en/" aria-label="KD SONDAJ">
+          <span class="brand-badge">KD</span>
           <div class="brand-text">
-            <span class="brand-title">KD SONDAJ</span>
+            <span class="brand-title">KD<span class="brand-accent">SONDAJ</span></span>
             <span class="brand-sub">Drilling systems</span>
           </div>
         </a>
@@ -105,9 +103,13 @@
   </nav>
         <div class="header-actions">
           <nav class="lang-switcher" aria-label="Language"><a class="lang-btn" href="/" hreflang="tr-TR">TR</a><a class="lang-btn" href="/en/" hreflang="en" aria-current="page">EN</a><a class="lang-btn" href="/ar/" hreflang="ar">AR</a></nav>
-          <a class="btn btn-wa header-cta" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-            0541 191 63 01
+          <a class="header-cta-quote" href="/en/contact/">
+            <span>📋</span>
+            <span>Request Quote</span>
+          </a>
+          <a class="header-cta-wa" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener">
+            <span class="pulse-dot-green"></span>
+            <span>0541 191 63 01</span>
           </a>
           <button class="menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-panel" aria-label="Menu">☰</button>
         </div>
@@ -145,304 +147,657 @@
     </div>
   </header>
   <main id="main">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="reveal-on-scroll">
-        <div class="telemetry-pill shimmer-badge">
-          <span class="beacon-dot"></span>
-          <span>45 YILLIK ÜRETİM &amp; SAHA TECRÜBESİ</span>
-          <span class="pill-tag">3000M KAPASİTE</span>
-        </div>
-        <h1>45 years of experience. <span class="highlight-orange">250–3000</span> metre drilling capacity.</h1>
-        <p class="lead">As depth increases, the right rig and field practice matter more. KD Sondaj keeps manufacturing and proven field services under one roof.</p>
-        <p class="hero-proof-text">Corporate borehole range is 250–3000 m. Catalogue headings use 300–3000 m.</p>
-        <div class="cta-row">
-          <a class="btn btn-wa" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-            0541 191 63 01
-          </a>
-          <a class="btn btn-signal" href="/en/contact/">
-            📝 Teklif Formu
-          </a>
-          <a class="btn btn-ghost" href="/en/equipment/drilling-rigs/">
-            Review rig capacities →
-          </a>
-        </div>
-      </div>
+  <!-- Asiaplast-Inspired Multi-Slide Interactive Hero Carousel -->
+  <section class="hero-carousel-section" id="hero-carousel">
+    <div class="hero-slides-wrapper">
       
-      <div class="hero-visual-container reveal-on-scroll">
-        <div class="hero-img-card">
-          <img src="/assets/hero-field-rig.jpg" alt="KD Sondaj Saha Kulesi ve 3000m Derin Kuyu Çalışması" width="800" height="450" fetchpriority="high" />
-        </div>
-        <aside class="hero-depth-card">
-          <div class="card-header-telemetry">
-            <span>TELEMETRY // STRATA &amp; FORMATION HORIZON</span>
-            <span class="status-online">3000M AKTİF</span>
-          </div>
-          <div class="depth-meter-track">
-            <div class="depth-meter-fill"></div>
-          </div>
-          <div class="depth-strata-list">
-            
-              <div class="strata-item ">
-                <div class="strata-node"></div>
-                <div class="strata-depth">0 – 250 m</div>
-                <div class="strata-label">Surface &amp; Shallow Aquifers</div>
+        <div class="hero-slide active" data-slide-index="0" aria-hidden="false">
+          <img class="hero-slide-bg" src="/assets/hero-field-rig.jpg" alt="Engineered Deep Geothermal &amp; Water Well Drilling Rigs up to 3000m" fetchpriority="high" loading="eager" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>45 YEARS DRILLING & MANUFACTURING LEGACY · 3000M RATING</span>
               </div>
-            
-              <div class="strata-item ">
-                <div class="strata-node"></div>
-                <div class="strata-depth">300 – 800 m</div>
-                <div class="strata-label">Truck-Mounted Hydraulic Systems</div>
+              <h1 class="hero-title">Engineered Deep Geothermal &amp; Water Well Drilling Rigs up to 3000m</h1>
+              <p class="hero-lead">Heavy trailer-mounted and truck hydraulic drilling rigs engineered with high-torque rotary tables and continuous borehole endurance.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>3000m Depth Rating</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>110-Ton Mast Capacity</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>ISO & API Quality Standard</span>
+                  </span>
+                
               </div>
-            
-              <div class="strata-item ">
-                <div class="strata-node"></div>
-                <div class="strata-depth">1000 – 1600 m</div>
-                <div class="strata-label">Deep Municipal &amp; Public Wells</div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/en/contact/">
+                  <span>📋</span>
+                  <span>Request a Quote</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/en/equipment/drilling-rigs/">
+                  <span>Explore Rigs</span>
+                  <span class="arrow-sym">→</span>
+                </a>
               </div>
-            
-              <div class="strata-item active">
-                <div class="strata-node"></div>
-                <div class="strata-depth">2000 – 3000 m</div>
-                <div class="strata-label">Heavy Trailer Geothermal Reservoirs</div>
-              </div>
-            
-          </div>
-          <div class="hero-card-stats">
-            <div class="stat-chip">
-              <div class="val" data-counter="3000" data-suffix=" m">3000 m</div>
-              <div class="lbl">Maximum Well Depth</div>
-            </div>
-            <div class="stat-chip">
-              <div class="val" data-counter="45" data-suffix="+ Years">45+ Yıl</div>
-              <div class="lbl">Field & Manufacturing Legacy</div>
             </div>
           </div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <section class="metrics-band">
-    <div class="wrap metrics-grid">
-      <div class="metric-item reveal-on-scroll">
-        <div class="metric-icon-box">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M5 15l7 7 7-7"/></svg>
         </div>
-        <div class="metric-content">
-          <div class="num" data-counter="3000" data-prefix="250–" data-suffix=" m">250–3000 m</div>
-          <span>Borehole capacity</span>
-        </div>
-      </div>
-      <div class="metric-item reveal-on-scroll delay-1">
-        <div class="metric-icon-box">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <div class="metric-content">
-          <div class="num" data-counter="3000" data-prefix="300–" data-suffix=" m">300–3000 m</div>
-          <span>Rig catalogue</span>
-        </div>
-      </div>
-      <div class="metric-item reveal-on-scroll delay-2">
-        <div class="metric-icon-box">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="metric-content">
-          <div class="num" data-counter="45" data-suffix="+ Years">45+ Yıl</div>
-          <span>Industry experience</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 01</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Eight service lines</h2>
-      </div>
       
-        <p>From petroleum and water to geothermal, geotechnical and core mineral work, the same field discipline applies.</p>
-        <div class="cards services"><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 22 5-18h2l5 18"/><path d="M7 16h10"/><path d="M8.5 11h7"/><circle cx="12" cy="2" r="1"/></svg></div>
-      <h3>Petroleum drilling</h3>
-      <p>Energy wells put mast load, mud and site safety first.</p>
-      <a class="more" href="/en/services/">Read more →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-      <h3>Water well drilling</h3>
-      <p>Drinking and irrigation wells; municipal scopes of 500–1600 m are published.</p>
-      <a class="more" href="/en/services/water-well-drilling/">Read more →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-      <h3>Soil study</h3>
-      <p>Pre-construction ground holes, read with the geotechnical line.</p>
-      <a class="more" href="/en/services/geotechnical-drilling/">Read more →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m12 12 4-4"/><circle cx="12" cy="12" r="3"/></svg></div>
-      <h3>Observation wells</h3>
-      <p>Monitoring holes. The product is data, not water yield.</p>
-      <a class="more" href="/en/services/geotechnical-drilling/">Read more →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg></div>
-      <h3>Mineral core drilling</h3>
-      <p>A core programme and a separate site plan for sample integrity.</p>
-      <a class="more" href="/en/services/mineral-exploration-drilling/">Read more →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-      <h3>Geotechnical survey drilling</h3>
-      <p>Log, sample and close-out discipline. Mid-depth masts.</p>
-      <a class="more" href="/en/services/geotechnical-drilling/">Read more →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
-      <h3>Geothermal drilling</h3>
-      <p>High depth, with a published 1200–2600 m geothermal scope.</p>
-      <a class="more" href="/en/services/geothermal-drilling/">Read more →</a>
-    </article><article class="card reveal-on-scroll">
-      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-      <h3>Water search and locating</h3>
-      <p>Locating water and drilling the well are separate jobs that can share a project.</p>
-      <a class="more" href="/en/services/water-well-drilling/">Read more →</a>
-    </article></div>
-        
-        <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
-          <img class="showcase-img" src="/assets/truck-rig.jpg" alt="KD Sondaj Kamyon Üstü Hidrolik Kule" loading="lazy" />
-          <div class="showcase-content">
-            <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> KAMYON ÜSTÜ HİDROLİK KULELER (300–1200 M)</span>
-            <h3>Drilling rigs: 300–3000 metre catalogue range.</h3>
-            <p>Heavy truck-mounted drilling rigs 300m to 1200m for rapid deployment and high torque.</p>
-            <div><a class="btn btn-signal" href="/en/equipment/drilling-rigs/">Read more →</a></div>
+        <div class="hero-slide " data-slide-index="1" aria-hidden="true">
+          <img class="hero-slide-bg" src="/assets/trailer-rig.jpg" alt="Heavy-Duty Trailer Drilling Rigs for Deep Reservoirs &amp; Aquifers" loading="lazy" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>HEAVY TRAILER RIG SERIES · 1500–3000 METERS</span>
+              </div>
+              <h1 class="hero-title">Heavy-Duty Trailer Drilling Rigs for Deep Reservoirs &amp; Aquifers</h1>
+              <p class="hero-lead">Powered by dual MAN 422 diesel engines, 5x510 heavy drawworks, and 7.5&quot; x 10&quot; duplex double-acting mud pump.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>Dual Independent Diesel Engines</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>5×510 Heavy Drawworks</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>70 RPM Rotary Table</span>
+                  </span>
+                
+              </div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/en/contact/">
+                  <span>📋</span>
+                  <span>Request a Quote</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/en/equipment/drilling-rigs/">
+                  <span>Explore Rigs</span>
+                  <span class="arrow-sym">→</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       
+        <div class="hero-slide " data-slide-index="2" aria-hidden="true">
+          <img class="hero-slide-bg" src="/assets/truck-rig.jpg" alt="Rapid-Mobilization Heavy Truck Drilling Rigs for Tough Terrains" loading="lazy" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>TRUCK-MOUNTED HYDRAULIC SERIES · 300–1200 METERS</span>
+              </div>
+              <h1 class="hero-title">Rapid-Mobilization Heavy Truck Drilling Rigs for Tough Terrains</h1>
+              <p class="hero-lead">Built on 6x4 and 8x4 heavy commercial chassis with 4 hydraulic leveling jacks, compact footprint and agile field navigation.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>6x4 & 8x4 Heavy Chassis</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>4 Hydraulic Leveling Jacks</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>14.50m Mast Height</span>
+                  </span>
+                
+              </div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/en/contact/">
+                  <span>📋</span>
+                  <span>Request a Quote</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/en/equipment/drilling-rigs/">
+                  <span>Explore Rigs</span>
+                  <span class="arrow-sym">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="hero-slide " data-slide-index="3" aria-hidden="true">
+          <img class="hero-slide-bg" src="/assets/geothermal-rig.jpg" alt="High-Temperature &amp; High-Pressure Geothermal Exploration Rigs" loading="lazy" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>GEOTHERMAL & SPECIAL PROJECTS · 2500 METERS</span>
+              </div>
+              <h1 class="hero-title">High-Temperature &amp; High-Pressure Geothermal Exploration Rigs</h1>
+              <p class="hero-lead">Equipped for well control equipment, BOP compatibility, and high-volume mud circulation lines for maximum field safety.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>High-Temp Resistant</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>BOP Well Control Ready</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>Custom Engineered Mast</span>
+                  </span>
+                
+              </div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/en/contact/">
+                  <span>📋</span>
+                  <span>Request a Quote</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/en/equipment/drilling-rigs/">
+                  <span>Explore Rigs</span>
+                  <span class="arrow-sym">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="hero-slide " data-slide-index="4" aria-hidden="true">
+          <img class="hero-slide-bg" src="/assets/drill-pipes.jpg" alt="Heavy-Duty Drill Pipes, Mud Pumps &amp; Downhole Tooling" loading="lazy" />
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-pattern"></div>
+          
+          <div class="hero-content-wrap">
+            <div class="hero-text-col">
+              <div class="hero-chip">
+                <span class="pulse-dot"></span>
+                <span>API SPEC 5D DRILL PIPES & DOWNHOLE TOOLS</span>
+              </div>
+              <h1 class="hero-title">Heavy-Duty Drill Pipes, Mud Pumps &amp; Downhole Tooling</h1>
+              <p class="hero-lead">API Spec 5D / Spec 7-1 certified drill pipes in steel grades E, X, G, S, IADC tricone bits, and Duplex reciprocating mud pumps.</p>
+              
+              <div class="hero-badges">
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>API Spec 5D & 7-1 Certified</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>Duplex 6" Mud Pumps</span>
+                  </span>
+                
+                  <span class="hero-badge-pill">
+                    <span class="check-icon">✓</span>
+                    <span>IADC Tricone Rock Bits</span>
+                  </span>
+                
+              </div>
+              
+              <div class="hero-cta-group">
+                <a class="btn-primary-gradient" href="/en/contact/">
+                  <span>📋</span>
+                  <span>Request a Quote</span>
+                </a>
+                <a class="btn-white-pill" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener">
+                  <span class="pulse-dot-green"></span>
+                  <span>WhatsApp: 0541 191 63 01</span>
+                </a>
+                <a class="btn-link-pill" href="/en/equipment/drilling-rigs/">
+                  <span>Explore Rigs</span>
+                  <span class="arrow-sym">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+      <div class="hero-arrows-row">
+        <button id="hero-prev" class="hero-arrow-btn" type="button" aria-label="Previous Slide">‹</button>
+        <button id="hero-next" class="hero-arrow-btn" type="button" aria-label="Next Slide">›</button>
+      </div>
     </div>
-  </div>
+
+    <!-- Asiaplast Signature Bottom Interactive Tabs Bar -->
+    <div class="hero-bottom-tabs-bar">
+      <div class="wrap">
+        <div class="hero-tabs-grid">
+          
+            <button type="button" class="hero-tab-btn active" data-target-slide="0">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">01</span>
+                <span class="hero-tab-live">LIVE</span>
+              </div>
+              <p class="hero-tab-label">3000M FLAGSHIP RIG</p>
+              <div class="hero-tab-progress-bar"></div>
+            </button>
+          
+            <button type="button" class="hero-tab-btn " data-target-slide="1">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">02</span>
+                
+              </div>
+              <p class="hero-tab-label">1500–3000M HEAVY TRAILER</p>
+              
+            </button>
+          
+            <button type="button" class="hero-tab-btn " data-target-slide="2">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">03</span>
+                
+              </div>
+              <p class="hero-tab-label">300–1200M TRUCK MOUNTED</p>
+              
+            </button>
+          
+            <button type="button" class="hero-tab-btn " data-target-slide="3">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">04</span>
+                
+              </div>
+              <p class="hero-tab-label">GEOTHERMAL &amp; SPECIAL RIGS</p>
+              
+            </button>
+          
+            <button type="button" class="hero-tab-btn " data-target-slide="4">
+              <div class="hero-tab-header">
+                <span class="hero-tab-num">05</span>
+                
+              </div>
+              <p class="hero-tab-label">API PIPES, PUMPS &amp; TOOLS</p>
+              
+            </button>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Infinite Marquee Ticker Strip -->
+    <div class="hero-marquee-strip" aria-hidden="true">
+      <div class="hero-marquee-track">
+        <span><span>•</span> 3000M JEOTERMAL SONDAJ KULELERİ</span>
+        <span><span>•</span> KAMYON ÜSTÜ HİDROLİK KULELER</span>
+        <span><span>•</span> API SPEC 5D SONDAJ TİJLERİ</span>
+        <span><span>•</span> DUPLEX ÇİFT PİSTON ÇAMUR POMPALARI</span>
+        <span><span>•</span> IADC TRICONE DÖNER KONİLİ MATKAPLAR</span>
+        <span><span>•</span> 45+ YILLIK İMALAT TECRÜBESİ</span>
+        <span><span>•</span> B2B GLOBAL İHRACAT &amp; LOJİSTİK</span>
+        <span><span>•</span> DSİ &amp; BELEDİYE DERİN SU KUYULARI</span>
+        <span><span>•</span> 3000M JEOTERMAL SONDAJ KULELERİ</span>
+        <span><span>•</span> KAMYON ÜSTÜ HİDROLİK KULELER</span>
+        <span><span>•</span> API SPEC 5D SONDAJ TİJLERİ</span>
+        <span><span>•</span> DUPLEX ÇİFT PİSTON ÇAMUR POMPALARI</span>
+        <span><span>•</span> IADC TRICONE DÖNER KONİLİ MATKAPLAR</span>
+        <span><span>•</span> 45+ YILLIK İMALAT TECRÜBESİ</span>
+        <span><span>•</span> B2B GLOBAL İHRACAT &amp; LOJİSTİK</span>
+        <span><span>•</span> DSİ &amp; BELEDİYE DERİN SU KUYULARI</span>
+      </div>
     </div>
   </section>
 
-  <section class="block">
+  <!-- Modern Product Range Catalog (Asiaplast Style Cards) -->
+  <section class="section-block bg-slate-subtle" id="catalog">
     <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 02</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Trailer and truck capacity classes</h2>
+      <div class="section-header-modern">
+        <span class="chip-badge">Catalog</span>
+        <h2 class="h2-modern">Product &amp; Rig Range</h2>
+        <p class="lead-sub">Manufactured to high engineering specifications for global drilling contractors and public tenders.</p>
       </div>
-      
-        <div class="filter-bar">
-          <button type="button" class="filter-btn active" data-filter="all">All Rigs</button>
-          <button type="button" class="filter-btn" data-filter="trailer">Trailer Rigs</button>
-          <button type="button" class="filter-btn" data-filter="truck">Truck Rigs</button>
-        </div>
-        <div class="cards four">
-          <article class="rig-card reveal-on-scroll" data-carrier="trailer">
-    <div class="rig-header">
-      <div class="rig-depth-badge">1500–3000 m</div>
-      <span class="carrier-tag trailer">Trailer</span>
-    </div>
-    <div class="spec-grid">
-      <div class="spec-item">
-        <dt>Deck engine</dt>
-        <dd>525 HP</dd>
-      </div>
-      <div class="spec-item"><dt>Mast capacity</dt><dd>110 t</dd></div>
-      <div class="spec-item">
-        <dt>Drawworks</dt>
-        <dd>90 t</dd>
-      </div>
-    </div>
-    <div class="rig-features">
-      <p style="color:var(--cyan);font-weight:700;">✓ With mud pump</p>
-      <p style="color:var(--text-muted);font-size:0.84rem;">Separate mechanical and air-pressure operating systems.</p>
-    </div>
-    <a class="rig-inquire-btn" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20and%20technical%20specifications%20for%20the%20KD%20Sondaj%201500%E2%80%933000%20m%20(Trailer)%20rig." target="_blank" rel="noopener">
-      <span>Request Quote (0541 191 63 01)</span>
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-    </a>
-  </article><article class="rig-card reveal-on-scroll" data-carrier="trailer">
-      <div class="rig-header">
-        <div class="rig-depth-badge">2500 m</div>
-        <span class="carrier-tag trailer">Trailer</span>
-      </div>
-      <div class="rig-features">
-        <ul style="margin:0;padding-inline-start:1.1rem;color:var(--text-soft);"><li>2 × MAN 422 diesel engines</li><li>14.50 m mast / 8 mm / 4 inch pipe</li><li>Double-gear chain box</li><li>Drawworks 5×510, large type, lined</li><li>Rotary OD 700 mm / ID 240 mm, hydraulic slide 850 mm</li><li>Large-type swivel</li><li>Large centrifuge no. 3, 4 inch suction</li><li>Hydraulic leveling with 4 double jack legs</li><li>Water hoses 3 inch R2; suction 4 inch</li><li>Kelly 4 sheaves / service 4 sheaves</li><li>Kelly OD 130–140 mm</li><li>Spare bit shanks 8.5 / 12.5 / 17.5</li><li>Mud pump 7.5×10</li></ul>
-      </div>
-      <a class="rig-inquire-btn" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20and%20technical%20specifications%20for%20the%20KD%20Sondaj%202500%20m%20(Trailer)%20rig." target="_blank" rel="noopener">
-        <span>Request Quote (0541 191 63 01)</span>
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-      </a>
-    </article><article class="rig-card reveal-on-scroll" data-carrier="truck">
-    <div class="rig-header">
-      <div class="rig-depth-badge">1000–1200 m</div>
-      <span class="carrier-tag truck">Truck</span>
-    </div>
-    <div class="spec-grid">
-      <div class="spec-item">
-        <dt>Deck engine</dt>
-        <dd>422 HP</dd>
-      </div>
-      <div class="spec-item"><dt>Mast capacity</dt><dd>90 t</dd></div>
-      <div class="spec-item">
-        <dt>Drawworks</dt>
-        <dd>70 t</dd>
-      </div>
-    </div>
-    <div class="rig-features">
-      <p style="color:var(--cyan);font-weight:700;">✓ With mud pump</p>
-      <p style="color:var(--text-muted);font-size:0.84rem;">Separate mechanical and air-pressure operating systems.</p>
-    </div>
-    <a class="rig-inquire-btn" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20and%20technical%20specifications%20for%20the%20KD%20Sondaj%201000%E2%80%931200%20m%20(Truck)%20rig." target="_blank" rel="noopener">
-      <span>Request Quote (0541 191 63 01)</span>
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-    </a>
-  </article><article class="rig-card reveal-on-scroll" data-carrier="trailer">
-    <div class="rig-header">
-      <div class="rig-depth-badge">1000–1200 m</div>
-      <span class="carrier-tag trailer">Trailer</span>
-    </div>
-    <div class="spec-grid">
-      <div class="spec-item">
-        <dt>Deck engine</dt>
-        <dd>525 HP</dd>
-      </div>
-      <div class="spec-item"><dt>Mast capacity</dt><dd>110 t</dd></div>
-      <div class="spec-item">
-        <dt>Drawworks</dt>
-        <dd>90 t</dd>
-      </div>
-    </div>
-    <div class="rig-features">
-      <p style="color:var(--cyan);font-weight:700;">✓ With mud pump</p>
-      <p style="color:var(--text-muted);font-size:0.84rem;">Separate mechanical and air-pressure operating systems.</p>
-    </div>
-    <a class="rig-inquire-btn" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20and%20technical%20specifications%20for%20the%20KD%20Sondaj%201000%E2%80%931200%20m%20(Trailer)%20rig." target="_blank" rel="noopener">
-      <span>Request Quote (0541 191 63 01)</span>
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24"/></svg>
-    </a>
-  </article>
-        </div>
-        <p style="margin-top:1.75rem;"><a class="btn btn-ghost" href="/en/equipment/drilling-rigs/">Read more (Tüm 11 Model) →</a></p>
-        
-        <div class="showcase-banner reveal-on-scroll" style="margin-top:2.5rem;">
-          <img class="showcase-img" src="/assets/trailer-rig.jpg" alt="KD Sondaj Ağır Dorse Kule 1500–3000 Metre" loading="lazy" />
-          <div class="showcase-content">
-            <span class="telemetry-pill shimmer-badge" style="margin-bottom:0.75rem;"><span class="beacon-dot"></span> 1500–3000M AĞIR DORSE SINIFI</span>
-            <h3>1500 – 3000 Metre Dorse Sondaj Kulesi</h3>
-            <p>Heavy trailer-mounted drilling rig with 110-ton mast capacity and 90-ton drawworks for deep geothermal & water wells.</p>
-            <div><a class="btn btn-signal" href="/en/equipment/drilling-rigs/">Read more →</a></div>
-          </div>
-        </div>
 
+      <div class="catalog-filter-bar">
+        <button type="button" class="filter-btn active" data-filter="all">All Models</button>
+        <button type="button" class="filter-btn" data-filter="trailer">Trailer Rigs</button>
+        <button type="button" class="filter-btn" data-filter="truck">Truck Rigs</button>
+        <button type="button" class="filter-btn" data-filter="equipment">Equipment &amp; Pumps</button>
+      </div>
+
+      <div class="product-grid-modern">
         
+          <article class="modern-prod-card" data-category="trailer">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/trailer-rig.jpg" alt="1500–3000m Trailer Drilling Rig" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🚜 Trailer Rig</span>
+                <span class="prod-badge-bottom">1500–3000m · 110T Mast</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/">1500–3000m Trailer Drilling Rig</a>
+                </h3>
+                <p class="prod-card-desc">Dual MAN 422 engines, 5x510 drawworks for deep geothermal and water aquifers.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">CAPACITY: 3000M</span>
+              <a class="prod-card-action" href="/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/">
+                <span>Technical Specs</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="trailer">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/geothermal-rig.jpg" alt="2500m Deep Geothermal Rig" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🌋 Geothermal</span>
+                <span class="prod-badge-bottom">2500m · Custom Build</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/">2500m Deep Geothermal Rig</a>
+                </h3>
+                <p class="prod-card-desc">Custom-engineered rig for geothermal reservoirs and high-pressure deep horizons.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">CAPACITY: 2500M</span>
+              <a class="prod-card-action" href="/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/">
+                <span>Technical Specs</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="trailer">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/trailer-rig.jpg" alt="1000–1200m Trailer Drilling Rig" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🚜 Trailer Rig</span>
+                <span class="prod-badge-bottom">1000–1200m · 90T Mast</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/">1000–1200m Trailer Drilling Rig</a>
+                </h3>
+                <p class="prod-card-desc">High-torque deep well rig for municipal water and agricultural cooperatives.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">CAPACITY: 1200M</span>
+              <a class="prod-card-action" href="/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/">
+                <span>Technical Specs</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="truck">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/truck-rig.jpg" alt="1000–1200m Truck Mounted Rig" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🚚 Truck Rig</span>
+                <span class="prod-badge-bottom">1000–1200m · 8x4 Chassis</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/">1000–1200m Truck Mounted Rig</a>
+                </h3>
+                <p class="prod-card-desc">Heavy hydraulic rig on 8x4 chassis delivering rapid mobilization and high torque.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">CAPACITY: 1200M</span>
+              <a class="prod-card-action" href="/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/">
+                <span>Technical Specs</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="truck">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/truck-rig.jpg" alt="800m Truck Mounted Rig" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🚚 Truck Rig</span>
+                <span class="prod-badge-bottom">800m · 6x4 Chassis</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/">800m Truck Mounted Rig</a>
+                </h3>
+                <p class="prod-card-desc">Optimal fuel economy and fast well completion for mid to deep water aquifers.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">CAPACITY: 800M</span>
+              <a class="prod-card-action" href="/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/">
+                <span>Technical Specs</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="equipment">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/drill-pipes.jpg" alt="API Spec 5D Drill Pipes" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">🔩 Drill Pipes</span>
+                <span class="prod-badge-bottom">2 3/8" – 5 1/2" · API Spec 5D</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/en/equipment/api-spec-5d-drill-pipes/">API Spec 5D Drill Pipes</a>
+                </h3>
+                <p class="prod-card-desc">Seamless drill pipes in steel grades E, X, G, S with hardbanded friction-welded tool joints.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">STANDARD: API 5D</span>
+              <a class="prod-card-action" href="/en/equipment/api-spec-5d-drill-pipes/">
+                <span>Technical Specs</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="equipment">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/mud-pump.jpg" alt="Duplex 6&quot; Reciprocating Mud Pump" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">⚙️ Mud Pump</span>
+                <span class="prod-badge-bottom">21–62 Bar · 895 PSI</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/en/equipment/duplex-6-inch-mud-pump/">Duplex 6&quot; Reciprocating Mud Pump</a>
+                </h3>
+                <p class="prod-card-desc">Heavy-duty double-acting reciprocating mud pump built for demanding drilling fluids.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">PRESSURE: 62 BAR</span>
+              <a class="prod-card-action" href="/en/equipment/duplex-6-inch-mud-pump/">
+                <span>Technical Specs</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+          <article class="modern-prod-card" data-category="equipment">
+            <div>
+              <div class="prod-card-media">
+                <img class="prod-card-img" src="/assets/tricone-bits.jpg" alt="IADC Tricone Roller Cone Bits" loading="lazy" />
+                <div class="prod-card-gradient"></div>
+                <span class="prod-badge-top">💎 Drill Bits</span>
+                <span class="prod-badge-bottom">IADC 111–637 · TCI / Steel Tooth</span>
+              </div>
+              <div class="prod-card-body">
+                <h3 class="prod-card-title">
+                  <a href="/en/equipment/iadc-tricone-drill-bits/">IADC Tricone Roller Cone Bits</a>
+                </h3>
+                <p class="prod-card-desc">High penetration rate engineered from soft alluvium to ultra-hard basalt and quartzite formations.</p>
+              </div>
+            </div>
+            <div class="prod-card-footer">
+              <span class="prod-moq-label">IADC CERTIFIED</span>
+              <a class="prod-card-action" href="/en/equipment/iadc-tricone-drill-bits/">
+                <span>Technical Specs</span>
+                <span class="arrow-sym">→</span>
+              </a>
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B Excellence Matrix (Asiaplast 4-Column Numbered Cards) -->
+  <section class="section-block border-y" id="b2b-excellence">
+    <div class="wrap">
+      <div class="section-header-center">
+        <span class="chip-badge">B2B Excellence</span>
+        <h2 class="h2-modern">Why Drilling Contractors Choose KD SONDAJ</h2>
+        <p class="lead-sub">A single, accountable manufacturing partner from structural engineering to container export and on-site commissioning.</p>
+      </div>
+
+      <div class="b2b-grid">
+        
+          <div class="b2b-card">
+            <span class="b2b-num-badge">1</span>
+            <h3 class="b2b-card-title">Specification-Driven Production</h3>
+            <p class="b2b-card-desc">Mast tonnage, drawworks spooling, engine horsepower and hydraulic units built strictly to your project depth and formation specs.</p>
+          </div>
+        
+          <div class="b2b-card">
+            <span class="b2b-num-badge">2</span>
+            <h3 class="b2b-card-title">Global Export &amp; Heavy Logistics</h3>
+            <p class="b2b-card-desc">Turnkey container and lowbed export logistics to Middle East, North Africa, Central Asia and Europe with full export documentation.</p>
+          </div>
+        
+          <div class="b2b-card">
+            <span class="b2b-num-badge">3</span>
+            <h3 class="b2b-card-title">45-Year Manufacturing Legacy</h3>
+            <p class="b2b-card-desc">Since 1980, hundreds of drilling rigs manufactured and field-proven across the most demanding hydrogeological formations.</p>
+          </div>
+        
+          <div class="b2b-card">
+            <span class="b2b-num-badge">4</span>
+            <h3 class="b2b-card-title">Responsive Quoting &amp; Field Support</h3>
+            <p class="b2b-card-desc">Detailed technical datasheets and quotations delivered within 24 hours; on-site commissioning and guaranteed spare parts support.</p>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries & Sectors We Serve (Asiaplast 6-Card Clean Grid) -->
+  <section class="section-block bg-slate-subtle" id="sectors">
+    <div class="wrap">
+      <div class="section-header-center">
+        <span class="chip-badge">Sectors</span>
+        <h2 class="h2-modern">Key Industries We Serve</h2>
+        <p class="lead-sub">Engineered drilling systems customized for complex formations and geological requirements.</p>
+      </div>
+
+      <div class="sectors-grid">
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">🌋</span>
+            <h3 class="sector-card-title">Geothermal Power Plants</h3>
+            <p class="sector-card-desc">BOP-compatible heavy trailer rigs engineered for high-enthalpy and high-temperature deep geothermal reservoirs.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">💧</span>
+            <h3 class="sector-card-title">Municipal Water Supply</h3>
+            <p class="sector-card-desc">Deep water well drilling from 1000m to 2000m ensuring uninterrupted public drinking water supplies.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">🌾</span>
+            <h3 class="sector-card-title">Agricultural Irrigation</h3>
+            <p class="sector-card-desc">Large-diameter borehole drilling, high-flow submersible pumping, and fuel-efficient truck-mounted rigs.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">⛏️</span>
+            <h3 class="sector-card-title">Mineral Exploration &amp; Coring</h3>
+            <p class="sector-card-desc">Wireline diamond coring systems delivering high core recovery rates for mineral discovery and reservoir logging.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">🏗️</span>
+            <h3 class="sector-card-title">Geotechnical &amp; Soil Stabilization</h3>
+            <p class="sector-card-desc">High-torque hydraulic drilling units for dams, tunnels, foundation grouting, and micropile installations.</p>
+          </div>
+        
+          <div class="sector-card">
+            <span class="sector-card-icon">🏭</span>
+            <h3 class="sector-card-title">Industrial Plant Water Supply</h3>
+            <p class="sector-card-desc">Guaranteed industrial water well engineering for factories and industrial zones requiring continuous process water.</p>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Subterranean Quote & Rig Selector Calculator -->
+  <section class="section-block" id="calculator">
+    <div class="wrap">
+      
   <div class="calc-widget reveal-on-scroll" id="rig-calculator" data-lang="en">
     <div class="calc-grid">
       <div class="calc-options">
@@ -474,119 +829,114 @@
       </div>
     </div>
   </div>
-      
-    </div>
-  </div>
     </div>
   </section>
 
-  <section class="block">
+  <!-- Asiaplast-Style Modern FAQ Accordion -->
+  <section class="section-block border-y" id="faq">
     <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 03</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Why KD Sondaj</h2>
+      <div class="faq-modern-grid">
+        <div>
+          <span class="chip-badge">FAQ</span>
+          <h2 class="h2-modern">Frequently Asked Questions</h2>
+          <p class="lead-sub" style="margin-bottom:1.5rem;">Everything you need to know about lead times, international delivery terms, shipping and spare parts guarantee.</p>
+          <a class="btn-primary-gradient" href="/en/contact/">
+            <span>📋</span>
+            <span>Get Custom Quote</span>
+          </a>
+        </div>
+
+        <div class="faq-modern-list">
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>What depths does KD Sondaj work at?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Corporate borehole capacity is 250–3000 metres. Catalogue headings use 300–3000 metres. The geothermal reference scope lists 1200–2600 m.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>Which services does KD Sondaj provide?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Petroleum drilling, water well drilling, soil study, observation wells, mineral core drilling, geotechnical survey, geothermal drilling, and water search and locating.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>Which rigs are used for geothermal drilling?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>For high depth the catalogue shows the 1500–3000 m trailer, 1000–1200 m truck/trailer and the 2500 m special build. Final choice follows formation and mast load.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>How is rig capacity chosen?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Target depth, carrier type (trailer/truck), mast and drawworks hook-load, and mud hydraulics are calculated collectively according to engineering standards.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>What information is needed for a water-well project?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Target depth, well purpose, province and formation notes if known. Phone or email is enough; the site does not store a form.</p>
+              </div>
+            </details>
+          
+            <details class="faq-modern-item">
+              <summary class="faq-modern-summary">
+                <span>Which regions does KD Sondaj serve from Ankara?</span>
+                <span class="faq-modern-arrow">▸</span>
+              </summary>
+              <div class="faq-modern-content">
+                <p>Headquarters are in Çankaya / Ankara. Operational range covers DSI regional basins, Aegean and Central Anatolia geothermal fields, and international overseas projects.</p>
+              </div>
+            </details>
+          
+        </div>
       </div>
-      <div class="cards three">
-    <article class="card reveal-on-scroll">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3>Evidence first</h3>
-      <p>Published depths and service types come before slogans.</p>
-    </article>
-  
-    <article class="card reveal-on-scroll">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3>Production line</h3>
-      <p>Quality is treated as one process from incoming material to after-sales.</p>
-    </article>
-  
-    <article class="card reveal-on-scroll">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3>High depth</h3>
-      <p>Geothermal and deep water wells use separate mechanical and air-pressure systems.</p>
-    </article>
-  </div>
-    </div>
-  </div>
     </div>
   </section>
 
-  <section class="block">
-    <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 04</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Published project scopes</h2>
+  <!-- Asiaplast-Style Ready for Bulk Quotation CTA Banner -->
+  <section class="bulk-quote-section" id="bulk-quote">
+    <div class="wrap bulk-quote-wrap">
+      <span class="chip-badge">Global Export Desk</span>
+      <h2 class="bulk-quote-title">Ready for a Complete Rig &amp; Equipment Quotation?</h2>
+      <p class="bulk-quote-lead">Send your target well depth, geology, and destination country — receive a comprehensive technical proposal within 24 hours.</p>
+      
+      <div class="bulk-quote-ctas">
+        <a class="btn-primary-gradient" href="/en/contact/">
+          <span>📋</span>
+          <span>Request a Quote</span>
+        </a>
+        <a class="btn-white-pill" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener">
+          <span class="pulse-dot-green"></span>
+          <span>WhatsApp: 0541 191 63 01</span>
+        </a>
+        <a class="btn-link-pill" href="/en/equipment/drilling-rigs/">
+          <span>Browse Rig Catalog</span>
+          <span class="arrow-sym">→</span>
+        </a>
       </div>
-      
-        <p>Official public, municipal and industrial deep-well projects completed across Turkey.</p>
-        <div class="list-cards">
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>Drinking-water drilling for the General Directorate of State Hydraulic Works in many provinces (500–1500 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>Şanlıurfa Municipality drinking-water wells (500–1600 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>Izmir Municipality drinking-water wells (500–1600 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>Aydın Municipality drinking-water wells (500–1600 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>50 geothermal wells in Central Anatolia and the Aegean (1200–2600 m).</p>
-    </article>
-  
-    <article class="ref-item reveal-on-scroll">
-      <span class="ref-badge">VERIFIED</span>
-      <p>Hundreds of private wells across Turkey (400–2000 m).</p>
-    </article>
-  </div>
-      
-    </div>
-  </div>
     </div>
   </section>
-
-  <section class="block">
-    <div class="wrap">
-      <div class="section reveal-on-scroll">
-    <div class="section-sidebar">
-      <div class="section-index-badge">NO. 05</div>
-      <div class="section-kicker">KD SONDAJ</div>
-    </div>
-    <div>
-      <div class="section-head">
-        <h2>Direct answers</h2>
-      </div>
-      <div class="faq"><details class="reveal-on-scroll"><summary>What depths does KD Sondaj work at?</summary><p>Corporate borehole capacity is 250–3000 metres. Catalogue headings use 300–3000 metres. The geothermal reference scope lists 1200–2600 m.</p></details><details class="reveal-on-scroll"><summary>Which services does KD Sondaj provide?</summary><p>Petroleum drilling, water well drilling, soil study, observation wells, mineral core drilling, geotechnical survey, geothermal drilling, and water search and locating.</p></details><details class="reveal-on-scroll"><summary>Which rigs are used for geothermal drilling?</summary><p>For high depth the catalogue shows the 1500–3000 m trailer, 1000–1200 m truck/trailer and the 2500 m special build. Final choice follows formation and mast load.</p></details><details class="reveal-on-scroll"><summary>How is rig capacity chosen?</summary><p>Target depth, carrier type (trailer/truck), mast and drawworks hook-load, and mud hydraulics are calculated collectively according to engineering standards.</p></details><details class="reveal-on-scroll"><summary>What information is needed for a water-well project?</summary><p>Target depth, well purpose, province and formation notes if known. Phone or email is enough; the site does not store a form.</p></details><details class="reveal-on-scroll"><summary>Which regions does KD Sondaj serve from Ankara?</summary><p>Headquarters are in Çankaya / Ankara. Operational range covers DSI regional basins, Aegean and Central Anatolia geothermal fields, and international overseas projects.</p></details></div>
-    </div>
-  </div>
-    </div>
-  </section></main>
+  </main>
   <section class="close-cta">
     <div class="wrap">
       <div class="close-cta-content">
@@ -608,12 +958,10 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-col">
-        <a class="brand" href="/en/" style="margin-bottom:1rem;">
-          <div class="brand-icon">
-            <img src="/assets/logo.svg" width="34" height="34" alt="KD SONDAJ" />
-          </div>
+        <a class="brand" href="/en/" style="margin-bottom:1rem;" aria-label="KD SONDAJ">
+          <span class="brand-badge">KD</span>
           <div class="brand-text">
-            <span class="brand-title">KD SONDAJ</span>
+            <span class="brand-title">KD<span class="brand-accent">SONDAJ</span></span>
             <span class="brand-sub">Drilling systems</span>
           </div>
         </a>
@@ -644,9 +992,21 @@
       <button class="back-to-top" id="back-to-top" type="button" aria-label="Yukarı Çık">↑ Back to Top</button>
     </div>
   </footer>
-  <a class="wa-float" href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener" aria-label="WhatsApp: 0541 191 63 01">
-    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-2.79 4.23c-.14 0-.37.05-.57.27-.2.21-.76.74-.76 1.81s.78 2.11.89 2.25c.11.15 1.51 2.42 3.73 3.3 1.85.73 2.22.59 2.62.55.4-.04 1.29-.53 1.47-1.04.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.27-.22-.11-1.29-.64-1.49-.71-.2-.07-.35-.11-.49.11-.15.21-.56.71-.69.86-.13.14-.26.16-.48.05-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.21-.01-.33.1-.44.1-.1.22-.26.33-.39.11-.13.15-.21.22-.36.07-.14.04-.27-.02-.38-.06-.11-.49-1.17-.67-1.6-.17-.42-.35-.36-.49-.37z"/></svg>
-  </a>
+  <aside aria-label="WhatsApp Export Desk" class="wa-export-float">
+    <div class="wa-export-tooltip">
+      <div class="wa-pulse-container">
+        <span class="wa-pulse-ping"></span>
+        <span class="wa-pulse-dot"></span>
+      </div>
+      <div class="wa-tooltip-text">
+        <span class="wa-tooltip-title">WhatsApp Drilling Export Desk</span>
+        <span class="wa-tooltip-status">+90 541 191 63 01 • Online</span>
+      </div>
+    </div>
+    <a href="https://wa.me/905411916301?text=Hello%2C%20I%20would%20like%20a%20quote%20from%20KD%20Sondaj.%20Target%20depth%20and%20service%3A" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: 0541 191 63 01" class="wa-export-btn">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.44-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.44 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-2.79 4.23c-.14 0-.37.05-.57.27-.2.21-.76.74-.76 1.81s.78 2.11.89 2.25c.11.15 1.51 2.42 3.73 3.3 1.85.73 2.22.59 2.62.55.4-.04 1.29-.53 1.47-1.04.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.27-.22-.11-1.29-.64-1.49-.71-.2-.07-.35-.11-.49.11-.15.21-.56.71-.69.86-.13.14-.26.16-.48.05-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.21-.01-.33.1-.44.1-.1.22-.26.33-.39.11-.13.15-.21.22-.36.07-.14.04-.27-.02-.38-.06-.11-.49-1.17-.67-1.6-.17-.42-.35-.36-.49-.37z"/></svg>
+    </a>
+  </aside>
   <script src="/assets/site.js"></script>
 </body>
 </html>

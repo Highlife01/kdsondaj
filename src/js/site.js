@@ -26,9 +26,9 @@
     });
   }
 
-  // 2. Heavy Rig Catalog Carrier Filter (All / Trailer / Truck)
+  // 2. Heavy Rig & Modern Product Catalog Filter (All / Trailer / Truck / Equipment)
   var filterButtons = document.querySelectorAll(".filter-btn");
-  var rigCards = document.querySelectorAll(".rig-card");
+  var rigCards = document.querySelectorAll(".rig-card, .modern-prod-card");
 
   if (filterButtons.length && rigCards.length) {
     filterButtons.forEach(function (btn) {
@@ -47,6 +47,88 @@
         });
       });
     });
+  }
+
+  // 2.1 Hero Carousel Interactive Logic (Asiaplast Flagship Style)
+  var heroSection = document.getElementById("hero-carousel");
+  if (heroSection) {
+    var slides = heroSection.querySelectorAll(".hero-slide");
+    var tabBtns = heroSection.querySelectorAll(".hero-tab-btn");
+    var prevBtn = document.getElementById("hero-prev");
+    var nextBtn = document.getElementById("hero-next");
+    var currentSlide = 0;
+    var slideCount = slides.length;
+    var carouselTimer = null;
+
+    function goToSlide(index) {
+      if (index < 0) index = slideCount - 1;
+      if (index >= slideCount) index = 0;
+      currentSlide = index;
+
+      slides.forEach(function (slide, i) {
+        if (i === currentSlide) {
+          slide.classList.add("active");
+          slide.setAttribute("aria-hidden", "false");
+        } else {
+          slide.classList.remove("active");
+          slide.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      tabBtns.forEach(function (btn, i) {
+        var existingBar = btn.querySelector(".hero-tab-progress-bar");
+        if (existingBar) existingBar.remove();
+
+        var existingLive = btn.querySelector(".hero-tab-live");
+        if (existingLive) existingLive.remove();
+
+        if (i === currentSlide) {
+          btn.classList.add("active");
+          var headerEl = btn.querySelector(".hero-tab-header");
+          if (headerEl) {
+            var liveBadge = document.createElement("span");
+            liveBadge.className = "hero-tab-live";
+            liveBadge.textContent = "LIVE";
+            headerEl.appendChild(liveBadge);
+          }
+          var bar = document.createElement("div");
+          bar.className = "hero-tab-progress-bar";
+          btn.appendChild(bar);
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+
+      resetCarouselTimer();
+    }
+
+    function resetCarouselTimer() {
+      if (carouselTimer) clearInterval(carouselTimer);
+      carouselTimer = setInterval(function () {
+        goToSlide(currentSlide + 1);
+      }, 6000);
+    }
+
+    tabBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var targetIndex = parseInt(btn.getAttribute("data-target-slide"), 10);
+        goToSlide(targetIndex);
+      });
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        goToSlide(currentSlide - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        goToSlide(currentSlide + 1);
+      });
+    }
+
+    resetCarouselTimer();
   }
 
   // 3. Interactive Subterranean Quote & Rig Selector Calculator
@@ -200,11 +282,13 @@
   if (siteHeader) {
     window.addEventListener("scroll", function () {
       if (window.scrollY > 20) {
-        siteHeader.style.background = "rgba(7, 9, 13, 0.94)";
-        siteHeader.style.borderColor = "rgba(255, 255, 255, 0.14)";
+        siteHeader.style.background = "rgba(255, 255, 255, 0.96)";
+        siteHeader.style.borderColor = "rgba(226, 232, 240, 0.95)";
+        siteHeader.style.boxShadow = "0 4px 20px -2px rgba(15, 23, 42, 0.08)";
       } else {
-        siteHeader.style.background = "var(--bg-glass)";
-        siteHeader.style.borderColor = "var(--border)";
+        siteHeader.style.background = "rgba(255, 255, 255, 0.92)";
+        siteHeader.style.borderColor = "rgba(226, 232, 240, 0.85)";
+        siteHeader.style.boxShadow = "0 1px 3px 0 rgba(0, 0, 0, 0.03)";
       }
     }, { passive: true });
   }
