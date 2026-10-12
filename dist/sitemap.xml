@@ -2,674 +2,1172 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.kdsondaj.com.tr/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/" />
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/hakkimizda/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hakkimizda/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hakkimizda/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/about/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/about/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/about/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/hizmetler/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/hizmetler/su-sondaji/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/su-sondaji/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/su-sondaji/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/water-well-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/water-well-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/water-well-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/hizmetler/jeotermal-sondaj/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/jeotermal-sondaj/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/jeotermal-sondaj/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/geothermal-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/geothermal-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/geothermal-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/hizmetler/jeoteknik-sondaj/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/jeoteknik-sondaj/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/jeoteknik-sondaj/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/geotechnical-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/geotechnical-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/geotechnical-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/hizmetler/maden-arama-sondaj/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/maden-arama-sondaj/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/maden-arama-sondaj/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/mineral-exploration-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/mineral-exploration-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/mineral-exploration-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-tijleri/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-tijleri/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-tijleri/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drill-pipes/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-matkaplari/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-matkaplari/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-matkaplari/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drill-bits/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drill-bits/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drill-bits/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/referanslar/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/referanslar/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/referanslar/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/references/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/references/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/references/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/iletisim/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/iletisim/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/iletisim/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/contact/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/contact/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/contact/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/2500m-special-deep-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-dorse-sondaj-makinesi/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/800m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/300-500m-kamyon-sondaj-makinesi/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/300-500m-kamyon-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/300-500m-kamyon-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/400-600m-dorse-sondaj-makinesi/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/400-600m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/400-600m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/400-600m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/api-spec-5d-drill-pipes/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/api-spec-5d-drill-pipes/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/api-spec-5d-drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/api-spec-5d-drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/api-spec-5d-drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/api-spec-5d-drill-pipes/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/iadc-tricone-drill-bits/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/iadc-tricone-drill-bits/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/iadc-tricone-drill-bits/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/iadc-tricone-drill-bits/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/iadc-tricone-drill-bits/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/iadc-tricone-drill-bits/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ekipman/duplex-6-inch-mud-pump/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/duplex-6-inch-mud-pump/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/duplex-6-inch-mud-pump/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/duplex-6-inch-mud-pump/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/duplex-6-inch-mud-pump/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/duplex-6-inch-mud-pump/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/rehber/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/rehber/how-to-choose-water-well-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/how-to-choose-water-well-drilling-rig/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/how-to-choose-water-well-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/how-to-choose-water-well-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/how-to-choose-water-well-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/how-to-choose-water-well-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/rehber/iadc-roller-cone-drill-bit-classification/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/iadc-roller-cone-drill-bit-classification/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/iadc-roller-cone-drill-bit-classification/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/iadc-roller-cone-drill-bit-classification/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/iadc-roller-cone-drill-bit-classification/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/iadc-roller-cone-drill-bit-classification/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/rehber/international-drilling-rig-rfq-checklist/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/international-drilling-rig-rfq-checklist/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/international-drilling-rig-rfq-checklist/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/international-drilling-rig-rfq-checklist/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/international-drilling-rig-rfq-checklist/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/international-drilling-rig-rfq-checklist/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/" />
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/about/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hakkimizda/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hakkimizda/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/about/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/about/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/about/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/services/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/services/water-well-drilling/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/su-sondaji/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/su-sondaji/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/water-well-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/water-well-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/water-well-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/services/geothermal-drilling/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/jeotermal-sondaj/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/jeotermal-sondaj/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/geothermal-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/geothermal-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/geothermal-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/services/geotechnical-drilling/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/jeoteknik-sondaj/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/jeoteknik-sondaj/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/geotechnical-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/geotechnical-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/geotechnical-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/services/mineral-exploration-drilling/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/maden-arama-sondaj/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/maden-arama-sondaj/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/mineral-exploration-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/mineral-exploration-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/mineral-exploration-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drill-pipes/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-tijleri/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-tijleri/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drill-pipes/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drill-bits/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-matkaplari/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-matkaplari/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drill-bits/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drill-bits/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drill-bits/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/references/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/referanslar/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/referanslar/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/references/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/references/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/references/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/contact/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/iletisim/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/iletisim/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/contact/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/contact/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/contact/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/2500m-special-deep-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-trailer-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/800m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/300-500m-kamyon-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/300-500m-kamyon-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/400-600m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/400-600m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/400-600m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/api-spec-5d-drill-pipes/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/api-spec-5d-drill-pipes/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/api-spec-5d-drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/api-spec-5d-drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/api-spec-5d-drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/api-spec-5d-drill-pipes/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/iadc-tricone-drill-bits/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/iadc-tricone-drill-bits/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/iadc-tricone-drill-bits/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/iadc-tricone-drill-bits/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/iadc-tricone-drill-bits/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/iadc-tricone-drill-bits/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/equipment/duplex-6-inch-mud-pump/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/duplex-6-inch-mud-pump/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/duplex-6-inch-mud-pump/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/duplex-6-inch-mud-pump/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/duplex-6-inch-mud-pump/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/duplex-6-inch-mud-pump/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/guides/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/guides/how-to-choose-water-well-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/how-to-choose-water-well-drilling-rig/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/how-to-choose-water-well-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/how-to-choose-water-well-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/how-to-choose-water-well-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/how-to-choose-water-well-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/guides/iadc-roller-cone-drill-bit-classification/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/iadc-roller-cone-drill-bit-classification/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/iadc-roller-cone-drill-bit-classification/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/iadc-roller-cone-drill-bit-classification/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/iadc-roller-cone-drill-bit-classification/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/iadc-roller-cone-drill-bit-classification/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/en/guides/international-drilling-rig-rfq-checklist/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/international-drilling-rig-rfq-checklist/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/international-drilling-rig-rfq-checklist/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/international-drilling-rig-rfq-checklist/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/international-drilling-rig-rfq-checklist/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/international-drilling-rig-rfq-checklist/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/" />
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/about/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hakkimizda/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hakkimizda/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/about/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/about/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/about/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/services/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/services/water-well-drilling/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/su-sondaji/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/su-sondaji/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/water-well-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/water-well-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/water-well-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/services/geothermal-drilling/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/jeotermal-sondaj/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/jeotermal-sondaj/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/geothermal-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/geothermal-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/geothermal-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/services/geotechnical-drilling/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/jeoteknik-sondaj/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/jeoteknik-sondaj/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/geotechnical-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/geotechnical-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/geotechnical-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/services/mineral-exploration-drilling/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/hizmetler/maden-arama-sondaj/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/hizmetler/maden-arama-sondaj/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/services/mineral-exploration-drilling/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/services/mineral-exploration-drilling/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/services/mineral-exploration-drilling/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drill-pipes/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-tijleri/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-tijleri/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drill-pipes/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drill-bits/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-matkaplari/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-matkaplari/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drill-bits/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drill-bits/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drill-bits/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/references/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/referanslar/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/referanslar/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/references/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/references/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/references/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/contact/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/iletisim/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/iletisim/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/contact/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/contact/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/contact/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1500-3000m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1500-3000m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/2500m-special-deep-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/2500m-ozel-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/2500m-special-deep-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/2500m-special-deep-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-kamyon-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-truck-mounted-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/1000-1200m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/1000-1200m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-kamyon-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-truck-mounted-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/800m-trailer-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/800m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/800m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/800m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/300-500m-kamyon-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/300-500m-kamyon-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/300-500m-truck-mounted-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/400-600m-trailer-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/400-600m-dorse-sondaj-makinesi/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/sondaj-makineleri/400-600m-dorse-sondaj-makinesi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/drilling-rigs/400-600m-trailer-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/drilling-rigs/400-600m-trailer-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/api-spec-5d-drill-pipes/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/api-spec-5d-drill-pipes/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/api-spec-5d-drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/api-spec-5d-drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/api-spec-5d-drill-pipes/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/api-spec-5d-drill-pipes/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/iadc-tricone-drill-bits/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/iadc-tricone-drill-bits/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/iadc-tricone-drill-bits/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/iadc-tricone-drill-bits/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/iadc-tricone-drill-bits/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/iadc-tricone-drill-bits/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/equipment/duplex-6-inch-mud-pump/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/ekipman/duplex-6-inch-mud-pump/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/ekipman/duplex-6-inch-mud-pump/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/equipment/duplex-6-inch-mud-pump/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/equipment/duplex-6-inch-mud-pump/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/equipment/duplex-6-inch-mud-pump/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/guides/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/guides/how-to-choose-water-well-drilling-rig/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/how-to-choose-water-well-drilling-rig/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/how-to-choose-water-well-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/how-to-choose-water-well-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/how-to-choose-water-well-drilling-rig/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/how-to-choose-water-well-drilling-rig/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/guides/iadc-roller-cone-drill-bit-classification/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/iadc-roller-cone-drill-bit-classification/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/iadc-roller-cone-drill-bit-classification/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/iadc-roller-cone-drill-bit-classification/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/iadc-roller-cone-drill-bit-classification/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/iadc-roller-cone-drill-bit-classification/" />
   </url>
   <url>
     <loc>https://www.kdsondaj.com.tr/ar/guides/international-drilling-rig-rfq-checklist/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.kdsondaj.com.tr/rehber/international-drilling-rig-rfq-checklist/" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/rehber/international-drilling-rig-rfq-checklist/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/guides/international-drilling-rig-rfq-checklist/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/guides/international-drilling-rig-rfq-checklist/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/guides/international-drilling-rig-rfq-checklist/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/su-kuyusu-acma-izni-2026-rehberi/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/iadc-kodlari-rehberi-matkap-secimi/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/sondaj-makinesi-secimi-7-kritik-parametre/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/api-spec-5d-drill-pipe-teknik-ozellikler/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/jeoteknik-etud-vs-zemin-etudu-farklar/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/karotlu-maden-arama-yontem-ve-maliyet/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/camur-pompasi-bakim-rehberi/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/camur-pompasi-bakim-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/camur-pompasi-bakim-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/camur-pompasi-bakim-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/camur-pompasi-bakim-rehberi/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/kuyu-verimi-nasil-artirilir/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/kuyu-verimi-nasil-artirilir/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/kuyu-verimi-nasil-artirilir/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/kuyu-verimi-nasil-artirilir/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/kuyu-verimi-nasil-artirilir/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/blog/su-sondajinda-10-sik-yapilan-hata/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/su-sondajinda-10-sik-yapilan-hata/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/su-sondajinda-10-sik-yapilan-hata/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/su-sondajinda-10-sik-yapilan-hata/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/su-sondajinda-10-sik-yapilan-hata/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/su-kuyusu-acma-izni-2026-rehberi/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/iadc-kodlari-rehberi-matkap-secimi/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/sondaj-makinesi-secimi-7-kritik-parametre/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/api-spec-5d-drill-pipe-teknik-ozellikler/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/jeoteknik-etud-vs-zemin-etudu-farklar/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/karotlu-maden-arama-yontem-ve-maliyet/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/camur-pompasi-bakim-rehberi/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/camur-pompasi-bakim-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/camur-pompasi-bakim-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/camur-pompasi-bakim-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/camur-pompasi-bakim-rehberi/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/kuyu-verimi-nasil-artirilir/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/kuyu-verimi-nasil-artirilir/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/kuyu-verimi-nasil-artirilir/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/kuyu-verimi-nasil-artirilir/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/kuyu-verimi-nasil-artirilir/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/en/blog/su-sondajinda-10-sik-yapilan-hata/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/su-sondajinda-10-sik-yapilan-hata/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/su-sondajinda-10-sik-yapilan-hata/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/su-sondajinda-10-sik-yapilan-hata/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/su-sondajinda-10-sik-yapilan-hata/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/su-kuyusu-acma-izni-2026-rehberi/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/su-kuyusu-acma-izni-2026-rehberi/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/jeotermal-sondaj-maliyeti-2026-derinlik-bazli/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/iadc-kodlari-rehberi-matkap-secimi/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/iadc-kodlari-rehberi-matkap-secimi/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/sondaj-makinesi-secimi-7-kritik-parametre/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/sondaj-makinesi-secimi-7-kritik-parametre/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/api-spec-5d-drill-pipe-teknik-ozellikler/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/api-spec-5d-drill-pipe-teknik-ozellikler/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/jeoteknik-etud-vs-zemin-etudu-farklar/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/jeoteknik-etud-vs-zemin-etudu-farklar/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/karotlu-maden-arama-yontem-ve-maliyet/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/karotlu-maden-arama-yontem-ve-maliyet/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/camur-pompasi-bakim-rehberi/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/camur-pompasi-bakim-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/camur-pompasi-bakim-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/camur-pompasi-bakim-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/camur-pompasi-bakim-rehberi/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/kuyu-verimi-nasil-artirilir/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/kuyu-verimi-nasil-artirilir/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/kuyu-verimi-nasil-artirilir/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/kuyu-verimi-nasil-artirilir/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/kuyu-verimi-nasil-artirilir/" />
+  </url>
+  <url>
+    <loc>https://www.kdsondaj.com.tr/ar/blog/su-sondajinda-10-sik-yapilan-hata/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.kdsondaj.com.tr/blog/su-sondajinda-10-sik-yapilan-hata/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kdsondaj.com.tr/en/blog/su-sondajinda-10-sik-yapilan-hata/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.kdsondaj.com.tr/ar/blog/su-sondajinda-10-sik-yapilan-hata/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kdsondaj.com.tr/en/blog/su-sondajinda-10-sik-yapilan-hata/" />
   </url>
 </urlset>

@@ -14,7 +14,30 @@ export const productList = [
     mast: "110 t",
     drawworks: "90 t",
     mudPump: "Integrated Duplex / Triplex High Pressure",
-    image: "/assets/trailer-rig.jpg",
+    image: "/assets/rig-1500m-transit.jpg",
+    gallery: [
+      {
+        src: "/assets/rig-1500m-transit.jpg",
+        captionTr: "KD-1500 Ağır Dorse Kule — Çekici & İntikal Modu (1500 m)",
+        captionEn: "KD-1500 Heavy Trailer Rig — Transit & Highway Mobilization (1500 m)",
+        captionAr: "حفارة مقطورة ثقيلة KD-1500 — وضع النقل البري (1500 م)",
+        label: "1500M İntikal"
+      },
+      {
+        src: "/assets/rig-1500m-mast.jpg",
+        captionTr: "KD-1500 Ağır Kule — Dikili Sahada Çalışma Konumu (1500 m)",
+        captionEn: "KD-1500 Heavy Mast — Erected Field Operation Position (1500 m)",
+        captionAr: "حفارة KD-1500 — البرج المرفوع في موقع العمل (1500 م)",
+        label: "1500M Dikili Kule"
+      },
+      {
+        src: "/assets/rig-3000m-heavy.jpg",
+        captionTr: "KD-3000 Ağır Dorse Platformu — 4-Aks Kule Şasisi (3000 m)",
+        captionEn: "KD-3000 Heavy Trailer Rig — 4-Axle Deep Borehole Chassis (3000 m)",
+        captionAr: "حفارة مقطورة عملاقة KD-3000 — هيكل 4 محاور للآبار العميقة (3000 م)",
+        label: "3000M Ağır Dorse"
+      }
+    ],
     specsTable: [
       { param: "Drilling Depth Capacity", val: "1500 – 3000 m (4,920 – 9,840 ft)", tr: "Delme Derinlik Kapasitesi", ar: "قدرة عمق الحفر" },
       { param: "Gross Mast Hook-Load", val: "110 Metric Tons (242,500 lbs)", tr: "Brüt Kule Kanca Yükü", ar: "حمولة خطاف البرج" },
@@ -194,7 +217,23 @@ export const productList = [
     mast: "90 t",
     drawworks: "70 t",
     mudPump: "Integrated High Flow Duplex",
-    image: "/assets/truck-rig.jpg",
+    image: "/assets/rig-1200m-1.jpg",
+    gallery: [
+      {
+        src: "/assets/rig-1200m-1.jpg",
+        captionTr: "KD-1200 Kamyon Üstü Hidrolik Kule — Sağ Yan & Arka Görünüm (1200 m)",
+        captionEn: "KD-1200 Truck-Mounted Drilling Rig — Right Side & Rear View (1200 m)",
+        captionAr: "حفارة شاحنة هيدروليكية KD-1200 — الجانب الأيمن والخلفي (1200 م)",
+        label: "1200M Sağ Profil"
+      },
+      {
+        src: "/assets/rig-1200m-2.jpg",
+        captionTr: "KD-1200 Kamyon Üstü Hidrolik Kule — Sol Yan & Ön Görünüm (1200 m)",
+        captionEn: "KD-1200 Truck-Mounted Drilling Rig — Left Side & Front View (1200 m)",
+        captionAr: "حفارة شاحنة هيدروليكية KD-1200 — الجانب الأيسر والأمامي (1200 م)",
+        label: "1200M Sol Profil"
+      }
+    ],
     specsTable: [
       { param: "Max Drilling Depth", val: "1000 – 1200 m (3,280 – 3,940 ft)", tr: "Maksimum Sondaj Derinliği", ar: "أقصى عمق حفر" },
       { param: "Carrier Platform", val: "Commercial 6×4 or 8×4 Heavy Truck Chassis", tr: "Kamyon Platformu", ar: "شاسيه شاحنة ثقيلة 6×4 أو 8×4" },
@@ -276,7 +315,23 @@ export const productList = [
     mast: "110 t",
     drawworks: "90 t",
     mudPump: "Standard Integrated Duplex",
-    image: "/assets/trailer-rig.jpg",
+    image: "/assets/rig-1200m-1.jpg",
+    gallery: [
+      {
+        src: "/assets/rig-1200m-1.jpg",
+        captionTr: "KD-1200-T Dorse Tipi Sondaj Makinesi — Sağ Yan & Arka Görünüm (1200 m)",
+        captionEn: "KD-1200-T Heavy Trailer Rig — Right Side & Rear View (1200 m)",
+        captionAr: "حفارة مقطورة KD-1200-T — الجانب الأيمن والخلفي (1200 م)",
+        label: "1200M Sağ Profil"
+      },
+      {
+        src: "/assets/rig-1200m-2.jpg",
+        captionTr: "KD-1200-T Dorse Tipi Sondaj Makinesi — Sol Yan & Ön Çekici Görünüm (1200 m)",
+        captionEn: "KD-1200-T Heavy Trailer Rig — Left Side & Front Tractor View (1200 m)",
+        captionAr: "حفارة مقطورة KD-1200-T — الجانب الأيسر والأمامي (1200 م)",
+        label: "1200M Sol Profil"
+      }
+    ],
     specsTable: [
       { param: "Depth Capacity", val: "1000 – 1200 m (3,280 – 3,940 ft)", tr: "Derinlik Kapasitesi", ar: "عمق الحفر" },
       { param: "Carrier", val: "Multi-Axle Heavy Semi-Trailer", tr: "Taşıyıcı Platform", ar: "مقطورة ثقيلة متعددة المحاور" },

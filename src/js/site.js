@@ -403,15 +403,153 @@
     });
   }
 
-  // 8. Progressive Web App (PWA) ServiceWorker Registration
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("/sw.js").then(function (reg) {
-        console.log("KD SONDAJ PWA ServiceWorker Active:", reg.scope);
-      }).catch(function (err) {
-        console.warn("PWA ServiceWorker registration error:", err);
+  // 8. Interactive Product Photo Gallery Switcher
+  var galleryThumbs = document.querySelectorAll(".gallery-thumb-btn");
+  var mainImg = document.getElementById("mainGalleryImg");
+  var mainBadge = document.getElementById("galleryBadge");
+
+  if (galleryThumbs.length && mainImg) {
+    galleryThumbs.forEach(function (thumb) {
+      thumb.addEventListener("click", function () {
+        var src = thumb.getAttribute("data-src");
+        var alt = thumb.getAttribute("data-alt");
+        var caption = thumb.getAttribute("data-caption");
+
+        galleryThumbs.forEach(function (t) { t.classList.remove("is-active"); });
+        thumb.classList.add("is-active");
+
+        mainImg.style.opacity = "0.35";
+        mainImg.style.transform = "scale(0.98)";
+        setTimeout(function () {
+          mainImg.src = src;
+          if (alt) mainImg.alt = alt;
+          if (mainBadge && caption) mainBadge.textContent = caption;
+          mainImg.style.opacity = "1";
+          mainImg.style.transform = "scale(1)";
+        }, 140);
       });
     });
   }
+
+  // 10. Asiaplast-Style Dynamic Hero Carousel Controller
+  (function initHeroCarousel() {
+    var slides = document.querySelectorAll(".hero-slide-item");
+    var textSlides = document.querySelectorAll(".hero-slide-text-item");
+    var tabs = document.querySelectorAll(".hero-tab-card");
+    var prevBtn = document.getElementById("heroPrevBtn");
+    var nextBtn = document.getElementById("heroNextBtn");
+    if (!slides.length || !tabs.length) return;
+
+    var currentIndex = 0;
+    var timer = null;
+    var intervalTime = 6500;
+
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      currentIndex = index;
+
+      slides.forEach(function (slide, i) {
+        if (i === currentIndex) {
+          slide.classList.add("is-active");
+          slide.setAttribute("aria-hidden", "false");
+        } else {
+          slide.classList.remove("is-active");
+          slide.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      if (textSlides.length) {
+        textSlides.forEach(function (ts, i) {
+          if (i === currentIndex) {
+            ts.classList.add("is-active");
+          } else {
+            ts.classList.remove("is-active");
+          }
+        });
+      }
+
+      tabs.forEach(function (tab, i) {
+        if (i === currentIndex) {
+          tab.classList.add("is-active");
+          tab.setAttribute("aria-selected", "true");
+        } else {
+          tab.classList.remove("is-active");
+          tab.setAttribute("aria-selected", "false");
+        }
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function startTimer() {
+      stopTimer();
+      timer = setInterval(nextSlide, intervalTime);
+    }
+
+    function stopTimer() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var idx = parseInt(tab.getAttribute("data-slide-index"), 10);
+        showSlide(idx);
+        startTimer();
+      });
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        prevSlide();
+        startTimer();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        nextSlide();
+        startTimer();
+      });
+    }
+
+    var heroSection = document.querySelector(".hero-carousel-section");
+    if (heroSection) {
+      heroSection.addEventListener("mouseenter", stopTimer);
+      heroSection.addEventListener("mouseleave", startTimer);
+
+      var touchStartX = 0;
+      var touchEndX = 0;
+      heroSection.addEventListener("touchstart", function (e) {
+        if (e.changedTouches && e.changedTouches[0]) {
+          touchStartX = e.changedTouches[0].screenX;
+        }
+      }, { passive: true });
+
+      heroSection.addEventListener("touchend", function (e) {
+        if (e.changedTouches && e.changedTouches[0]) {
+          touchEndX = e.changedTouches[0].screenX;
+          var diff = touchStartX - touchEndX;
+          if (Math.abs(diff) > 45) {
+            if (diff > 0) nextSlide();
+            else prevSlide();
+            startTimer();
+          }
+        }
+      }, { passive: true });
+    }
+
+    startTimer();
+  })();
 })();
+
 

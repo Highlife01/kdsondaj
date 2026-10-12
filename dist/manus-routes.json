@@ -505,11 +505,6 @@
       "page": "guideRfq"
     },
     {
-      "path": "/admin/",
-      "file": "admin/index.html",
-      "indexable": false
-    },
-    {
       "path": "/404.html",
       "file": "404.html",
       "indexable": false
